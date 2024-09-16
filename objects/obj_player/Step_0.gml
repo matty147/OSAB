@@ -1,36 +1,41 @@
-move_horizontaly = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-move_verticaly = keyboard_check(ord("S")) - keyboard_check(ord("W"));
+var dash = keyboard_check_pressed(vk_shift)
+var move_x = keyboard_check(ord("D")) - keyboard_check(ord("A"))
+var move_y = keyboard_check(ord("S")) - keyboard_check(ord("W"))
 
-move_horizontaly = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-move_verticaly = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 
-if (move_horizontaly != 0 || move_verticaly != 0) {
-    var length = sqrt(sqr(move_horizontaly) + sqr(move_verticaly));
-    move_horizontaly /= length;
-    move_verticaly /= length;
+if dash == 1
+{
+	dash_speed = 10;
+}
+if dash_speed > 1
+{
+dash_speed--; 	
 }
 
-if(y + move_verticaly * _speed - 18 <= 0 || y + move_verticaly * _speed + 18 >= room_height || y + move_verticaly * dash - 18 <= 0 || y + move_verticaly * dash + 18 >= room_height){
-    move_verticaly = 0
-}
-if(x + move_horizontaly * _speed - 18 < 0 || x + move_horizontaly * _speed + 18 > room_width || x + move_horizontaly * dash - 18 < 0 || x + move_horizontaly * dash + 18 > room_width){
-    move_horizontaly = 0;
-}
+move_y *= dash_speed;
+move_x *= dash_speed;
 
-x += move_horizontaly * _speed;
-y += move_verticaly * _speed;
-
-if(keyboard_check(vk_shift) && cooldown <= 0){
-    x += move_horizontaly * dash;
-    y += move_verticaly * dash;
-    dash_time--
-}
-else cooldown--
-
-if (dash_time <= 0){
-    dash_time = 10;
-    cooldown = 20;
+// horizontal
+for (var i = 0; i < 10; i++)
+{
+	if !place_meeting(x + move_x * _speed,y,obj_wall){
+		x += move_x * _speed;
+		_speed = def_speed;
+		break;
+	}
+	_speed -= 1;
 }
 
+//vertical
+for (var i = 0; i < 10; i++)
+{
+	if !place_meeting(x,y  + move_y * _speed,obj_wall){
+		y += move_y * _speed;
+		_speed = def_speed;
+		break;
+	}
+	_speed -= 1;
+}
 
-
+move_x = move;
+move_y = move;

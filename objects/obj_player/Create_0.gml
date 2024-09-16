@@ -1,6 +1,6 @@
-move_verticaly = 0;
-move_horizontaly = 0;
-_speed = 6;
-dash = 40;
-dash_time = 10;
-cooldown = 0;
+window_set_fullscreen(true);
+
+move = 6;
+_speed = 10;
+def_speed = _speed;
+dash_speed = 1;
