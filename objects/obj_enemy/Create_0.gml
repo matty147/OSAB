@@ -1,0 +1,9 @@
+image_speed = 0;
+image_index = random_range(0,2);
+scale = random_range(0.5,5);
+image_xscale = scale;
+image_yscale = scale;
+survive_speed = random_range(10, 100);
+image_alpha = 0.1;
+hitbox = false;
+show_hitbox = 50;
