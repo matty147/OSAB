@@ -21,7 +21,24 @@ if read_file && current_index < array_length(_x) && _time[current_index] == glob
 	instance.image_index = _id[current_index];
 	instance.image_xscale = _size[current_index];
 	instance.image_yscale = _size[current_index];
+	instance.angle = _angle[current_index];
+	instance._speed = _speed[current_index];
+	instance.image_alpha = _alpha[current_index];
 	current_index++;
+	
+	
+	//spawning enemies on the same frame
+	while current_index < array_length(_x) && _time[current_index] == global.runtime
+	{
+		instance = instance_create_layer(_x[current_index],_y[current_index],"Spawned",obj_enemy);
+		instance.image_index = _id[current_index];
+		instance.image_xscale = _size[current_index];
+		instance.image_yscale = _size[current_index];
+		instance.angle = _angle[current_index];
+		instance._speed = _speed[current_index];
+		instance.image_alpha = _alpha[current_index];
+		current_index++;	
+	}
 }
 
 if _time[array_length(_x) - 1] >= global.runtime
