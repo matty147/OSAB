@@ -24,6 +24,7 @@ if read_file && current_index < array_length(_x) && _time[current_index] == glob
 	instance.angle = _angle[current_index];
 	instance._speed = _speed[current_index];
 	instance.image_alpha = _alpha[current_index];
+	instance.survive_speed = 500;
 	current_index++;
 	
 	
@@ -37,13 +38,14 @@ if read_file && current_index < array_length(_x) && _time[current_index] == glob
 		instance.angle = _angle[current_index];
 		instance._speed = _speed[current_index];
 		instance.image_alpha = _alpha[current_index];
+		instance.survive_speed = 500;
 		current_index++;	
 	}
 }
 
 if _time[array_length(_x) - 1] >= global.runtime
 {
-	end_game = 250;
+	end_game = 5000;
 }end_game--;
 
 if end_game <= 0

@@ -21,7 +21,7 @@ _alpha = [];
 position = NaN;
 
 //load file
-file = file_text_open_read("test.osab");
+file = file_text_open_read("circle.osab");
 
 //read file
 while (!file_text_eof(file)) {
