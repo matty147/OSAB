@@ -8,7 +8,7 @@ if (move_x != 0 || move_y != 0) {
     move_y /= length;
 }
 
-if dash == 1
+if dash == 1	
 {
 	dash_speed = 8;
 	inv = 30;
