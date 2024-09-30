@@ -57,10 +57,10 @@ if read_file && current_index < array_length(_x) && _time[current_index] == glob
 
 if read_file && _time[array_length(_x) - 1] >= global.runtime
 {
-	end_game = 5000;
+	end_game = 250;
 }end_game--;
 
-if end_game <= 0 && read_file
+if instance_number(obj_enemy) == 0 && read_file
 {
 	room_goto(main_menu);
 	//game_end();	
