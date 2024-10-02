@@ -22,7 +22,7 @@ if !read_file
 		button = button_max;
 	}else if button < 0
 	{
-	button = 0;	
+		button = 0;	
 	}
 }
 
@@ -60,7 +60,7 @@ if read_file && _time[array_length(_x) - 1] >= global.runtime
 	end_game = 250;
 }end_game--;
 
-if instance_number(obj_enemy) == 0 && read_file
+if instance_number(obj_enemy) <= 0 && read_file && end_game < 0
 {
 	room_goto(main_menu);
 	//game_end();	

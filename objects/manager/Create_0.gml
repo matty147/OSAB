@@ -1,5 +1,5 @@
 randomise();
-//window_set_fullscreen(true);
+window_set_fullscreen(true);
 
 global.runtime = 0; // track starts
 
