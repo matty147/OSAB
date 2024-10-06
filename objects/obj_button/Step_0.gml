@@ -1,50 +1,108 @@
-function button_pressed()
+function button_pressed(menu_id)
 {
+	if scrollable
+	{
+		
+	show_message("start level: " + string(button_title));	
+	}
+	
 	switch button_id
 	{
+		//first screen
 	
-	case "0": //start
-		room_goto(level);
-		break;
+			case "0": //start
+				//room_goto(level); // level select screen
+				return 1;
 		
-	case "1": // option
-	show_message("show_options");
-		break;
+			case "1": // option
+			//show_debug_message("show_options");
+				return 2;
+
 		
-	case "2": // system
-	show_message("show_system");
-		break;
+			case "2": // credits
+			//show_debug_message("show_credits");
+				return 3;
 		
-	case "3": // quit
-	game_end();
-		break;
-	
+			case "3": // quit
+			game_end();
+				break;
+
+			case "4": // Back
+				return floor(menu_id/10);
 	}
+	return menu_id;
 } 
 
 
 
 var instance = instance_find(manager,0);
 
-show_debug_message(instance.button);
-
-
 image_index = 0;
 
 if position_meeting(mouse_x,mouse_y,id)
 {
-	instance.button = instance.button_max + 1;
+	instance.button = NaN;
 	image_index = 1;
-	if mouse_check_button(mb_left) ||  keyboard_check_released(vk_enter)
+	if mouse_check_button_released(mb_left)
 	{
-		button_pressed();
+		instance.menu_id = button_pressed(instance.menu_id);
 	}
 
-}else if button_id = instance.button
+}else if button_id == instance.button
 {
 	image_index = 1;
 	if keyboard_check_released(vk_enter)
 	{
-		button_pressed();
+		instance.menu_id = button_pressed(instance.menu_id);
 	}
 }else image_index = 0;
+
+//show_debug_message(instance.menu_id);
+
+switch instance.menu_id
+{
+	
+	case "0": //main menu
+	instance_activate_layer("main");
+	instance_deactivate_layer("options");
+	instance_deactivate_layer("credits");
+	instance_deactivate_layer("level_select");
+		break;
+	
+	case "1": //level select
+	instance_deactivate_layer("main");
+	instance_deactivate_layer("options");
+	instance_deactivate_layer("credits");
+	instance_activate_layer("level_select");
+		break;
+	
+	case "2":
+	instance_deactivate_layer("main");
+	instance_activate_layer("options");
+	instance_deactivate_layer("credits");
+	instance_deactivate_layer("level_select");
+		break;
+		
+	case "3":
+	instance_deactivate_layer("main");
+	instance_deactivate_layer("options");
+	instance_activate_layer("credits");
+	instance_deactivate_layer("level_select");
+		break;
+}
+
+if scrollable
+{
+	y += (mouse_wheel_up() - mouse_wheel_down()) * 32;
+	
+	if y < - 30
+	{
+		y = y + room_height + 30;	
+	
+	}
+
+	if y > room_height + 30
+	{
+		y = y - room_height - 30;	
+	}
+}

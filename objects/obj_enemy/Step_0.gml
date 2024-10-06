@@ -18,15 +18,17 @@ if hitbox == true
 //calculates the movement direction and then translates it from deg to rad
 
 ////moves in one directioncx
-//x += cos(real(angle) * (pi / 180)) * real(_speed);
-//y += sin(real(angle) * (pi / 180)) * real(_speed);
+x += cos(real(angle) * (pi / 180)) * real(_speed);
+y += sin(real(angle) * (pi / 180)) * real(_speed);
 
 
 //wave only on the y part
-x += cos(real(angle) * (pi / 180)) * real(_speed);
-y += sin(real(angle) * (pi / 180)) * real(_speed) + sin(real(wave_angle) * (pi / 180)) * amplitude;
+//x += cos(real(angle) * (pi / 180)) * real(_speed);
+//y += sin(real(angle) * (pi / 180)) * real(_speed) + sin(real(wave_angle) * (pi / 180)) * amplitude;
 
-wave_angle += frequency;
+//wave_angle += frequency;
+
+
 
 
 ////same thing?

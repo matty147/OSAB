@@ -3,6 +3,8 @@ window_set_fullscreen(true);
 
 global.runtime = 0; // track starts
 
+menu_id = 0;
+
 button = 0
 
 end_game = 0;
@@ -22,11 +24,12 @@ _alpha = [];
 
 position = NaN;
 
+
 if load_level
 {
 
 	//load file
-	file = file_text_open_read("a.osab");
+	file = file_text_open_read("test.osab");
 
 	//read file
 	while (!file_text_eof(file)) {
@@ -64,12 +67,37 @@ if load_level
 }
 
 
-//if krooby == true
-//{
-//	krooby.osu == true
-//	{
-//		launch(osu);
-		
-//	}
-	
-//}
+show_debug_message("");
+
+index = 0;
+save[0] = "";
+
+
+//checks for available levels
+
+var _file = file_find_first("*.osab*", 0);
+
+while ( _file != "" ) // file_find_first() / file_find_next() return "" (empty string) if no files found.
+{
+	_file = string_delete(_file, string_length(_file) - 4, 5);
+	show_debug_message(_file + ".osab");
+    save[index++] = _file; 
+    _file = file_find_next();
+
+}
+
+show_debug_message("\nFound " + string(index) + " files.");
+
+file_find_close();
+
+show_debug_message("");
+
+
+for (var i = 0; i < array_length(save) && i < 11; i += 1)
+{
+var	button_instance = instance_create_layer(767,-15 + i * 73,"level_select",obj_button)
+	button_instance.button_title = save[i];
+	button_instance.image_xscale = 10.5;
+	button_instance.image_yscale = 2.166;
+	button_instance.scrollable = true;		
+}

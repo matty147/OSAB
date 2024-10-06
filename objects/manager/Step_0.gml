@@ -13,9 +13,9 @@ if keyboard_check_pressed(vk_escape)
 }
 
 if !read_file
-{	
+{
+	
 	button += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
-
 	
 	if button > button_max
 	{
