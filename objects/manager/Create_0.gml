@@ -24,6 +24,8 @@ _alpha = [];
 
 position = NaN;
 
+move_buttons = 0;
+
 
 if load_level
 {
@@ -72,6 +74,8 @@ show_debug_message("");
 index = 0;
 save[0] = "";
 
+level_id = 0;
+
 
 //checks for available levels
 
@@ -99,5 +103,5 @@ var	button_instance = instance_create_layer(767,-15 + i * 73,"level_select",obj_
 	button_instance.button_title = save[i];
 	button_instance.image_xscale = 10.5;
 	button_instance.image_yscale = 2.166;
-	button_instance.scrollable = true;		
+	button_instance.scrollable = true;	
 }

@@ -93,16 +93,19 @@ switch instance.menu_id
 
 if scrollable
 {
-	y += (mouse_wheel_up() - mouse_wheel_down()) * 32;
+	y += instance.move_buttons;
 	
-	if y < - 30
+	if y < - 30 // on top of the screen
 	{
 		y = y + room_height + 30;	
-	
+	//fetch data to update 	button_title
+		button_title = instance.save[instance.level_id];
 	}
 
-	if y > room_height + 30
+	if y > room_height + 30 // on the bottom of the screen
 	{
-		y = y - room_height - 30;	
+		y = y - room_height - 30;
+		show_debug_message(instance.level_id)
+		button_title = instance.save[instance.level_id];
 	}
 }

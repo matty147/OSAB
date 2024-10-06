@@ -65,3 +65,19 @@ if instance_number(obj_enemy) <= 0 && read_file && end_game < 0
 	room_goto(main_menu);
 	//game_end();	
 }
+
+
+move_buttons = mouse_wheel_up() - mouse_wheel_down();
+level_id += move_buttons;
+
+show_debug_message(move_buttons);
+if level_id < 0
+{
+	
+	level_id = array_length(save) - 1;
+}else if level_id >= array_length(save)
+{
+	level_id = 0;
+}
+
+move_buttons *= 32;
