@@ -28,6 +28,7 @@
   ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"1.osab","CopyToMask":-1,"filePath":"datafiles","name":"1.osab","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"2.osab","CopyToMask":-1,"filePath":"datafiles","name":"2.osab","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"a.osab","CopyToMask":-1,"filePath":"datafiles/aaa","name":"a.osab","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"aatest.osab","CopyToMask":-1,"filePath":"datafiles/aaa","name":"aatest.osab","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"amewatson.osab","CopyToMask":-1,"filePath":"datafiles/aaa","name":"amewatson.osab","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
