@@ -2,8 +2,10 @@ function button_pressed(menu_id)
 {
 	if scrollable
 	{
-		
-	show_message("start level: " + string(button_title));	
+		room_goto(level);
+		show_debug_message("levelname: " + global.level_name);
+		global.level_name = button_title;
+		//show_message("start level: " + string(button_title));	
 	}
 	
 	switch button_id
@@ -93,19 +95,26 @@ switch instance.menu_id
 
 if scrollable
 {
-	y += instance.move_buttons;
+	y = lerp(y, y + instance.move_buttons,0.5);
 	
 	if y < - 30 // on top of the screen
 	{
 		y = y + room_height + 30;	
-	//fetch data to update 	button_title
+
 		button_title = instance.save[instance.level_id];
 	}
 
 	if y > room_height + 30 // on the bottom of the screen
 	{
 		y = y - room_height - 30;
-		show_debug_message(instance.level_id)
+		//show_debug_message(instance.level_id)
+				
+		var last_value = instance.level_id + 10;
+		if last_value > array_length(instance.save)
+		{
+			last_value -= array_length(instance.save);
+		}
+		
 		button_title = instance.save[instance.level_id];
 	}
 }

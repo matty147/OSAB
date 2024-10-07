@@ -1,6 +1,8 @@
 image_speed = 0;
 image_index = 0;
-mouse_hover = true;
+mouse_hover = true
+
+global.level_name = "test";
 
 scrollable = false;
 
