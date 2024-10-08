@@ -18,7 +18,8 @@ show_debug_message("");
 index = 0;
 save[0] = "";
 
-level_id = 0;
+first_value = 0;
+last_value = 13;
 
 if room == main_menu
 {
@@ -41,6 +42,7 @@ if room == main_menu
 
 	show_debug_message("");
 
+	amount_of_buttons = 0;
 
 	for (var i = 0; i < array_length(save) && i < 11; i += 1)
 	{
@@ -48,6 +50,17 @@ if room == main_menu
 		button_instance.button_title = save[i];
 		button_instance.image_xscale = 10.5;
 		button_instance.image_yscale = 2.166;
-		button_instance.scrollable = true;	
+		button_instance.scrollable = true;
+		amount_of_buttons++;
 	}
+	while amount_of_buttons < 11
+	{
+		var	button_instance = instance_create_layer(767,-15 + amount_of_buttons * 73,"level_select",obj_button)
+		button_instance.button_title = "";
+		button_instance.image_xscale = 10.5;
+		button_instance.image_yscale = 2.166;
+		button_instance.scrollable = true;
+		amount_of_buttons++;		
+	}
+	show_debug_message(amount_of_buttons);
 }

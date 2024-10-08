@@ -23,16 +23,29 @@ if keyboard_check_pressed(vk_escape)
 	}
 
 move_buttons = mouse_wheel_up() - mouse_wheel_down();
-level_id += move_buttons;
+first_value += move_buttons;
+last_value += move_buttons;
 
 //show_debug_message(move_buttons);
-if level_id < 0
+if first_value < 0
 {
 	
-	level_id = array_length(save) - 1;
-}else if level_id >= array_length(save)
+	first_value = array_length(save) - 1;
+}else if first_value >= array_length(save)
 {
-	level_id = 0;
+	first_value = 0;
 }
+
+if last_value < 0
+{
+	
+	last_value  = array_length(save) - 1;
+}else if last_value  >= array_length(save)
+{
+	last_value  = 0;
+}
+
+//show_debug_message("first: " + string(first_value));
+//show_debug_message("last: " + string(last_value));
 
 move_buttons *= 32;

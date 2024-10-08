@@ -27,6 +27,7 @@
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":".osab","CopyToMask":-1,"filePath":"datafiles","name":".osab","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"1.osab","CopyToMask":-1,"filePath":"datafiles","name":"1.osab","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"2.osab","CopyToMask":-1,"filePath":"datafiles","name":"2.osab","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"a.osab","CopyToMask":-1,"filePath":"datafiles/aaa","name":"a.osab","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
