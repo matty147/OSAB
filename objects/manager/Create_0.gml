@@ -19,7 +19,7 @@ index = 0;
 save[0] = "";
 
 first_value = 0;
-last_value = 13;
+last_value = 10;
 
 if room == main_menu
 {
@@ -63,4 +63,6 @@ if room == main_menu
 		amount_of_buttons++;		
 	}
 	show_debug_message(amount_of_buttons);
+	show_debug_message("array lenght: " + string(array_length(save)));
+	
 }

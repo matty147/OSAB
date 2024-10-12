@@ -1,0 +1,3 @@
+//, time, id, x, y, scale, direction, speed, alpha
+//, circles
+100,3,750,500,1,10,2,0.1
