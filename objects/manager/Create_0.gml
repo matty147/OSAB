@@ -1,7 +1,11 @@
 randomise();
 window_set_fullscreen(true);
 
+global.pause = false;
+
 global.runtime = 0; // track starts
+
+
 
 menu_id = 0;
 
@@ -66,3 +70,7 @@ if room == main_menu
 	show_debug_message("array lenght: " + string(array_length(save)));
 	
 }
+
+
+
+
