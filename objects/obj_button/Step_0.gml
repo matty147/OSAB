@@ -112,7 +112,7 @@ if scrollable
 	
 				instance.last_value = array_length(instance.save) - 1;
 			}
-			else if instance.last_value >= array_length(instance.save) -1
+			else if instance.last_value >= array_length(instance.save)
 			{
 				instance.last_value = 0;
 			}
