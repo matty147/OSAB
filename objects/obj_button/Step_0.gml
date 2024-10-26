@@ -109,13 +109,25 @@ if scrollable
 		
 			if instance.last_value < 0
 			{
-	
 				instance.last_value = array_length(instance.save) - 1;
 			}
 			else if instance.last_value >= array_length(instance.save)
-			{
-				instance.last_value = 0;
+			{	
+			instance.last_value = 0;
 			}
+			
+			
+			
+			if instance.first_value < 0
+			{
+				instance.first_value = array_length(instance.save)-1;
+			}
+			else if instance.first_value >= array_length(instance.save)
+			{
+				instance.first_value = 0;
+			}
+			
+			
 		button_title = instance.save[instance.last_value];
 		
 	}
@@ -133,16 +145,28 @@ if scrollable
 		
 			if instance.first_value < 0
 			{
-	
-				instance.first_value = array_length(instance.save) - 1;
+				instance.first_value = array_length(instance.save)-1;
 			}
 			else if instance.first_value >= array_length(instance.save)
 			{
 				instance.first_value = 0;
 			}
+			
+			
+			
+			if instance.last_value < 0
+			{
+				instance.last_value = array_length(instance.save) - 1;
+			}
+			else if instance.last_value >= array_length(instance.save)
+			{
+				instance.last_value = 0;
+			}
+			
+			
 		
 		button_title = instance.save[instance.first_value];
 		
-		
 	}
+	show_debug_message("first: " + string(instance.first_value) + " last: " + string(instance.last_value));
 }
