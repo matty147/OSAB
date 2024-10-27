@@ -10,3 +10,6 @@ if global.pause //temp
 	draw_set_font (fnt_default);
 	draw_text_transformed(room_width/2 - 100,room_height/2,"Paused",2,2,0);
 }
+	
+	
+	

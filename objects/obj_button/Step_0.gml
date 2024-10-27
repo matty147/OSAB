@@ -93,19 +93,19 @@ switch instance.menu_id
 
 if scrollable
 {
+	//smooth moving from point A to point B
 	y = lerp(y, y + instance.move_buttons * 32,0.5);
 	
 	if y < - 30 // moving from top to bottom
 	{
 		y = y + room_height + 30;	
 		
-		
-		//show_debug_message("instance.last_value: " + string(instance.last_value));
-		//show_debug_message("replacing: " + string(button_title) + " with: " + string( instance.save[instance.last_value]));
-		//show_debug_message("replacing: A");
-		
 			instance.last_value -= instance.move_buttons;
 			instance.first_value -= instance.move_buttons;
+		
+		
+		
+			//check if the list is not overflowing and if so, fixes it.
 		
 			if instance.last_value < 0
 			{
@@ -116,8 +116,6 @@ if scrollable
 			instance.last_value = 0;
 			}
 			
-			
-			
 			if instance.first_value < 0
 			{
 				instance.first_value = array_length(instance.save)-1;
@@ -128,6 +126,7 @@ if scrollable
 			}
 			
 			
+		//saves the updated value from the list into a button_title.
 		button_title = instance.save[instance.last_value];
 		
 	}
@@ -135,14 +134,13 @@ if scrollable
 	if y > room_height + 30 // moving from bottom to top
 	{
 		y = y - room_height - 30;
-		//show_debug_message(instance.level_id)
-		
-		//show_debug_message("replacing: " + string(button_title) + " with: " + string( instance.save[instance.first_value]));
-		//show_debug_message("replacing: B");
 		
 			instance.last_value -= instance.move_buttons;
 			instance.first_value -= instance.move_buttons;
 		
+			
+			//check if the list is not overflowing and if so, fixes it.
+			
 			if instance.first_value < 0
 			{
 				instance.first_value = array_length(instance.save)-1;
@@ -151,9 +149,7 @@ if scrollable
 			{
 				instance.first_value = 0;
 			}
-			
-			
-			
+						
 			if instance.last_value < 0
 			{
 				instance.last_value = array_length(instance.save) - 1;
@@ -163,10 +159,8 @@ if scrollable
 				instance.last_value = 0;
 			}
 			
-			
-		
+		//saves the updated value from the list into a button_title.
 		button_title = instance.save[instance.first_value];
 		
 	}
-	show_debug_message("first: " + string(instance.first_value) + " last: " + string(instance.last_value));
 }

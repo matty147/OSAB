@@ -1,4 +1,4 @@
-if keyboard_check_released(ord("R")) && keyboard_check(vk_control)
+if keyboard_check_pressed(ord("R")) && keyboard_check(vk_control)
 {
 	game_restart();	
 }
@@ -30,8 +30,6 @@ if !global.pause
 
 }	
 
-
-
 		button += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
 	
 		if button > button_max
@@ -42,9 +40,4 @@ if !global.pause
 			button = 0;	
 		}
 
-
-
-
-
-
-	move_buttons = mouse_wheel_up() - mouse_wheel_down();
+move_buttons = mouse_wheel_up() - mouse_wheel_down();

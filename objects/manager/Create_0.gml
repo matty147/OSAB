@@ -15,6 +15,7 @@ position = NaN;
 
 move_buttons = 0;
 
+mouse_pressed_y = 0;
 
 
 show_debug_message("");
@@ -70,7 +71,3 @@ if room == main_menu
 	show_debug_message("array lenght: " + string(array_length(save)));
 	
 }
-
-
-
-
