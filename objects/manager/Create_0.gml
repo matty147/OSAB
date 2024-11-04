@@ -11,6 +11,8 @@ menu_id = 0;
 
 button = 0
 
+button_repeat = false;
+
 position = NaN;
 
 move_buttons = 0;
@@ -25,6 +27,12 @@ save[0] = "";
 
 first_value = 0;
 last_value = 10;
+lemon = true;
+
+if !file_exists("lemon.png")
+{
+	lemon = false;
+}
 
 if room == main_menu
 {
@@ -56,6 +64,7 @@ if room == main_menu
 		button_instance.image_xscale = 10.5;
 		button_instance.image_yscale = 2.166;
 		button_instance.scrollable = true;
+		button_instance.button_id = i;
 		amount_of_buttons++;
 	}
 	while amount_of_buttons < 11
@@ -70,4 +79,9 @@ if room == main_menu
 	show_debug_message(amount_of_buttons);
 	show_debug_message("array lenght: " + string(array_length(save)));
 	
+}
+
+if !lemon
+{
+	game_end();	
 }

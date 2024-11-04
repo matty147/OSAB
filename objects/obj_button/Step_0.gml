@@ -1,4 +1,4 @@
-function button_pressed(menu_id)
+function button_pressed(menu_id, instance)
 {
 	if scrollable
 	{
@@ -6,21 +6,28 @@ function button_pressed(menu_id)
 		room_goto(level);
 	}
 	
-	switch button_id
+	instance.button = 0; 
+	
+	switch function_id
 	{
 		//first screen
 	
 			case "0": //start
 				//room_goto(level); // level select screen
+			instance.button_max = 10;
+			instance.button_repeat = true;
+			instance.button = 5;
 				return 1;
 		
 			case "1": // option
 			//show_debug_message("show_options");
+			instance.button_max = 3;
 				return 2;
 
 		
 			case "2": // credits
 			//show_debug_message("show_credits");
+			instance.button_max = 0;
 				return 3;
 		
 			case "3": // quit
@@ -28,6 +35,8 @@ function button_pressed(menu_id)
 				break;
 
 			case "4": // Back
+			instance.button_max = 3;
+			instance.button_repeat = false;
 				return floor(menu_id/10);
 	}
 	return menu_id;
@@ -37,15 +46,21 @@ function button_pressed(menu_id)
 
 var instance = instance_find(manager,0);
 
+if keyboard_check_pressed(vk_escape) || keyboard_check_pressed(vk_backspace) 
+{
+	instance.menu_id = floor(instance.menu_id/10);
+}
+
 image_index = 0;
 
 if position_meeting(mouse_x,mouse_y,id)
 {
-	instance.button = NaN;
+	instance.button = 0;
 	image_index = 1;
 	if mouse_check_button_released(mb_left)
 	{
-		instance.menu_id = button_pressed(instance.menu_id);
+		instance.menu_id = button_pressed(instance.menu_id, instance);
+		
 	}
 
 }else if button_id == instance.button
@@ -53,7 +68,7 @@ if position_meeting(mouse_x,mouse_y,id)
 	image_index = 1;
 	if keyboard_check_released(vk_enter)
 	{
-		instance.menu_id = button_pressed(instance.menu_id);
+		instance.menu_id = button_pressed(instance.menu_id, instance);
 	}
 }else image_index = 0;
 
@@ -100,8 +115,8 @@ if scrollable
 	{
 		y = y + room_height + 30;	
 		
-			instance.last_value -= instance.move_buttons;
-			instance.first_value -= instance.move_buttons;
+			instance.last_value -= sign(instance.move_buttons);
+			instance.first_value -= sign(instance.move_buttons);
 		
 		
 		
@@ -135,8 +150,9 @@ if scrollable
 	{
 		y = y - room_height - 30;
 		
-			instance.last_value -= instance.move_buttons;
-			instance.first_value -= instance.move_buttons;
+		
+			instance.last_value -= sign(instance.move_buttons);
+			instance.first_value -= sign(instance.move_buttons);
 		
 			
 			//check if the list is not overflowing and if so, fixes it.
