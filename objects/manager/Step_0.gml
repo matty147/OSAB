@@ -43,10 +43,10 @@ if !global.pause
 		}
 	}else if button > button_max	
 		{
-		button -= button_max + 1;	
+			button -= button_max + 1;	
 		}else if button < 0
 		{
-		button += button_max + 1;
+			button += button_max + 1;
 		}
 	
 	show_debug_message(button);
@@ -56,4 +56,13 @@ move_buttons = mouse_wheel_up() - mouse_wheel_down();
 if move_buttons == 0
 {
 	move_buttons = (keyboard_check_pressed(vk_up) - keyboard_check_pressed(vk_down)) * 4.5; // find the right value for this so that the buttons dont move
+	//if button = NaN
+	//{
+	//	button = 0;
+	//}
+}
+
+if move_buttons != 0 && room = main_menu
+{
+audio_play_sound(snd_menu,2,false);	
 }

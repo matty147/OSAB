@@ -6,6 +6,8 @@ global.level_name = "test";
 
 scrollable = false;
 
+alarm[0] = fps * 1;
+
 //deactivate all layers except manager and main
 //all layers have to be on when compiling or else it wont work!!!
 instance_activate_layer("main");

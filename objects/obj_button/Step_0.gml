@@ -1,3 +1,4 @@
+// function
 function button_pressed(menu_id, instance)
 {
 	if scrollable
@@ -14,20 +15,16 @@ function button_pressed(menu_id, instance)
 	
 			case "0": //start
 				//room_goto(level); // level select screen
-			instance.button_max = 10;
-			instance.button_repeat = true;
 			instance.button = 5;
 				return 1;
 		
 			case "1": // option
 			//show_debug_message("show_options");
-			instance.button_max = 3;
 				return 2;
 
 		
 			case "2": // credits
 			//show_debug_message("show_credits");
-			instance.button_max = 0;
 				return 3;
 		
 			case "3": // quit
@@ -35,8 +32,6 @@ function button_pressed(menu_id, instance)
 				break;
 
 			case "4": // Back
-			instance.button_max = 3;
-			instance.button_repeat = false;
 				return floor(menu_id/10);
 	}
 	return menu_id;
@@ -44,61 +39,115 @@ function button_pressed(menu_id, instance)
 
 
 
-var instance = instance_find(manager,0);
 
-if keyboard_check_pressed(vk_escape) || keyboard_check_pressed(vk_backspace) 
+var instance = instance_find(manager,0); //find manager object to fetch values
+
+if keyboard_check_pressed(vk_escape) && instance.menu_id != 0 || keyboard_check_pressed(vk_backspace) && instance.menu_id != 0
 {
 	instance.menu_id = floor(instance.menu_id/10);
+	audio_play_sound(snd_back, 2, false);
 }
 
-image_index = 0;
 
-if position_meeting(mouse_x,mouse_y,id)
+if button_id % 2 == 0 && scrollable
 {
-	instance.button = 0;
+	image_index = 2;	
+}else image_index = 2; //0
+ 
+// hide mouse when inactive
+if point_distance(instance.mouse_xprevious, instance.mouse_yprevious, mouse_x, mouse_y) // if mouse is moving
+{ 
+    window_set_cursor(cr_default); //can make a 
+	instance.mouse_off = false;
+}
+else if alarm[0] <= 0
+{
+	alarm[0] = fps * 5; // mouse stoped moving for 3 s. alarm 0 will activate only when when 
+}
+
+instance.mouse_xprevious = mouse_x;
+instance.mouse_yprevious = mouse_y;
+
+if instance.move_buttons != 0 &&  mouse_wheel_up() - mouse_wheel_down() == 0
+{
+	alarm[0] = 1;	
+}
+
+
+if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off
+{
 	image_index = 1;
+	
 	if mouse_check_button_released(mb_left)
 	{
+		audio_play_sound(snd_click, 2, false);
 		instance.menu_id = button_pressed(instance.menu_id, instance);
 		
 	}
 
-}else if button_id == instance.button
+}else if button_id == instance.button && instance.mouse_off
 {
 	image_index = 1;
 	if keyboard_check_released(vk_enter)
 	{
+		audio_play_sound(snd_click, 2, false);
 		instance.menu_id = button_pressed(instance.menu_id, instance);
 	}
-}else image_index = 0;
+}
+
+if mouse_x
+
+if scrollable
+{
+	
+	if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off
+	{
+		image_xscale = 11;
+	}else if button_id == instance.button && instance.mouse_off
+	{
+		image_xscale = 11;
+	}else image_xscale = 10.5;
+}
 
 //show_debug_message(instance.menu_id);
 
 switch instance.menu_id
 {
 	
-	case "0": //main menu
+	case "0": // main menu
+	instance.button_repeat = false;
+	instance.button_max = 3;
+	
 	instance_activate_layer("main");
 	instance_deactivate_layer("options");
 	instance_deactivate_layer("credits");
 	instance_deactivate_layer("level_select");
 		break;
 	
-	case "1": //level select
+	case "1": // level select
+	instance.button_max = 10;
+	instance.button_repeat = true;
+	
 	instance_deactivate_layer("main");
 	instance_deactivate_layer("options");
 	instance_deactivate_layer("credits");
 	instance_activate_layer("level_select");
 		break;
 	
-	case "2":
+	case "2": // options
+	instance.button_repeat = false;
+	instance.button_max = 3;
+	
 	instance_deactivate_layer("main");
 	instance_activate_layer("options");
 	instance_deactivate_layer("credits");
 	instance_deactivate_layer("level_select");
 		break;
 		
-	case "3":
+	case "3": // credits
+	instance.button_repeat = false;
+	instance.button_max = 0;
+	
 	instance_deactivate_layer("main");
 	instance_deactivate_layer("options");
 	instance_activate_layer("credits");

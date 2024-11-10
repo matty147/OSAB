@@ -9,9 +9,14 @@ global.runtime = 0; // track starts
 
 menu_id = 0;
 
-button = 0
+button = 0;
 
 button_repeat = false;
+
+mouse_off = false;
+
+mouse_xprevious = mouse_x;
+mouse_yprevious = mouse_y;
 
 position = NaN;
 
@@ -59,21 +64,24 @@ if room == main_menu
 
 	for (var i = 0; i < array_length(save) && i < 11; i += 1)
 	{
-	var	button_instance = instance_create_layer(767,-15 + i * 73,"level_select",obj_button)
+		var	button_instance = instance_create_layer(room_width,-15 + i * 73,"level_select",obj_button)
 		button_instance.button_title = save[i];
 		button_instance.image_xscale = 10.5;
 		button_instance.image_yscale = 2.166;
 		button_instance.scrollable = true;
 		button_instance.button_id = i;
+		button_instance.title_position = "left";
 		amount_of_buttons++;
 	}
 	while amount_of_buttons < 11
 	{
-		var	button_instance = instance_create_layer(767,-15 + amount_of_buttons * 73,"level_select",obj_button)
-		button_instance.button_title = "";
+		var	button_instance = instance_create_layer(room_width,-15 + amount_of_buttons * 73,"level_select",obj_button)
+		button_instance.button_title = "no";
 		button_instance.image_xscale = 10.5;
 		button_instance.image_yscale = 2.166;
 		button_instance.scrollable = true;
+		button_instance.button_id = amount_of_buttons;
+		button_instance.title_position = "left";
 		amount_of_buttons++;		
 	}
 	show_debug_message(amount_of_buttons);
