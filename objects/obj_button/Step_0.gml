@@ -15,7 +15,7 @@ function button_pressed(menu_id, instance)
 	
 			case "0": //start
 				//room_goto(level); // level select screen
-			instance.button = 5;
+				instance.button = 5;
 				return 1;
 		
 			case "1": // option
@@ -102,11 +102,11 @@ if scrollable
 	
 	if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off
 	{
-		image_xscale = 11;
+		image_xscale = 0.3;
 	}else if button_id == instance.button && instance.mouse_off
 	{
-		image_xscale = 11;
-	}else image_xscale = 10.5;
+		image_xscale = 0.3;
+	}else image_xscale = 0.3;
 }
 
 
