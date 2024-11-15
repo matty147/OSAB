@@ -1,10 +1,13 @@
 // function
+
 function button_pressed(menu_id, instance)
 {
-	if scrollable
-	{
-		global.level_name = button_title;
-		room_goto(level);
+	if(global.can_interact){
+		if scrollable
+		{
+			global.level_name = button_title;
+			room_goto(level);
+		}
 	}
 	
 	instance.button = 0; 
@@ -57,7 +60,7 @@ if button_id % 2 == 0 && scrollable
 // hide mouse when inactive
 if point_distance(instance.mouse_xprevious, instance.mouse_yprevious, mouse_x, mouse_y) // if mouse is moving
 { 
-    window_set_cursor(cr_default); //can make a 
+	window_set_cursor(cr_default); //can make a 
 	instance.mouse_off = false;
 }
 else if alarm[0] <= 0
@@ -102,11 +105,11 @@ if scrollable
 	
 	if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off
 	{
-		image_xscale = 0.3;
+		image_xscale = 0.55;
 	}else if button_id == instance.button && instance.mouse_off
 	{
-		image_xscale = 0.3;
-	}else image_xscale = 0.3;
+		image_xscale = 0.55;
+	}else image_xscale = 0.5;
 }
 
 
@@ -184,3 +187,43 @@ if scrollable
 		
 	}
 }
+
+if(!global.can_interact){
+	if(scrollable){
+	image_xscale = 0.5;
+	}
+}
+
+
+//options buttons code
+
+//fakt mě zabij tohle je stupidni to prenecham tobe
+
+// Needs to move and spawn another object with settings info neer itself and reset whenever you leave that layer 
+
+
+/*var button_bg = instance_find(obj_menu_button_bg, 0);
+var original_x = button_bg.original_x;
+
+
+if (instance.menu_id == 2 && position_meeting(mouse_x, mouse_y, id)) {
+    if (mouse_check_button_pressed(mb_left) || keyboard_check_pressed(vk_enter)) {
+		
+        if (button_bg != undefined) {
+            button_bg.x = 200;
+        }
+
+        if (button_id == 0) {
+            show_debug_message("Button 1 clicked");
+        } else if (button_id == 1) {
+            show_debug_message("Button 1 clicked");
+        } else if (button_id == 2) {
+            show_debug_message("Button 2 clicked");
+        }
+
+        clicked = true;
+    }
+} else {
+	button_bg.x = button_bg.original_x;
+    clicked = false;
+}*/

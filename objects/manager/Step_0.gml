@@ -70,6 +70,7 @@ switch menu_id
 		button_max = 3;
 	
 		instance_activate_layer("main");
+		instance_deactivate_layer("level_buttons");
 		instance_deactivate_layer("options");
 		instance_deactivate_layer("credits");
 		instance_deactivate_layer("level_select");
@@ -83,6 +84,7 @@ switch menu_id
 		instance_deactivate_layer("options");
 		instance_deactivate_layer("credits");
 		instance_activate_layer("level_select");
+		instance_activate_layer("level_buttons");
 		break;
 	
 	case "2": // options
@@ -93,6 +95,7 @@ switch menu_id
 		instance_activate_layer("options");
 		instance_deactivate_layer("credits");
 		instance_deactivate_layer("level_select");
+		instance_deactivate_layer("level_buttons");
 		break;
 		
 	case "3": // credits
@@ -103,6 +106,7 @@ switch menu_id
 		instance_deactivate_layer("options");
 		instance_activate_layer("credits");
 		instance_deactivate_layer("level_select");
+		instance_deactivate_layer("level_buttons");
 		break;
 }
 

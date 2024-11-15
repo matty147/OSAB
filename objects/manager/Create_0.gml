@@ -5,6 +5,8 @@ global.pause = false;
 
 global.runtime = 0; // track starts
 
+global.can_interact = true;
+
 
 
 menu_id = 0;
@@ -64,7 +66,7 @@ if room == main_menu
 
 	for (var i = 0; i < array_length(save) && i < 11; i += 1)
 	{
-		var	button_instance = instance_create_layer(room_width,-15 + i * 73,"level_select",obj_button)
+		var	button_instance = instance_create_layer(room_width,-15 + i * 73,"level_buttons",obj_button)
 		button_instance.button_title = save[i]; //fetch the button display title
 		button_instance.image_xscale = 0.3; // x scale of button
 		button_instance.image_yscale = 0.3; // y scale of button
