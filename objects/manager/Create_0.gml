@@ -77,7 +77,7 @@ if room == main_menu
 	}
 	while amount_of_buttons < 11
 	{
-		var	button_instance = instance_create_layer(room_width,-15 + amount_of_buttons * 73,"level_select",obj_button)
+		var	button_instance = instance_create_layer(room_width,-15 + amount_of_buttons * 73,"level_buttons",obj_button)
 		button_instance.button_title = "";
 		button_instance.image_xscale = 0.3;
 		button_instance.image_yscale = 0.3;
