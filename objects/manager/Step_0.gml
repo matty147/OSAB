@@ -62,7 +62,56 @@ if move_buttons == 0
 	//}
 }
 
+switch menu_id
+{
+	
+	case "0": // main menu
+		button_repeat = false;
+		button_max = 3;
+	
+		instance_activate_layer("main");
+		instance_deactivate_layer("options");
+		instance_deactivate_layer("credits");
+		instance_deactivate_layer("level_select");
+		break;
+	
+	case "1": // level select
+		button_max = 10;
+		button_repeat = true;
+	
+		instance_deactivate_layer("main");
+		instance_deactivate_layer("options");
+		instance_deactivate_layer("credits");
+		instance_activate_layer("level_select");
+		break;
+	
+	case "2": // options
+		button_repeat = false;
+		button_max = 3;
+	
+		instance_deactivate_layer("main");
+		instance_activate_layer("options");
+		instance_deactivate_layer("credits");
+		instance_deactivate_layer("level_select");
+		break;
+		
+	case "3": // credits
+		button_repeat = false;
+		button_max = 0;
+	
+		instance_deactivate_layer("main");
+		instance_deactivate_layer("options");
+		instance_activate_layer("credits");
+		instance_deactivate_layer("level_select");
+		break;
+}
+
+
+
+
 if move_buttons != 0 && room = main_menu
 {
-audio_play_sound(snd_menu,2,false);	
+	audio_play_sound(snd_menu,2,false);	
 }
+
+

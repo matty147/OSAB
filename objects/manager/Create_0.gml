@@ -65,18 +65,18 @@ if room == main_menu
 	for (var i = 0; i < array_length(save) && i < 11; i += 1)
 	{
 		var	button_instance = instance_create_layer(room_width,-15 + i * 73,"level_select",obj_button)
-		button_instance.button_title = save[i];
-		button_instance.image_xscale = 10.5;
-		button_instance.image_yscale = 2.166;
-		button_instance.scrollable = true;
-		button_instance.button_id = i;
-		button_instance.title_position = "left";
+		button_instance.button_title = save[i]; //fetch the button display title
+		button_instance.image_xscale = 10.5; // x scale of button
+		button_instance.image_yscale = 2.166; // y scale of button
+		button_instance.scrollable = true;  // if the button should scroll (only in layer level_select)
+		button_instance.button_id = i; // id of the button for button for scrolling
+		button_instance.title_position = "left"; // position of the text on button
 		amount_of_buttons++;
 	}
 	while amount_of_buttons < 11
 	{
 		var	button_instance = instance_create_layer(room_width,-15 + amount_of_buttons * 73,"level_select",obj_button)
-		button_instance.button_title = "no";
+		button_instance.button_title = "";
 		button_instance.image_xscale = 10.5;
 		button_instance.image_yscale = 2.166;
 		button_instance.scrollable = true;
