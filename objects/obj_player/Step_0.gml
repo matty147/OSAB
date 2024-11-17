@@ -90,5 +90,3 @@ if !global.pause
 	}
 	
 }
-
-//show_debug_message("health:" + string(health));

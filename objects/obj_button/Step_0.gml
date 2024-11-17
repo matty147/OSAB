@@ -24,7 +24,10 @@ function button_pressed(menu_id, instance)
 			case "1": // option
 			//show_debug_message("show_options");
 				return 2;
-
+				
+			case "10":
+				global.pop_up = true;
+				return;
 		
 			case "2": // credits
 			//show_debug_message("show_credits");
@@ -35,7 +38,9 @@ function button_pressed(menu_id, instance)
 				break;
 
 			case "4": // Back
-				return floor(menu_id/10);
+				global.pop_up = false; // dosent find the room????
+				//show_debug_message(menu_id/10);
+				//return floor(menu_id/10);
 	}
 	return menu_id;
 } 
@@ -47,7 +52,7 @@ var instance = instance_find(manager,0); //find manager object to fetch values
 
 if keyboard_check_pressed(vk_escape) && instance.menu_id != 0 || keyboard_check_pressed(vk_backspace) && instance.menu_id != 0
 {
-	instance.menu_id = floor(instance.menu_id/10);
+	instance.menu_id = 4;// floor(instance.menu_id/10);
 	audio_play_sound(snd_back, 2, false);
 }
 
@@ -65,7 +70,7 @@ if point_distance(instance.mouse_xprevious, instance.mouse_yprevious, mouse_x, m
 }
 else if alarm[0] <= 0
 {
-	alarm[0] = fps * 5; // mouse stoped moving for 3 s. alarm 0 will activate only when when 
+	//alarm[0] = fps * 5; // mouse stoped moving for 3 s. alarm 0 will activate only when when 
 }
 
 instance.mouse_xprevious = mouse_x;
@@ -97,8 +102,6 @@ if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off
 		instance.menu_id = button_pressed(instance.menu_id, instance);
 	}
 }
-
-if mouse_x
 
 if scrollable
 {
@@ -195,35 +198,33 @@ if(!global.can_interact){
 }
 
 
+if move
+{
+	if global.pop_up
+	{
+		if hidden
+		{
+			display_text = true;
+			image_alpha = clamp(image_alpha + 0.1, 0, 1);	
+		}
+
+		x = lerp(x,moved_position_x + sprite_width,0.1);
+	}else
+	{
+		if hidden
+		{
+			display_text = false;
+			image_alpha = clamp(image_alpha - 0.05, 0, 1);	
+		}
+		
+		x = lerp(x,original_x,0.1);
+	}
+}
+
+
+
 //options buttons code
 
 //fakt mě zabij tohle je stupidni to prenecham tobe
-
 // Needs to move and spawn another object with settings info neer itself and reset whenever you leave that layer 
 
-
-/*var button_bg = instance_find(obj_menu_button_bg, 0);
-var original_x = button_bg.original_x;
-
-
-if (instance.menu_id == 2 && position_meeting(mouse_x, mouse_y, id)) {
-    if (mouse_check_button_pressed(mb_left) || keyboard_check_pressed(vk_enter)) {
-		
-        if (button_bg != undefined) {
-            button_bg.x = 200;
-        }
-
-        if (button_id == 0) {
-            show_debug_message("Button 1 clicked");
-        } else if (button_id == 1) {
-            show_debug_message("Button 1 clicked");
-        } else if (button_id == 2) {
-            show_debug_message("Button 2 clicked");
-        }
-
-        clicked = true;
-    }
-} else {
-	button_bg.x = button_bg.original_x;
-    clicked = false;
-}*/

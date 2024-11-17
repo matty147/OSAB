@@ -49,8 +49,6 @@ if !global.pause
 			button += button_max + 1;
 		}
 	
-	show_debug_message(button);
-	
 move_buttons = mouse_wheel_up() - mouse_wheel_down();
 
 if move_buttons == 0
@@ -113,9 +111,18 @@ switch menu_id
 
 
 
-if move_buttons != 0 && room = main_menu
+if move_buttons != 0 && room == main_menu
 {
 	audio_play_sound(snd_menu,2,false);	
 }
 
 
+if keyboard_check_pressed(vk_tab) && keyboard_check(vk_control) // open console menu
+{
+	global.debug = !global.debug;
+}
+
+if global.debug
+{
+	show_debug_log(true);
+}else show_debug_log(false);

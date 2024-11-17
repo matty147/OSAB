@@ -8,7 +8,6 @@ global.runtime = 0; // track starts
 global.can_interact = true;
 
 
-
 menu_id = 0;
 
 button = 0;
@@ -25,6 +24,8 @@ position = NaN;
 move_buttons = 0;
 
 mouse_pressed_y = 0;
+
+global.pop_up = false;
 
 
 show_debug_message("");
@@ -95,3 +96,6 @@ if !lemon
 {
 	game_end();	
 }
+
+
+global.debug = false; //will open console menu
