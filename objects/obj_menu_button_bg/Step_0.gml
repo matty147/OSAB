@@ -1,3 +1,4 @@
+
 if move
 {
 	if global.pop_up

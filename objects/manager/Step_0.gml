@@ -106,6 +106,9 @@ switch menu_id
 		instance_deactivate_layer("level_select");
 		instance_deactivate_layer("level_buttons");
 		break;
+		
+	case "21":
+		break;
 }
 
 

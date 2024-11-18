@@ -25,9 +25,9 @@ function button_pressed(menu_id, instance)
 			//show_debug_message("show_options");
 				return 2;
 				
-			case "10":
+			case "20":
 				global.pop_up = true;
-				return;
+				return 20; // options + 1
 		
 			case "2": // credits
 			//show_debug_message("show_credits");
@@ -38,9 +38,9 @@ function button_pressed(menu_id, instance)
 				break;
 
 			case "4": // Back
-				global.pop_up = false; // dosent find the room????
-				//show_debug_message(menu_id/10);
-				//return floor(menu_id/10);
+				global.pop_up = false; // dosen't find the room????
+				show_debug_message(menu_id/10);
+				return floor(menu_id/10);
 	}
 	return menu_id;
 } 
@@ -52,7 +52,8 @@ var instance = instance_find(manager,0); //find manager object to fetch values
 
 if keyboard_check_pressed(vk_escape) && instance.menu_id != 0 || keyboard_check_pressed(vk_backspace) && instance.menu_id != 0
 {
-	instance.menu_id = 4;// floor(instance.menu_id/10);
+	pop_up = false;
+	instance.menu_id = floor(instance.menu_id/10);
 	audio_play_sound(snd_back, 2, false);
 }
 
@@ -162,8 +163,7 @@ if scrollable
 		
 		
 			instance.last_value -= sign(instance.move_buttons);
-			instance.first_value -= sign(instance.move_buttons);
-		
+			instance.first_value -= sign(instance.move_buttons);	
 			
 			//check if the list is not overflowing and if so, fixes it.
 			
@@ -193,7 +193,7 @@ if scrollable
 
 if(!global.can_interact){
 	if(scrollable){
-	image_xscale = 0.5;
+		image_xscale = 0.5;
 	}
 }
 

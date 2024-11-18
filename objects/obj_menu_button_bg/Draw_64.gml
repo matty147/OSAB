@@ -1,7 +1,6 @@
 draw_set_color(c_white);
 draw_set_halign(fa_center);
 
-
 if display_text
 {
 	draw_line(x + margin_x, line_y, x + sprite_width - margin_x, line_y);
@@ -13,9 +12,10 @@ if display_text
 
 	if (instance.menu_id == 0) {
 	    draw_text(x + sprite_width / 2, text_y, "Welcome");
-	} else if (instance.menu_id == 2) {
+	} else if (instance.menu_id == 2) || (instance.menu_id == 20){
 	    draw_text(x + sprite_width / 2, text_y, "Options");
 	} else if (instance.menu_id == 1){
 		draw_text(x + sprite_width / 2, text_y, "Level Details");
 	}
+	
 }
