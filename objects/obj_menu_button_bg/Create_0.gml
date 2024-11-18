@@ -5,6 +5,7 @@ margin_x = 30;
 line_y = y + 120;
 text_y = y + 70;
 
+instance = instance_find(manager, 0);
 
 if hidden
 {

@@ -6,6 +6,7 @@
 	moved_position_x: move button from default spot to this var. only used in options
 	move: if the button should move 
 	hidden: if hte button should hide as default
+	button_number: option menu button id
 */
 
 

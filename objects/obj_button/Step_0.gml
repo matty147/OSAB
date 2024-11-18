@@ -27,7 +27,18 @@ function button_pressed(menu_id, instance)
 				
 			case "20":
 				global.pop_up = true;
+				instance.pop_up_id = 1;
 				return 20; // options + 1
+				
+			case "21":
+				global.pop_up = true;
+				instance.pop_up_id = 2;
+				return 21; // options + 1
+				
+			case "22":
+				global.pop_up = true;
+				instance.pop_up_id = 2;
+				return 22; // options + 1
 		
 			case "2": // credits
 			//show_debug_message("show_credits");
@@ -89,7 +100,10 @@ if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off
 	
 	if mouse_check_button_released(mb_left)
 	{
-		audio_play_sound(snd_click, 2, false);
+		if image_alpha > 0
+		{
+			audio_play_sound(snd_click, 2, false);
+		}
 		instance.menu_id = button_pressed(instance.menu_id, instance);
 		
 	}
@@ -99,7 +113,10 @@ if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off
 	image_index = 1;
 	if keyboard_check_released(vk_enter)
 	{
-		audio_play_sound(snd_click, 2, false);
+		if image_alpha > 0
+		{
+			audio_play_sound(snd_click, 2, false);
+		}
 		instance.menu_id = button_pressed(instance.menu_id, instance);
 	}
 }
@@ -202,7 +219,7 @@ if move
 {
 	if global.pop_up
 	{
-		if hidden
+		if hidden && instance.pop_up_id == button_number || hidden && instance.pop_up_id == 0
 		{
 			display_text = true;
 			image_alpha = clamp(image_alpha + 0.1, 0, 1);	
@@ -219,6 +236,13 @@ if move
 		
 		x = lerp(x,original_x,0.1);
 	}
+	
+	if instance.pop_up_id != button_number && button_number != 0
+	{
+		image_alpha = clamp(image_alpha - 0.05, 0, 1);	
+		display_text = false;	
+	}
+	
 }
 
 

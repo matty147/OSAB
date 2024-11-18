@@ -25,6 +25,8 @@ move_buttons = 0;
 
 mouse_pressed_y = 0;
 
+pop_up_id = 0;
+
 global.pop_up = false;
 
 
