@@ -7,6 +7,7 @@ global.runtime = 0; // track starts
 
 global.can_interact = true;
 
+id_of_button_selected = 4;
 
 menu_id = 0;
 
@@ -69,29 +70,33 @@ if room == main_menu
 
 	for (var i = 0; i < array_length(save) && i < 11; i += 1)
 	{
-		var	button_instance = instance_create_layer(room_width,-15 + i * 73,"level_buttons",obj_button)
+		var	button_instance = instance_create_layer(room_width,-15 + i * 73,"level_select",obj_button)
 		button_instance.button_title = save[i]; //fetch the button display title
 		button_instance.image_xscale = 0.3; // x scale of button
 		button_instance.image_yscale = 0.3; // y scale of button
 		button_instance.scrollable = true;  // if the button should scroll (only in layer level_select)
 		button_instance.button_id = i; // id of the button for button for scrolling
 		button_instance.title_position = "left"; // position of the text on button
+		button_instance.selected_button_id = i;
 		amount_of_buttons++;
 	}
 	while amount_of_buttons < 11
 	{
-		var	button_instance = instance_create_layer(room_width,-15 + amount_of_buttons * 73,"level_buttons",obj_button)
+		var	button_instance = instance_create_layer(room_width,-15 + amount_of_buttons * 73,"level_select",obj_button)
 		button_instance.button_title = "";
 		button_instance.image_xscale = 0.3;
 		button_instance.image_yscale = 0.3;
 		button_instance.scrollable = true;
 		button_instance.button_id = amount_of_buttons;
 		button_instance.title_position = "left";
+		button_instance.selected_button_id = amount_of_buttons;
 		amount_of_buttons++;		
 	}
 	show_debug_message(amount_of_buttons);
 	show_debug_message("array lenght: " + string(array_length(save)));
-	
+
+	var select_panel = instance_create_layer(0,640,"level_buttons",obj_select_panel);
+
 }
 
 if !lemon

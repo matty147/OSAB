@@ -5,7 +5,7 @@
 	title_position: where on the button will the text be displayed (left/right/middle)
 	moved_position_x: move button from default spot to this var. only used in options
 	move: if the button should move 
-	hidden: if hte button should hide as default
+	hidden: if the button should hide as default
 	button_number: option menu button id
 */
 
@@ -15,6 +15,7 @@ image_index = 0;
 mouse_hover = true
 display_text = true;
 pop_up = false;
+selected_button_id = 1;
 
 if hidden
 {

@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"select_panel",
+  "%Name":"obj_select_panel",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"select_panel",
+  "name":"obj_select_panel",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",

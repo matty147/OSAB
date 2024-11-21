@@ -37,7 +37,7 @@ function button_pressed(menu_id, instance)
 				
 			case "22":
 				global.pop_up = true;
-				instance.pop_up_id = 2;
+				instance.pop_up_id = 3;
 				return 22; // options + 1
 		
 			case "2": // credits
@@ -98,6 +98,8 @@ if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off
 {
 	image_index = 1;
 	
+	instance.id_of_button_selected = selected_button_id;
+	
 	if mouse_check_button_released(mb_left)
 	{
 		if image_alpha > 0
@@ -111,6 +113,9 @@ if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off
 }else if button_id == instance.button && instance.mouse_off
 {
 	image_index = 1;
+	
+	instance.id_of_button_selected = selected_button_id;
+	
 	if keyboard_check_released(vk_enter)
 	{
 		if image_alpha > 0
@@ -168,6 +173,9 @@ if scrollable
 				instance.first_value = 0;
 			}
 			
+			selected_button_id = instance.last_value;
+			
+			show_debug_message("a: " + string(instance.last_value));
 			
 		//saves the updated value from the list into a button_title.
 		button_title = instance.save[instance.last_value];
@@ -201,6 +209,9 @@ if scrollable
 			{
 				instance.last_value = 0;
 			}
+			
+			selected_button_id = instance.first_value;
+			show_debug_message("a: " + string(instance.first_value));
 			
 		//saves the updated value from the list into a button_title.
 		button_title = instance.save[instance.first_value];
@@ -244,6 +255,8 @@ if move
 	}
 	
 }
+
+var pannel = instance_find(obj_select_panel,0);
 
 
 
