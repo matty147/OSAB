@@ -175,7 +175,7 @@ if scrollable
 			
 			selected_button_id = instance.last_value;
 			
-			show_debug_message("a: " + string(instance.last_value));
+			//show_debug_message("a: " + string(instance.last_value));
 			
 		//saves the updated value from the list into a button_title.
 		button_title = instance.save[instance.last_value];
@@ -211,7 +211,7 @@ if scrollable
 			}
 			
 			selected_button_id = instance.first_value;
-			show_debug_message("a: " + string(instance.first_value));
+			//show_debug_message("a: " + string(instance.first_value));
 			
 		//saves the updated value from the list into a button_title.
 		button_title = instance.save[instance.first_value];

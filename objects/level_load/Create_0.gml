@@ -31,7 +31,7 @@ _alpha = [];
 			if _path_parts[0] != "id" && _path_parts[0] != "name" && _path_parts[0] != "lenght" && _path_parts[0] != "diff" && _path_parts[0] != "description" && string_trim(_path_parts[0]) != "-"
 			{
 				//save file into arrays
-				show_debug_message("a: " + string(_path_parts[0]));
+				//show_debug_message("a: " + string(_path_parts[0]));
 					if _path_parts[0] != "//" // removes comments. comments must start with "//,"
 					{
 						array_push(_time,_path_parts[0]);		

@@ -1,5 +1,13 @@
 //, time, id, x, y, scale, direction, speed, alpha
 //, circles
+
+id,0
+name,test
+description,proste napis naky slovo dej shift bez na cajthamla prosim nehraj si na cajthmalma jo bude to fungovat jeste pis no to je vsechno jdeme
+lenght,69
+diff,5
+-
+
 100,1,750,500,0.6,0,3,0.2
 100,1,750,500,0.6,36,3,0.2
 100,1,750,500,0.6,72,3,0.2

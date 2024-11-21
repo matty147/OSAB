@@ -13,7 +13,9 @@ description = "";
 lenght = "";
 diff = "";
 
-				
+last_id_of_button_selected = 4;
+
+loaded_level_data = false;				
 
 instance = instance_find(manager, 0);
 
