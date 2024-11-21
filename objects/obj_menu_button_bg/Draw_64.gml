@@ -37,6 +37,7 @@ if display_text
 
 if level_info
 {
+		data = [];
 		var file = file_text_open_read(instance.save[instance.id_of_button_selected] + ".osab");
 		
 			while (!file_text_eof(file))
@@ -54,17 +55,9 @@ if level_info
 						break;
 					}
 				
-					show_debug_message("lol: " + string(_path_parts[0]));
-					show_debug_message("lol: " + string(_path_parts[1]));
-					show_debug_message("lol: " + string(_path_parts[2]));
-					show_debug_message("lol: " + string(_path_parts[3]));
 					if _path_parts[0] != "//"
 					{
-						_id = string(_path_parts[0]);
-						name = string(_path_parts[1]);
-						description = string(_path_parts[2]);
-						lenght = string(_path_parts[3]);
-						diff = string(_path_parts[4]);
+						array_push(data,_path_parts[1]);
 					}
 				
 					show_debug_message("processed:" + string(line));
@@ -72,8 +65,27 @@ if level_info
 			}
 				file_text_close(file);
 			show_debug_message("finished");
-	
+			
+			if array_length(data) >= 4
+			{			
+				_id = data[0];
+				name = data[1];
+				description = data[2];
+				lenght = data[3];
+				diff = data[4];
+			}else{
+				_id = "";
+				name = "";
+				description = "";
+				lenght = "";
+				diff = "";
+			}
 	
 	//draw_set_halign(fa_left);
-	draw_text(x + sprite_width / 2 ,190,"description: " + string(description))	
+	
+	draw_set_font(fnt_default);
+	
+	draw_text_ext_transformed(x + sprite_width / 2 ,230,"description: " + string(description),30,300,2,2,0);	
+	draw_text_transformed(x + sprite_width / 2 ,320,"lenght: " + string(lenght),2,2,0);	
+	draw_text_transformed(x + sprite_width / 2 ,400,"difficulty: " + string(diff),2,2,0);	
 }

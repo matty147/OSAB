@@ -28,9 +28,10 @@ _alpha = [];
 
 			show_debug_message(_path_parts);
 		
-			if _path_parts[0] != "id" && _path_parts[0] != "name" && _path_parts[0] != "lenght" && _path_parts[0] != "diff" && _path_parts[0] != "description"
+			if _path_parts[0] != "id" && _path_parts[0] != "name" && _path_parts[0] != "lenght" && _path_parts[0] != "diff" && _path_parts[0] != "description" && string_trim(_path_parts[0]) != "-"
 			{
 				//save file into arrays
+				show_debug_message("a: " + string(_path_parts[0]));
 					if _path_parts[0] != "//" // removes comments. comments must start with "//,"
 					{
 						array_push(_time,_path_parts[0]);		
@@ -42,7 +43,7 @@ _alpha = [];
 						array_push(_speed, _path_parts[6])
 						array_push(_alpha, _path_parts[7])
 					}else show_debug_message("comment " + string(line));
-			}else show_debug_message("level : " + string(_path_parts[0]) + ": " + string (_path_parts[1]))
+			}//else show_debug_message("level : " + string(_path_parts[0]) + ": " + string (_path_parts[1]));
 		}else show_debug_message("nothing here line ignored");
 		
 		//show_debug_message(line);
