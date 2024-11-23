@@ -16,6 +16,7 @@ mouse_hover = true
 display_text = true;
 pop_up = false;
 selected_button_id = 1;
+can_interact = false;
 
 if hidden
 {

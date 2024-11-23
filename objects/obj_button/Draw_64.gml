@@ -5,8 +5,10 @@ draw_set_font (fnt_default);
 if display_text
 {
 
-	//if !scrollable
-	//{
+	if scrollable && instance_place(x,y - sprite_height * 3/4 ,obj_select_panel) // makes the text not overlap with select panel
+	{
+		exit;
+	}
 		switch title_position
 		{
 			case "left":

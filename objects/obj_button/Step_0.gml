@@ -2,13 +2,12 @@
 
 function button_pressed(menu_id, instance)
 {
-	if(global.can_interact){
 		if scrollable
 		{
 			global.level_name = button_title;
 			room_goto(level);
 		}
-	}
+
 	
 	instance.button = 0; 
 	
@@ -23,6 +22,7 @@ function button_pressed(menu_id, instance)
 		
 			case "1": // option
 			//show_debug_message("show_options");
+			global.pop_up = false;
 				return 2;
 				
 			case "20":
@@ -55,9 +55,6 @@ function button_pressed(menu_id, instance)
 	}
 	return menu_id;
 } 
-
-
-
 
 var instance = instance_find(manager,0); //find manager object to fetch values
 
@@ -93,9 +90,18 @@ if instance.move_buttons != 0 &&  mouse_wheel_up() - mouse_wheel_down() == 0
 	alarm[0] = 1;	
 }
 
-
-if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off
+if instance_place(mouse_x,mouse_y - 32,obj_select_panel) // the mouse is not perfect so we need to move it down a bit so there is no dead space
 {
+	can_interact = false;
+}else can_interact = true;
+
+if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off 
+{
+	if scrollable && !can_interact // cant interact if button is hiden behind by obj_select_panel (mouse is touching select panel)
+	{
+		exit;
+	}
+	
 	image_index = 1;
 	
 	instance.id_of_button_selected = selected_button_id;
@@ -219,11 +225,9 @@ if scrollable
 	}
 }
 
-if(!global.can_interact){
 	if(scrollable){
 		image_xscale = 0.5;
 	}
-}
 
 
 if move
@@ -257,11 +261,3 @@ if move
 }
 
 var pannel = instance_find(obj_select_panel,0);
-
-
-
-//options buttons code
-
-//fakt mě zabij tohle je stupidni to prenecham tobe
-// Needs to move and spawn another object with settings info neer itself and reset whenever you leave that layer 
-

@@ -8,7 +8,8 @@ if global.pause //temp
 	draw_rectangle_colour(0, 0, room_width, 50, c_aqua,c_aqua,c_aqua,c_aqua,false);
 	draw_set_colour(c_aqua);
 	draw_set_font (fnt_default);
-	draw_text_transformed(room_width/2 - 100,room_height/2,"Paused",2,2,0);
+	draw_set_valign(fa_middle);
+	draw_text_transformed(room_width/2,room_height/2,"Paused",5,5,0);
 }
 	
 	

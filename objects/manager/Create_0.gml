@@ -5,7 +5,7 @@ global.pause = false;
 
 global.runtime = 0; // track starts
 
-global.can_interact = true;
+//global.can_interact = true; //??????????
 
 id_of_button_selected = 4;
 
