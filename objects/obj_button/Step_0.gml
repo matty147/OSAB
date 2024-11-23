@@ -28,18 +28,18 @@ function button_pressed(menu_id, instance)
 			case "20":
 				global.pop_up = true;
 				instance.pop_up_id = 1;
-				return 20; // options + 1
+				return 20;
 				
 			case "21":
 				global.pop_up = true;
 				instance.pop_up_id = 2;
-				return 21; // options + 1
+				return 21;
 				
 			case "22":
 				global.pop_up = true;
 				instance.pop_up_id = 3;
-				return 22; // options + 1
-		
+				return 22;
+				
 			case "2": // credits
 			//show_debug_message("show_credits");
 				return 3;
