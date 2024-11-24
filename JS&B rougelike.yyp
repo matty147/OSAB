@@ -79,6 +79,7 @@
     {"$GMIncludedFile":"","%Name":"Abc - 50.osab","CopyToMask":-1,"filePath":"datafiles","name":"Abc - 50.osab","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"Abc - 51.osab","CopyToMask":-1,"filePath":"datafiles","name":"Abc - 51.osab","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"lemon.png","CopyToMask":-1,"filePath":"datafiles","name":"lemon.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"test.osab","CopyToMask":-1,"filePath":"datafiles","name":"test.osab","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],

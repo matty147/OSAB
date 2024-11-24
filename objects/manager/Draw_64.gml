@@ -1,15 +1,12 @@
 draw_self();
 
-if global.pause //temp
+if room == level
 {
-	draw_set_alpha(0.5);
-	draw_rectangle_colour(0, 0, room_width, room_height, c_black,c_black,c_black,c_black,false);
-	draw_set_alpha(1);
-	draw_rectangle_colour(0, 0, room_width, 50, c_aqua,c_aqua,c_aqua,c_aqua,false);
-	draw_set_colour(c_aqua);
-	draw_set_font (fnt_default);
-	draw_set_valign(fa_middle);
-	draw_text_transformed(room_width/2,room_height/2,"Paused",5,5,0);
+	if global.pause //temp
+	{
+		instance_activate_layer("pause_menu");
+		draw_text_transformed(room_width * 3/4,room_height * 1/4,"Paused",5,5,0);
+	}else instance_deactivate_layer("pause_menu");	
 }
 	
 	

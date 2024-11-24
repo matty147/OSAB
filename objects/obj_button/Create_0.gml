@@ -23,7 +23,9 @@ if hidden
 	display_text = false;	
 }
 
-global.level_name = "test";
+if !variable_global_exists("level_name") {
+	global.level_name = "test";
+}
 
 scrollable = false;
 

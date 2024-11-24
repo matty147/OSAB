@@ -1,7 +1,7 @@
 	// spawn objects after the file is read until there are no more to spawn
 	if current_index < array_length(_x) && _time[current_index] == global.runtime
 	{
-		var instance = instance_create_layer(_x[current_index],_y[current_index],"Spawned",obj_enemy);
+		var instance = instance_create_layer(_x[current_index],_y[current_index],"spawned",obj_enemy);
 		instance.image_index = _id[current_index];
 		instance.image_xscale = _size[current_index];
 		instance.image_yscale = _size[current_index];
@@ -15,7 +15,7 @@
 		//spawning enemies on the same frame
 		while current_index < array_length(_x) && _time[current_index] == global.runtime
 		{
-			instance = instance_create_layer(_x[current_index],_y[current_index],"Spawned",obj_enemy);
+			instance = instance_create_layer(_x[current_index],_y[current_index],"spawned",obj_enemy);
 			instance.image_index = _id[current_index];
 			instance.image_xscale = _size[current_index];
 			instance.image_yscale = _size[current_index];

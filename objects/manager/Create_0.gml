@@ -5,6 +5,8 @@ global.pause = false;
 
 global.runtime = 0; // track starts
 
+global.debug = false; //will open console menu
+
 //global.can_interact = true; //??????????
 
 id_of_button_selected = 4;
@@ -103,6 +105,3 @@ if !lemon
 {
 	game_end();	
 }
-
-
-global.debug = false; //will open console menu

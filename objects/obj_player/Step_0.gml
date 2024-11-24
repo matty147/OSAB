@@ -89,4 +89,9 @@ if !global.pause
 		room_restart();		
 	}
 	
+	if x < 0 || y < 0 || x > room_width || y > room_height // if player out of bounds
+	{
+		room_restart();
+	}
+	
 }

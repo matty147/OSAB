@@ -11,7 +11,7 @@ function button_pressed(menu_id, instance)
 	
 	instance.button = 0; 
 	
-	switch function_id
+	switch function_id // -1 is NaN
 	{
 		//first screen
 	
@@ -52,6 +52,20 @@ function button_pressed(menu_id, instance)
 				global.pop_up = false; // dosen't find the room????
 				show_debug_message(menu_id/10);
 				return floor(menu_id/10);
+				
+			case "40": // continue
+				global.pause = false;
+				return 0;
+				
+			case "41": // retry
+			//show_debug_message("global level name" + string(global.level_name));
+				room_restart();
+				return 0;
+				
+			case "42": // exit level
+				room_goto(main_menu)
+				return 0;
+				
 	}
 	return menu_id;
 } 
@@ -97,23 +111,20 @@ if instance_place(mouse_x,mouse_y - 32,obj_select_panel) // the mouse is not per
 
 if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off 
 {
-	if scrollable && !can_interact // cant interact if button is hiden behind by obj_select_panel (mouse is touching select panel)
+	if !(scrollable && !can_interact) // cant interact if button is hiden behind by obj_select_panel (mouse is touching select panel)
 	{
-		exit;
-	}
+		image_index = 1;
 	
-	image_index = 1;
+		instance.id_of_button_selected = selected_button_id;
 	
-	instance.id_of_button_selected = selected_button_id;
-	
-	if mouse_check_button_released(mb_left)
-	{
-		if image_alpha > 0
+		if mouse_check_button_released(mb_left)
 		{
-			audio_play_sound(snd_click, 2, false);
+			if image_alpha > 0
+			{
+				audio_play_sound(snd_click, 2, false);
+			}
+			instance.menu_id = button_pressed(instance.menu_id, instance);
 		}
-		instance.menu_id = button_pressed(instance.menu_id, instance);
-		
 	}
 
 }else if button_id == instance.button && instance.mouse_off

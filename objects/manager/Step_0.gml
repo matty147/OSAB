@@ -114,7 +114,7 @@ switch menu_id
 
 
 
-if move_buttons != 0 && room == main_menu
+if move_buttons != 0 && room == main_menu && menu_id == "1"
 {
 	audio_play_sound(snd_menu,2,false);	
 }

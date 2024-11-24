@@ -15,6 +15,7 @@ _alpha = [];
 
 	//load file
 	file = file_text_open_read(global.level_name + ".osab");
+	
 
 	show_debug_message(global.level_name);
 	//read file
