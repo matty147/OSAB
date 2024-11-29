@@ -195,7 +195,7 @@ if scrollable
 			//show_debug_message("a: " + string(instance.last_value));
 			
 		//saves the updated value from the list into a button_title.
-		button_title = instance.save[instance.last_value];
+		button_title = filename_name(instance.save[instance.last_value]);
 		
 	}
 
@@ -231,7 +231,7 @@ if scrollable
 			//show_debug_message("a: " + string(instance.first_value));
 			
 		//saves the updated value from the list into a button_title.
-		button_title = instance.save[instance.first_value];
+		button_title = filename_name(instance.save[instance.first_value]); // use file_name to fetch file name from the path
 		
 	}
 }

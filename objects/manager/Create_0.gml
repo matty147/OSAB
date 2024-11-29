@@ -51,29 +51,25 @@ if room == main_menu
 {
 	//checks for available levels
 
-	var _file = file_find_first("*.osab*", 0);
+    results = [];
+    scr_read_files("levels", ".osab", results); // if the file dir is changed. reloading game maker is needed
 
-	while ( _file != "" ) // file_find_first() / file_find_next() return "" (empty string) if no files found.
-	{
-		_file = string_delete(_file, string_length(_file) - 4, 5);
-		show_debug_message(_file + ".osab");
-	    save[index++] = _file; 
-	    _file = file_find_next();
+    if array_length(results) > 0 {
+        for (var i = 0; i < array_length(results); i++) {
+            show_debug_message("File found: " + results[i]);
+        }
+    } else {
+        show_debug_message("No files found.");
+    }
 
-	}
-
-	show_debug_message("\nFound " + string(index) + " files.");
-
-	file_find_close();
-
-	show_debug_message("");
+        save = results;
 
 	amount_of_buttons = 0;
 
 	for (var i = 0; i < array_length(save) && i < 11; i += 1)
 	{
 		var	button_instance = instance_create_layer(room_width,-15 + i * 73,"level_select",obj_button)
-		button_instance.button_title = save[i]; //fetch the button display title
+		button_instance.button_title = filename_name(save[i]); //fetch the button display title
 		button_instance.image_xscale = 0.3; // x scale of button
 		button_instance.image_yscale = 0.3; // y scale of button
 		button_instance.scrollable = true;  // if the button should scroll (only in layer level_select)
@@ -93,9 +89,11 @@ if room == main_menu
 		button_instance.title_position = "left";
 		button_instance.selected_button_id = amount_of_buttons;
 		amount_of_buttons++;		
-	}
+	}	
 	show_debug_message(amount_of_buttons);
 	show_debug_message("array lenght: " + string(array_length(save)));
+	show_debug_message(filename_dir(save[0])); // for path to the folder
+	show_debug_message(filename_name(save[0])); // for name of the file
 
 	var select_panel = instance_create_layer(0,640,"level_buttons",obj_select_panel);
 

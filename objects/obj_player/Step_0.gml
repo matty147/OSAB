@@ -21,12 +21,14 @@ if !global.pause
 	    move_y /= length;
 	}
 
-	if dash == 1	
+	if dash == 1 && !dash_cooldown
 	{
 		dash_speed = 8;
 		is_invincible = true;
 		is_dashing = true;
+		dash_cooldown = true;
 		alarm[0] = invincible_time * fps;
+		alarm[1] = 0.5 * fps;
 	}
 	if dash_speed > 1
 	{
