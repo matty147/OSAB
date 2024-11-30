@@ -4,7 +4,8 @@ function button_pressed(menu_id, instance)
 {
 		if scrollable
 		{
-			global.level_name = button_title;
+			global.level_name = file_path;
+			show_debug_message(global.level_name);
 			room_goto(level);
 		}
 
@@ -197,6 +198,7 @@ if scrollable
 		//saves the updated value from the list into a button_title.
 		button_title = filename_name(instance.save[instance.last_value]);
 		
+		file_path = (instance.save[instance.last_value]);
 	}
 
 	if y > room_height + 30 // moving from bottom to top
@@ -232,6 +234,7 @@ if scrollable
 			
 		//saves the updated value from the list into a button_title.
 		button_title = filename_name(instance.save[instance.first_value]); // use file_name to fetch file name from the path
+		file_path = (instance.save[instance.first_value]);
 		
 	}
 }

@@ -14,7 +14,7 @@ function scr_read_files(folder, extension, results) {
 
     while (_file != "") {
         var full_path = folder + "\\" + _file;
-        if (_file != "." && _file != "..") {
+        if (_file != "." && _file != "..") { // if not special or hiden folder
             if (directory_exists(full_path)) {
                 array_push(subfolders, full_path);
             } else if (file_exists(full_path) && string_pos(extension, _file) > 0) {

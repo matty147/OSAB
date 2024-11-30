@@ -70,6 +70,7 @@ if room == main_menu
 	{
 		var	button_instance = instance_create_layer(room_width,-15 + i * 73,"level_select",obj_button)
 		button_instance.button_title = filename_name(save[i]); //fetch the button display title
+		button_instance.file_path =  save[i]; // path to the file
 		button_instance.image_xscale = 0.3; // x scale of button
 		button_instance.image_yscale = 0.3; // y scale of button
 		button_instance.scrollable = true;  // if the button should scroll (only in layer level_select)

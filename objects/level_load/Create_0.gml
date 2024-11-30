@@ -14,7 +14,7 @@ _speed = [];
 _alpha = [];
 
 	//load file
-	file = file_text_open_read(global.level_name + ".osab");
+	file = file_text_open_read(global.level_name);
 	
 
 	show_debug_message(global.level_name);

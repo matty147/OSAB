@@ -18,6 +18,8 @@ pop_up = false;
 selected_button_id = 1;
 can_interact = false;
 
+file_path = "";
+
 if hidden
 {
 	display_text = false;	
