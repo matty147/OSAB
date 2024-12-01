@@ -20,7 +20,7 @@ if keyboard_check_pressed(ord("C"))
 //show_debug_message(working_directory);
 
 var fileid = file_text_open_write(working_directory + "test.txt"); // C:\Users\<user>\AppData\Local\<project name> why the fuck is it there T-T
-if fileid = -1
+if fileid = -1 // it will go to the same place when exported fuck this
 {
 	show_debug_message("fuckup!!!!");
 	exit;

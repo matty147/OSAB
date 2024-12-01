@@ -20,8 +20,8 @@ if !global.pause
 	//calculates the movement direction and then translates it from deg to rad
 
 	////moves in one directioncx
-	x += cos(real(angle) * (pi / 180)) * real(_speed);
-	y += sin(real(angle) * (pi / 180)) * real(_speed);
+	//x += cos(real(angle) * (pi / 180)) * real(_speed);
+	//y += sin(real(angle) * (pi / 180)) * real(_speed);
 
 
 	//wave only on the y part
@@ -42,17 +42,17 @@ if !global.pause
 
 	//moves there and back
 
-	//// Variables to control the wave
-	//var wave_amplitude = 10; // Size of the wave
-	//var wave_frequency = 0.005; // Speed of the wave oscillation //0.005
-	//var wave_offset = sin(current_time * wave_frequency) * wave_amplitude; // Calculate the wave offset based on time
+	// Variables to control the wave
+	var wave_amplitude = 10; // Size of the wave
+	var wave_frequency = 0.005; // Speed of the wave oscillation //0.005
+	var wave_offset = sin(current_time * wave_frequency) * wave_amplitude; // Calculate the wave offset based on time
 
-	//// Main movement in the direction of the angle
-	//x += cos(real(angle) * (pi / 180)) * real(_speed);
-	//y += sin(real(angle) * (pi / 180)) * real(_speed);
+	// Main movement in the direction of the angle
+	x += cos(real(angle) * (pi / 180)) * real(_speed);
+	y += sin(real(angle) * (pi / 180)) * real(_speed);
 
-	//// Add wave motion perpendicular to the movement direction
-	//x += cos((real(angle) + 90) * (pi / 180)) * wave_offset;
-	//y += sin((real(angle) + 90) * (pi / 180)) * wave_offset;
+	// Add wave motion perpendicular to the movement direction
+	x += cos((real(angle) + 90) * (pi / 180)) * wave_offset;
+	y += sin((real(angle) + 90) * (pi / 180)) * wave_offset;
 }
 
