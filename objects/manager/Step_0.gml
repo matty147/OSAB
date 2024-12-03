@@ -1,35 +1,16 @@
 if keyboard_check_pressed(ord("R")) && keyboard_check(vk_control)
 {
-	game_restart();	
+	game_restart();
 }
 
-if keyboard_check_pressed(ord("C"))
+//if keyboard_check_pressed(ord("S")) && keyboard_check(vk_control) && room == editor
+//{
+//	scr_save_level("test.osab","");
+//}
+
+if keyboard_check_pressed(ord("E"))
 {
-//	// Create and open the file in write mode
-//var file = file_text_open_write("example.txt");
-
-//// Write some text to the file
-//file_text_write_string(file, "Hello, this is a line of text!");
-//file_text_writeln(file); // Adds a newline after the string
-
-//file_text_write_string(file, "This is another line.");
-//file_text_writeln(file);
-
-//// Close the file
-//file_text_close(file);
-//show_debug_message(working_directory);
-
-var fileid = file_text_open_write(working_directory + "test.txt"); // C:\Users\<user>\AppData\Local\<project name> why the fuck is it there T-T
-if fileid = -1 // it will go to the same place when exported fuck this
-{
-	show_debug_message("fuckup!!!!");
-	exit;
-}
-
-file_text_write_real(fileid,69);
-file_text_write_string(fileid,"hello");
-file_text_close(fileid);
-
+	room_goto(editor);
 }
 
 
