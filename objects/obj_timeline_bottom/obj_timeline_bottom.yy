@@ -1,15 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_select_panel",
+  "%Name":"obj_timeline_bottom",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_select_panel",
+  "name":"obj_timeline_bottom",
   "overriddenProperties":[],
   "parent":{
-    "name":"main_menu",
-    "path":"folders/Objects/main_menu.yy",
+    "name":"level",
+    "path":"folders/Objects/level.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_select_panel",
-    "path":"sprites/spr_select_panel/spr_select_panel.yy",
+    "name":"spr_timeline_bottom",
+    "path":"sprites/spr_timeline_bottom/spr_timeline_bottom.yy",
   },
   "spriteMaskId":null,
   "visible":true,

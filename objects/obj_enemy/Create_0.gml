@@ -21,3 +21,15 @@ if !variable_instance_exists(id,"_speed") // check if the value is declared if n
 {
 	_speed = 0;	
 }
+
+if !variable_instance_exists(id,"spawned_time")
+{
+	spawned_time = 0;
+}
+
+if !variable_instance_exists(id,"move")
+{
+move = false;	
+	
+}
+	

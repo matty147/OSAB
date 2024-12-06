@@ -10,8 +10,8 @@
   "name":"obj_menu_button_bg",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"main_menu",
+    "path":"folders/Objects/main_menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,

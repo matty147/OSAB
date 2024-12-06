@@ -9,6 +9,7 @@
 		instance._speed = _speed[current_index];
 		instance.image_alpha = _alpha[current_index];
 		instance.survive_speed = 500;
+		instance.move = true;
 		current_index++;
 	
 	
@@ -23,6 +24,7 @@
 			instance._speed = _speed[current_index];
 			instance.image_alpha = _alpha[current_index];
 			instance.survive_speed = 500;
+			instance.move = true;
 			current_index++;	
 		}
 	}

@@ -9,8 +9,8 @@
   "name":"obj_editor",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"level_editor",
+    "path":"folders/Objects/level_editor.yy",
   },
   "parentObjectId":null,
   "persistent":false,
