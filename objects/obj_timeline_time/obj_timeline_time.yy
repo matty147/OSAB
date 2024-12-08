@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_arrow",
+  "%Name":"obj_timeline_time",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_arrow",
+  "name":"obj_timeline_time",
   "overriddenProperties":[],
   "parent":{
     "name":"level_editor",
@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_arrow",
-    "path":"sprites/spr_arrow/spr_arrow.yy",
+    "name":"spr_timeline_time",
+    "path":"sprites/spr_timeline_time/spr_timeline_time.yy",
   },
   "spriteMaskId":null,
   "visible":true,

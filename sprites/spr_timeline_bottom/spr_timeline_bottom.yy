@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"level_editor",
+    "path":"folders/Sprites/level_editor.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
