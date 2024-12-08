@@ -1,12 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_timeline_bottom",
+  "%Name":"obj_arrow",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_timeline_bottom",
+  "name":"obj_arrow",
   "overriddenProperties":[],
   "parent":{
     "name":"level_editor",
@@ -31,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_timeline_bottom",
-    "path":"sprites/spr_timeline_bottom/spr_timeline_bottom.yy",
+    "name":"spr_wall",
+    "path":"sprites/spr_wall/spr_wall.yy",
   },
   "spriteMaskId":null,
   "visible":true,

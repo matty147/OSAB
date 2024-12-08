@@ -1,12 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_timeline_bottom",
+  "%Name":"obj_timeline_name",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_timeline_bottom",
+  "name":"obj_timeline_name",
   "overriddenProperties":[],
   "parent":{
     "name":"level_editor",
@@ -31,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_timeline_bottom",
-    "path":"sprites/spr_timeline_bottom/spr_timeline_bottom.yy",
+    "name":"spr_timeline_name",
+    "path":"sprites/spr_timeline_name/spr_timeline_name.yy",
   },
   "spriteMaskId":null,
   "visible":true,
