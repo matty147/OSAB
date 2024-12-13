@@ -9,3 +9,5 @@ distance = round(screen_size/(numb_of_timestamps - 1)); // -1 to fill the whole 
 
 time = 0;
 
+a = 0;
+scroll = 1;
