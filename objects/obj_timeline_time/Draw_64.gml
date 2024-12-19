@@ -2,10 +2,8 @@ draw_set_halign(fa_center);
 draw_set_color(c_white);
 
 for (var i = 0; i < numb_of_timestamps - 1; i += 1)
-{
-	var _x = x + distance * i + 30 + offset;
-	
-	if  _x < room_width - sprite_width
+{	
+	/*if  _x < room_width - sprite_width
 	{
 		
 	}else if _x > room_width
@@ -19,10 +17,17 @@ for (var i = 0; i < numb_of_timestamps - 1; i += 1)
 		array_delete(time_stamps, array_length(time_stamps) -1, 1)
 
 		show_debug_message(time_stamps);
-	}
+	}*/
+	
+    var _x = x + distance * i + 30 + offset;
 
-        var minutes = floor((time_stamps[i] + 5 * i) / 60); // :) fml
-        var seconds = abs((time_stamps[i] + 5 * i) % 60);
+    // Proper wrapping that includes the offset
+    _x = ((_x - offset) % room_width + room_width) % room_width; // Wrap safely
+    _x += offset; // Reapply the offset
+	
+
+        var minutes = floor((time_stamps[i]) / 60); // :) fml
+        var seconds = abs((time_stamps[i]) % 60);
         seconds = (seconds < 10) ? "0" + string(seconds) : string(seconds); // ensure two digits
         draw_text_transformed(_x, y + sprite_height / 2, string(minutes) + ":" + seconds, 1, 1, 0);
 

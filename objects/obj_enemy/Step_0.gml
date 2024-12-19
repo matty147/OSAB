@@ -42,7 +42,7 @@ if !global.pause && move
 
 	//moves there and back
 
-	// Variables to control the wave
+	//// Variables to control the wave
 	//var wave_amplitude = 10; // Size of the wave
 	//var wave_frequency = 0.005; // Speed of the wave oscillation //0.005
 	//var wave_offset = sin(current_time * wave_frequency) * wave_amplitude; // Calculate the wave offset based on time
