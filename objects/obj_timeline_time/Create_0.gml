@@ -8,9 +8,13 @@ distance = round(screen_size/(numb_of_timestamps - 1)); // -1 to fill the whole 
 time = 0;
 
 offset = 0;
+local_offset = 0;
+
 scroll = 1;
 
 time_stamps = [];
+
+time_positions = [];
 
 for (var i = 0; i < numb_of_timestamps; i += 1)
 {

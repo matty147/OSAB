@@ -1,53 +1,32 @@
 draw_set_halign(fa_center);
 draw_set_color(c_white);
 
-for (var i = 0; i < numb_of_timestamps - 1; i += 1)
+
+
+offset += (mouse_wheel_up() - mouse_wheel_down()) * distance;
+if (offset < 0) offset = 0;
+show_debug_message("offset:" + string(offset))
+
+
+var start_time = ceil(offset / distance);
+show_debug_message("start:" + string(start_time))
+
+for (var i = 0; i < numb_of_timestamps; i += 1)
 {	
-	/*if  _x < room_width - sprite_width
-	{
-		
-	}else if _x > room_width
-	{
-		show_debug_message(time_stamps);
+	var _x = x + distance * i + 30; 
+	var _time = (start_time + i) * 5;
 
-		var last_value = time_stamps[array_length(time_stamps) -1];
-
-		array_insert(time_stamps, 0, last_value);
-
-		array_delete(time_stamps, array_length(time_stamps) -1, 1)
-
-		show_debug_message(time_stamps);
-	}*/
-	
-    var _x = x + distance * i + 30 + offset;
-
-    // Proper wrapping that includes the offset
-    _x = ((_x - offset) % room_width + room_width) % room_width; // Wrap safely
-    _x += offset; // Reapply the offset
-	
-
-        var minutes = floor((time_stamps[i]) / 60); // :) fml
-        var seconds = abs((time_stamps[i]) % 60);
-        seconds = (seconds < 10) ? "0" + string(seconds) : string(seconds); // ensure two digits
-        draw_text_transformed(_x, y + sprite_height / 2, string(minutes) + ":" + seconds, 1, 1, 0);
+    var minutes = floor(_time / 60); // :) fml
+    var seconds = abs(_time % 60);
+    seconds = (seconds < 10) ? "0" + string(seconds) : string(seconds); // ensure two digits
+    draw_text_transformed(_x, y + sprite_height / 2, string(minutes) + ":" + seconds, 1, 1, 0);
 
 }
 
-// put data into a list and fecht the data from the list
+// look if the offset reached a point that it crosed the value distance and check if it is bigger or smaller than last frame
 
-time += (mouse_wheel_up() - mouse_wheel_down()) * 5;
+time += (mouse_wheel_up() - mouse_wheel_down()) * 10;
 
-if time < 0 
-{
-	time = 0;	
-	scroll = 10;
-}scroll--;
-
-
-if scroll <= 0
-{
-	offset += (mouse_wheel_up() - mouse_wheel_down()) * 2;
-}
 
 // displays object hitbox
 //draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,1); 
