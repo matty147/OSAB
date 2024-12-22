@@ -42,6 +42,11 @@ first_value = 0;
 last_value = 10;
 lemon = true;
 
+
+//////////////////
+mdoubleclick =-1;
+clickdouble=0;
+
 if !file_exists("lemon.png")
 {
 	lemon = false;

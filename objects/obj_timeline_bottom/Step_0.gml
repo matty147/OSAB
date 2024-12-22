@@ -10,8 +10,8 @@ if numb_of_timelines < 0
 
 if numb_of_timelines != last_numb_of_timelines && numb_of_timelines > last_numb_of_timelines
 {
-		var instance = instance_create_layer(x + 200,y - sprite_height * numb_of_timelines,"timeline",obj_timeline_top);
-		instance.image_xscale = 18;
+		var instance = instance_create_layer(x + 192,y - sprite_height * numb_of_timelines,"timeline",obj_timeline_top);
+		instance.image_xscale = 19;
 		instance = instance_create_layer(x,y - sprite_height * numb_of_timelines,"timeline",obj_timeline_name);
 		instance.image_xscale = 3;
 }

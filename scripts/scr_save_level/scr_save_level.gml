@@ -5,6 +5,7 @@
 function scr_save_level(file_name, data, description){
 	
 	var fileid = file_text_open_write(file_name); // C:\Users\<user>\AppData\Local\<project name> why the fuck is it there T-T
+	//C:\Users\matty\AppData\Local\JS_B_rougelike
 	if fileid = -1 // it will go to the same place when exported fuck this
 	{
 		show_debug_message("fuckup!!!!");

@@ -5,11 +5,11 @@ draw_set_color(c_white);
 
 offset += (mouse_wheel_up() - mouse_wheel_down()) * distance;
 if (offset < 0) offset = 0;
-show_debug_message("offset:" + string(offset))
+//show_debug_message("offset:" + string(offset))
 
 
 var start_time = ceil(offset / distance);
-show_debug_message("start:" + string(start_time))
+//show_debug_message("start:" + string(start_time))
 
 for (var i = 0; i < numb_of_timestamps; i += 1)
 {	
@@ -23,9 +23,12 @@ for (var i = 0; i < numb_of_timestamps; i += 1)
 
 }
 
-// look if the offset reached a point that it crosed the value distance and check if it is bigger or smaller than last frame
-
 time += (mouse_wheel_up() - mouse_wheel_down()) * 10;
+
+if time < 0
+{
+	time = 0;	
+}
 
 
 // displays object hitbox

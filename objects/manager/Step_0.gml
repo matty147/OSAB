@@ -108,22 +108,21 @@ switch menu_id
 		break;
 		
 	case "3": // credits
-		button_repeat = false;
-		button_max = 0;
 	
-		instance_deactivate_layer("main");
-		instance_deactivate_layer("options");
-		instance_activate_layer("credits");
-		instance_deactivate_layer("level_select");
-		instance_deactivate_layer("level_buttons");
+		room_goto(editor);
+	
+		//button_repeat = false;
+		//button_max = 0;	
+		//instance_deactivate_layer("main");
+		//instance_deactivate_layer("options");
+		//instance_activate_layer("credits");
+		//instance_deactivate_layer("level_select");
+		//instance_deactivate_layer("level_buttons");
 		break;
 		
 	case "21":
 		break;
 }
-
-
-
 
 if move_buttons != 0 && room == main_menu && menu_id == "1"
 {
@@ -140,3 +139,30 @@ if global.debug
 {
 	show_debug_log(true);
 }else show_debug_log(false);
+
+//check what type of click is happening
+//var 'clickdouble': 0=noclick, 1=singleclick, 2=doubleclick
+mdoubleclick--;
+if (mdoubleclick < 0)
+{
+	clickdouble = 0;
+}
+
+if (mouse_check_button_pressed(mb_left) && mdoubleclick >= 0 && clickdouble == 0.5)
+{
+	clickdouble = 2;
+}
+
+if (mouse_check_button_pressed(mb_left) && mdoubleclick < 0)
+{
+	mdoubleclick = room_speed * 0.25;
+	clickdouble = 0.5;
+}
+
+if (clickdouble == 0.5 && mdoubleclick == 0)
+{
+	clickdouble = 1;
+}
+
+
+

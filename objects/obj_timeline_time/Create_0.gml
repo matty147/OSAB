@@ -12,16 +12,7 @@ local_offset = 0;
 
 scroll = 1;
 
-time_stamps = [];
 
-time_positions = [];
-
-for (var i = 0; i < numb_of_timestamps; i += 1)
-{
-	array_push(time_stamps,time + 5 * i)
-}
-
-show_debug_message(time_stamps);
 
 /*
 
