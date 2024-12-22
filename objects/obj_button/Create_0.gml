@@ -25,10 +25,6 @@ if hidden
 	display_text = false;	
 }
 
-if !variable_global_exists("level_name") {
-	global.level_name = "test";
-}
-
 scrollable = false;
 
 alarm[0] = fps * 1;

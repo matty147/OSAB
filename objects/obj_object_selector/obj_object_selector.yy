@@ -1,13 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_test",
+  "%Name":"obj_object_selector",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_test",
+  "name":"obj_object_selector",
   "overriddenProperties":[],
   "parent":{
     "name":"level_editor",
@@ -32,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_test",
-    "path":"sprites/spr_test/spr_test.yy",
+    "name":"spr_object_selector",
+    "path":"sprites/spr_object_selector/spr_object_selector.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -3,9 +3,6 @@ randomise();
 // Grid size
 grid_size = 64;
 offset = 32;		
-		
-start_point = 0;
-end_point = 0;
 
 spawn_time = 30;
 
@@ -18,3 +15,5 @@ dragging = false;
 last_position_y = -1;
 
 edit_menu_popup = false;
+
+paused = false;

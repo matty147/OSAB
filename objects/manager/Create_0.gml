@@ -7,6 +7,10 @@ global.runtime = 0; // track starts
 
 global.debug = false; //will open console menu
 
+if !variable_global_exists("level_name") {
+	global.level_name = "test";
+}
+
 //global.can_interact = true; //??????????
 
 id_of_button_selected = 4;
@@ -46,6 +50,11 @@ lemon = true;
 //////////////////
 mdoubleclick =-1;
 clickdouble=0;
+
+level_object_list = [ //object name
+"player",
+"test"
+];
 
 if !file_exists("lemon.png")
 {

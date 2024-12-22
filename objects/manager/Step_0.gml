@@ -163,6 +163,3 @@ if (clickdouble == 0.5 && mdoubleclick == 0)
 {
 	clickdouble = 1;
 }
-
-
-
