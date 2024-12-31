@@ -1,8 +1,11 @@
-numb_of_timelines += keyboard_check_pressed(vk_up) - keyboard_check_pressed(vk_down);
+ if _manager.shortcuts_on
+ {
+	numb_of_timelines += keyboard_check_pressed(vk_up) - keyboard_check_pressed(vk_down);
+ }
 
-if numb_of_timelines < 0
+if numb_of_timelines < min_numb_of_timelines
 {
-	numb_of_timelines = 0;
+	numb_of_timelines = min_numb_of_timelines;
 }else if numb_of_timelines > max_numb_of_timelines
 {
 	numb_of_timelines = max_numb_of_timelines;	
@@ -18,7 +21,7 @@ if numb_of_timelines != last_numb_of_timelines && numb_of_timelines > last_numb_
 
 last_numb_of_timelines = numb_of_timelines;
 
-if keyboard_check_pressed(ord("H"))
+if keyboard_check_pressed(ord("H")) && _manager.shortcuts_on
 {	
 	hide = !hide;
 }
@@ -28,6 +31,7 @@ if hide
 	y = lerp(y, room_height + sprite_height,1);
 	
 }y = lerp(y, def_position_y,0.5);
+
 
 
 

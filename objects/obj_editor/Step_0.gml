@@ -1,4 +1,4 @@
-if keyboard_check_pressed(ord("S")) && keyboard_check(vk_control)
+if keyboard_check_pressed(ord("S")) && keyboard_check(vk_control) && _manager.shortcuts_on
 {
 	show_debug_message("saving level");
 	

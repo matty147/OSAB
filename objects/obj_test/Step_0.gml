@@ -1,5 +1,5 @@
 if !paused{
-	if keyboard_check_pressed(ord("N"))
+	if keyboard_check_pressed(ord("N")) && _manager.shortcuts_on
 	{
 		spawn_time = floor(random_range(0, 100));
 		show_debug_message(spawn_time);
@@ -28,7 +28,7 @@ if !paused{
 			}else
 			{
 				last_position_y = y;
-			}
+			}			
 		}
 	
 		if dragging && is_draggable
@@ -68,9 +68,11 @@ if !paused{
 	}else if _manager.clickdouble == 2 && position_meeting(mouse_x,mouse_y,id) && !edit_menu_popup
 	{
 		edit_menu_popup = true;
-		var edit_menu = instance_create_layer(x,y,"manager",obj_object_edit_menu);
+		var edit_menu = instance_create_layer(x,y,"popups",obj_object_edit_menu); ///////////////////////////////////////////
 		edit_menu.parent_id = id;
-		show_debug_message("a");
+		edit_menu.image_xscale = 2;
+		edit_menu.image_yscale = 3;
+		//show_debug_message("a");
 	}
 
 
@@ -101,4 +103,12 @@ if !paused{
 	{
 		spawn_time = 0;	
 	}
+}
+
+
+if bottom.hide
+{
+	
+	var timeline = instance_nearest(x, y, obj_timeline_top);
+	y = timeline.y;	
 }

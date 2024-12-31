@@ -5,6 +5,10 @@ draw_set_color(c_white);
 
 offset += (mouse_wheel_up() - mouse_wheel_down()) * distance;
 if (offset < 0) offset = 0;
+
+time += (mouse_wheel_up() - mouse_wheel_down()) * 10;
+if (time < 0) time = 0;
+
 //show_debug_message("offset:" + string(offset))
 
 
@@ -21,13 +25,6 @@ for (var i = 0; i < numb_of_timestamps; i += 1)
     seconds = (seconds < 10) ? "0" + string(seconds) : string(seconds); // ensure two digits
     draw_text_transformed(_x, y + sprite_height / 2, string(minutes) + ":" + seconds, 1, 1, 0);
 
-}
-
-time += (mouse_wheel_up() - mouse_wheel_down()) * 10;
-
-if time < 0
-{
-	time = 0;	
 }
 
 

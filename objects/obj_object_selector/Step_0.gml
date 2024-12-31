@@ -1,4 +1,4 @@
-if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,id){
+ if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,id){
     
 	grabbing = true;
 	
@@ -25,7 +25,6 @@ if mouse_check_button_released(mb_left) && grabbing {
 				instance.spawn_time = floor((5*(mouse_x - time_line.x - 30) + (time_line.time * time_line.distance)/2) / time_line.distance);
 				instance.paused = false;
 				instance.y = (round((mouse_y - 32) / 64) * 64) + 32;	
-				instance.last_position_y = y;
 			}else instance_destroy(instance);
 		}
 } 

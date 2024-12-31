@@ -7,11 +7,12 @@ global.runtime = 0; // track starts
 
 global.debug = false; //will open console menu
 
+
 if !variable_global_exists("level_name") {
 	global.level_name = "test";
 }
 
-//global.can_interact = true; //??????????
+shortcuts_on = true;
 
 id_of_button_selected = 4;
 
