@@ -2,9 +2,12 @@ _manager = instance_find(manager,0);
 
 image_speed = 0;
 grabbing = 0;
+
+offset = 16;
+
+x = x - offset;
 def_pos_x = x;
 def_pos_y = y;
-
 
 //object_number is defined in the bg object
 
@@ -17,6 +20,5 @@ if object_number != -1
 }else
 {
 	obj_name = "obj_test";
-	
 }
 

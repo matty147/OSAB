@@ -8,31 +8,35 @@ function ais_numeric(string) {
     return true;
 }
 
-
-
 if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,id)
 {
-
+	_manager.selected_items++;
 	selected = true;
 	timer = fps;
 	keyboard_string = "";
-	
-}if !position_meeting(mouse_x,mouse_y,id) && mouse_check_button_pressed(mb_left) || keyboard_check_pressed(vk_escape)
+}if !position_meeting(mouse_x,mouse_y,id) && mouse_check_button_pressed(mb_left) && selected || keyboard_check_pressed(vk_escape) && selected
 {
+	_manager.selected_items--;
 	selected = false;
 	show_debug_message(text);
 	if !ais_numeric(text)
 	{
-		text = last_valid_input;
-	}else last_valid_input = text;
+		text = last_valid_input;		
+	}
+	
+	if string_length(string(text)) > max_text_lenght
+	{
+		text = string_copy(text, 1, max_text_lenght);
+	}
+	
+	last_valid_input = text;
 }
 
 if selected
-{
-	
+{	
 	if keyboard_check(vk_anykey) && string_length(text) < max_text_lenght
 	{
-		text = text + string(keyboard_string);
+		text = string(text) + string(keyboard_string);
 		keyboard_string = "";
 	}
 
@@ -49,10 +53,6 @@ if selected
 		delete_time = -4;
 		keyboard_string = "";
 	}
-	_manager.shortcuts_on = false;
-}else
-{
-	_manager.shortcuts_on = true;
 }
 
 delete_time++;

@@ -1,11 +1,11 @@
 if !paused{
-	if keyboard_check_pressed(ord("N")) && _manager.shortcuts_on
-	{
-		spawn_time = floor(random_range(0, 100));
-		show_debug_message(spawn_time);
-	}
-
-	if keyboard_check(vk_control)
+	//if keyboard_check_pressed(ord("N")) && _manager.shortcuts_on
+	//{
+	//	spawn_time = floor(random_range(0, 100));
+	//	show_debug_message(spawn_time);
+	//}
+	
+	if keyboard_check(vk_control) && !edit_menu_popup
 	{
 		if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,id)
 		{
@@ -16,7 +16,7 @@ if !paused{
 		{
 			dragging = false;
 		
-			if y < 100
+			if y < 100 //animation?
 			{
 				show_debug_message("deleted object");
 				instance_destroy();	
@@ -47,7 +47,7 @@ if !paused{
 		}
 	
 	
-	}else if keyboard_check(vk_shift)
+	}else if keyboard_check(vk_shift) && !edit_menu_popup
 	{
 		if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,id)
 		{
@@ -62,7 +62,7 @@ if !paused{
 		if dragging && is_draggable
 		{
 			x = mouse_x;
-			spawn_time = (5*(x- instance.x - 30) + (instance.time * instance.distance)/2) / instance.distance;
+			spawn_time = (5*(x - instance.x - 30) + (instance.time * instance.distance)/2) / instance.distance;
 			spawn_time = floor(spawn_time);
 		}
 	}else if _manager.clickdouble == 2 && position_meeting(mouse_x,mouse_y,id) && !edit_menu_popup
@@ -70,8 +70,11 @@ if !paused{
 		edit_menu_popup = true;
 		var edit_menu = instance_create_layer(x,y,"popups",obj_object_edit_menu); ///////////////////////////////////////////
 		edit_menu.parent_id = id;
-		edit_menu.image_xscale = 2;
-		edit_menu.image_yscale = 3;
+		edit_menu.image_xscale = 3.5;
+		edit_menu.image_yscale = 6;	
+		edit_menu.object_x = object_x;
+		edit_menu.object_y = object_y;
+		edit_menu.object_rotation = object_rotation % 360; // make the angle smaller or eaqual then 360
 		//show_debug_message("a");
 	}
 
@@ -108,7 +111,31 @@ if !paused{
 
 if bottom.hide
 {
-	
 	var timeline = instance_nearest(x, y, obj_timeline_top);
 	y = timeline.y;	
+}	
+
+if mouse_check_button_pressed(mb_right) && position_meeting(mouse_x,mouse_y,id)
+{
+	extend = true;
+}
+
+if mouse_check_button_released(mb_right)
+{
+	extend = false;	
+}
+
+if extend
+{
+	image_xscale = point_distance(x, y, mouse_x, y) / 32;
+
+	if image_xscale < min_object_stretch
+	{
+		image_xscale = min_object_stretch;	
+	}
+
+	if mouse_x < x
+	{
+		image_xscale = 1;	
+	}
 }

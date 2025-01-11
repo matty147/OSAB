@@ -18,3 +18,11 @@ last_position_y = (round((y - 32) / 64) * 64) + 32;
 edit_menu_popup = false;
 
 paused = false;
+
+object_x = x;
+object_y = room_height/2;
+object_rotation = 0;
+
+extend = false;
+
+min_object_stretch = 1;

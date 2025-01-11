@@ -87,6 +87,7 @@ if level_info
 				{
 					data[2] = string_copy(string(data[2]), 1, 80) + "...";
 				}
+				
 				_id = data[0];
 				name = data[1];
 				description = data[2];

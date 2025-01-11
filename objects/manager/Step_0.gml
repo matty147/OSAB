@@ -166,3 +166,10 @@ if (clickdouble == 0.5 && mdoubleclick == 0)
 {
 	clickdouble = 1;
 }
+
+if selected_items < 1
+{
+	shortcuts_on = true;	
+}else shortcuts_on = false;
+
+//show_debug_message(selected_items);

@@ -2,7 +2,7 @@ delete_time = 5;
 text = "";
 
 selected = false;
-last_valid_input = "";
+last_valid_input = string(text);
 
 timer = 0;
 

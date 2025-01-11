@@ -11,6 +11,7 @@ global.debug = false; //will open console menu
 if !variable_global_exists("level_name") {
 	global.level_name = "test";
 }
+selected_items = 0;
 
 shortcuts_on = true;
 

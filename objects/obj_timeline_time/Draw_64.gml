@@ -23,8 +23,10 @@ for (var i = 0; i < numb_of_timestamps; i += 1)
     var minutes = floor(_time / 60); // :) fml
     var seconds = abs(_time % 60);
     seconds = (seconds < 10) ? "0" + string(seconds) : string(seconds); // ensure two digits
-    draw_text_transformed(_x, y + sprite_height / 2, string(minutes) + ":" + seconds, 1, 1, 0);
-
+	if !position_meeting(_x,y + sprite_height / 2, obj_object_edit_menu)
+	{
+		draw_text_transformed(_x, y + sprite_height / 2, string(minutes) + ":" + seconds, 1, 1, 0);
+	}
 }
 
 
