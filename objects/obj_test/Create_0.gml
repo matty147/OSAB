@@ -5,10 +5,13 @@ grid_size = 64;
 offset = 32;
 
 spawn_time = 30;
+end_time = spawn_time;
 
 instance = instance_find(obj_timeline_time,0);
 _manager = instance_find(manager,0);
 bottom = instance_find(obj_timeline_bottom,0);
+
+display_image = obj_object_selector;
 
 is_draggable = true;
 dragging = false;

@@ -127,8 +127,9 @@ if mouse_check_button_released(mb_right)
 
 if extend
 {
-	image_xscale = point_distance(x, y, mouse_x, y) / 32;
-
+	image_xscale = point_distance(x, y, (mouse_x + 30 + spawn_time * instance.distance / 5) - instance.time * instance.distance / 10, y) / 32;
+	show_debug_message(image_xscale);
+	
 	if image_xscale < min_object_stretch
 	{
 		image_xscale = min_object_stretch;	
