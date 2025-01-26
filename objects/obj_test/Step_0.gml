@@ -125,18 +125,35 @@ if mouse_check_button_released(mb_right)
 	extend = false;	
 }
 
-if extend
+if extend // image_xscale = (mouse_x - x) / 32;
 {
-	image_xscale = point_distance(x, y, (mouse_x + 30 + spawn_time * instance.distance / 5) - instance.time * instance.distance / 10, y) / 32;
-	show_debug_message(image_xscale);
+	//image_xscale = (mouse_x - x) / 32;
+
+	duration = (5*(mouse_x - x) + (instance.time * instance.distance)/2) / instance.distance;
+	duration = floor(duration);
+	
+	//image_xscale = (((mouse_x - x)) - instance.time * instance.distance / 10) / 32;
+	image_xscale = (duration * instance.distance / 5) / 32;
+	
 	
 	if image_xscale < min_object_stretch
 	{
-		image_xscale = min_object_stretch;	
+		image_xscale = min_object_stretch;		
 	}
 
 	if mouse_x < x
 	{
 		image_xscale = 1;	
 	}
+	
+	if duration < 0
+	{
+		duration = 0;	
+	}	
+}
+
+if global.runtime % 10 == 0
+{
+	show_debug_message("size: " + string(image_xscale));
+	show_debug_message("spawn_time: " + string(spawn_time) + " end_time: " + string(spawn_time + duration));
 }

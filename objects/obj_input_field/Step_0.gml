@@ -8,6 +8,15 @@ function ais_numeric(string) {
     return true;
 }
 
+if setup
+{
+	show_debug_message("a: " + string(last_valid_input));
+	last_valid_input = "0";
+	
+	setup = false;
+}
+
+
 if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,id)
 {
 	_manager.selected_items++;
@@ -17,8 +26,10 @@ if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,id)
 }if !position_meeting(mouse_x,mouse_y,id) && mouse_check_button_pressed(mb_left) && selected || keyboard_check_pressed(vk_escape) && selected
 {
 	_manager.selected_items--;
+
 	selected = false;
-	show_debug_message(text);
+
+
 	if !ais_numeric(text)
 	{
 		text = last_valid_input;		
@@ -30,6 +41,7 @@ if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,id)
 	}
 	
 	last_valid_input = text;
+	
 }
 
 if selected

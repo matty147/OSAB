@@ -1,8 +1,10 @@
 delete_time = 5;
 text = "";
 
+setup = true;
+
 selected = false;
-last_valid_input = string(text);
+last_valid_input = 0;
 
 timer = 0;
 
