@@ -84,7 +84,7 @@ if !paused{
 		dragging = false;
 	}
 
-	x = (instance.x + 30 + spawn_time * instance.distance / 5) - instance.time * instance.distance / 10;
+	x = (instance.x + 30 + spawn_time * instance.distance / 5);// + (instance.x + 30 + instance.distance * (instance.offset / instance.distance));
 	
 	if !dragging
 	{
@@ -132,13 +132,13 @@ if extend // image_xscale = (mouse_x - x) / 32;
 	duration = (5*(mouse_x - x) + (instance.time * instance.distance)/2) / instance.distance;
 	duration = floor(duration);
 	
-	//image_xscale = (((mouse_x - x)) - instance.time * instance.distance / 10) / 32;
+	image_xscale = (((mouse_x - x)) - instance.time * instance.distance / 10) / 32;
 	image_xscale = (duration * instance.distance / 5) / 32;
 	
 	
 	if image_xscale < min_object_stretch
 	{
-		image_xscale = min_object_stretch;		
+		image_xscale = min_object_stretch;
 	}
 
 	if mouse_x < x
@@ -154,6 +154,7 @@ if extend // image_xscale = (mouse_x - x) / 32;
 
 if global.runtime % 10 == 0
 {
-	show_debug_message("size: " + string(image_xscale));
-	show_debug_message("spawn_time: " + string(spawn_time) + " end_time: " + string(spawn_time + duration));
+	//show_debug_message("size: " + string(image_xscale));
+	//show_debug_message("spawn_time: " + string(spawn_time) + " end_time: " + string(spawn_time + duration));
+	//show_debug_message(instance.offset);
 }

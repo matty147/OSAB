@@ -77,7 +77,10 @@ if keyboard_check_pressed(vk_escape) && instance.menu_id != 0 || keyboard_check_
 {
 	pop_up = false;
 	instance.menu_id = floor(instance.menu_id/10);
-	audio_play_sound(snd_back, 2, false);
+	if !audio_is_playing(snd_back)
+	{
+		audio_play_sound(snd_back, 2, false);
+	}
 }
 
 
@@ -122,7 +125,10 @@ if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off
 		{
 			if image_alpha > 0
 			{
-				audio_play_sound(snd_click, 2, false);
+				if !audio_is_playing(snd_click)
+				{	
+					audio_play_sound(snd_click, 2, false);
+				}
 			}
 			instance.menu_id = button_pressed(instance.menu_id, instance);
 		}
@@ -138,7 +144,10 @@ if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off
 	{
 		if image_alpha > 0
 		{
-			audio_play_sound(snd_click, 2, false);
+			if !audio_is_playing(snd_click)
+			{
+				audio_play_sound(snd_click, 2, false);
+			}
 		}
 		instance.menu_id = button_pressed(instance.menu_id, instance);
 	}

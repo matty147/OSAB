@@ -6,21 +6,23 @@ draw_set_color(c_white);
 offset += (mouse_wheel_up() - mouse_wheel_down()) * distance;
 if (offset < 0) offset = 0;
 
-time += (mouse_wheel_up() - mouse_wheel_down()) * 10;
-if (time < 0) time = 0;
+//time += (mouse_wheel_up() - mouse_wheel_down()) * 10;
+//if (time < 0) time = 0;
 
 //show_debug_message("offset:" + string(offset))
 
 
-var start_time = ceil(offset / distance);
-//show_debug_message("start:" + string(start_time))
+var start_time = floor(offset / distance);
+show_debug_message(offset/distance);
 
-for (var i = 0; i < numb_of_timestamps; i += 1)
+show_debug_message("start:" + string(start_time))
+
+for (var i = 0; i < numb_of_timestamps; i++)
 {	
 	var _x = x + distance * i + 30; 
 	var _time = (start_time + i) * 5;
 
-    var minutes = floor(_time / 60); // :) fml
+    var minutes = floor(_time / 60);
     var seconds = abs(_time % 60);
     seconds = (seconds < 10) ? "0" + string(seconds) : string(seconds); // ensure two digits
 	if !position_meeting(_x,y + sprite_height / 2, obj_object_edit_menu)

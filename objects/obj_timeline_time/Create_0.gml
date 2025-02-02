@@ -13,3 +13,5 @@ local_offset = 0;
 
 scroll = 1;
 play = false;
+
+sound_id = snd_test; //sync_test
