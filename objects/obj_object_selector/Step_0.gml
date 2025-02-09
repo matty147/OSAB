@@ -22,7 +22,7 @@ if mouse_check_button_released(mb_left) && grabbing {
 		{
 			if place_meeting(instance.x, instance.y,obj_timeline_top)
 			{
-				instance.spawn_time = floor((5*(mouse_x - time_line.x - 30 - offset) + (time_line.time * time_line.distance)/2) / time_line.distance);
+				instance.spawn_time = floor((5*(mouse_x - time_line.x - 30 - offset) + (time_line.offset * time_line.distance)/2) / time_line.distance);
 				instance.paused = false;
 				instance.y = (round((mouse_y - 32) / 64) * 64) + 32;
 				instance.display_image = "spr_enemy";//sprite_name;

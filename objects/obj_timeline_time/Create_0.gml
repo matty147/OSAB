@@ -6,7 +6,7 @@ numb_of_timestamps = 15;
 
 distance = round(screen_size/(numb_of_timestamps - 1)); // -1 to fill the whole sprite
 
-time = 0;
+//time = 0;
 
 offset = 0;
 local_offset = 0;

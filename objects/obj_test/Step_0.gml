@@ -62,7 +62,7 @@ if !paused{
 		if dragging && is_draggable
 		{
 			x = mouse_x;
-			spawn_time = (5*(x - instance.x - 30) + (instance.time * instance.distance)/2) / instance.distance;
+			spawn_time = (5*(x - instance.x - 30) + (instance.offset * instance.distance)/2) / instance.distance;
 			spawn_time = floor(spawn_time);
 		}
 	}else if _manager.clickdouble == 2 && position_meeting(mouse_x,mouse_y,id) && !edit_menu_popup
@@ -129,10 +129,10 @@ if extend // image_xscale = (mouse_x - x) / 32;
 {
 	//image_xscale = (mouse_x - x) / 32;
 
-	duration = (5*(mouse_x - x) + (instance.time * instance.distance)/2) / instance.distance;
+	duration = (5*(mouse_x - x) + (instance.offset * instance.distance)/2) / instance.distance;
 	duration = floor(duration);
 	
-	image_xscale = (((mouse_x - x)) - instance.time * instance.distance / 10) / 32;
+	image_xscale = (((mouse_x - x)) - instance.offset * instance.distance / 10) / 32;
 	image_xscale = (duration * instance.distance / 5) / 32;
 	
 	
