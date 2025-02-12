@@ -71,10 +71,14 @@ if !paused{
 		var edit_menu = instance_create_layer(x,y,"popups",obj_object_edit_menu); ///////////////////////////////////////////
 		edit_menu.parent_id = id;
 		edit_menu.image_xscale = 3.5;
-		edit_menu.image_yscale = 6;	
+		edit_menu.image_yscale = 6.25;	
 		edit_menu.object_x = object_x;
 		edit_menu.object_y = object_y;
 		edit_menu.object_rotation = object_rotation % 360; // make the angle smaller or eaqual then 360
+		edit_menu.object_x_scale = object_x_scale;
+		edit_menu.object_y_scale = object_y_scale;
+		edit_menu.object_name = string(display_image);
+		edit_menu.object_time = spawn_time;
 		//show_debug_message("a");
 	}
 
@@ -84,8 +88,11 @@ if !paused{
 		dragging = false;
 	}
 
-	x = (instance.x + 30 + spawn_time * instance.distance / 5);// + (instance.x + 30 + instance.distance * (instance.offset / instance.distance));
+	x = (instance.x + 30 + spawn_time * instance.distance / 5);
+	//x -= (x + 30 + instance.offset * instance.distance / 5 );
+	//show_debug_message((x + 30 + (instance.offset - spawn_time) * instance.distance / 5 ));
 	
+	//show_debug_message(instance.offset - spawn_time);
 	if !dragging
 	{
 		if x < instance.x

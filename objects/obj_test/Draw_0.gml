@@ -10,7 +10,7 @@ draw_self();
 	}
 
 
-draw_rectangle(real(object_x),real(object_y),real(object_x) + 10, real(object_y) + 10,false);
+draw_rectangle(real(object_x),real(object_y),real(object_x ) + 10, real(object_y) + 10,false);
 
 draw_set_color(c_white);
 

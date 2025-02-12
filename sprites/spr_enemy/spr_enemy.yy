@@ -27,7 +27,7 @@
   "origin":4,
   "parent":{
     "name":"enemy",
-    "path":"folders/Sprites/enemy.yy",
+    "path":"folders/Sprites/level/enemy.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

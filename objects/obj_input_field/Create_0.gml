@@ -13,3 +13,5 @@ _manager = instance_find(manager,0);
 custom_input = "";
 
 max_text_lenght = 10;
+
+numeric_check = false;

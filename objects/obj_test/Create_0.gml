@@ -25,6 +25,9 @@ paused = false;
 object_x = x;
 object_y = room_height/2;
 object_rotation = 0;
+object_x_scale = 1;
+object_y_scale = 1;
+
 
 extend = false;
 
