@@ -8,7 +8,7 @@ function scr_save_level(file_name, data, description){
 	//C:\Users\matty\AppData\Local\JS_B_rougelike
 	if fileid = -1 // it will go to the same place when exported fuck this
 	{
-		show_debug_message("fuckup!!!!");
+		show_debug_message("saving failed!!!!");
 		exit;
 	}
 	
@@ -45,21 +45,38 @@ function scr_save_level(file_name, data, description){
 	for (var i = 0; i < array_length(data); i += 1)
 	{
 		var inst_id = layer_instance_get_instance(data[i]);
-		file_text_write_string(fileid,"0," + string(inst_id.image_index)
-		+ "," + string(inst_id.x)
-		+ "," + string(inst_id.y)
-		+ "," + string(inst_id.image_xscale)
-		+ "," + string(inst_id.angle)
-		+ "," + string(inst_id._speed)
-		+ "," + string(inst_id.image_alpha)
-		+ "," + string(inst_id.survive_speed));
+		file_text_write_string(fileid,string(inst_id.spawn_time)
+		+ ","+ "0"
+		+ "," + string(inst_id.object_x)
+		+ "," + string(inst_id.object_y)
+		+ "," + string(inst_id.object_x_scale)
+		+ "," + string(inst_id.object_rotation)
+		+ "," + string(inst_id.object_speed)
+		+ "," + "0.75"); // object alpha
+		//+ "," + string(inst_id.survive_speed));
 		file_text_writeln(fileid);
 	}
+	file_text_close(fileid);
+	show_message("File saved! (" + string(array_length(data)) + ") objects");
+}
+	
+	//for (var i = 0; i < array_length(data); i += 1)
+	//{
+	//	var inst_id = layer_instance_get_instance(data[i]);
+	//	file_text_write_string(fileid,"0"
+	//	+ ","+ string(inst_id.image_index)
+	//	+ "," + string(inst_id.x)
+	//	+ "," + string(inst_id.y)
+	//	+ "," + string(inst_id.image_xscale)
+	//	+ "," + string(inst_id.angle)
+	//	+ "," + string(inst_id._speed)
+	//	+ "," + string(inst_id.image_alpha)
+	//	+ "," + string(inst_id.survive_speed));
+	//	file_text_writeln(fileid);
+	//}
+	
 	//file_text_write_real(fileid,69);
 	//file_text_write_string(fileid,"hello");
-	file_text_close(fileid);
-	show_message("File saved!");
-}
 
 /*
 			//, time, id, x, y, scale, direction, speed, alpha

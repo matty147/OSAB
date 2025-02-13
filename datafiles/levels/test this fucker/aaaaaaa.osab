@@ -1,0 +1,13 @@
+//,this is a test level
+
+id,0 
+name,Test level
+description,this is a description
+lenght,69 
+diff,6 
+-
+
+15,0,477,384,1,0,1,0.75
+18,0,535,384,1,0,1,0.75
+23,0,616,384,1,0,1,0.75
+27,0,690,384,1,0,1,0.75

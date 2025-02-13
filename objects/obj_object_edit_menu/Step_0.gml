@@ -82,7 +82,8 @@ show_advanced_option = check_box.state;
 if show_advanced_option
 {
 	show_debug_message("Advanced options");
-}
+	image_xscale = 7;
+}else image_xscale = 3.5;
 
 if !position_meeting(mouse_x,mouse_y,id) && mouse_check_button_pressed(mb_left)
 {

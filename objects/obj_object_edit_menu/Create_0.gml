@@ -30,7 +30,6 @@ x_scale = instance_create_layer(object_spawn_x , y + 210, "popups", obj_input_fi
 y_scale = instance_create_layer(object_spawn_x, y + 260, "popups", obj_input_field);
 time = instance_create_layer(object_spawn_x, y + 310, "popups", obj_input_field);
 check_box = instance_create_layer(object_spawn_x, y + 360, "popups", obj_check_box);
-//advanced = instance_create_layer(x + sprite_width, y + 360, "popups", );	
 array_push(delete_list,x_pos);
 array_push(delete_list,y_pos);
 array_push(delete_list,rotation);
@@ -38,5 +37,4 @@ array_push(delete_list,x_scale);
 array_push(delete_list,y_scale);
 array_push(delete_list,time);
 array_push(delete_list,check_box);
-//array_push(delete_list,advanced);
 array_push(delete_list,id)
