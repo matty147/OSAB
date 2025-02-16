@@ -23,8 +23,8 @@ if mouse_check_button_released(mb_left) && grabbing {
 	{
 		if place_meeting(instance.x, instance.y, obj_timeline_top)
 		{
-			var x_in_timeline = mouse_x + 16 - time_line.x + time_line.offset;
-			instance.spawn_time = floor(x_in_timeline / time_line.second_size);
+			var x_in_timeline = mouse_x - time_line.x + time_line.offset; 
+			instance.spawn_time = floor(x_in_timeline / time_line.second_size) - 2;
 			show_debug_message("Object: x=" + string(x_in_timeline) + "; time=" + string(instance.spawn_time));
 			
 			//instance.spawn_time = floor((5*(mouse_x - time_line.x - 30 - offset) + (time_line.offset * time_line.distance)/2) / time_line.distance);

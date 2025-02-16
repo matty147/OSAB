@@ -82,17 +82,22 @@ if !paused{
 		//show_debug_message("a");
 	}
 
-
 	if mouse_check_button_released(mb_left)
 	{
 		dragging = false;
 	}
+	
 	var time_line = instance;  // todo rename instance
 
 	// obj time -> x on timeline -> x on screen
-	var x_in_timeline = spawn_time * time_line.second_size;
+	var x_in_timeline = (spawn_time + 2) * time_line.second_size;
 	x = x_in_timeline - time_line.offset + time_line.x;
 
+if global.runtime % 30 == 0
+{
+	show_debug_message("Moved Object: x_in_timeline=" + string(x_in_timeline) + "; x=" + string(x))
+
+}
 
 	if !dragging
 	{
@@ -160,8 +165,3 @@ if extend // image_xscale = (mouse_x - x) / 32;
 	}	
 }
 
-if global.runtime % 10 == 0
-{
-	show_debug_message("Moved Object: x_in_timeline=" + string(x_in_timeline) + "; x=" + string(x))
-
-}
