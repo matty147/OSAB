@@ -15,8 +15,6 @@ if keyboard_check_pressed(ord("S")) && keyboard_check(vk_control) && _manager.sh
 		}
 	)
 	
-	
-	
 	scr_save_level("test.osab", elements, description); // load data into file
 	global.pause = false;
 }

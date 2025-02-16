@@ -74,7 +74,8 @@ object_x = x_pos.text;
 object_y = y_pos.text;
 object_rotation = rotation.text;
 object_x_scale = x_scale.text;
-object_y_scale = y_scale.text;
+object_speed = y_scale.text;
+//object_y_scale = y_scale.text;
 object_time = time.text;
 
 show_advanced_option = check_box.state;
@@ -93,6 +94,7 @@ if !position_meeting(mouse_x,mouse_y,id) && mouse_check_button_pressed(mb_left)
 	parent_id.object_rotation = object_rotation;
 	parent_id.object_x_scale = object_x_scale;
 	parent_id.object_y_scale = object_y_scale;
+	parent_id.object_speed = object_speed;
 	parent_id.start_time = object_time; // dosent change time for some reason???	
 	show_debug_message("destroyed");
 	

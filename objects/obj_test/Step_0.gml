@@ -87,12 +87,13 @@ if !paused{
 	{
 		dragging = false;
 	}
+	var time_line = instance;  // todo rename instance
 
-	x = (instance.x + 30 + spawn_time * instance.distance / 5);
-	//x -= (x + 30 + instance.offset * instance.distance / 5 );
-	//show_debug_message((x + 30 + (instance.offset - spawn_time) * instance.distance / 5 ));
-	
-	//show_debug_message(instance.offset - spawn_time);
+	// obj time -> x on timeline -> x on screen
+	var x_in_timeline = spawn_time * time_line.second_size;
+	x = x_in_timeline - time_line.offset + time_line.x;
+
+
 	if !dragging
 	{
 		if x < instance.x
@@ -161,7 +162,6 @@ if extend // image_xscale = (mouse_x - x) / 32;
 
 if global.runtime % 10 == 0
 {
-	//show_debug_message("size: " + string(image_xscale));
-	//show_debug_message("spawn_time: " + string(spawn_time) + " end_time: " + string(spawn_time + duration));
-	//show_debug_message(instance.offset);
+	show_debug_message("Moved Object: x_in_timeline=" + string(x_in_timeline) + "; x=" + string(x))
+
 }

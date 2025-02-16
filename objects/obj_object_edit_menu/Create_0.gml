@@ -10,6 +10,7 @@ object_rotation = 0;
 object_x_scale = 1;
 object_y_scale = 1;
 object_time	= 1;
+object_speed = 1;
 show_advanced_option = false;
 
 delete_list = [];

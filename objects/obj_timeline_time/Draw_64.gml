@@ -7,7 +7,7 @@ if (offset < 0) offset = 0;
 
 //offset = curent time
 // distance = 85 (distance from one timestamp to another)
-var start_time = floor(offset / distance); // calculates the current time (have to multiply it to get seconds)
+start_time = floor(offset / distance); // calculates the current time (have to multiply it to get seconds)
 
 //create timestamps
 for (var i = 0; i < numb_of_timestamps; i++)

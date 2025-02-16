@@ -4,7 +4,7 @@ randomise();
 grid_size = 64;
 offset = 32;
 
-spawn_time = 30;
+spawn_time = 0;
 duration = 0;
 
 instance = instance_find(obj_timeline_time,0);

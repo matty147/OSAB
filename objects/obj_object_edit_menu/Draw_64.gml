@@ -10,8 +10,10 @@ var text_x = x + 10;
 draw_text_transformed(text_x,y + 60 + x_pos.sprite_height / 2,"X pos: ",2,2,0);
 draw_text_transformed(text_x,y + 110 + x_pos.sprite_height / 2,"Y pos: ",2,2,0);
 draw_text_transformed(text_x,y + 160 + x_pos.sprite_height / 2,"Angle: ",2,2,0);
-draw_text_transformed(text_x,y + 210 + x_pos.sprite_height / 2,"X scale: ",2,2,0);
-draw_text_transformed(text_x,y + 260 + x_pos.sprite_height / 2,"Y scale: ",2,2,0);	
+draw_text_transformed(text_x,y + 210 + x_pos.sprite_height / 2,"Scale: ",2,2,0);
+//draw_text_transformed(text_x,y + 210 + x_pos.sprite_height / 2,"X scale: ",2,2,0);
+draw_text_transformed(text_x,y + 260 + x_pos.sprite_height / 2,"Speed: ",2,2,0);	
+//draw_text_transformed(text_x,y + 260 + x_pos.sprite_height / 2,"Y scale: ",2,2,0);	
 draw_text_transformed(text_x,y + 310 + x_pos.sprite_height / 2,"Time: ",2,2,0);
 draw_text_transformed(text_x,y + 360 + x_pos.sprite_height / 2,"Advanced: ",2,2,0);
 
