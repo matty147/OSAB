@@ -173,3 +173,19 @@ if selected_items < 1
 }else shortcuts_on = false;
 
 //show_debug_message(selected_items);
+
+
+if keyboard_check_pressed(ord("O")) && !false // this opens a selector for the user to pick a file from (sanboxmode must be OFF!!!)
+{
+	var file = get_open_filename(".osab|*.osab", "");
+
+	if file == -1
+	{
+		show_debug_message("-1");	
+	}else show_debug_message("file:" + string(file));
+
+	if file != ""
+	{
+	    file_text_open_read(file);
+	}
+}

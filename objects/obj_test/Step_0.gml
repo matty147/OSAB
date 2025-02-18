@@ -76,9 +76,10 @@ if !paused{
 		edit_menu.object_y = object_y;
 		edit_menu.object_rotation = object_rotation % 360; // make the angle smaller or eaqual then 360
 		edit_menu.object_x_scale = object_x_scale;
-		edit_menu.object_y_scale = object_y_scale;
+		//edit_menu.object_y_scale = object_y_scale;
 		edit_menu.object_name = string(display_image);
 		edit_menu.object_time = spawn_time;
+		edit_menu.object_y_scale = object_speed; // temp 
 		//show_debug_message("a");
 	}
 
@@ -92,12 +93,6 @@ if !paused{
 	// obj time -> x on timeline -> x on screen
 	var x_in_timeline = (spawn_time + 2) * time_line.second_size;
 	x = x_in_timeline - time_line.offset + time_line.x;
-
-if global.runtime % 30 == 0
-{
-	show_debug_message("Moved Object: x_in_timeline=" + string(x_in_timeline) + "; x=" + string(x))
-
-}
 
 	if !dragging
 	{
@@ -125,7 +120,7 @@ if global.runtime % 30 == 0
 if bottom.hide
 {
 	var timeline = instance_nearest(x, y, obj_timeline_top);
-	y = timeline.y;	
+	y = timeline.y + sprite_height;	
 }	
 
 if mouse_check_button_pressed(mb_right) && position_meeting(mouse_x,mouse_y,id)
@@ -165,3 +160,11 @@ if extend // image_xscale = (mouse_x - x) / 32;
 	}	
 }
 
+//if global.runtime % 30 == 0
+//{
+//	show_debug_message("Moved Object: x_in_timeline=" + string(x_in_timeline) + "; x=" + string(x))
+//
+//}
+
+
+// todo fix moving and makeing blocks longer

@@ -1,7 +1,7 @@
 function ais_numeric(string) {
     for (var i = 1; i <= string_length(string); i++) {
         var char = string_char_at(string, i);
-        if (!((char >= "0") && (char <= "9"))) {
+        if (!((char >= "0") && (char <= "9")  || (char == "."))) {
             return false;
         }
     }
