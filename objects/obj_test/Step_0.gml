@@ -62,8 +62,12 @@ if !paused{
 		if dragging && is_draggable
 		{
 			x = mouse_x;
-			spawn_time = (5*(x - instance.x - 30) + (instance.offset * instance.distance)/2) / instance.distance;
-			spawn_time = floor(spawn_time);
+			//spawn_time = (5*(x - instance.x - 30) + (instance.offset * instance.distance)/2) / instance.distance;
+			//spawn_time = floor(spawn_time);
+			var x_in_timeline = mouse_x - instance.x + instance.offset;
+			spawn_time = floor(x_in_timeline / instance.second_size) - 2;
+			
+		
 		}
 	}else if _manager.clickdouble == 2 && position_meeting(mouse_x,mouse_y,id) && !edit_menu_popup
 	{
@@ -134,14 +138,14 @@ if mouse_check_button_released(mb_right)
 }
 
 if extend // image_xscale = (mouse_x - x) / 32;
-{
-	//image_xscale = (mouse_x - x) / 32;
-
-	duration = (5*(mouse_x - x) + (instance.offset * instance.distance)/2) / instance.distance;
-	duration = floor(duration);
+{	
+	var x_in_timeline = mouse_x - x + instance.offset;
+	var	drag_time = floor(x_in_timeline / instance.second_size);
 	
-	image_xscale = (((mouse_x - x)) - instance.offset * instance.distance / 10) / 32;
-	image_xscale = (duration * instance.distance / 5) / 32;
+	x_in_timeline = (drag_time) * instance.second_size;
+	image_xscale = (x_in_timeline - instance.offset) / 32;
+	
+	show_debug_message(image_xscale);
 	
 	
 	if image_xscale < min_object_stretch
