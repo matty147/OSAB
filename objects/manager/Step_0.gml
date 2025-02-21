@@ -38,7 +38,9 @@ global.pause = !global.pause;
 
 if !global.pause
 {
-	global.runtime++;
+	//global.runtime += time_line.distance / (5 * room_speed); //timeline.distance only exists in the editor while this code runs anywhere
+	global.runtime += 85 / (5 * room_speed);
+	show_debug_message(global.runtime);
 
 	//show_debug_message(global.runtime);
 
@@ -48,7 +50,7 @@ if !global.pause
 	
 	if !button_repeat // if the user is not in the level select screen
 	{
-		if button > button_max // check if the button is not going outside the buttons
+		if button > button_max // check if the button is not going outside the buttonss
 		{
 			button = button_max;
 		}else if button < 0

@@ -38,7 +38,6 @@ pop_up_id = 0;
 
 global.pop_up = false;
 
-
 show_debug_message("");
 
 index = 0;
