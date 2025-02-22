@@ -1,4 +1,4 @@
-if keyboard_check_pressed(ord("S")) && keyboard_check(vk_control) && _manager.shortcuts_on
+if keyboard_check_pressed(ord("S")) && keyboard_check(vk_control) && _manager.shortcuts_on // save level
 {
 	show_debug_message("saving level");
 	
@@ -19,7 +19,7 @@ if keyboard_check_pressed(ord("S")) && keyboard_check(vk_control) && _manager.sh
 	global.pause = false;
 }
 
-if keyboard_check_pressed(ord("O")) && keyboard_check(vk_control) && _manager.shortcuts_on
+if keyboard_check_pressed(ord("O")) && keyboard_check(vk_control) && _manager.shortcuts_on // load level
 {
 	var level_data = scr_load_level();
 	
@@ -52,6 +52,4 @@ if keyboard_check_pressed(ord("O")) && keyboard_check(vk_control) && _manager.sh
 			object_speed = real(level_data[1][i][6]);			
 		}		
 	}
-	
-	
 }

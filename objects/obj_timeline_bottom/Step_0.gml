@@ -1,4 +1,4 @@
- if _manager.shortcuts_on
+ if _manager.shortcuts_on && !hide
  {
 	numb_of_timelines += keyboard_check_pressed(vk_up) - keyboard_check_pressed(vk_down);
  }
@@ -11,7 +11,7 @@ if numb_of_timelines < min_numb_of_timelines
 	numb_of_timelines = max_numb_of_timelines;	
 }
 
-if numb_of_timelines != last_numb_of_timelines && numb_of_timelines > last_numb_of_timelines
+if numb_of_timelines != last_numb_of_timelines && numb_of_timelines > last_numb_of_timelines && !hide
 {
 		var instance = instance_create_layer(x + 192,y - sprite_height * numb_of_timelines,"timeline",obj_timeline_top);
 		instance.image_xscale = 19;
@@ -32,6 +32,11 @@ if hide
 	
 }y = lerp(y, def_position_y,0.5);
 
+
+if keyboard_check_pressed(ord("C")) && _manager.shortcuts_on
+{
+	show_checkerboard = !show_checkerboard;
+}
 
 
 

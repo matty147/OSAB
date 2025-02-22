@@ -40,7 +40,7 @@ if !global.pause
 {
 	//global.runtime += time_line.distance / (5 * room_speed); //timeline.distance only exists in the editor while this code runs anywhere
 	global.runtime += 85 / (5 * room_speed);
-	show_debug_message(global.runtime);
+	//show_debug_message(global.runtime);
 
 	//show_debug_message(global.runtime);
 
