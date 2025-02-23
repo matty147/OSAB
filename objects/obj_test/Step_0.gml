@@ -27,7 +27,8 @@ if !paused{
 				y = last_position_y;
 			}else
 			{
-				last_position_y = y;
+					last_position_y = y;
+
 			}			
 		}
 	
@@ -113,13 +114,12 @@ if !paused{
 	{
 			y = last_position_y;
 			
-			if !place_meeting(x,y,obj_timeline_top) && x <= room_width && x >= instance.x
+			if !place_meeting(x,y,obj_timeline_top) && x <= room_width && x >= instance.x && !bottom.hide
 			{
 				show_debug_message("sad")
 				var top = instance_find(obj_timeline_top,0);
 				y += top.sprite_height;
 				last_position_y += top.sprite_height;
-	
 			}
 	}
 
@@ -129,6 +129,10 @@ if !paused{
 	}
 }
 
+if !bottom.hide && y > room_height
+{
+	y = room_height - instance.sprite_height;
+}
 
 if bottom.hide
 {

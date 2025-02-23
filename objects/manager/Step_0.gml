@@ -10,11 +10,10 @@ if shortcuts_on
 	//	scr_save_level("test.osab","");
 	//}
 
-	if keyboard_check_pressed(ord("E")) 
-	{
-		room_goto(editor);
-	}
-
+	//if keyboard_check_pressed(ord("E")) 
+	//{
+	//	room_goto(editor);
+	//}
 
 	//these will be buttons on the menu but for the time being they are here
 
