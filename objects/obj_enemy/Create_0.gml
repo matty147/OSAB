@@ -29,7 +29,6 @@ if !variable_instance_exists(id,"spawned_time")
 
 if !variable_instance_exists(id,"move")
 {
-move = false;	
-	
+	move = false;	
 }
 	

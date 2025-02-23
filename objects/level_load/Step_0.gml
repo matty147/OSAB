@@ -36,6 +36,10 @@
 
 	if instance_number(obj_enemy) <= 0 && end_game < 0
 	{
-		room_goto(main_menu);
+		win = true;
+		global.pause = true;
+		//room_goto(main_menu);
 		//game_end();	
 	}
+	
+	show_debug_message(global.runtime)

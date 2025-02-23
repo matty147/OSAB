@@ -14,27 +14,26 @@ if grabbing{
 
 var time_line = instance_find(obj_timeline_time,0);
 
-if mouse_check_button_released(mb_left) && grabbing {
+if mouse_check_button_released(mb_left) && grabbing
+{
 	grabbing = false;
 
-	var instance = instance_create_layer(x,y,"objects", asset_get_index(obj_name));
-	show_debug_message("a");
-	if string(obj_name) == "obj_test"
+	var instance = instance_create_layer(x,y,"objects", obj_test);
+	
+	if sprite_name != "delete"
 	{
-		if place_meeting(instance.x, instance.y, obj_timeline_top)
-		{
-			var x_in_timeline = mouse_x - time_line.x + time_line.offset; 
-			instance.spawn_time = floor(x_in_timeline / time_line.second_size) - 2;
-			show_debug_message("Object: x=" + string(x_in_timeline) + "; time=" + string(instance.spawn_time));
+		show_debug_message("a");
+			if place_meeting(instance.x, instance.y, obj_timeline_top)
+			{
+				var x_in_timeline = mouse_x - time_line.x + time_line.offset; 
+				instance.spawn_time = floor(x_in_timeline / time_line.second_size) - 2;
+				show_debug_message("Object: x=" + string(x_in_timeline) + "; time=" + string(instance.spawn_time));
 			
-			//instance.spawn_time = floor((5*(mouse_x - time_line.x - 30 - offset) + (time_line.offset * time_line.distance)/2) / time_line.distance);
-			instance.paused = false;
-			instance.y = (round((mouse_y - 32) / 64) * 64) + 32;
-			instance.display_image = "spr_enemy";//sprite_name;
-		}
-		else 
-		{
-			instance_destroy(instance);
-		}
-	}
+				//instance.spawn_time = floor((5*(mouse_x - time_line.x - 30 - offset) + (time_line.offset * time_line.distance)/2) / time_line.distance);
+				instance.paused = false;
+				instance.y = (round((mouse_y - 32) / 64) * 64) + 32;
+				instance.display_image = "spr_" + string(_manager.level_object_list[object_number][0]);//sprite_name;
+				instance.display_object_size = _manager.level_object_list[object_number][1];
+			}else instance_destroy(instance);
+	}else instance_destroy(instance);
 } 

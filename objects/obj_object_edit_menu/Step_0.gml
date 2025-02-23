@@ -96,7 +96,9 @@ if !position_meeting(mouse_x,mouse_y,id) && mouse_check_button_pressed(mb_left)
 	parent_id.object_y_scale = object_x_scale; // temp
 	//parent_id.object_y_scale = object_y_scale;
 	parent_id.object_speed = object_speed;
-	parent_id.start_time = object_time; // dosent change time for some reason???	
+	parent_id.start_time = object_time; // dosent change time for some reason???
+	var _manager = instance_find(manager,0);
+	_manager.shortcuts_on = false;
 	show_debug_message("destroyed");
 	
 	//foreach iohng

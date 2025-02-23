@@ -38,6 +38,11 @@ if keyboard_check_pressed(ord("C")) && _manager.shortcuts_on
 	show_checkerboard = !show_checkerboard;
 }
 
+if keyboard_check_pressed(ord("X")) && _manager.shortcuts_on
+{
+	help_line = !help_line;
+}
+
 
 
 //show_debug_message("a:" + string(numb_of_timelines));

@@ -28,7 +28,7 @@ if !global.pause
 		is_dashing = true;
 		dash_cooldown = true;
 		alarm[0] = invincible_time * fps;
-		alarm[1] = 0.5 * fps;
+		alarm[1] = 1 * fps;
 	}
 	if dash_speed > 1
 	{
@@ -59,11 +59,12 @@ if !global.pause
 		}
 		_speed -= 1;
 	}
-	
-	//if move_x != 0 && move_y != 0
-	//{
+
+
+	if keyboard_check(vk_anykey)
+	{
 		image_angle = arctan2(move_y * -1 ,move_x) * (180 / pi); // up and down are switched
-	//}
+	}
 	
 	move_x = move;
 	move_y = move;
@@ -76,24 +77,33 @@ if !global.pause
 		{
 			health--;	
 			is_invincible = true;
+			damaged = true;
 			alarm[0] = invincible_time * fps;
 		}
 	}
 
-	if is_invincible == true && global.runtime % 5 == 0 && !is_dashing
+	if damaged
 	{
-		image_index++;
-	}else image_index = 0;
+		image_speed = 1;
+	}else
+	{
+		image_index = 0;
+		image_speed = 0;	
+	}
 
 	if health < 0
 	{
 		show_debug_message("dead");
-		room_restart();		
+		dead = true;
+		global.pause = true;
+		//room_restart();		
 	}
 	
 	if x < 0 || y < 0 || x > room_width || y > room_height // if player out of bounds
 	{
-		room_restart();
+		dead = true;
+		global.pause = true;
 	}
+	
 	
 }

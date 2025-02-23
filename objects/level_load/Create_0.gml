@@ -1,4 +1,5 @@
 current_index = 0;
+win = false;
 
 read_file = false;
 

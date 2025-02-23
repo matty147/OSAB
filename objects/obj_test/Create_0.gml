@@ -11,7 +11,7 @@ instance = instance_find(obj_timeline_time,0);
 _manager = instance_find(manager,0);
 bottom = instance_find(obj_timeline_bottom,0);
 
-display_image = obj_object_selector;
+display_image = "spr_enemy";
 
 is_draggable = true;
 dragging = false;
@@ -28,6 +28,7 @@ object_rotation = 0;
 object_x_scale = 1;
 object_y_scale = 1; // cant have 1:2 object???
 object_speed = 1;
+//display_object_size = 0;
 
 
 extend = false;

@@ -9,6 +9,7 @@ hide = false;
 
 show_checkerboard = false;
 checkerboard_size = 32;
+help_line = false;
 
 _manager = instance_find(manager,0);
 timeline_time = instance_find(obj_timeline_time,0);

@@ -112,6 +112,15 @@ if !paused{
 	if !dragging && !place_meeting(x,y,obj_timeline_top)
 	{
 			y = last_position_y;
+			
+			if !place_meeting(x,y,obj_timeline_top) && x <= room_width && x >= instance.x
+			{
+				show_debug_message("sad")
+				var top = instance_find(obj_timeline_top,0);
+				y += top.sprite_height;
+				last_position_y += top.sprite_height;
+	
+			}
 	}
 
 	if spawn_time < 0
@@ -163,6 +172,7 @@ if extend // image_xscale = (mouse_x - x) / 32;
 		duration = 0;	
 	}	
 }
+
 
 //if global.runtime % 30 == 0
 //{

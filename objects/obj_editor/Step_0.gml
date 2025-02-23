@@ -49,7 +49,9 @@ if keyboard_check_pressed(ord("O")) && keyboard_check(vk_control) && _manager.sh
 			object_x_scale = real(level_data[1][i][4]);
 			object_y_scale = real(level_data[1][i][4]);
 			object_rotation = real(level_data[1][i][5]);
-			object_speed = real(level_data[1][i][6]);			
+			object_speed = real(level_data[1][i][6]);
+			display_image = "spr_test";
+			display_object_size = 0.1;
 		}		
 	}
 }
