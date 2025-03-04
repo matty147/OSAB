@@ -19,8 +19,6 @@ _alpha = [];
 	
 	show_debug_message(global.level_name);
 	
-
-	show_debug_message("aaaaaaaaa" + global.level_name);
 	//read file
 	while (!file_text_eof(file)) {
 		line = file_text_readln(file);

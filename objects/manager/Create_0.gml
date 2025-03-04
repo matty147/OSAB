@@ -9,8 +9,13 @@ global.debug = false; //will open console menu
 
 
 if !variable_global_exists("level_name") {
-	global.level_name = "test";
+	global.level_name = "levels\\test\\test.osab";
 }
+
+if !variable_global_exists("cleared_levels") {
+	global.cleared_levels = 0;
+}
+
 selected_items = 0;
 
 shortcuts_on = true;
