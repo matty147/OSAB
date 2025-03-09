@@ -12,6 +12,14 @@ if !variable_global_exists("level_name") {
 	global.level_name = "levels\\test\\test.osab";
 }
 
+if !variable_global_exists("story_level") {
+	global.story_level = false;
+}
+
+if !variable_global_exists("cleared") {
+	global.cleared = false;
+}
+
 if !variable_global_exists("cleared_levels") {
 	global.cleared_levels = 0;
 }
@@ -71,9 +79,9 @@ level_object_list = [ //object name + siZe
 ["snake",0.05],//10
 ["spike",0.05],//11
 ["spike_floor",0.065],//12
-["spike_saw",0.065],//14
-["spike_saw_hole",0.065],//15
-["sun",0.065]//16
+["spike_saw",0.065],//13
+["spike_saw_hole",0.065],//14
+["sun",0.065]//15
 ];
 
 if !file_exists("lemon.png")

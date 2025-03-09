@@ -1,0 +1,11 @@
+//, time, id, x, y, scale, direction, speed, alpha
+//, circles
+
+id,1
+name,hello
+description,banan 
+lenght,120
+diff,10
+-
+
+100,3,750,500,1,10,2,0.1

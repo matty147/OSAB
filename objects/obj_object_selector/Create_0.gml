@@ -14,6 +14,7 @@ def_pos_y = y;
 if object_number != -1
 {
 	sprite_name = "spr_" + string(_manager.level_object_list[object_number][0]);
+	
 	sprite_index = asset_get_index(sprite_name);
 	display_sprite_size = real(_manager.level_object_list[object_number][1]);
 	image_xscale = display_sprite_size;

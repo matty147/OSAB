@@ -31,7 +31,7 @@ if shortcuts_on
 if room = level && keyboard_check_pressed(vk_escape)
 {
 	
-global.pause = !global.pause;
+	global.pause = !global.pause;
 	
 }
 

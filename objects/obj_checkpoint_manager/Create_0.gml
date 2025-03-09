@@ -1,6 +1,6 @@
 checkpoint_list = [];
 checkpoints_numb = instance_number(obj_checkpoint);
-current_level = 0;
+current_level = global.cleared_levels;
 
 
 for (var i = 0; i < checkpoints_numb; ++i) {

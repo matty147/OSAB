@@ -1,3 +1,11 @@
+var spr = "spr_" + string(level_object_list[object_sprite]);
+
+show_debug_message(asset_get_index(spr));
+show_debug_message(asset_get_index("spr_house"));
+
+sprite_index = asset_get_index(spr);
+//image_index = 0;//asset_get_index("spr_house");
+
 if !global.pause && move
 {
 

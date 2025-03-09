@@ -27,8 +27,9 @@ if keyboard_check_pressed(ord("K")) && place_meeting(x,y,obj_checkpoint)
 if keyboard_check_pressed(vk_enter) && place_meeting(x,y,obj_checkpoint)
 {
 	//global.level_name = "levels\\test\\test.osab";
+	global.story_level = true;
+	global.cleared = checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].cleared;
 	global.level_name = checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].level_name;
-	show_debug_message("a" + string(global.level_name));
-	room_goto(level);
-	
+	show_debug_message("started: " + string(global.level_name) + "\ncleared: " + string(global.cleared));
+	room_goto(level);	
 }

@@ -60,3 +60,5 @@ _alpha = [];
 	file_text_close(file);
 	show_debug_message("finished");
 	read_file = true;
+	show_debug_message("glob: " + (string(global.cleared) + "(level_load)"));
+	show_debug_message("stor: " + (string(global.story_level) + "(level_load)"));

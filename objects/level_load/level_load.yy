@@ -9,8 +9,8 @@
   "name":"level_load",
   "overriddenProperties":[],
   "parent":{
-    "name":"level_editor",
-    "path":"folders/Objects/level_editor.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
