@@ -30,6 +30,7 @@ object_y_scale = 1; // cant have 1:2 object???
 object_speed = 1;
 //display_object_size = 0;
 
+_id = 0;
 
 extend = false;
 

@@ -49,7 +49,7 @@ function scr_save_level(file_name, data, description){
 	{
 		var inst_id = layer_instance_get_instance(data[i]);
 		file_text_write_string(fileid,string(inst_id.spawn_time)
-		+ ","+ "0"
+		+ ","+ string(inst_id._id)
 		+ "," + string(inst_id.object_x)
 		+ "," + string(inst_id.object_y)
 		+ "," + string(inst_id.object_x_scale)

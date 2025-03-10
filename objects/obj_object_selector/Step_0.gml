@@ -34,6 +34,8 @@ if mouse_check_button_released(mb_left) && grabbing
 				instance.y = (round((mouse_y - 32) / 64) * 64) + 32;
 				instance.display_image = "spr_" + string(_manager.level_object_list[object_number][0]);//sprite_name;
 				instance.display_object_size = _manager.level_object_list[object_number][1];
+				instance._id = object_number;
+				show_debug_message(object_number);
 			}else instance_destroy(instance);
 	}else instance_destroy(instance);
 } 
