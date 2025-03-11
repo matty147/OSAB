@@ -183,6 +183,3 @@ if extend // image_xscale = (mouse_x - x) / 32;
 //	show_debug_message("Moved Object: x_in_timeline=" + string(x_in_timeline) + "; x=" + string(x))
 //
 //}
-
-
-// todo fix moving and makeing blocks longer

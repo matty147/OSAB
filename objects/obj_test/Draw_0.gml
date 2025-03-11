@@ -5,9 +5,16 @@ draw_self();
 	{
 		if x > instance.x && room_width > x
 		{
+			//on object
 			draw_sprite_ext(asset_get_index(string(display_image)),0,x + 16,y,display_object_size* 1/3,display_object_size * 1/3,0,c_white,1);
 			
-			draw_sprite_ext(asset_get_index(string(display_image)),0,object_x,object_y,real(object_x_scale) * display_object_size,real(object_y_scale) * display_object_size,0,c_white,1);
+			
+			
+			// object in game
+			if floor(instance.offset / 85 * 5) >= spawn_time && floor(instance.offset / 85 * 5) <= spawn_time + duration
+			{
+				draw_sprite_ext(asset_get_index(string(display_image)),0,object_x,object_y,real(object_x_scale) * display_object_size,real(object_y_scale) * display_object_size,0,c_white,1);
+			}
 			//draw_rectangle(real(object_x),real(object_y),real(object_x ) + 10, real(object_y) + 10,false);
 
 			draw_set_color(c_white);
@@ -27,4 +34,3 @@ draw_self();
 				}
 		}
 	}
-
