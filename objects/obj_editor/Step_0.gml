@@ -38,20 +38,29 @@ if keyboard_check_pressed(ord("O")) && keyboard_check(vk_control) && _manager.sh
 	
 	for (var i = 0; i < array_length(level_data[1]); i++) //, time, id, x, y, scale, direction, speed, alpha
 	{
-		show_debug_message("placed an object: " + string(i));
+		show_debug_message("placed an object: " + string(i));	
+		
+		var object = level_data[1][i];	
+	
 		var instance = instance_create_layer(210,736,"objects",obj_test);
 		with (instance)
-		{
-			spawn_time = real(level_data[1][i][0]);	
-			display_image = "spr_enemy";	
-			object_x = real(level_data[1][i][2]);
-			object_y = real(level_data[1][i][3]);
-			object_x_scale = real(level_data[1][i][4]);
-			object_y_scale = real(level_data[1][i][4]);
-			object_rotation = real(level_data[1][i][5]);
-			object_speed = real(level_data[1][i][6]);
+		{// unpacking or save level_data[1][i] into a var so its easier
+			spawn_time = real(object[0]);	
+			object_x = real(object[2]);
+			object_y = real(object[3]);
+			object_x_scale = real(object[4]);
+			object_y_scale = real(object[4]);
+			object_rotation = real(object[5]);
+			object_speed = real(object[6]);
 			display_image = "spr_test";
 			display_object_size = 0.1;
 		}		
 	}
+}
+
+if keyboard_check_pressed(ord("R")) && _manager.shortcuts_on
+{
+	show_debug_message(time_line.offset);
+	time_line.offset = floor(time_line.offset / 17) * 17;
+	show_debug_message(time_line.offset);
 }

@@ -5,7 +5,7 @@ grid_size = 64;
 offset = 32;
 
 spawn_time = 0;
-duration = 1;
+duration = 2;
 
 instance = instance_find(obj_timeline_time,0);
 _manager = instance_find(manager,0);
