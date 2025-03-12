@@ -20,6 +20,19 @@ if !global.pause
 	    move_x /= length;
 	    move_y /= length;
 	}
+	
+	var _inst = instance_place(x,y,obj_enemy)
+	if place_meeting(x, y, _inst) && _inst.hitbox == true
+	{
+		if !is_invincible && !is_dashing
+		{
+			health--;	
+			is_invincible = true;
+			damaged = true;
+			alarm[0] = invincible_time * fps;
+		}
+	}
+	
 
 	if dash == 1 && !dash_cooldown
 	{
@@ -28,7 +41,7 @@ if !global.pause
 		is_dashing = true;
 		dash_cooldown = true;
 		alarm[0] = invincible_time * fps;
-		alarm[1] = 1 * fps;
+		alarm[1] = 0.25 * fps;
 	}
 	if dash_speed > 1
 	{
@@ -68,19 +81,6 @@ if !global.pause
 	
 	move_x = move;
 	move_y = move;
-
-
-	var _inst = instance_place(x,y,obj_enemy)
-	if place_meeting(x, y, _inst) && _inst.hitbox == true
-	{
-		if !is_invincible && !is_dashing
-		{
-			health--;	
-			is_invincible = true;
-			damaged = true;
-			alarm[0] = invincible_time * fps;
-		}
-	}
 
 	if damaged
 	{

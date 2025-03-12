@@ -1,0 +1,2 @@
+moving = true;
+stoped = false;

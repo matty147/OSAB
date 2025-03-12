@@ -144,5 +144,8 @@ if room == main_menu
 
 if !lemon
 {
-	game_end();	
+			show_message("Error 404: Lemon Not Found.\nThe requested lemon could not be located. It might have been squeezed, zested, or simply never existed. Please check your citrus directory and try again.");
+			game_end();
+	 //show_error("Error: Went to wrong area. Aborting game.", true);
+
 }

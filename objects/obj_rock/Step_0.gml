@@ -1,0 +1,1 @@
+y = base_y + sin(current_time * speed) * amplitude;

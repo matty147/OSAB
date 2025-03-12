@@ -1,0 +1,10 @@
+image_alpha = 0;
+fading_out = false;
+image_xscale = 0.46;
+image_yscale = 0.46;
+moving_arc = false;
+arc_progress = 0;
+start_x = x;
+start_y = y;
+target_x = 1187;
+target_y = 477;
