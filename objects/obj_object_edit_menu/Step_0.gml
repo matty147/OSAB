@@ -98,7 +98,7 @@ if !position_meeting(mouse_x,mouse_y,id) && mouse_check_button_pressed(mb_left)
 	parent_id.object_speed = object_speed;
 	parent_id.start_time = object_time; // dosent change time for some reason???
 	var _manager = instance_find(manager,0);
-	_manager.shortcuts_on = false;
+	_manager.selected_items = 0;
 	show_debug_message("destroyed");
 	
 	//foreach iohng

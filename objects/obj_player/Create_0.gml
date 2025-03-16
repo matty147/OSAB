@@ -13,7 +13,7 @@ dash_cooldown = false;
 is_dashing = false;
 
 is_invincible = false;
-invincible_time = 0.5;
+invincible_time = 0.75;
 
 damaged = false;
 

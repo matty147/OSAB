@@ -8,22 +8,22 @@ frequency = 2;
 wave_angle = 0;
 
 level_object_list = [ //object name + siZe
-"all_spike_saw", //0
-"circle", //1
-"empty_triangle", //2
-"halfcircle", //3
-"enemy", //4
-"house",//5
-"moon",//6
-"rectangle", //7
-"rounded_polygon",//8
-"rounded_rect",//9
-"snake",//10
-"spike",//11
-"spike_floor",//12
-"spike_saw",//13
-"spike_saw_hole",//14
-"sun"//15
+["all_spike_saw",0.065], //0
+["circle",0.065], //1
+["empty_triangle",0.065], //2
+["halfcircle",0.07], //3
+["enemy",0.5], //4
+["house",0.07],//5
+["moon",0.063],//6
+["rectangle",0.065], //7
+["rounded_polygon",0.065],//8
+["rounded_rect",0.065],//9
+["snake",0.05],//10
+["spike",0.05],//11
+["spike_floor",0.065],//12
+["spike_saw",0.065],//13
+["spike_saw_hole",0.065],//14
+["sun",0.065]//15
 ];
 
 
@@ -32,10 +32,7 @@ if !variable_instance_exists(id,"survive_speed") // check if the value is declar
 	survive_speed = 0;	
 }
 
-//if !variable_instance_exists(id,"survive_speed") // check if the value is declared if not declare it
-//{
 	object_sprite = 0;	
-//}
 
 if !variable_instance_exists(id,"angle") // check if the value is declared if not declare it
 {

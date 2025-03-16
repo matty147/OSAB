@@ -1,10 +1,16 @@
-var spr = "spr_" + string(level_object_list[object_sprite]);
+var spr = "spr_" + string(level_object_list[object_sprite][0]);
 
-show_debug_message(asset_get_index(spr));
-show_debug_message(asset_get_index("spr_house"));
+//show_debug_message(asset_get_index(spr));
+//show_debug_message(asset_get_index("spr_house"));
 
 sprite_index = asset_get_index(spr);
-//image_index = 0;//asset_get_index("spr_house");
+
+if sprite_width > 64
+{
+	image_xscale *= real(level_object_list[object_sprite][1]);
+	image_yscale *= real(level_object_list[object_sprite][1])
+}
+image_index = 0;//asset_get_index("spr_house");
 
 if !global.pause && move
 {
@@ -13,7 +19,7 @@ if !global.pause && move
 	{
 		instance_destroy();
 	}
-
+ 
 	if show_hitbox < 0
 	{
 		survive_speed--;
