@@ -150,7 +150,7 @@
     {"id":{"name":"obj_help_guy3","path":"objects/obj_help_guy3/obj_help_guy3.yy",},},
     {"id":{"name":"obj_help_guy4","path":"objects/obj_help_guy4/obj_help_guy4.yy",},},
     {"id":{"name":"obj_input_field","path":"objects/obj_input_field/obj_input_field.yy",},},
-    {"id":{"name":"obj_level_editor","path":"objects/obj_level_editor/obj_level_editor.yy",},},
+    {"id":{"name":"obj_level_data_editor","path":"objects/obj_level_data_editor/obj_level_data_editor.yy",},},
     {"id":{"name":"obj_level_player","path":"objects/obj_level_player/obj_level_player.yy",},},
     {"id":{"name":"obj_logo","path":"objects/obj_logo/obj_logo.yy",},},
     {"id":{"name":"obj_main_guy","path":"objects/obj_main_guy/obj_main_guy.yy",},},

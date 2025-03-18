@@ -1,5 +1,6 @@
 delete_time = 5;
 text = "";
+level_data_editor = instance_find(obj_level_data_editor,0);
 
 setup = true;
 
