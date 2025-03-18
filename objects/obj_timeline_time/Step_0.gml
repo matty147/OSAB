@@ -47,7 +47,17 @@ if keyboard_check_pressed(ord("G")) && _manager.shortcuts_on
 }
 
 // stop all sounds 
-if keyboard_check_pressed(ord("M"))
+if keyboard_check_pressed(ord("M")) && _manager.shortcuts_on
 {
 	audio_stop_all();
+}
+
+if keyboard_check(vk_control) && keyboard_check_pressed(ord("L"))
+{
+	var audio_path = get_open_filename(".ogg|*.ogg","");
+	if audio_path != -1
+	{
+		show_debug_message("created new audio");
+		sound_id = audio_create_stream(audio_path);
+	}
 }

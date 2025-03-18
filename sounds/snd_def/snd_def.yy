@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_test",
+  "%Name":"snd_def",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,7 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":294.56,
-  "name":"snd_test",
+  "name":"snd_def",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_test.mp3",
+  "soundFile":"snd_def.mp3",
   "type":0,
-  "volume":0.25,
+  "volume":0.0,
 }

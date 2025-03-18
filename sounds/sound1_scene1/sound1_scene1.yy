@@ -12,8 +12,8 @@
   "duration":5.873946,
   "name":"sound1_scene1",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"cutscenes",
+    "path":"folders/Sounds/cutscenes.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

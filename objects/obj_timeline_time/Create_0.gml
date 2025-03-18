@@ -23,4 +23,4 @@ start_time = 0;  // start of the visible timeline in time
 scroll = 1;
 play = false;
 
-sound_id = snd_test; //sync_test
+sound_id = snd_def;
