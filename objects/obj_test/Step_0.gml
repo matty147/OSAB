@@ -72,20 +72,23 @@ if !paused{
 		}
 	}else if _manager.clickdouble == 2 && position_meeting(mouse_x,mouse_y,id) && !edit_menu_popup
 	{
-		edit_menu_popup = true;
-		var edit_menu = instance_create_layer(x,y,"popups",obj_object_edit_menu); ///////////////////////////////////////////
-		edit_menu.parent_id = id;
-		edit_menu.image_xscale = 3.5;
-		edit_menu.image_yscale = 6.25;	
-		edit_menu.object_x = object_x;
-		edit_menu.object_y = object_y;
-		edit_menu.object_rotation = object_rotation % 360; // make the angle smaller or eaqual then 360
-		edit_menu.object_x_scale = object_x_scale;
-		//edit_menu.object_y_scale = object_y_scale;
-		edit_menu.object_name = string(display_image);
-		edit_menu.object_time = spawn_time;
-		edit_menu.object_y_scale = object_speed; // temp 
-		//show_debug_message("a");
+		if distance_to_object(obj_level_data_editor) > 1000
+		{
+			edit_menu_popup = true;
+			var edit_menu = instance_create_layer(x,y,"popups",obj_object_edit_menu); ///////////////////////////////////////////
+			edit_menu.parent_id = id;
+			edit_menu.image_xscale = 3.5;
+			edit_menu.image_yscale = 6.25;	
+			edit_menu.object_x = object_x;
+			edit_menu.object_y = object_y;
+			edit_menu.object_rotation = object_rotation % 360; // make the angle smaller or eaqual then 360
+			edit_menu.object_x_scale = object_x_scale;
+			//edit_menu.object_y_scale = object_y_scale;
+			edit_menu.object_name = string(display_image);
+			edit_menu.object_time = spawn_time;
+			edit_menu.object_y_scale = object_speed; // temp 
+			//show_debug_message("a");
+		}
 	}
 
 	if mouse_check_button_released(mb_left)

@@ -86,7 +86,7 @@ if show_advanced_option
 	image_xscale = 7;
 }else image_xscale = 3.5;
 
-if !position_meeting(mouse_x,mouse_y,id) && mouse_check_button_pressed(mb_left)
+if !position_meeting(mouse_x,mouse_y,id) && mouse_check_button_pressed(mb_left) || distance_to_object(obj_level_data_editor) < 1000
 {
 	parent_id.edit_menu_popup = false;
 	parent_id.object_x = object_x;
