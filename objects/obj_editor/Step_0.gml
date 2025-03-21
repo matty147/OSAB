@@ -1,5 +1,8 @@
-if keyboard_check_pressed(ord("S")) && keyboard_check(vk_control) && _manager.shortcuts_on // save level
+if keyboard_check_pressed(ord("S")) && keyboard_check(vk_control) && _manager.shortcuts_on || save // save level
 {
+	
+	save = false;
+	
 	show_debug_message("saving level");
 	
 	global.pause = true;
@@ -15,12 +18,21 @@ if keyboard_check_pressed(ord("S")) && keyboard_check(vk_control) && _manager.sh
 		}
 	)
 	
+	array_push(description,"0"); // id is usless
+	array_push(description,level_data_editor.level_name);
+	array_push(description,level_data_editor.level_description);
+	array_push(description,level_data_editor.level_difficulty);
+	array_push(description,level_data_editor.level_lenght);
+	
 	scr_save_level("test.osab", elements, description); // load data into file
 	global.pause = false;
 }
 
-if keyboard_check_pressed(ord("O")) && keyboard_check(vk_control) && _manager.shortcuts_on // load level
+if keyboard_check_pressed(ord("O")) && keyboard_check(vk_control) && _manager.shortcuts_on || load // load level
 {
+	
+	load = false;
+	
 	var level_data = scr_load_level();
 	
 	show_debug_message("/////////////////////////////////////////");	
@@ -56,6 +68,22 @@ if keyboard_check_pressed(ord("O")) && keyboard_check(vk_control) && _manager.sh
 			display_object_size = 0.1;
 		}		
 	}
+	
+	level_data_editor.set_values = true;
+	
+	var object = level_data[0];
+	
+	for (var i = 0; i < array_length(level_data[0]); i++)
+	{
+		object[i] = string_replace_all(object[i], "\n", "");
+		object[i] = string_replace_all(object[i], "\r", "");
+		//show_debug_message("replaced: " + string(object[i]));
+	}
+	
+	level_data_editor.level_name = object[1];
+	level_data_editor.level_lenght = object[2]; 
+	level_data_editor.level_difficulty = object[3];
+	level_data_editor.level_description = object[4];
 }
 
 if keyboard_check_pressed(ord("R")) && _manager.shortcuts_on

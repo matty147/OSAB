@@ -110,7 +110,10 @@ switch menu_id
 		instance_deactivate_layer("level_select");
 		instance_deactivate_layer("level_buttons");
 		break;
-		
+	
+		case "21":
+		break;
+	
 	case "3": // credits
 	
 		room_goto(editor);
@@ -123,8 +126,18 @@ switch menu_id
 		//instance_deactivate_layer("level_select");
 		//instance_deactivate_layer("level_buttons");
 		break;
-		
-	case "21":
+	
+	case "31":
+		var _editor = instance_find(obj_editor,0);
+		_editor.save = true;
+		show_debug_message("saving");
+		menu_id = -1;
+		break;
+	case "32":
+		var _editor = instance_find(obj_editor,0);
+		_editor.load = true;
+		show_debug_message("loading");
+		menu_id = -1
 		break;
 }
 

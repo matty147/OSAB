@@ -21,7 +21,7 @@ function scr_save_level(file_name, data, description){
 	file_text_writeln(fileid);
 	file_text_writeln(fileid);
 	file_text_write_string(fileid,"id,");
-	file_text_write_real(fileid,description[0]);
+	file_text_write_string(fileid,string(description[0]));
 	
 	file_text_writeln(fileid);
 	file_text_write_string(fileid,"name,");
@@ -33,11 +33,11 @@ function scr_save_level(file_name, data, description){
 	
 	file_text_writeln(fileid);
 	file_text_write_string(fileid,"lenght,");
-	file_text_write_real(fileid,description[3]);
+	file_text_write_string(fileid,string(description[3]));
 	
 	file_text_writeln(fileid);
 	file_text_write_string(fileid,"diff,");
-	file_text_write_real(fileid,description[4]);
+	file_text_write_string(fileid,string(description[4]));
 	
 	file_text_writeln(fileid);
 	file_text_write_string(fileid,"-");

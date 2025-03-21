@@ -26,6 +26,10 @@ function button_pressed(menu_id, instance)
 			global.pop_up = false;
 				return 2;
 				
+			case "2": // editor
+			//show_debug_message("show_credits");
+				return 3;
+				
 			case "20":
 				global.pop_up = true;
 				instance.pop_up_id = 1;
@@ -40,10 +44,13 @@ function button_pressed(menu_id, instance)
 				global.pop_up = true;
 				instance.pop_up_id = 3;
 				return 22;
-				
-			case "2": // credits
+
+			case "23": // save
 			//show_debug_message("show_credits");
-				return 3;
+				return 31;
+				
+			case "24": // load
+				return 32;
 		
 			case "3": // quit
 			game_end();

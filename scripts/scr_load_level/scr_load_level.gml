@@ -1,5 +1,5 @@
 /// @description loads the data into the editors. Returns two arrays, the first one being the object description and the second one being the objects
-/// @return {array[array,array} 
+/// @return {array[array,array]} 
 function scr_load_level(){ //, time, id, x, y, scale, direction, speed, alpha
 	
 	var file_location = get_open_filename(".osab|*.osab","");
