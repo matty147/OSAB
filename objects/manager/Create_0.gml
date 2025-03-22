@@ -5,6 +5,13 @@ global.pause = false;
 
 global.runtime = 0; // track starts
 
+if room = level
+{
+
+global.runtime = -10;	
+	
+}
+
 global.debug = false; //will open console menu
 
 

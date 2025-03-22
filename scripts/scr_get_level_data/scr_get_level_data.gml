@@ -15,6 +15,8 @@ function scr_read_files(folder, extension, results) {
 
     var subfolders = [];
     var path = folder + "\\*";
+	show_debug_message(folder);
+	
     var _file = file_find_first(path,  fa_directory);
 
     while (_file != "") {

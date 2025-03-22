@@ -1,3 +1,13 @@
+	if floor(global.runtime) == 0  && search != ""
+	{
+		if !audio_is_playing(sound_id)
+		{
+			show_debug_message("playing sound");
+			audio_play_sound(sound_id, 1, false,1);
+		}
+		
+	}
+	
 	// spawn objects after the file is read until there are no more to spawn
 	if current_index < array_length(_x) && _time[current_index] == floor(global.runtime)
 	{
@@ -35,11 +45,27 @@
 
 		}
 	}
-
+	
 	if _time[array_length(_x) - 1] >= floor(global.runtime)
 	{
 		end_game = 250;
 	}else end_game--;
+	
+	if end_game = 249 && search != ""
+	{
+		audio_sound_gain(sound_id,0,7000);	
+	}
+	
+	if  player.dead && search != ""
+	{
+		pitch -= 0.01;
+		audio_sound_pitch(sound_id, pitch);
+		
+		if pitch < 0
+		{
+			audio_stop_sound(sound_id);
+		}
+	}
 
 	if instance_number(obj_enemy) <= 0 && end_game < 0
 	{
@@ -52,6 +78,11 @@
 			global.cleared_levels++;
 			global.cleared = true;
 			show_debug_message("cleared + story" + string(global.cleared_levels));
+			
+			if search != ""
+			{
+				audio_stop_sound(sound_id);
+			}
 		}
 		//room_goto(main_menu);
 		//game_end();	

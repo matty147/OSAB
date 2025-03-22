@@ -38,8 +38,7 @@ if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,id) &
 
 	selected = false;
 
-
-	if !ais_numeric(text)// && numeric_check
+	if !ais_numeric(text) && numeric_check
 	{
 		text = last_valid_input;		
 	}
