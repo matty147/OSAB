@@ -8,6 +8,21 @@
 		
 	}
 	
+	if global.runtime > 1 && search != ""
+	{
+	
+		if global.pause
+		{
+			audio_pause_sound(sound_id);
+		}else 
+		{
+			if audio_is_paused(sound_id)
+			{
+				audio_resume_sound(sound_id);
+			}
+		}
+	}
+	
 	// spawn objects after the file is read until there are no more to spawn
 	if current_index < array_length(_x) && _time[current_index] == floor(global.runtime)
 	{
