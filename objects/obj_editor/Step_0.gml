@@ -64,8 +64,8 @@ if keyboard_check_pressed(ord("O")) && keyboard_check(vk_control) && _manager.sh
 			object_y_scale = real(object[4]);
 			object_rotation = real(object[5]);
 			object_speed = real(object[6]);
-			display_image = "spr_test";
-			display_object_size = 0.1;
+			display_image = "spr_test"; // fix
+			display_object_size = 0.1; // fix
 		}		
 	}
 	

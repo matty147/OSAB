@@ -101,6 +101,8 @@ if !paused{
 	// obj time -> x on timeline -> x on screen
 	var x_in_timeline = (spawn_time + 2) * time_line.second_size;
 	x = x_in_timeline - time_line.offset + time_line.x;
+	
+	x -= 4; //fix offset
 
 	if !dragging
 	{

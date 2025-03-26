@@ -6,8 +6,13 @@ draw_self();
 		if x + sprite_width > instance.x && room_width > x
 		{
 			//on object
-			draw_sprite_ext(asset_get_index(string(display_image)),0,x + 16,y,display_object_size* 1/3,display_object_size * 1/3,0,c_white,1);
-			
+			if instance.x < x
+			{
+				draw_sprite_ext(asset_get_index(string(display_image)),0,x + 16,y,display_object_size* 1/3,display_object_size * 1/3,0,c_white,1);
+			}else if instance.x > x && floor(instance.offset / 85 * 5) <= spawn_time + duration && position_meeting(instance.x,y,id)
+			{
+				draw_sprite_ext(asset_get_index(string(display_image)),0,instance.x + 16,y,display_object_size* 1/3,display_object_size * 1/3,0,c_white,1);
+			}
 			
 			
 			// object in game
