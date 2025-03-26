@@ -104,13 +104,23 @@ if !paused{
 
 	if !dragging
 	{
-		if x < instance.x
+		if place_meeting(x,y,obj_timeline_name)
 		{
-			image_alpha = 0;
-		}else if x > room_width
+			depth = name.depth + 1;
+		}else
 		{
-				image_alpha = 0;
-		}else image_alpha = 1;
+			depth = layer_get_depth("objects");
+		}
+		
+		//if x < instance.x // change to visible
+		//{
+		//	visible = false;
+		//	//image_alpha = 0;l
+		//}else if x > room_width
+		//{
+		//	visible = false;
+		//		//image_alpha = 0;
+		//}else visible = true; //image_alpha = 1;
 	}
 	
 	if !dragging && !place_meeting(x,y,obj_timeline_top)
@@ -161,7 +171,15 @@ if extend // image_xscale = (mouse_x - x) / 32;
 	x_in_timeline = (drag_time) * instance.second_size;
 	image_xscale = (x_in_timeline - instance.offset) / 32;
 	
-	show_debug_message(image_xscale);
+	x_in_timeline = x + sprite_width - instance.x + instance.offset; // have to calculate time for sprite_width
+	duration = floor(x_in_timeline / instance.second_size) - 2;
+	duration -= spawn_time;
+	
+	show_debug_message(x_in_timeline);	
+	show_debug_message("a: " + string(duration));
+	//show_debug_message(image_xscale);
+	
+	//var x_in_timeline = mouse_x - instance.x + instance.offset;
 	
 	
 	if image_xscale < min_object_stretch
@@ -174,7 +192,7 @@ if extend // image_xscale = (mouse_x - x) / 32;
 		image_xscale = 1;	
 	}
 	
-	if duration < 0
+	if duration < 0 // ?????
 	{
 		duration = 0;	
 	}	

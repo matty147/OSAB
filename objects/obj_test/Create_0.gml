@@ -10,6 +10,7 @@ duration = 2;
 instance = instance_find(obj_timeline_time,0);
 _manager = instance_find(manager,0);
 bottom = instance_find(obj_timeline_bottom,0);
+name = instance_find(obj_timeline_name,0);
 
 display_image = "spr_enemy";
 
