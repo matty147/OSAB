@@ -1,5 +1,8 @@
 original_x = x;
 display_text = true;
+display_image = "";
+picture_scale_x = 1;
+picture_scale_y = 1;
 
 margin_x = 30;
 line_y = y + 120;

@@ -45,13 +45,13 @@ if level_info
 	if instance.id_of_button_selected != last_id_of_button_selected
 	{
 		loaded_level_data = false;
+		last_id_of_button_selected = instance.id_of_button_selected;		
 		//show_debug_message("update");
 	}
-
-	last_id_of_button_selected = instance.id_of_button_selected;
 	
 	if !loaded_level_data
 	{
+		loaded_level_data = true;
 		data = [];
 		var file = file_text_open_read(instance.save[instance.id_of_button_selected])//file_text_open_read(instance.save[instance.id_of_button_selected] + ".osab");
 		
@@ -101,7 +101,43 @@ if level_info
 				lenght = "-";
 				diff = "-";
 			}
-		loaded_level_data = true;
+			
+			if display_image != ""
+			{
+				sprite_delete(display_image);	
+			}
+			
+			var file_location = filename_dir(string(instance.save[instance.id_of_button_selected]));
+			//show_debug_message(file_location);
+			var path = file_location + "\\*.png";
+	
+			show_debug_message("path: " + string(path));
+	
+			var search = file_find_first(path, fa_directory);
+	
+			show_debug_message(search);
+			show_debug_message(string(file_location) + string(search));
+			if search != ""
+			{
+				display_image = sprite_add(string(file_location) + "\\" + string(search),0,false,false,0,0);
+		
+				if (display_image != -1) {
+			
+					var max_width = sprite_width * 3/4;
+					var max_height = 200;
+			
+					var spr_width = sprite_get_width(display_image);
+					var spr_height = sprite_get_height(display_image);
+			
+					picture_scale_x = max_width / spr_width;
+					picture_scale_y = max_height / spr_height
+					
+			    } else {
+					display_image = "";
+			        show_debug_message("Failed to load sprite.");
+			    }
+		
+		}else display_image = "";
 	}
 	
 	draw_set_font(fnt_default);
@@ -112,29 +148,9 @@ if level_info
 	draw_text_transformed(x + sprite_width / 4 ,325,"lenght: " + string(lenght),2,2,0);	
 	draw_text_transformed(x + sprite_width / 4 * 3 ,325,"difficulty: " + string(diff),2,2,0);
 	
-	var file_location = filename_dir(string(instance.save[instance.id_of_button_selected]));
-	//show_debug_message(file_location);
-	var path = file_location + "\\*.png";
 	
-	show_debug_message("path: " + string(path));
-	
-	var search = file_find_first(path, fa_directory);
-	
-	show_debug_message(search);
-	show_debug_message(string(file_location) + string(search));
-	
-	if search != ""
+	if display_image != ""
 	{
-		var image = sprite_add(string(file_location) + "\\" + string(search),0,false,false,0,0);
-		
-		if (image != -1) {
-			draw_sprite(image,0,sprite_width / 4,400);
-	    } else {
-	        show_debug_message("Failed to load sprite.");
-	    }
-		
-		
+		draw_sprite_ext(display_image,0,sprite_width / 4,400,picture_scale_x,picture_scale_y,0,c_white,1);
 	}
-	//draw_rectangle(sprite_width / 4,400,sprite_width,600,false)
-	
 }
