@@ -26,6 +26,7 @@
 	// spawn objects after the file is read until there are no more to spawn
 	if current_index < array_length(_x) && _time[current_index] == floor(global.runtime)
 	{
+		show_debug_message(duration[current_index]);
 		var instance = instance_create_layer(_x[current_index],_y[current_index],"spawned",obj_enemy);
 		//instance.image_index = 0;
 		instance.object_sprite = _id[current_index];
@@ -34,7 +35,7 @@
 		instance.angle = _angle[current_index];
 		instance._speed = _speed[current_index];
 		instance.image_alpha = _alpha[current_index];
-		instance.survive_speed = 500;
+		instance.survive_speed = real(duration[current_index]) * 85;
 		instance.move = true;
 		
 		//show_debug_message(instance.level_object_list[_id[current_index]]);
@@ -44,6 +45,7 @@
 		//spawning enemies on the same frame
 		while current_index < array_length(_x) && _time[current_index] == floor(global.runtime)
 		{
+			show_debug_message(duration[current_index]);
 			instance = instance_create_layer(_x[current_index],_y[current_index],"spawned",obj_enemy);
 			//instance.image_index = 0;
 			instance.object_sprite = _id[current_index];
@@ -52,7 +54,7 @@
 			instance.angle = _angle[current_index];
 			instance._speed = _speed[current_index];
 			instance.image_alpha = _alpha[current_index];
-			instance.survive_speed = 500;
+			instance.survive_speed = real(duration[current_index]) * 85;
 			instance.move = true;
 			
 			//show_debug_message(instance.level_object_list[_id[current_index]]);

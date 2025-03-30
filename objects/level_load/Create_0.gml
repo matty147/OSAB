@@ -15,6 +15,7 @@ _size = [];
 _angle = [];
 _speed = [];
 _alpha = [];
+duration = [];
 
 	//load file
 	file = file_text_open_read(global.level_name);
@@ -43,9 +44,16 @@ _alpha = [];
 						array_push(_x,_path_parts[2]);
 						array_push(_y,_path_parts[3]);
 						array_push(_size,_path_parts[4]);
-						array_push(_angle, _path_parts[5])
-						array_push(_speed, _path_parts[6])
-						array_push(_alpha, _path_parts[7])
+						array_push(_angle, _path_parts[5]);
+						array_push(_speed, _path_parts[6]);
+						array_push(_alpha, _path_parts[7]);
+						if array_length(_path_parts) >= 9
+						{
+							if string_trim(string(_path_parts[8])) != ""
+							{
+								array_push(duration, _path_parts[8]);
+							}else array_push(duration, 2);
+						}else array_push(duration, 2);
 					}else show_debug_message("comment " + string(line));
 			}//else show_debug_message("level : " + string(_path_parts[0]) + ": " + string (_path_parts[1]));
 		}else show_debug_message("nothing here line ignored");

@@ -57,7 +57,8 @@ function scr_save_level(file_name, data, description){
 		+ "," + string(inst_id.object_x_scale)
 		+ "," + string(inst_id.object_rotation)
 		+ "," + string(inst_id.object_speed)
-		+ "," + "0.75"); // object alpha
+		+ "," + "0.75"
+		+ "," + string(inst_id.duration)); // object alpha
 		//+ "," + string(inst_id.survive_speed));
 		file_text_writeln(fileid);
 	}

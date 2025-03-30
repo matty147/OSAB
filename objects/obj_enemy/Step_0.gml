@@ -14,15 +14,13 @@ image_index = 0;//asset_get_index("spr_house");
 
 if !global.pause && move
 {
-
 	if survive_speed < 0
 	{
 		instance_destroy();
-	}
+	}else survive_speed--;
  
 	if show_hitbox < 0
 	{
-		survive_speed--;
 		hitbox = true;
 	}else show_hitbox--;
 

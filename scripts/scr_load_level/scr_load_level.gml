@@ -25,17 +25,35 @@ function scr_load_level(){ //, time, id, x, y, scale, direction, speed, alpha
 			{
 				//save file into arrays
 				//show_debug_message("a: " + string(_path_parts[0]));
+				
 					if object[0] != "//" // removes comments. comments must start with "//,"
 					{
-						array_push(object_data,[
-						object[0], 
-						object[1],
-						object[2],
-						object[3],
-						object[4],
-						object[5],
-						object[6],
-						object[7]]);
+						if array_length(object) >= 9
+						{
+							array_push(object_data,[
+							object[0], 
+							object[1],
+							object[2],
+							object[3],
+							object[4],
+							object[5],
+							object[6],
+							object[7],
+							object[8]]);
+						}else
+						{
+							array_push(object_data,[
+							object[0], 
+							object[1],
+							object[2],
+							object[3],
+							object[4],
+							object[5],
+							object[6],
+							object[7],
+							"2"]);
+						}
+						
 						//show_debug_message(object);
 					}else show_debug_message("comment: " + string(line));
 			}else
