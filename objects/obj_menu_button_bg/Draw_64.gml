@@ -109,11 +109,19 @@ if level_info
 			
 			var file_location = filename_dir(string(instance.save[instance.id_of_button_selected]));
 			//show_debug_message(file_location);
-			var path = file_location + "\\*.png";
+			var png_path = file_location + "\\*.png";
+			var jpg_path = file_location + "\\*.jpg";
 	
-			show_debug_message("path: " + string(path));
+			show_debug_message("png path: " + string(png_path));
+			show_debug_message("jpg path: " + string(jpg_path));
 	
-			var search = file_find_first(path, fa_directory);
+			var search = file_find_first(png_path, fa_directory);
+			
+			if search == ""
+			{
+				show_debug_message("no");
+				search = file_find_first(jpg_path, fa_directory);
+			}
 	
 			show_debug_message(search);
 			show_debug_message(string(file_location) + string(search));
