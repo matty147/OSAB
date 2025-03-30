@@ -21,8 +21,8 @@ if keyboard_check_pressed(ord("S")) && keyboard_check(vk_control) && _manager.sh
 	array_push(description,"0"); // id is usless
 	array_push(description,level_data_editor.level_name);
 	array_push(description,level_data_editor.level_description);
-	array_push(description,level_data_editor.level_difficulty);
 	array_push(description,level_data_editor.level_lenght);
+	array_push(description,level_data_editor.level_difficulty);
 	
 	scr_save_level("test.osab", elements, description); // load data into file
 	global.pause = false;
@@ -53,6 +53,8 @@ if keyboard_check_pressed(ord("O")) && keyboard_check(vk_control) && _manager.sh
 		show_debug_message("placed an object: " + string(i));	
 		
 		var object = level_data[1][i];	
+		var display_sprite = _manager.level_object_list[object[1]];	
+		
 	
 		var instance = instance_create_layer(210,736,"objects",obj_test);
 		with (instance)
@@ -64,8 +66,8 @@ if keyboard_check_pressed(ord("O")) && keyboard_check(vk_control) && _manager.sh
 			object_y_scale = real(object[4]);
 			object_rotation = real(object[5]);
 			object_speed = real(object[6]);
-			display_image = "spr_test"; // fix
-			display_object_size = 0.1; // fix
+			display_image = "spr_" + string(display_sprite[0]); // fix
+			display_object_size = _manager.level_object_list[object[1]][1]; // fix
 		}		
 	}
 	
@@ -80,10 +82,13 @@ if keyboard_check_pressed(ord("O")) && keyboard_check(vk_control) && _manager.sh
 		//show_debug_message("replaced: " + string(object[i]));
 	}
 	
+	//show_debug_message(object);
+	
 	level_data_editor.level_name = object[1];
-	level_data_editor.level_lenght = object[2]; 
-	level_data_editor.level_difficulty = object[3];
-	level_data_editor.level_description = object[4];
+	level_data_editor.level_description = object[2];
+	level_data_editor.level_lenght = object[3]; 
+	level_data_editor.level_difficulty = object[4];
+	
 }
 
 if keyboard_check_pressed(ord("R")) && _manager.shortcuts_on

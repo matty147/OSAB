@@ -25,9 +25,9 @@ if show_advanced_option
 	draw_set_color(c_white);
 }
 
-draw_set_halign(fa_left)
-draw_text(20, 100,"X: " + string(object_x)
-+ " Y: " + string(object_y)
-+ " angle: " + string(object_rotation)
-+ " scale: " + string(object_x_scale) + ":" + string(object_y_scale)
-+ " Advanced: " + string(show_advanced_option));
+//draw_set_halign(fa_left)
+//draw_text(20, 100,"X: " + string(object_x)
+//+ " Y: " + string(object_y)
+//+ " angle: " + string(object_rotation)
+//+ " scale: " + string(object_x_scale) + ":" + string(object_y_scale)
+//+ " Advanced: " + string(show_advanced_option));

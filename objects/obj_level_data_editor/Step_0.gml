@@ -38,8 +38,8 @@ if set_values
 	description.text = level_description;
 	description.last_valid_input = level_description;
 	
-	lenght.text = level_description;
-	lenght.last_valid_input = level_description;
+	lenght.text = level_lenght;
+	lenght.last_valid_input = level_lenght;
 	
 	difficulty.text = level_difficulty;
 	difficulty.last_valid_input = level_difficulty;

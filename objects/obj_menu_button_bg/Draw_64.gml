@@ -28,7 +28,8 @@ if display_text
 	} else if (instance.menu_id == 1){
 
 
-		draw_text(x + sprite_width / 2, text_y, filename_name(string(instance.save[instance.id_of_button_selected])));
+		//draw_text(x + sprite_width / 2, text_y, filename_name(string(instance.save[instance.id_of_button_selected])));
+		draw_text(x + sprite_width / 2, text_y, name);
 
 
 	}
@@ -110,6 +111,30 @@ if level_info
 	draw_set_halign(fa_center);
 	draw_text_transformed(x + sprite_width / 4 ,325,"lenght: " + string(lenght),2,2,0);	
 	draw_text_transformed(x + sprite_width / 4 * 3 ,325,"difficulty: " + string(diff),2,2,0);
-	draw_rectangle(sprite_width / 4,400,sprite_width, 600,false)
+	
+	var file_location = filename_dir(string(instance.save[instance.id_of_button_selected]));
+	//show_debug_message(file_location);
+	var path = file_location + "\\*.png";
+	
+	show_debug_message("path: " + string(path));
+	
+	var search = file_find_first(path, fa_directory);
+	
+	show_debug_message(search);
+	show_debug_message(string(file_location) + string(search));
+	
+	if search != ""
+	{
+		var image = sprite_add(string(file_location) + "\\" + string(search),0,false,false,0,0);
+		
+		if (image != -1) {
+			draw_sprite(image,0,sprite_width / 4,400);
+	    } else {
+	        show_debug_message("Failed to load sprite.");
+	    }
+		
+		
+	}
+	//draw_rectangle(sprite_width / 4,400,sprite_width,600,false)
 	
 }

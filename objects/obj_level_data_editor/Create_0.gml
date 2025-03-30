@@ -23,14 +23,15 @@ name.depth = depth - 1;
 name.image_xscale = 5.5;
 name.text = "Unnamed level";
 name.last_valid_input = "Unnamed level";
-name.max_text_lenght = 15;
+name.max_text_lenght = 30;
 
 
-description =  instance_create_layer(x + add_x_position,y + sprite_width * 2/6,"popups",obj_input_field);
+description = instance_create_layer(x + add_x_position,y + sprite_width * 2/6,"popups",obj_input_field);
 description.depth = depth - 1;
 description.image_xscale = 5.5;
 description.text = "None";
 description.last_valid_input = "None";
+description.max_text_lenght = 30;
 
 
 lenght = instance_create_layer(x + add_x_position,y + sprite_width * 3/6,"popups",obj_input_field);

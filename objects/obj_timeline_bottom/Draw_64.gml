@@ -1,3 +1,5 @@
+draw_set_color(c_white);
+draw_set_halign(fa_left);
 if !hide
 {
 	draw_text(10,room_height - numb_of_timelines * timeline_time.sprite_height * 2 - 50,"mouse_x: " + string(mouse_x) + " mouse_y: " + string(mouse_y) + " rotation: " + string(rotation));

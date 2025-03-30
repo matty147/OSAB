@@ -15,6 +15,8 @@ function scr_save_level(file_name, data, description){
 		exit;
 	}
 	
+	show_debug_message(description);
+	
 	file_text_write_string(fileid,"//,");
 	file_text_write_string(fileid,"User built level");
 	

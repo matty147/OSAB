@@ -13,6 +13,8 @@ _manager = instance_find(manager,0);
 
 custom_input = "";
 
+text_size = 1;
+
 max_text_lenght = 10;
 
 numeric_check = false;
