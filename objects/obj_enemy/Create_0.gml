@@ -1,4 +1,5 @@
 image_speed = 0;
+set_up = true;
 //survive_speed = random_range(100, 100); //change!!!!
 hitbox = false;
 show_hitbox = 50;
@@ -25,7 +26,6 @@ level_object_list = [ //object name + siZe
 ["spike_saw_hole",0.065],//14
 ["sun",0.065]//15
 ];
-
 
 if !variable_instance_exists(id,"survive_speed") // check if the value is declared if not declare it
 {
