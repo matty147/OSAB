@@ -15,11 +15,12 @@ if room == editor
 		var elements = layer_get_all_elements(layer_id);
 
 		array_sort(elements,function(a,b)
-			{
-				return layer_instance_get_instance(a).spawn_time - layer_instance_get_instance(b).spawn_time;
-			}
-		)
-	
+		{
+			return layer_instance_get_instance(a).spawn_time - layer_instance_get_instance(b).spawn_time;
+		}
+		);
+		
+		description = [];
 		array_push(description,"0"); // id is usless
 		array_push(description,level_data_editor.level_name);
 		array_push(description,level_data_editor.level_description);
