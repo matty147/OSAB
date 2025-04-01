@@ -75,7 +75,7 @@ clickdouble=0;
 level_object_list = [ //object name + siZe
 ["all_spike_saw",0.065], //0
 ["circle",0.065], //1
-["empty_triangle",0.065], //2
+["star",0.065], //2
 ["halfcircle",0.07], //3
 ["enemy",0.5], //4
 ["house",0.07],//5
@@ -88,7 +88,13 @@ level_object_list = [ //object name + siZe
 ["spike_floor",0.065],//12
 ["spike_saw",0.065],//13
 ["spike_saw_hole",0.065],//14
-["sun",0.065]//15
+["sun",0.065],//15
+["large_arrow",0.065],//16
+["heart",0.065],//17
+["hexagon",0.065],//18
+["industrial_circle",0.065],//19
+["lightning",0.065],//20
+["heart",0.065]//21
 ];
 
 if !file_exists("lemon.png")
