@@ -67,13 +67,12 @@ function button_pressed(menu_id, instance)
 				
 			case "41": // retry
 			//show_debug_message("global level name" + string(global.level_name));
-				audio_stop_all();
 				room_restart();
 				return 0;
 				
 			case "42": // exit level
 				audio_stop_all();
-				room_goto(main_menu)
+				room_goto(main_menu);
 				return 0;
 				
 	}

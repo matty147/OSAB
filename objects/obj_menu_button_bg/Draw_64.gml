@@ -119,7 +119,7 @@ if level_info
 			
 			if search == ""
 			{
-				show_debug_message("no");
+				//show_debug_message("no");
 				search = file_find_first(jpg_path, fa_directory);
 			}
 	
@@ -155,7 +155,6 @@ if level_info
 	draw_set_halign(fa_center);
 	draw_text_transformed(x + sprite_width / 4 ,325,"lenght: " + string(lenght),2,2,0);	
 	draw_text_transformed(x + sprite_width / 4 * 3 ,325,"difficulty: " + string(diff),2,2,0);
-	
 	
 	if display_image != ""
 	{

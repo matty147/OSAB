@@ -41,7 +41,7 @@ if !global.pause
 		is_dashing = true;
 		dash_cooldown = true;
 		alarm[0] = invincible_time * fps;
-		alarm[1] = 0.25 * fps;
+		alarm[1] = (invincible_time + 0.25) * fps;
 	}
 	if dash_speed > 1
 	{
@@ -54,24 +54,25 @@ if !global.pause
 	// horizontal
 	for (var i = 0; i < 10; i++)
 	{
-		if !place_meeting(x + move_x * _speed,y,obj_wall){
+		if !place_meeting(x + move_x * _speed,y,obj_wall) && x > 0 && x < room_width{
 			x += move_x * _speed;
-			_speed = def_speed;
 			break;
 		}
 		_speed -= 1;
 	}
+	_speed = def_speed;
 
 	//vertical
 	for (var i = 0; i < 10; i++)
 	{
-		if !place_meeting(x,y  + move_y * _speed,obj_wall){
+		if !place_meeting(x,y  + move_y * _speed,obj_wall) && y > 0 && y < room_height{
 			y += move_y * _speed;
-			_speed = def_speed;
 			break;
 		}
 		_speed -= 1;
 	}
+	_speed = def_speed;
+	
 
 
 	if keyboard_check(vk_anykey)

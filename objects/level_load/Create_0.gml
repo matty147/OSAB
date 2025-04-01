@@ -95,3 +95,5 @@ duration = [];
 
 	show_debug_message("glob: " + (string(global.cleared) + "(level_load)"));
 	show_debug_message("stor: " + (string(global.story_level) + "(level_load)"));
+	
+	audio_deleted = 0;

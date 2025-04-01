@@ -8,10 +8,10 @@
 		
 	}
 	
-	if global.runtime > 1 && search != ""
+	if global.runtime > 1 && search != "" && !win
 	{
 	
-		if global.pause
+		if global.pause && !player.dead
 		{
 			audio_pause_sound(sound_id);
 		}else 
@@ -64,7 +64,7 @@
 			//show_debug_message(instance.level_object_list[_id[current_index]]);
 			current_index++;	
 
-			show_debug_message(_time[current_index + 1]);
+			//show_debug_message(_time[current_index + 1]);
 		}
 	}
 	
@@ -80,6 +80,7 @@
 	
 	if  player.dead && search != ""
 	{
+		show_debug_message(pitch);
 		pitch -= 0.01;
 		audio_sound_pitch(sound_id, pitch);
 		
@@ -90,9 +91,18 @@
 	}
 
 	if instance_number(obj_enemy) <= 0 && end_game < 0
-	{
+	{	
 		win = true;
 		global.pause = true;
+		
+		if search != ""
+		{
+			audio_stop_sound(sound_id);
+			if audio_deleted
+			{
+				audio_deleted = audio_destroy_stream(sound_id);
+			}
+		}
 		
 		if !global.cleared && global.story_level
 		{
@@ -100,11 +110,6 @@
 			global.cleared_levels++;
 			global.cleared = true;
 			show_debug_message("cleared + story" + string(global.cleared_levels));
-			
-			if search != ""
-			{
-				audio_stop_sound(sound_id);
-			}
 		}
 		//room_goto(main_menu);
 		//game_end();	
