@@ -67,6 +67,7 @@ function button_pressed(menu_id, instance)
 				
 			case "41": // retry
 			//show_debug_message("global level name" + string(global.level_name));
+				audio_stop_all();
 				room_restart();
 				return 0;
 				

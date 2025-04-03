@@ -62,7 +62,7 @@ if room == editor
 			var instance = instance_create_layer(210,736,"objects",obj_test);
 			with (instance)
 			{// unpacking or save level_data[1][i] into a var so its easier
-				spawn_time = real(object[0]);	
+				spawn_time = real(object[0]) / 17;	
 				object_x = real(object[2]);
 				object_y = real(object[3]);
 				object_x_scale = real(object[4]);
