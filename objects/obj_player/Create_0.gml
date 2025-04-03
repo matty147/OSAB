@@ -1,6 +1,8 @@
 image_speed = 0;
 image_index = 0;
 
+image_scale = 0;
+mod_image_scale = 0;
 
 move = 6;
 _speed = 10;
