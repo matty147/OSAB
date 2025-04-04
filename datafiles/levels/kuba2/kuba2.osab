@@ -1,10 +1,10 @@
 //,User built level
 
 id,0
-name,Unnamed level
-description,None
-lenght,0
-diff,0
+name,energy Synergy Matrix
+description,second story level
+lenght,1:16
+diff,YES
 -
 //,cast1
 0,7,683,384,2,36,6,0,4,5

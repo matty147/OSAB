@@ -30,6 +30,8 @@
 		//show_debug_message(duration[current_index]);
 		var instance = instance_create_layer(_x[current_index],_y[current_index],"spawned",obj_enemy);
 		//instance.image_index = 0;
+		
+		show_debug_message(_id[current_index]);
 		instance.object_sprite = _id[current_index];
 		instance.image_xscale = _size[current_index];
 		instance.image_yscale = _size[current_index];
@@ -38,6 +40,7 @@
 		instance.image_alpha = _alpha[current_index];
 		instance.survive_speed = real(duration[current_index]) * 85;
 		instance.move = true;
+		instance.show_hitbox = real(show_hitbox[current_index]);
 		
 		//show_debug_message(_time[current_index + 1]);
 		
@@ -52,6 +55,7 @@
 			//show_debug_message(duration[current_index]);
 			instance = instance_create_layer(_x[current_index],_y[current_index],"spawned",obj_enemy);
 			//instance.image_index = 0;
+			show_debug_message(_id[current_index]);
 			instance.object_sprite = _id[current_index];
 			instance.image_xscale = _size[current_index];
 			instance.image_yscale = _size[current_index];
@@ -60,6 +64,7 @@
 			instance.image_alpha = _alpha[current_index];
 			instance.survive_speed = real(duration[current_index]) * 85;
 			instance.move = true;
+			instance.show_hitbox = real(show_hitbox[current_index]);
 			
 			//show_debug_message(instance.level_object_list[_id[current_index]]);
 			current_index++;	

@@ -121,6 +121,7 @@ if level_info
 			{
 				//show_debug_message("no");
 				search = file_find_first(jpg_path, fa_directory);
+				file_find_close();
 			}
 	
 			show_debug_message(search);
@@ -146,6 +147,27 @@ if level_info
 			    }
 		
 		}else display_image = "";
+		
+		if sound_id != "" 
+		{
+			audio_stop_sound(sound_id);
+			audio_destroy_stream(sound_id);
+		}			
+					
+		var music_path = file_location + "\\*.ogg";
+			
+		search = file_find_first(music_path, fa_directory);
+		file_find_close();
+	
+		show_debug_message("found song: " + string(search));
+
+		if search != ""
+		{
+			sound_id = audio_create_stream(filename_dir(music_path) + "\\" + search);
+			audio_play_sound(sound_id, 1, false,1);
+		}
+		
+		
 	}
 	
 	draw_set_font(fnt_default);

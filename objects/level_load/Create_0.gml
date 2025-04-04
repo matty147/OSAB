@@ -16,6 +16,7 @@ _angle = [];
 _speed = [];
 _alpha = [];
 duration = [];
+show_hitbox = [];
 
 	//load file
 	file = file_text_open_read(global.level_name);
@@ -47,13 +48,21 @@ duration = [];
 						array_push(_angle, _path_parts[5]);
 						array_push(_speed, _path_parts[6]);
 						array_push(_alpha, _path_parts[7]);
-						if array_length(_path_parts) >= 9
+						
+						if array_length(_path_parts) = 9
 						{
 							if string_trim(string(_path_parts[8])) != ""
 							{
 								array_push(duration, _path_parts[8]);
 							}else array_push(duration, 2);
 						}else array_push(duration, 2);
+						
+							if array_length(_path_parts) = 10
+							{
+								array_push(show_hitbox, _path_parts[9]);
+							}else array_push(show_hitbox, 25);
+						
+						
 					}else show_debug_message("comment " + string(line));
 			}//else show_debug_message("level : " + string(_path_parts[0]) + ": " + string (_path_parts[1]));
 		}else show_debug_message("nothing here line ignored");
@@ -67,6 +76,9 @@ duration = [];
 		//show_debug_message("-----------------------------------------------------------------")
 		//show_debug_message("-----------------------------------------------------------------")
 	}
+	
+	audio_stop_all();
+	
 	file_text_close(file);
 	show_debug_message("finished");
 	read_file = true;

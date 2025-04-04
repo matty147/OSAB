@@ -94,7 +94,8 @@ level_object_list = [ //object name + siZe
 ["hexagon",0.065],//18
 ["industrial_circle",0.065],//19
 ["lightning",0.065],//20
-["heart",0.065]//21
+["heart",0.065],//21
+["main_boss",0.5],//22
 ];
 
 if !file_exists("lemon.png")

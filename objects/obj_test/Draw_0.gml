@@ -19,13 +19,13 @@ draw_self();
 			if floor(instance.offset / 85 * 5) >= spawn_time && floor(instance.offset / 85 * 5) <= spawn_time + duration
 			{ //small then cur time								//big then cur time
 				draw_sprite_ext(asset_get_index(string(display_image)),0,object_x,object_y,real(object_x_scale) * display_object_size,real(object_y_scale) * display_object_size,0,c_white,1);
-			}
-			//draw_rectangle(real(object_x),real(object_y),real(object_x ) + 10, real(object_y) + 10,false);
+			
+				//draw_rectangle(real(object_x),real(object_y),real(object_x ) + 10, real(object_y) + 10,false);
 
-			draw_set_color(c_white);
+				draw_set_color(c_white);
 
-			var end_x = real(object_x) + lengthdir_x(50, real(object_rotation)) + 5;
-			var end_y = real(object_y) + lengthdir_y(50, real(object_rotation)) + 5;
+				var end_x = real(object_x) + lengthdir_x(50, real(object_rotation)) + 5;
+				var end_y = real(object_y) + lengthdir_y(50, real(object_rotation)) + 5;
 			
 				if bottom.help_line
 				{
@@ -37,5 +37,6 @@ draw_self();
 				{
 					draw_line_color(real(object_x),real(object_y),end_x, end_y,c_white,c_white);	
 				}
+			}
 		}
 	}

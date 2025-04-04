@@ -1,6 +1,10 @@
 original_x = x;
 display_text = true;
+
 display_image = "";
+sound_id = NaN;
+audio_deleted = 0;
+
 picture_scale_x = 1;
 picture_scale_y = 1;
 
