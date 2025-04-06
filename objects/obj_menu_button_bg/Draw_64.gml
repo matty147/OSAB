@@ -49,7 +49,7 @@ if level_info
 		//show_debug_message("update");
 	}
 	
-	if !loaded_level_data
+	if !loaded_level_data && true
 	{
 		loaded_level_data = true;
 		data = [];

@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_menu",
+  "%Name":"snd_button",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,7 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.03898,
-  "name":"snd_menu",
+  "name":"snd_button",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_menu.wav",
+  "soundFile":"snd_button.wav",
   "type":0,
-  "volume":0.0,
+  "volume":0.59,
 }

@@ -10,10 +10,10 @@ if shortcuts_on
 	//	scr_save_level("test.osab","");
 	//}
 
-	if keyboard_check_pressed(ord("E")) 
-	{
-		room_goto(level_select);
-	}
+	//if keyboard_check_pressed(ord("E")) 
+	//{
+	//	room_goto(level_select);
+	//}
 
 	//these will be buttons on the menu but for the time being they are here
 
@@ -143,7 +143,10 @@ switch menu_id
 
 if move_buttons != 0 && room == main_menu && menu_id == "1"
 {
-	audio_play_sound(snd_menu,2,false);	
+	if !audio_is_playing(snd_button)
+	{
+		audio_play_sound(snd_button,2,false);
+	}
 }
 
 
@@ -187,3 +190,16 @@ if selected_items < 1
 }else shortcuts_on = false;
 
 //show_debug_message(selected_items);
+
+if room == main_menu
+{
+	if menu_id != 1
+	{
+		if !audio_is_playing(snd_menu_bg)
+		{
+			audio_stop_all();
+			audio_play_sound(snd_menu_bg,0,true,1,9);
+		}
+	}else audio_stop_sound(snd_menu_bg);
+	
+}
