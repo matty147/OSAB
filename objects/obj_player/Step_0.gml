@@ -26,6 +26,7 @@ if !global.pause
 	{
 		if !is_invincible && !is_dashing
 		{
+			audio_play_sound(snd_hit,0,false);
 			health--;	
 			is_invincible = true;
 			damaged = true;
@@ -36,6 +37,7 @@ if !global.pause
 
 	if dash == 1 && !dash_cooldown
 	{
+		audio_play_sound(snd_dash,0,false);
 		dash_speed = 8;
 		is_invincible = true;
 		is_dashing = true;
@@ -105,6 +107,8 @@ if !global.pause
 		dead = true;
 		global.pause = true;
 	}
+	
+	
 	
 	
 }

@@ -1,6 +1,6 @@
 draw_self();
 
-//var length = 32;
+//var length = 1;
 
 //for (var i = 1; i < 10;i++)
 //{

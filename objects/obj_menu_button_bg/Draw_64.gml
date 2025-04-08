@@ -204,6 +204,6 @@ if level_info
 	
 	if display_image != ""
 	{
-		draw_sprite_ext(display_image,0,sprite_width / 4,400,picture_scale_x,picture_scale_y,0,c_white,1);
+		draw_sprite_ext(display_image,0,sprite_width / 4,375,picture_scale_x,picture_scale_y,0,c_white,1);
 	}
 }
