@@ -54,6 +54,8 @@
     {"$GMIncludedFile":"","%Name":"BG.png","CopyToMask":-1,"filePath":"datafiles/levels/kuba2","name":"BG.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"kuba2.osab","CopyToMask":-1,"filePath":"datafiles/levels/kuba2","name":"kuba2.osab","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"Song2.ogg","CopyToMask":-1,"filePath":"datafiles/levels/kuba2","name":"Song2.ogg","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"ahojks.osab","CopyToMask":-1,"filePath":"datafiles/levels/kuba3","name":"ahojks.osab","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"song4.ogg","CopyToMask":-1,"filePath":"datafiles/levels/kuba3","name":"song4.ogg","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"Abc - 01.osab","CopyToMask":-1,"filePath":"datafiles/levels/level 1","name":"Abc - 01.osab","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"Abc - 10.osab","CopyToMask":-1,"filePath":"datafiles/levels/level 10","name":"Abc - 10.osab","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"Abc - 11.osab","CopyToMask":-1,"filePath":"datafiles/levels/level 11","name":"Abc - 11.osab","resourceType":"GMIncludedFile","resourceVersion":"2.0",},

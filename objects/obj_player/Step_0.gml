@@ -41,7 +41,7 @@ if !global.pause
 		is_dashing = true;
 		dash_cooldown = true;
 		alarm[0] = invincible_time * fps;
-		alarm[1] = (invincible_time + 0.01) * fps;
+		alarm[1] = (invincible_time + 0.005) * fps;
 	}
 	if dash_speed > 1
 	{

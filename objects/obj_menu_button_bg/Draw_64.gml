@@ -42,7 +42,7 @@ if level_info
 	
 	//show_debug_message("last: " + string(last_id_of_button_selected) + "new: " + string(instance.id_of_button_selected));
 	
-	if instance.id_of_button_selected != last_id_of_button_selected
+	if instance.id_of_button_selected != last_id_of_button_selected && instance.selected_scrollable_button
 	{
 		loaded_level_data = false;
 		last_id_of_button_selected = instance.id_of_button_selected;		

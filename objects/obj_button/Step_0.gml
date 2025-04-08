@@ -28,6 +28,7 @@ function button_pressed(menu_id, instance)
 				
 			case "2": // editor
 			//show_debug_message("show_credits");
+			audio_stop_all();
 				return 3;
 				
 			case "20":
@@ -122,13 +123,21 @@ if instance_place(mouse_x,mouse_y - 32,obj_select_panel) // the mouse is not per
 	can_interact = false;
 }else can_interact = true;
 
+if can_interact && button_id != -1
+{
+	show_debug_message("scroll: " + string(scrollable));
+	instance.selected_scrollable_button = scrollable;
+}else instance.selected_scrollable_button = false;
+
 if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off 
 {
+	
 	if !(scrollable && !can_interact) // cant interact if button is hiden behind by obj_select_panel (mouse is touching select panel)
 	{
 		image_index = 1;
 	
 		instance.id_of_button_selected = selected_button_id;
+
 	
 		if mouse_check_button_released(mb_left)
 		{
@@ -172,11 +181,7 @@ if scrollable
 	{
 		image_xscale = 0.55;
 	}else image_xscale = 0.5;
-}
 
-
-if scrollable
-{
 	//smooth moving from point A to point B
 	y = lerp(y, y + instance.move_buttons * 32,0.5);
 	
@@ -257,9 +262,9 @@ if scrollable
 	}
 }
 
-	if(scrollable){
-		image_xscale = 0.5;
-	}
+if(scrollable){
+	image_xscale = 0.5;
+}
 
 
 if move

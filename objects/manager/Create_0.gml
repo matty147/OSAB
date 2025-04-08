@@ -8,12 +8,13 @@ global.runtime = 0; // track starts
 if room = level
 {
 
-global.runtime = -10;	
+global.runtime = -30;	
 	
 }
 
 global.debug = false; //will open console menu
 
+selected_scrollable_button = false;
 
 if !variable_global_exists("level_name") {
 	global.level_name = "levels\\test\\test.osab";
