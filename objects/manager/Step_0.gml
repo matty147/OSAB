@@ -197,9 +197,18 @@ if room == main_menu
 	{
 		if !audio_is_playing(snd_menu_bg)
 		{
+			show_debug_message("plaing bg music" + string(room_get_name(room)));
 			audio_stop_all();
 			audio_play_sound(snd_menu_bg,0,true,1,9);
 		}
 	}else audio_stop_sound(snd_menu_bg);
+	
+}else{
+
+if audio_is_playing(snd_menu_bg)
+{
+	show_debug_message("stoped bg music");
+	audio_stop_sound(snd_menu_bg);
+}
 	
 }

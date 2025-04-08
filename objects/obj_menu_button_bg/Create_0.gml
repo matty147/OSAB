@@ -20,6 +20,9 @@ description = "";
 lenght = "";
 diff = "";
 
+text = "";
+text_size = 1;
+
 last_id_of_button_selected = 4;
 
 loaded_level_data = false;				

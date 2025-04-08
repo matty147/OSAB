@@ -125,7 +125,7 @@ if instance_place(mouse_x,mouse_y - 32,obj_select_panel) // the mouse is not per
 
 if can_interact && button_id != -1
 {
-	show_debug_message("scroll: " + string(scrollable));
+	//show_debug_message("scroll: " + string(scrollable));
 	instance.selected_scrollable_button = scrollable;
 }else instance.selected_scrollable_button = false;
 

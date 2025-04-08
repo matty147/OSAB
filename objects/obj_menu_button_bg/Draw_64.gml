@@ -9,30 +9,54 @@ if display_text
 	draw_set_font(fnt_large);
 
 	if (instance.menu_id == 0) {
-	    draw_text(x + sprite_width / 2, text_y, "Welcome");
+	    text = "Welcome";
 	} else if (instance.menu_id == 2) || (instance.menu_id == 20) || (instance.menu_id == 21) || (instance.menu_id == 22){
 		if hidden
 		{
 			if instance.menu_id == 20
 			{
-				draw_text(x + sprite_width / 2, text_y, "Game setting");
+				text = "Game setting";
 			}else if instance.menu_id == 21
 			{
-				draw_text(x + sprite_width / 2, text_y, "Graphics setting");
+				text = "Graphics setting";
 			}else if instance.menu_id == 22
 			{
-				draw_text(x + sprite_width / 2, text_y, "Audio setting");
+				text = "Audio setting";
 			}
 			
-		}else draw_text(x + sprite_width / 2, text_y, "Options");
+		}else text = "Options"
 	} else if (instance.menu_id == 1){
-
-
-		//draw_text(x + sprite_width / 2, text_y, filename_name(string(instance.save[instance.id_of_button_selected])));
-		draw_text(x + sprite_width / 2, text_y, name);
-
-
+		text = string(name);
 	}
+	
+	//show_debug_message("name: " + string(text));
+	
+	var repeat_numb = 0;
+	
+	while string_width(string(text)) * text_size > sprite_width
+	{
+	
+		repeat_numb++;
+	
+		if string_width(string(text)) * text_size > sprite_width - 50
+		{
+			if text_size > 0.5
+			{
+				text_size -= 0.1;
+			}
+			show_debug_message(string_length(text));
+		}else if text_size < 1 && string_width(string(text)) * (text_size + 0.1) < sprite_width - 50
+		{
+			text_size += 0.1;
+		}
+		
+		if repeat_numb > 10
+		{
+			break;	
+		}
+	}
+	
+	draw_text_transformed(x + sprite_width / 2, text_y, text,text_size,text_size,0);
 	
 }
 
