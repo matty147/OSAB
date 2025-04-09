@@ -9,14 +9,24 @@ if room == editor
 	
 		global.pause = true;
 		// Get the ID of a layer
-		var layer_id = layer_get_id("objects"); // fetch all objects in layer
+		//var layer_id = layer_get_id("objects"); // fetch all objects in layer
 
 		// Retrieve all elements in the layer
-		var elements = layer_get_all_elements(layer_id);
+		var elements = [];//layer_get_all_elements(layer_id);
+		
+		var count = instance_number(obj_test);
+		
+		for (var i = 0; i < count; i++)
+		{
+			array_push(elements,instance_find(obj_test, i));
+		}
 
 		array_sort(elements,function(a,b)
 		{
-			return layer_instance_get_instance(a).spawn_time - layer_instance_get_instance(b).spawn_time;
+			show_debug_message("a: " + string(a.spawn_time));
+			show_debug_message("b: " + string(b.spawn_time));
+			//return layer_instance_get_instance(a).spawn_time - layer_instance_get_instance(b).spawn_time;
+			return  a.spawn_time - b.spawn_time;
 		}
 		);
 		
@@ -40,15 +50,23 @@ if room == editor
 	
 		show_debug_message("/////////////////////////////////////////");	
 		show_debug_message(level_data);
-		var layer_id = layer_get_id("objects");
-		var delete_objects = layer_get_all_elements(layer_id);
+		//var layer_id = layer_get_id("objects");
+		var delete_objects = [];//layer_get_all_elements(layer_id);
+		
+		var count = instance_number(obj_test);
+		
+		for (var i = 0; i < count; i++)
+		{
+			array_push(delete_objects,instance_find(obj_test, i));
+			show_debug_message("found one");
+		}
 	
 		show_debug_message("E");
 	
 		for (var i = 0; i < array_length(delete_objects); i++)
 		{
-			show_debug_message("deleting obj: " + string(layer_instance_get_instance(delete_objects[i])));
-			instance_destroy(layer_instance_get_instance(delete_objects[i]));
+			show_debug_message("deleting obj: " + string(delete_objects[i]));
+			instance_destroy(delete_objects[i]);
 		}
 	
 		for (var i = 0; i < array_length(level_data[1]); i++) //, time, id, x, y, scale, direction, speed, alpha
