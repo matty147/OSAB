@@ -76,9 +76,12 @@
 	if _time[array_length(_x) - 1] >= floor(global.runtime)
 	{
 		end_game = 250;
-	}else end_game--;
+	}else if !global.pause
+	{	
+		end_game--;
+	}
 	
-	if end_game = 249 && search != ""
+	if end_game = 249 && search != ""	
 	{
 		audio_sound_gain(sound_id,0,7000);	
 	}

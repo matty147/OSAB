@@ -88,14 +88,21 @@ if !global.pause
 	if damaged
 	{
 		image_speed = 1;
+		if image_index % 2 == 0
+		{
+			image_index = (3 - health) * 2;
+		}
+		
 	}else
 	{
-		image_index = 0;
+		image_index = (3 - health) * 2;
 		image_speed = 0;	
 	}
 
 	if health < 0
 	{
+		image_index = 8;
+		image_speed = 0
 		show_debug_message("dead");
 		dead = true;
 		global.pause = true;
