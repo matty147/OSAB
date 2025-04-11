@@ -33,3 +33,5 @@ if keyboard_check_pressed(vk_enter) && place_meeting(x,y,obj_checkpoint)
 	show_debug_message("started: " + string(global.level_name) + "\ncleared: " + string(global.cleared));
 	room_goto(level);	
 }
+
+//view_camera[0] = 

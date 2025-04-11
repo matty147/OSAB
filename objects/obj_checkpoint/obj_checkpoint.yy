@@ -31,6 +31,7 @@
     {"$GMObjectProperty":"v1","%Name":"checkpoint_id","filters":[],"listItems":[],"multiselect":false,"name":"checkpoint_id","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"visible","filters":[],"listItems":[],"multiselect":false,"name":"visible","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v1","%Name":"level_name","filters":[],"listItems":[],"multiselect":false,"name":"level_name","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"levels\\\\test\\\\test.osab","varType":2,},
+    {"$GMObjectProperty":"v1","%Name":"boss_level","filters":[],"listItems":[],"multiselect":false,"name":"boss_level","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
