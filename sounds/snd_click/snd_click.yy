@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_click.wav",
   "type":0,
-  "volume":0.0,
+  "volume":0.5,
 }

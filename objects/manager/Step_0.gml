@@ -1,4 +1,3 @@
-if room == level_select
 {
 
 	if keyboard_check_pressed(vk_escape)
