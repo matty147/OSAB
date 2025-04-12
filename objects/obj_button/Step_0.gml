@@ -18,7 +18,18 @@ function button_pressed(menu_id, instance)
 	
 			case "0": //start
 				//room_goto(level); // level select screen
+				instance.show_game_select_button = !instance.show_game_select_button;
+				global.pop_up = !global.pop_up;
 				instance.button = 5;
+				return 5;
+				
+			case "5": //free mode
+				instance.show_game_select_button = false;
+				instance.button = 5;
+				return 1;
+				
+			case "6": //story mode
+				room_goto(level_select); // level select screen
 				return 1;
 		
 			case "1": // option
@@ -59,6 +70,7 @@ function button_pressed(menu_id, instance)
 
 			case "4": // Back
 				global.pop_up = false; // dosen't find the room????
+				instance.show_game_select_button = false;
 				show_debug_message(menu_id/10);
 				return floor(menu_id/10);
 				
@@ -85,7 +97,8 @@ var instance = instance_find(manager,0); //find manager object to fetch values
 
 if keyboard_check_pressed(vk_escape) && instance.menu_id != 0 || keyboard_check_pressed(vk_backspace) && instance.menu_id != 0
 {
-	pop_up = false;
+	global.pop_up = false;
+	instance.show_game_select_button = false;
 	instance.menu_id = floor(instance.menu_id/10);
 	if !audio_is_playing(snd_back)
 	{
@@ -147,8 +160,8 @@ if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off
 				{	
 					audio_play_sound(snd_click, 2, false);
 				}
+				instance.menu_id = button_pressed(instance.menu_id, instance);
 			}
-			instance.menu_id = button_pressed(instance.menu_id, instance);
 		}
 	}
 
@@ -166,8 +179,8 @@ if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off
 			{
 				audio_play_sound(snd_click, 2, false);
 			}
+			instance.menu_id = button_pressed(instance.menu_id, instance);
 		}
-		instance.menu_id = button_pressed(instance.menu_id, instance);
 	}
 }
 
@@ -266,10 +279,14 @@ if(scrollable){
 	image_xscale = 0.5;
 }
 
+if instance.menu_id == "0" || instance.menu_id == "5"
+{
+	instance.pop_up_id = 0;
+}
 
 if move
 {
-	if global.pop_up
+	if global.pop_up || instance.show_game_select_button && instance.menu_id == 0
 	{
 		if hidden && instance.pop_up_id == button_number || hidden && instance.pop_up_id == 0
 		{
@@ -277,7 +294,15 @@ if move
 			image_alpha = clamp(image_alpha + 0.1, 0, 1);	
 		}
 
-		x = lerp(x,moved_position_x + sprite_width,0.1);
+		if moved_position_x != -1
+		{
+			x = lerp(x,moved_position_x + sprite_width,0.1);
+		}
+		
+		if moved_position_y != -1
+		{
+			y = lerp(y,moved_position_y + sprite_height / 2,0.1);
+		}
 	}else
 	{
 		if hidden
@@ -286,7 +311,15 @@ if move
 			image_alpha = clamp(image_alpha - 0.05, 0, 1);	
 		}
 		
-		x = lerp(x,original_x,0.1);
+		if moved_position_x != -1
+		{
+			x = lerp(x,original_x,0.1);
+		}
+		
+		if moved_position_y != -1
+		{
+			y = lerp(y,original_y,0.1);
+		}
 	}
 	
 	if instance.pop_up_id != button_number && button_number != 0
@@ -295,6 +328,19 @@ if move
 		display_text = false;	
 	}
 	
+}
+
+if show_extra_buttons
+{
+	if instance.in_main_menu
+	{
+		button_free_play.visible = true;
+		button_story_mode.visible = true;
+	}else
+	{
+		button_free_play.visible = false;
+		button_story_mode.visible = false;
+	}
 }
 
 var pannel = instance_find(obj_select_panel,0);

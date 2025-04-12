@@ -29,6 +29,8 @@ loaded_level_data = false;
 
 instance = instance_find(manager, 0);
 
+default_yscale = image_yscale;
+needeed_scale = default_yscale;
 
 if hidden
 {

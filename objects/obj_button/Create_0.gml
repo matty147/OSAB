@@ -32,6 +32,35 @@ alarm[0] = fps * 1;
 button_bg = instance_find(obj_menu_button_bg, 0);
 clicked = false;
 original_x = x;
+original_y = y;
+
+if show_extra_buttons
+{
+	button_story_mode = instance_create_layer(x - 30,y,"main_spawned",obj_button);
+	button_story_mode.image_alpha = 0;
+	button_story_mode.image_xscale = 0.25;
+	button_story_mode.image_yscale = 0.25;
+	button_story_mode.function_id = 6; 
+	button_story_mode.button_title = "Story mode";
+	button_story_mode.button_id = -1;
+	button_story_mode.move = true;
+	button_story_mode.hidden = true;
+	button_story_mode.moved_position_y = y + 37;
+	button_story_mode.original_y = y;
+	
+	
+	button_free_play = instance_create_layer(x - 30,y + 37,"main_spawned",obj_button);
+	button_free_play.image_alpha = 0;
+	button_free_play.image_xscale = 0.25;
+	button_free_play.image_yscale = 0.25;
+	button_free_play.function_id = 5; 
+	button_free_play.button_title = "free play";
+	button_free_play.button_id = -1;
+	button_free_play.move = true;
+	button_free_play.hidden = true;
+	button_free_play.moved_position_y = y + 100;
+	button_free_play.original_y = y;
+}
 
 //deactivate all layers except manager and main
 //all layers have to be on when compiling or else it wont work!!!

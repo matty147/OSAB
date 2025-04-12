@@ -56,6 +56,9 @@ move_buttons = 0;
 mouse_pressed_y = 0;
 
 pop_up_id = 0;
+in_main_menu = false;
+
+show_game_select_button = false;
 
 global.pop_up = false;
 

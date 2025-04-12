@@ -45,24 +45,24 @@ if !global.pause
 
 }	
 
-		button += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
+button += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
 	
-	if !button_repeat // if the user is not in the level select screen
+if !button_repeat // if the user is not in the level select screen
+{
+	if button > button_max // check if the button is not going outside the buttonss
 	{
-		if button > button_max // check if the button is not going outside the buttonss
-		{
-			button = button_max;
-		}else if button < 0
-		{
-			button = 0;	
-		}
-	}else if button > button_max	
-		{
-			button -= button_max + 1;	
-		}else if button < 0
-		{
-			button += button_max + 1;
-		}
+		button = button_max;
+	}else if button < 0
+	{
+		button = 0;	
+	}
+}else if button > button_max	
+	{
+		button -= button_max + 1;	
+	}else if button < 0
+	{
+		button += button_max + 1;
+	}
 	
 move_buttons = mouse_wheel_up() - mouse_wheel_down();
 
@@ -81,8 +81,10 @@ switch menu_id
 	case "0": // main menu
 		button_repeat = false;
 		button_max = 3;
+		in_main_menu = true;
 	
 		instance_activate_layer("main");
+		instance_activate_layer("main_spawned");
 		instance_deactivate_layer("level_buttons");
 		instance_deactivate_layer("options");
 		instance_deactivate_layer("credits");
@@ -92,8 +94,10 @@ switch menu_id
 	case "1": // level select
 		button_max = 10;
 		button_repeat = true;
+		in_main_menu = false;
 	
 		instance_deactivate_layer("main");
+		instance_deactivate_layer("main_spawned");
 		instance_deactivate_layer("options");
 		instance_deactivate_layer("credits");
 		instance_activate_layer("level_select");
@@ -103,8 +107,10 @@ switch menu_id
 	case "2": // options
 		button_repeat = false;
 		button_max = 3;
+		in_main_menu = false;
 	
 		instance_deactivate_layer("main");
+		instance_deactivate_layer("main_spawned");
 		instance_activate_layer("options");
 		instance_deactivate_layer("credits");
 		instance_deactivate_layer("level_select");
@@ -112,10 +118,11 @@ switch menu_id
 		break;
 	
 		case "21":
+		in_main_menu = false;
 		break;
 	
 	case "3": // credits
-	
+		in_main_menu = false;
 		room_goto(editor);
 	
 		//button_repeat = false;

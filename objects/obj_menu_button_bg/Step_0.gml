@@ -26,3 +26,13 @@ if move
 		display_text = false;	
 	}
 }
+
+if instance.menu_id == "0" || instance.menu_id == "5"
+{
+	if instance.show_game_select_button
+	{
+		needeed_scale = 0.42;
+	}else needeed_scale = default_yscale;
+
+	image_yscale = lerp(image_yscale,needeed_scale,0.1);
+}
