@@ -26,11 +26,12 @@ function button_pressed(menu_id, instance)
 			case "5": //free mode
 				instance.show_game_select_button = false;
 				instance.button = 5;
+				global.story_level = false;
 				return 1;
 				
 			case "6": //story mode
 				room_goto(level_select); // level select screen
-				return 1;
+				return 0;
 		
 			case "1": // option
 			//show_debug_message("show_options");
@@ -84,7 +85,18 @@ function button_pressed(menu_id, instance)
 				room_restart();
 				return 0;
 				
-			case "42": // exit level
+			case "42": // exit level or go to next level select
+				audio_stop_all();
+				if global.story_level 
+				{
+					room_goto(level_select);
+				}else
+				{
+					room_goto(main_menu);
+				}
+				return 0;
+				
+			case "43": // exit level
 				audio_stop_all();
 				room_goto(main_menu);
 				return 0;

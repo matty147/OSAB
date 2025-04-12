@@ -1,6 +1,5 @@
 image_speed = 0;
- image_index = 0;
-
+image_index = 0;
 
 checkpoint_manager = instance_find(obj_checkpoint_manager,0);
 

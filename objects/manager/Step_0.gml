@@ -1,38 +1,31 @@
-if shortcuts_on
+if room == level_select
 {
-	if keyboard_check_pressed(ord("R")) && keyboard_check(vk_control)
+
+	if keyboard_check_pressed(vk_escape)
 	{
-		game_restart();
+		room_goto(main_menu);	
 	}
-
-	//if keyboard_check_pressed(ord("S")) && keyboard_check(vk_control) && room == editor
-	//{
-	//	scr_save_level("test.osab","");
-	//}
-
-	if keyboard_check_pressed(ord("E")) 
-	{
-		room_goto(level_select);
-	}
-
-	//these will be buttons on the menu but for the time being they are here
-
-	if keyboard_check_pressed(ord("M")) && global.pause
-	{
-		room_goto(main_menu);
-	}
-
-	if keyboard_check_pressed(ord("R")) && global.pause
-	{
-		room_restart();
-	}
+	
 }
 
-if room = level && keyboard_check_pressed(vk_escape)
+
+if room = level 
 {
 	
-	global.pause = !global.pause;
+	if keyboard_check_pressed(vk_escape)
+	{
+		global.pause = !global.pause;
+	}
 	
+	if !global.pause
+	{
+		window_set_cursor(cr_none);
+	}else window_set_cursor(cr_default);
+}
+
+if room == level_select
+{	
+	window_set_cursor(cr_none);
 }
 
 if !global.pause
@@ -219,3 +212,4 @@ if audio_is_playing(snd_menu_bg)
 }
 	
 }
+

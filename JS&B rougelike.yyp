@@ -282,6 +282,7 @@
     {"id":{"name":"spr_circle","path":"sprites/spr_circle/spr_circle.yy",},},
     {"id":{"name":"spr_current_time","path":"sprites/spr_current_time/spr_current_time.yy",},},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
+    {"id":{"name":"spr_exit_to_menu_bg","path":"sprites/spr_exit_to_menu_bg/spr_exit_to_menu_bg.yy",},},
     {"id":{"name":"spr_halfcircle","path":"sprites/spr_halfcircle/spr_halfcircle.yy",},},
     {"id":{"name":"spr_heart","path":"sprites/spr_heart/spr_heart.yy",},},
     {"id":{"name":"spr_hexagon","path":"sprites/spr_hexagon/spr_hexagon.yy",},},
