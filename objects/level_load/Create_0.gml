@@ -1,3 +1,5 @@
+audio_master_gain(global.volume);
+
 current_index = 0;
 win = false;
 

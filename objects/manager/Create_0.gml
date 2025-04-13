@@ -1,5 +1,4 @@
 randomise();
-//window_set_fullscreen(true);
 
 global.pause = false;
 
@@ -7,9 +6,7 @@ global.runtime = 0; // track starts
 
 if room = level
 {
-
-global.runtime = -30;	
-	
+	global.runtime = -30;		
 }
 
 global.debug = false; //will open console menu
@@ -32,13 +29,15 @@ if !variable_global_exists("cleared_levels") {
 	global.cleared_levels = 0;
 }
 
-if !variable_global_exists("global.volume") {
+if !variable_global_exists("volume") {
 	global.volume = 0.25;
 }
 
-if !variable_global_exists("global.fullscreen") {
-	global.fullscreen = false;
+if !variable_global_exists("fullscreen") {
+	global.fullscreen = true;
+	window_set_fullscreen(global.fullscreen);
 }
+
 audio_master_gain(global.volume);
 
 selected_items = 0;

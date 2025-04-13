@@ -1,16 +1,27 @@
 if pressed_fetch
 {
+	audio_master_gain(0);
 	pressed_fetch = false;
 	show_debug_message("\n\n\n\n\n fetching data");
 	get = http_get(base_url + "/results");
+	show_debug_message("aasa" + string(get));
+	if get == -1
+	{
+		game_end();	
+	}
 }
 
 if pressed_post
 {
+	audio_master_gain(0);
 	pressed_post = false;
 	show_debug_message("posting data");
 	var file = get_open_filename("Audio files|*.ogg|All files|*.*", "");
-	if (file == "") exit;
+	if (file == -1)
+	{
+		show_message("No input given.");
+		game_end();
+	}
 
 	var file_name = filename_name(file);
 	var boundary = "------GameMakerBoundary";

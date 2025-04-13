@@ -159,15 +159,15 @@ if move_buttons != 0 && room == main_menu && menu_id == "1"
 }
 
 
-if keyboard_check_pressed(vk_tab) && keyboard_check(vk_control) // open console menu
-{
-	global.debug = !global.debug;
-}
+//if keyboard_check_pressed(vk_tab) && keyboard_check(vk_control) // open console menu
+//{
+//	global.debug = !global.debug;
+//}
 
-if global.debug
-{
-	show_debug_log(true);
-}else show_debug_log(false);
+//if global.debug
+//{
+//	show_debug_log(true);
+//}else show_debug_log(false);
 
 //check what type of click is happening
 //var 'clickdouble': 0=noclick, 1=singleclick, 2=doubleclick

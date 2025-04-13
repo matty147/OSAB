@@ -15,14 +15,14 @@ if point_distance(x,y,_x,_y) > 1
 	
 }
 
-if keyboard_check_pressed(ord("K")) && place_meeting(x,y,obj_checkpoint)
-{
-	if checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].cleared == false
-	{
-		global.cleared_levels++;
-		checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].cleared = true;
-	}
-}
+//if keyboard_check_pressed(ord("K")) && place_meeting(x,y,obj_checkpoint)
+//{
+//	if checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].cleared == false
+//	{
+//		global.cleared_levels++;
+//		checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].cleared = true;
+//	}
+//}
 
 if keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)
 {
@@ -34,6 +34,8 @@ if keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)
 		global.cleared = checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].cleared;
 		global.level_name = checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].level_name;
 		show_debug_message("started: " + string(global.level_name) + "\ncleared: " + string(global.cleared));
+		
+		audio_stop_sound(snd_story_level_bg);
 		
 		room_goto(checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].cutscene);	
 	}
