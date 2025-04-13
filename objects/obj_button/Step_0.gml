@@ -29,6 +29,16 @@ function button_pressed(menu_id, instance)
 				global.story_level = false;
 				return 1;
 				
+			case "51": //fetch data
+				var file_input = instance_find(obj_file_input,0);
+				file_input.pressed_fetch = true;
+				return -1;
+				
+			case "52": //post data
+				var file_input = instance_find(obj_file_input,0);
+				file_input.pressed_post = true;
+				return -1;
+				
 			case "6": //story mode
 				room_goto(level_select); // level select screen
 				return -1;
