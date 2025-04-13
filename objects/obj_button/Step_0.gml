@@ -31,7 +31,7 @@ function button_pressed(menu_id, instance)
 				
 			case "6": //story mode
 				room_goto(level_select); // level select screen
-				return 0;
+				return -1;
 		
 			case "1": // option
 			//show_debug_message("show_options");
@@ -77,13 +77,13 @@ function button_pressed(menu_id, instance)
 				
 			case "40": // continue
 				global.pause = false;
-				return 0;
+				return -1;
 				
 			case "41": // retry
 			//show_debug_message("global level name" + string(global.level_name));
 				audio_stop_all();
 				room_restart();
-				return 0;
+				return -1;
 				
 			case "42": // exit level or go to next level select
 				audio_stop_all();
@@ -94,12 +94,21 @@ function button_pressed(menu_id, instance)
 				{
 					room_goto(main_menu);
 				}
-				return 0;
+				return -1;
 				
 			case "43": // exit level
 				audio_stop_all();
 				room_goto(main_menu);
-				return 0;
+				return -1;
+				
+			case "10":
+				global.fullscreen = !global.fullscreen;
+				window_set_fullscreen(global.fullscreen);
+				return -1;
+				
+			case "11":
+				window_enable_borderless_fullscreen(false);
+				return -1;
 				
 	}
 	return menu_id;

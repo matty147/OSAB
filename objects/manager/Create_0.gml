@@ -1,5 +1,5 @@
 randomise();
-window_set_fullscreen(true);
+//window_set_fullscreen(true);
 
 global.pause = false;
 
@@ -31,6 +31,15 @@ if !variable_global_exists("cleared") {
 if !variable_global_exists("cleared_levels") {
 	global.cleared_levels = 0;
 }
+
+if !variable_global_exists("global.volume") {
+	global.volume = 0.25;
+}
+
+if !variable_global_exists("global.fullscreen") {
+	global.fullscreen = false;
+}
+audio_master_gain(global.volume);
 
 selected_items = 0;
 
@@ -147,9 +156,9 @@ if room == main_menu
 				decrease_i += 4;	
 			}
 		
-			show_debug_message("i: " + string(i));
-			show_debug_message("lenght: " + string(array_length(save)));
-			show_debug_message("decrease_i: " + string(decrease_i));
+			//show_debug_message("i: " + string(i));
+			//show_debug_message("lenght: " + string(array_length(save)));
+			//show_debug_message("decrease_i: " + string(decrease_i));
 		
 			var	button_instance = instance_create_layer(room_width,-15 + i * 73,"level_select",obj_button)
 			button_instance.button_title = filename_name(save[i - decrease_i]); //fetch the button display title

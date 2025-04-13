@@ -15,19 +15,20 @@ if display_text
 		{
 			if instance.menu_id == 20
 			{
-				text = "Game setting";
+				text = "Game settings";
 			}else if instance.menu_id == 21
 			{
-				text = "Graphics setting";
+				text = "Audio settings";
 			}else if instance.menu_id == 22
 			{
-				text = "Audio setting";
+				text = "Credits";
 			}
 			
 		}else text = "Options"
 	} else if (instance.menu_id == 1){
 		text = string(name);
 	}
+	
 	
 	//show_debug_message("name: " + string(text));
 	
@@ -58,6 +59,22 @@ if display_text
 	
 	draw_text_transformed(x + sprite_width / 2, text_y, text,text_size,text_size,0);
 	
+	if text = "Credits"
+	{
+		draw_set_halign(fa_left);
+		draw_text_transformed(x + 25,y + 150,"Programming: Inkk_ing",0.7,0.7,0);
+		draw_text_transformed(x + 25,y + 200,"Art: Krooby",0.7,0.7,0);
+		draw_text_transformed(x + 25,y + 270,"Music used:",0.75,0.75,0);
+		draw_text_transformed(x + 30,y + 320,"Yooh - MariannE",0.5,0.5,0);
+		draw_text_transformed(x + 30,y + 350,"Tanciky - Energy synergy Matrix",0.5,0.5,0);
+		draw_text_transformed(x + 30,y + 380,"HyuN - Disorder",0.5,0.5,0);
+		draw_text_transformed(x + 30,y + 410,"fur:trash - what the devils?????",0.5,0.5,0);
+		draw_text_transformed(x + 30,y + 440,"Polyphia - The Audacity",0.5,0.5,0);
+	}else if text = "Audio settings"
+	{
+		draw_set_halign(fa_left);
+		draw_text_transformed(x + 25,y + 193,"Global volume",0.5,0.5,0);
+	}
 }
 
 

@@ -86,6 +86,7 @@ switch menu_id
 		instance_activate_layer("main_spawned");
 		instance_deactivate_layer("level_buttons");
 		instance_deactivate_layer("options");
+		instance_deactivate_layer("options_spawned");
 		instance_deactivate_layer("credits");
 		instance_deactivate_layer("level_select");
 		break;
@@ -98,6 +99,7 @@ switch menu_id
 		instance_deactivate_layer("main");
 		instance_deactivate_layer("main_spawned");
 		instance_deactivate_layer("options");
+		instance_deactivate_layer("options_spawned");
 		instance_deactivate_layer("credits");
 		instance_activate_layer("level_select");
 		instance_activate_layer("level_buttons");
@@ -111,6 +113,7 @@ switch menu_id
 		instance_deactivate_layer("main");
 		instance_deactivate_layer("main_spawned");
 		instance_activate_layer("options");
+		instance_activate_layer("options_spawned");
 		instance_deactivate_layer("credits");
 		instance_deactivate_layer("level_select");
 		instance_deactivate_layer("level_buttons");
