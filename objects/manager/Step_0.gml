@@ -6,7 +6,10 @@ if room == level_select ||  room == editor
 		room_goto(main_menu);	
 	}
 	
-	window_set_cursor(cr_none);
+	if room == level_select // fuck this i cant deal with this shit anymore T-T
+	{
+		window_set_cursor(cr_none);	
+	}
 }
 
 if room == level_select
