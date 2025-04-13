@@ -20,3 +20,11 @@ if checkpoint_id <= global.cleared_levels
 		cleared = true;	
 	}
 }
+locked = false;
+
+if visible == false
+{
+	visible = true;
+	locked = true;
+	
+}

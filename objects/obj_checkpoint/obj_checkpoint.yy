@@ -32,6 +32,7 @@
     {"$GMObjectProperty":"v1","%Name":"visible","filters":[],"listItems":[],"multiselect":false,"name":"visible","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v1","%Name":"level_name","filters":[],"listItems":[],"multiselect":false,"name":"level_name","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"levels\\\\test\\\\test.osab","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"boss_level","filters":[],"listItems":[],"multiselect":false,"name":"boss_level","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"cutscene","filters":[],"listItems":[],"multiselect":false,"name":"cutscene","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"cutscene1","path":"rooms/cutscene1/cutscene1.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"cutscene1","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

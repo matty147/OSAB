@@ -1,3 +1,4 @@
+if room == level_select ||  room == editor
 {
 
 	if keyboard_check_pressed(vk_escape)
@@ -5,8 +6,18 @@
 		room_goto(main_menu);	
 	}
 	
+	window_set_cursor(cr_none);
 }
 
+if room == level_select
+{
+	
+	if !audio_is_playing(snd_story_level_bg)
+	{
+		audio_play_sound(snd_story_level_bg,0,true);
+	}
+	
+}
 
 if room = level 
 {
@@ -22,10 +33,6 @@ if room = level
 	}else window_set_cursor(cr_default);
 }
 
-if room == level_select
-{	
-	window_set_cursor(cr_none);
-}
 
 if !global.pause
 {
@@ -33,7 +40,7 @@ if !global.pause
 	global.runtime += 85 / (5 * room_speed);
 	//show_debug_message(global.runtime);
 
-	//show_debug_message(global.runtime);
+	//show_debug_message(global.runtime);	
 
 }	
 

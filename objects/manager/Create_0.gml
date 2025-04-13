@@ -124,40 +124,65 @@ if room == main_menu
 
         save = results;
 
-	amount_of_buttons = 0;
-
-	for (var i = 0; i < array_length(save) && i < 11; i += 1)
+	if array_length(save) <= 0
 	{
-		var	button_instance = instance_create_layer(room_width,-15 + i * 73,"level_select",obj_button)
-		button_instance.button_title = filename_name(save[i]); //fetch the button display title
-		button_instance.file_path =  save[i]; // path to the file
-		button_instance.image_xscale = 0.3; // x scale of button
-		button_instance.image_yscale = 0.3; // y scale of button
-		button_instance.scrollable = true;  // if the button should scroll (only in layer level_select)
-		button_instance.button_id = i; // id of the button for button for scrolling
-		button_instance.title_position = "left"; // position of the text on button
-		button_instance.selected_button_id = i;
-		amount_of_buttons++;
+		show_message("Found no levels. Did you format them corectly?");
+		game_end();
+	}else
+	{
+
+		amount_of_buttons = 0;
+
+		var decrease_i = 0;
+
+		for (var i = 0;i < 11; i += 1)
+		{
+			if amount_of_buttons >= 11
+			{
+				exit;			
+			}
+		
+			if i - decrease_i > array_length(save) - 1
+			{
+				decrease_i += 4;	
+			}
+		
+			show_debug_message("i: " + string(i));
+			show_debug_message("lenght: " + string(array_length(save)));
+			show_debug_message("decrease_i: " + string(decrease_i));
+		
+			var	button_instance = instance_create_layer(room_width,-15 + i * 73,"level_select",obj_button)
+			button_instance.button_title = filename_name(save[i - decrease_i]); //fetch the button display title
+			button_instance.file_path =  save[i - decrease_i]; // path to the file
+			button_instance.image_xscale = 0.3; // x scale of button
+			button_instance.image_yscale = 0.3; // y scale of button
+			button_instance.scrollable = true;  // if the button should scroll (only in layer level_select)
+			button_instance.button_id = i - decrease_i; // id of the button for button for scrolling
+			button_instance.title_position = "left"; // position of the text on button
+			button_instance.selected_button_id = i - decrease_i;
+			amount_of_buttons++;
+		
+
+		}
+		//while amount_of_buttons < 11
+		//{
+		//	var	button_instance = instance_create_layer(room_width,-15 + amount_of_buttons * 73,"level_select",obj_button)
+		//	button_instance.button_title = "";
+		//	button_instance.image_xscale = 0.3;
+		//	button_instance.image_yscale = 0.3;
+		//	button_instance.scrollable = true;
+		//	button_instance.button_id = amount_of_buttons;
+		//	button_instance.title_position = "left";
+		//	button_instance.selected_button_id = amount_of_buttons;
+		//	amount_of_buttons++;		
+		//}	
+		show_debug_message(amount_of_buttons);
+		show_debug_message("array lenght: " + string(array_length(save)));
+		show_debug_message(filename_dir(save[0])); // for path to the folder
+		show_debug_message(filename_name(save[0])); // for name of the file
+
+		var select_panel = instance_create_layer(0,640,"level_buttons",obj_select_panel);
 	}
-	while amount_of_buttons < 11
-	{
-		var	button_instance = instance_create_layer(room_width,-15 + amount_of_buttons * 73,"level_select",obj_button)
-		button_instance.button_title = "";
-		button_instance.image_xscale = 0.3;
-		button_instance.image_yscale = 0.3;
-		button_instance.scrollable = true;
-		button_instance.button_id = amount_of_buttons;
-		button_instance.title_position = "left";
-		button_instance.selected_button_id = amount_of_buttons;
-		amount_of_buttons++;		
-	}	
-	show_debug_message(amount_of_buttons);
-	show_debug_message("array lenght: " + string(array_length(save)));
-	show_debug_message(filename_dir(save[0])); // for path to the folder
-	show_debug_message(filename_name(save[0])); // for name of the file
-
-	var select_panel = instance_create_layer(0,640,"level_buttons",obj_select_panel);
-
 }
 
 if !lemon

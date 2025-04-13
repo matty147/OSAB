@@ -30,7 +30,7 @@ if !global.pause
 			health--;	
 			is_invincible = true;
 			damaged = true;
-			alarm[0] = invincible_time * fps;
+			alarm[0] = (invincible_time + 0.25) * fps;
 		}
 	}
 	
