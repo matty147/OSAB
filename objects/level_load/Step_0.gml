@@ -23,57 +23,68 @@
 		}
 	}
 	
+	show_debug_message("/n/n/n/n/n/n/n/dasdasdaSDA")
+	
 	// spawn objects after the file is read until there are no more to spawn
-	if current_index < array_length(_x) && _time[current_index] == floor(global.runtime)
-	{
-		//show_debug_message(global.runtime);
-		//show_debug_message(duration[current_index]);
-		var instance = instance_create_layer(_x[current_index],_y[current_index],"spawned",obj_enemy);
-		//instance.image_index = 0;
+		if current_index < array_length(objects) && objects[current_index].time == floor(global.runtime)
+		{
+			
+			show_debug_message(current_index);
+			
+			var position = objects[current_index].position;
+			var size = objects[current_index].size;
+			var move = objects[current_index].move;
+			
+			var instance = instance_create_layer(position[0],position[1],"spawned",obj_enemy);
+			//instance.image_index = 0;
 		
-		show_debug_message(_id[current_index]);
-		instance.object_sprite = _id[current_index];
-		instance.image_xscale = _size[current_index];
-		instance.image_yscale = _size[current_index];
-		instance.angle = _angle[current_index];
-		instance._speed = _speed[current_index];
-		instance.image_alpha = _alpha[current_index];
-		instance.survive_speed = real(duration[current_index]) * 85;
-		instance.move = true;
-		instance.show_hitbox = real(show_hitbox[current_index]);
+			instance.object_sprite = objects[current_index].object_type;
+			instance.image_xscale = size[0];
+			instance.image_yscale = size[1];
+			instance.angle = objects[current_index].angle;
+			instance._speed = move.speed;
+			instance.image_alpha = move.alpha;
+			instance.survive_speed = real(move.duration) * 85;
+			instance.move = true; //???
+			instance.show_hitbox = real(move.show_hitbox);
 		
-		//show_debug_message(_time[current_index + 1]);
+			//show_debug_message(_time[current_index + 1]);
 		
-		//show_debug_message(instance.level_object_list[_id[current_index]]);
-		current_index++;
+			//show_debug_message(instance.level_object_list[_id[current_index]]);
+			current_index++;
 	
 	
 		//spawning enemies on the same frame
-		while current_index < array_length(_x) && _time[current_index] == floor(global.runtime)
+		while current_index < array_length(objects) && objects[current_index].time == floor(global.runtime)
 		{
-			//show_debug_message(global.runtime);
-			//show_debug_message(duration[current_index]);
-			instance = instance_create_layer(_x[current_index],_y[current_index],"spawned",obj_enemy);
-			//instance.image_index = 0;
-			show_debug_message(_id[current_index]);
-			instance.object_sprite = _id[current_index];
-			instance.image_xscale = _size[current_index];
-			instance.image_yscale = _size[current_index];
-			instance.angle = _angle[current_index];
-			instance._speed = _speed[current_index];
-			instance.image_alpha = _alpha[current_index];
-			instance.survive_speed = real(duration[current_index]) * 85;
-			instance.move = true;
-			instance.show_hitbox = real(show_hitbox[current_index]);
 			
-			//show_debug_message(instance.level_object_list[_id[current_index]]);
-			current_index++;	
-
+			position = objects[current_index].position;
+			size = objects[current_index].size;
+			move = objects[current_index].move;
+			
+			instance = instance_create_layer(position[0],position[1],"spawned",obj_enemy);
+			//instance.image_index = 0;
+		
+			instance.object_sprite = objects[current_index].object_type;
+			instance.image_xscale = size[0];
+			instance.image_yscale = size[1];
+			instance.angle = objects[current_index].angle;
+			instance._speed = move.speed;
+			instance.image_alpha = move.alpha;
+			instance.survive_speed = real(move.duration) * 85;
+			instance.move = true; //???
+			instance.show_hitbox = real(move.show_hitbox);
+		
 			//show_debug_message(_time[current_index + 1]);
+		
+			//show_debug_message(instance.level_object_list[_id[current_index]]);
+			current_index++;
 		}
 	}
 	
-	if _time[array_length(_x) - 1] >= floor(global.runtime)
+	show_debug_message(end_game < 0)
+	
+	if objects[array_length(objects) - 1].time >= floor(global.runtime)
 	{
 		end_game = 250;
 	}else if !global.pause
@@ -81,12 +92,12 @@
 		end_game--;
 	}
 	
-	if end_game = 249 && search != ""	
+	if end_game = 249 && search != ""
 	{
 		audio_sound_gain(sound_id,0,7000);	
 	}
 	
-	if  player.dead && search != ""
+	if player.dead && search != ""
 	{
 		show_debug_message(pitch);
 		pitch -= 0.01;
@@ -99,7 +110,7 @@
 	}
 
 	if instance_number(obj_enemy) <= 0 && end_game < 0
-	{	
+	{
 		win = true;
 		global.pause = true;
 		
