@@ -60,7 +60,7 @@ with open(input_path, "r", encoding="utf-8") as f:
 # Final structure
 full_level_data = {
     "meta": metadata,
-    "waves": waves
+    "level": waves
 }
 
 # Write JSON output

@@ -101,17 +101,22 @@ if level_info
 	
 			while(file_text_eof(file_name) == false)
 			{
-				json += file_text_readln(file_name);
+				var line = file_text_readln(file_name);
+				if string_trim(line) == "},"
+				{
+					json += "}\n";
+					json += "}";
+					break;
+				}else json += line;
 			}
 		
 			file_text_close(file_name);
 
+			show_debug_message("leveldata:  " + string(json));
 		
 			level_data = json_parse(json);
 		
-		show_debug_message("leveldata:" + string(level_data));
-		
-			if true
+			if level_data != undefined
 			{			
 				
 				var meta = level_data.meta;

@@ -3,9 +3,10 @@
     "id": 0,
     "name": "Energy Synergy Matrix",
     "description": "Third story level",
+    "lenght": 69,
     "diff": 7
   },
-  "waves": [
+  "level": [
     {
       "time": 0,
       "object_type": "7",
