@@ -23,13 +23,9 @@
 		}
 	}
 	
-	show_debug_message("/n/n/n/n/n/n/n/dasdasdaSDA")
-	
 	// spawn objects after the file is read until there are no more to spawn
 		if current_index < array_length(objects) && objects[current_index].time == floor(global.runtime)
 		{
-			
-			show_debug_message(current_index);
 			
 			var position = objects[current_index].position;
 			var size = objects[current_index].size;
@@ -81,8 +77,6 @@
 			current_index++;
 		}
 	}
-	
-	show_debug_message(end_game < 0)
 	
 	if objects[array_length(objects) - 1].time >= floor(global.runtime)
 	{
