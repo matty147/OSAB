@@ -13,7 +13,7 @@ if display_text
 	} else if (instance.menu_id == 2) || (instance.menu_id == 20) || (instance.menu_id == 21) || (instance.menu_id == 22){
 		if hidden
 		{
-			if instance.menu_id == 20
+			if instance.menu_id == 20	
 			{
 				text = "Game settings";
 			}else if instance.menu_id == 21
@@ -97,7 +97,7 @@ if level_info
 
 			var json = "";
 		
-			var file_name = file_text_open_read(instance.save[instance.id_of_button_selected])
+			var file_name = file_text_open_read(instance.save[instance.id_of_button_selected]);
 	
 			while(file_text_eof(file_name) == false)
 			{

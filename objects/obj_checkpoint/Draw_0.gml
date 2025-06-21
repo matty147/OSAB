@@ -11,7 +11,6 @@ if checkpoint_id + 1 < checkpoint_manager.checkpoints_numb && cleared
 
 if locked
 {
-
-draw_sprite_ext(spr_lock,0,x,y,0.075,0.075,0,c_white,1);	
+	draw_sprite_ext(spr_lock,0,x,y,0.075,0.075,0,c_white,1);	
 }
 //draw_text(x,y - sprite_height,cleared);

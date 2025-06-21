@@ -15,14 +15,14 @@ if point_distance(x,y,_x,_y) > 1
 	
 }
 
-//if keyboard_check_pressed(ord("K")) && place_meeting(x,y,obj_checkpoint)
-//{
-//	if checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].cleared == false
-//	{
-//		global.cleared_levels++;
-//		checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].cleared = true;
-//	}
-//}
+if keyboard_check_pressed(ord("K")) && place_meeting(x,y,obj_checkpoint)
+{
+	if checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].cleared == false
+	{
+		global.cleared_levels++;
+		checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].cleared = true;
+	}
+}
 
 if keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)
 {

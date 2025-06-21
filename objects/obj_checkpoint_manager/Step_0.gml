@@ -1,4 +1,5 @@
 current_level += keyboard_check_pressed(ord("D")) - keyboard_check_pressed(ord("A"));
+current_level += keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
 
 //show_debug_message(current_level);
 
