@@ -43,6 +43,7 @@
 			instance.survive_speed = real(move.duration) * 85;
 			instance.move = true; //???
 			instance.show_hitbox = real(move.show_hitbox);
+			instance.positions = move.positions;
 		
 			//show_debug_message(_time[current_index + 1]);
 		
@@ -70,6 +71,7 @@
 			instance.survive_speed = real(move.duration) * 85;
 			instance.move = true; //???
 			instance.show_hitbox = real(move.show_hitbox);
+			instance.positions = move.positions;
 		
 			//show_debug_message(_time[current_index + 1]);
 		
@@ -78,8 +80,9 @@
 		}
 	}
 	
-	if objects[array_length(objects) - 1].time >= floor(global.runtime)
+	if floor(global.runtime) <= objects[array_length(objects) - 1].time && !instance_exists(obj_enemy)
 	{
+		show_debug_message("started");
 		end_game = 250;
 	}else if !global.pause
 	{	

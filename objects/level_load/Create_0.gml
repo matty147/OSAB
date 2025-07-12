@@ -1,4 +1,5 @@
 audio_master_gain(global.volume);
+audio_stop_all();
 
 current_index = 0;
 win = false;
@@ -41,7 +42,7 @@ player = instance_find(obj_player,0);
 	show_debug_message(meta.lenght);
 	show_debug_message(meta.diff);
 	
-	show_debug_message(objects[1])
+	show_debug_message(objects[0])
 	
 	show_debug_message("finished");
 	read_file = true;

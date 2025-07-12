@@ -8,7 +8,6 @@ if !variable_instance_exists(id,"show_hitbox")
 	show_hitbox = 25;
 }
 
-
 amplitude = 2; // 10 is realy cool 
 frequency = 2;
 wave_angle = 0;
@@ -43,4 +42,10 @@ if !variable_instance_exists(id,"move")
 {
 	move = false;	
 }
+
+if !variable_instance_exists(id,"positions")
+{
+	positions = [];	
+}
 	
+positions_cur_position = 0

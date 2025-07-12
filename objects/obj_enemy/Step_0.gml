@@ -18,11 +18,6 @@ if set_up
 
 if !global.pause && move
 {
-	if survive_speed < 0
-	{
-		instance_destroy();
-	}else survive_speed--;
- 
 	if show_hitbox < 0
 	{
 		hitbox = true;
@@ -32,12 +27,35 @@ if !global.pause && move
 	{
 		image_alpha = 1; 
 	}
-
-	//calculates the movement direction and then translates it from deg to rad
-
-	////moves in one directioncx
-	x += cos(real(angle) * (pi / 180)) * real(_speed);
-	y += sin(real(angle) * (pi / 180)) * real(_speed);
+	
+	show_debug_message($"{array_length(positions)} vs {positions_cur_position}")
+	
+	if array_length(positions) > 0
+	{
+			var _x = positions[positions_cur_position][0];
+			var _y = positions[positions_cur_position][1];
+		
+			if abs(x - _x) <= 10 && abs(y - _y) <= 10
+			{
+				positions_cur_position++;
+			}else move_towards_point(_x,_y,_speed);		
+			
+			
+			if positions_cur_position >= array_length(positions)
+			{
+				instance_destroy();
+			}
+		
+	}else{
+		x += cos(real(angle) * (pi / 180)) * real(_speed);
+		y += sin(real(angle) * (pi / 180)) * real(_speed);
+		
+		if survive_speed < 0
+		{
+			instance_destroy();
+		}else survive_speed--;
+ 
+	}
 
 
 	//wave only on the y part

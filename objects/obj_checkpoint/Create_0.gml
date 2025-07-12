@@ -22,6 +22,8 @@ if checkpoint_id <= global.cleared_levels
 }
 locked = false;
 
+popup_size = false;
+
 if visible == false
 {
 	visible = true;
@@ -69,7 +71,11 @@ show_debug_message(meta);
 
 display_info_box = false;
 
-info_box = instance_create_layer(x - sprite_width / 2 * 4,y - sprite_height/2,"checkpoints",obj_level_select_info_box);
+var size_x = 2.5; // why tf is it 3 and not 0.3???
+
+info_box = instance_create_layer(x - sprite_width / 2 * size_x,y - sprite_height/2 - 5,"checkpoints",obj_level_select_info_box);
+info_box.image_xscale = 0.25;
+info_box.image_yscale = 0.25;
 info_box.visible = false;
 info_box.data = meta;
 info_box.cleared = false;

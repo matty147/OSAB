@@ -1,3 +1,31 @@
+if global.debug
+{
+	show_debug_log(true);	
+}
+
+//if keyboard_check_pressed(vk_f4)
+//{
+//	if f4_count > 10
+//	{
+//		global.fullscreen = false;
+//		window_set_fullscreen(global.fullscreen);
+//		alarm[0] = 10;
+//		show_message(global.f4_troll ? "deactivating freaky mode D:" : "activating freaky mode");
+//	}else f4_count++;
+//}
+
+//if global.f4_troll
+//{
+//	//window_set_position(random_range(0,display_get_width()),random_range(0,display_get_height()));
+//	window_set_position(f4_pos,0);
+//	f4_pos += 5;
+	
+//	if display_get_width() * 1.1 < f4_pos
+//	{
+//		f4_pos = 0 - room_width * 1.1;
+//	};
+//}
+
 if room == level_select ||  room == editor
 {
 

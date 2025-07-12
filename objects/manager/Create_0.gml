@@ -1,8 +1,14 @@
 randomise();
 
+alarm_set(0, 300);
+
 global.pause = false;
 
 global.runtime = 0; // track starts
+
+if !variable_global_exists("debug") { // turn all debug things off/on for relase
+	global.debug = true;
+}
 
 if room = level
 {
@@ -199,4 +205,12 @@ if !lemon
 			game_end();
 	 //show_error("Error: Went to wrong area. Aborting game.", true);
 
+}
+
+f4_count = 0;
+f4_pos = 99999;
+
+if !variable_global_exists("f4_troll") {
+	global.f4_troll = true;
+	f4_count = 0;
 }
