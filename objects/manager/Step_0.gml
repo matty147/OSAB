@@ -1,6 +1,14 @@
 if global.debug
 {
-	show_debug_log(true);	
+	if keyboard_check_pressed(192) // open console menu with ~
+	{
+		global.debug_log = !global.debug_log;
+	}
+
+	if global.debug_log
+	{
+		show_debug_log(true);
+	}else show_debug_log(false);
 }
 
 //if keyboard_check_pressed(vk_f4)
@@ -188,17 +196,6 @@ if move_buttons != 0 && room == main_menu && menu_id == "1"
 		audio_play_sound(snd_button,2,false);
 	}
 }
-
-
-//if keyboard_check_pressed(vk_tab) && keyboard_check(vk_control) // open console menu
-//{
-//	global.debug = !global.debug;
-//}
-
-//if global.debug
-//{
-//	show_debug_log(true);
-//}else show_debug_log(false);
 
 //check what type of click is happening
 //var 'clickdouble': 0=noclick, 1=singleclick, 2=doubleclick

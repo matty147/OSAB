@@ -47,5 +47,25 @@ if !variable_instance_exists(id,"positions")
 {
 	positions = [];	
 }
-	
+
+if !variable_instance_exists(id,"move_type")
+{
+	move_type = "None";
+}
+
+if !variable_instance_exists(id,"bounce")
+{
+	bounce = [0,0];
+}
+
+if !variable_instance_exists(id,"_gravity")
+{
+	_gravity = 0;
+}
+
+_friction = false;
+
+hspd = bounce[0];
+vspd = bounce[1];
+
 positions_cur_position = 0

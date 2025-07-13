@@ -23,66 +23,37 @@
 		}
 	}
 	
-	// spawn objects after the file is read until there are no more to spawn
-		if current_index < array_length(objects) && objects[current_index].time == floor(global.runtime)
-		{
+	//spawning enemies on the same frame
+	while current_index < array_length(objects) && objects[current_index].time == floor(global.runtime)
+	{
 			
-			var position = objects[current_index].position;
-			var size = objects[current_index].size;
-			var move = objects[current_index].move;
+		var position = objects[current_index].position;
+		var size = objects[current_index].size;
+		var move = objects[current_index].move;
 			
-			var instance = instance_create_layer(position[0],position[1],"spawned",obj_enemy);
-			//instance.image_index = 0;
+		var instance = instance_create_layer(position[0],position[1],"spawned",obj_enemy);
 		
-			instance.object_sprite = objects[current_index].object_type;
-			instance.image_xscale = size[0];
-			instance.image_yscale = size[1];
-			instance.angle = objects[current_index].angle;
-			instance._speed = move.speed;
-			instance.image_alpha = move.alpha;
-			instance.survive_speed = real(move.duration) * 85;
-			instance.move = true; //???
-			instance.show_hitbox = real(move.show_hitbox);
-			instance.positions = move.positions;
+		instance.object_sprite = objects[current_index].object_type;
+		instance.image_xscale = size[0];
+		instance.image_yscale = size[1];
+		instance.angle = objects[current_index].angle;
+		instance._speed = move.speed;
+		instance.image_alpha = move.alpha;
+		instance.survive_speed = real(move.duration) * 85;
+		instance.move = true; //???
+		instance.show_hitbox = real(move.show_hitbox);
 		
-			//show_debug_message(_time[current_index + 1]);
-		
-			//show_debug_message(instance.level_object_list[_id[current_index]]);
-			current_index++;
-	
-	
-		//spawning enemies on the same frame
-		while current_index < array_length(objects) && objects[current_index].time == floor(global.runtime)
-		{
-			
-			position = objects[current_index].position;
-			size = objects[current_index].size;
-			move = objects[current_index].move;
-			
-			instance = instance_create_layer(position[0],position[1],"spawned",obj_enemy);
-			//instance.image_index = 0;
-		
-			instance.object_sprite = objects[current_index].object_type;
-			instance.image_xscale = size[0];
-			instance.image_yscale = size[1];
-			instance.angle = objects[current_index].angle;
-			instance._speed = move.speed;
-			instance.image_alpha = move.alpha;
-			instance.survive_speed = real(move.duration) * 85;
-			instance.move = true; //???
-			instance.show_hitbox = real(move.show_hitbox);
-			instance.positions = move.positions;
-		
-			//show_debug_message(_time[current_index + 1]);
-		
-			//show_debug_message(instance.level_object_list[_id[current_index]]);
-			current_index++;
-		}
+		instance.move_type = variable_struct_exists(move, "move_type") ? move.move_type : "None";	
+		instance.positions = variable_struct_exists(move, "positions") ? move.positions : [];
+		instance.bounce = variable_struct_exists(move, "bounce") ? move.bounce: [0,0]; 
+		instance._gravity = variable_struct_exists(move, "gravity") ? move.gravity: 0;
+		instance._friction = variable_struct_exists(move, "friction") ? move.friction: false;
+
+		current_index++;
 	}
 	
 	if floor(global.runtime) <= objects[array_length(objects) - 1].time && !instance_exists(obj_enemy)
 	{
-		show_debug_message("started");
 		end_game = 250;
 	}else if !global.pause
 	{	

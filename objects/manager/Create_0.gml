@@ -10,12 +10,14 @@ if !variable_global_exists("debug") { // turn all debug things off/on for relase
 	global.debug = true;
 }
 
+if !variable_global_exists("debug_log") { // turn all debug things off/on for relase
+	global.debug_log = false;
+}
+
 if room = level
 {
 	global.runtime = -30;		
 }
-
-global.debug = false; //will open console menu
 
 selected_scrollable_button = false;
 
@@ -207,10 +209,10 @@ if !lemon
 
 }
 
-f4_count = 0;
-f4_pos = 99999;
+//f4_count = 0;
+//f4_pos = 99999;
 
-if !variable_global_exists("f4_troll") {
-	global.f4_troll = true;
-	f4_count = 0;
-}
+//if !variable_global_exists("f4_troll") {
+//	global.f4_troll = true;
+//	f4_count = 0;
+//}
