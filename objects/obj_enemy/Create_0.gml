@@ -76,4 +76,7 @@ points_y = ds_list_create();
 pointx = [];
 pointy = [];
 
+end_scale = [];
+scale_speed = [];
+
 spline_cur_location = 0;

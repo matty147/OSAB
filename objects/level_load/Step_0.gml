@@ -49,6 +49,8 @@
 		instance._gravity = variable_struct_exists(move, "gravity") ? move.gravity: 0;
 		instance.splines = variable_struct_exists(move, "spline") ? move.spline: false;
 		instance._friction = variable_struct_exists(move, "friction") ? move.friction: false;
+		instance.end_scale = variable_struct_exists(move, "end_scale") ? move.end_scale: [size[0],size[1]];
+		instance.scale_speed = variable_struct_exists(move, "end_scale") ? move.scale_speed: [move.speed,move.speed];
 
 		current_index++;
 	}

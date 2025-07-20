@@ -71,12 +71,12 @@ if !global.pause && move
 			if splines
 			{
 				
-				show_debug_message($"spline cur loc: {spline_cur_location}")
+				//show_debug_message($"spline cur loc: {spline_cur_location}")
 				
 				x = spline(spline_cur_location, points_x);
 				y = spline(spline_cur_location, points_y);
 			
-				spline_cur_location += 0.01;
+				spline_cur_location += _speed;
 			
 				if spline_cur_location >= 1
 				{
@@ -129,6 +129,16 @@ if !global.pause && move
 			}else survive_speed--;
 		
 			break;
+			
+			case "scale":
+					image_xscale = lerp(image_xscale, end_scale[0] * real(level_object_list[object_sprite][1]),scale_speed[0]);
+					image_yscale = lerp(image_yscale, end_scale[1] * real(level_object_list[object_sprite][1]),scale_speed[1]);
+				break;
+			
+			default:
+				show_debug_message("invalid object");
+				instance_destroy();
+				break
 	}
 
 }else move_towards_point(x,y,0);	

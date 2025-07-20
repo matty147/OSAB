@@ -57,7 +57,7 @@
           [0, 0],
           [250, 300],
           [500, 600],
-          [0, 0],
+          [0, 0]
         ]
       },
       "special": {
@@ -105,7 +105,7 @@
       ],
       "angle": 90.0,
       "move": {
-        "speed": 5.0,
+        "speed": 0.005,
         "alpha": 0.4,
         "duration": 5.0,
         "show_hitbox": 25,
@@ -120,6 +120,32 @@
 		  [300, 100],
 		  [500, 300]
 		]
+      },
+      "special": {
+        "using": true,
+        "a": true
+      }
+    },
+    {
+      "time": 15,
+      "object_type": "1",
+      "position": [
+        748.0,
+        500.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25,
+		"move_type":"scale",
+		"end_scale": [4.0, 1.5],
+		"scale_speed": [0.3,0.01]
       },
       "special": {
         "using": true,
