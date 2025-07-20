@@ -40,13 +40,14 @@
 		instance._speed = move.speed;
 		instance.image_alpha = move.alpha;
 		instance.survive_speed = real(move.duration) * 85;
-		instance.move = true; //???
+		instance.move = true; //????
 		instance.show_hitbox = real(move.show_hitbox);
-		
+		 
 		instance.move_type = variable_struct_exists(move, "move_type") ? move.move_type : "None";	
 		instance.positions = variable_struct_exists(move, "positions") ? move.positions : [];
 		instance.bounce = variable_struct_exists(move, "bounce") ? move.bounce: [0,0]; 
 		instance._gravity = variable_struct_exists(move, "gravity") ? move.gravity: 0;
+		instance.splines = variable_struct_exists(move, "spline") ? move.spline: false;
 		instance._friction = variable_struct_exists(move, "friction") ? move.friction: false;
 
 		current_index++;

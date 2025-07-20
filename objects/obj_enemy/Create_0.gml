@@ -69,3 +69,11 @@ hspd = bounce[0];
 vspd = bounce[1];
 
 positions_cur_position = 0
+
+points_x = ds_list_create();
+points_y = ds_list_create();
+
+pointx = [];
+pointy = [];
+
+spline_cur_location = 0;
