@@ -141,7 +141,7 @@ if level_info
 			
 			if display_image != ""
 			{
-				sprite_delete(display_image);	
+				sprite_delete(display_image);
 			}
 			
 			var file_location = filename_dir(string(instance.save[instance.id_of_button_selected]));

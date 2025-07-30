@@ -133,6 +133,12 @@ if !global.pause && move
 			case "scale":
 					image_xscale = lerp(image_xscale, end_scale[0] * real(level_object_list[object_sprite][1]),scale_speed[0]);
 					image_yscale = lerp(image_yscale, end_scale[1] * real(level_object_list[object_sprite][1]),scale_speed[1]);
+					
+					if survive_speed < 0
+					{
+						instance_destroy();
+					}else survive_speed--;
+					
 				break;
 			
 			default:

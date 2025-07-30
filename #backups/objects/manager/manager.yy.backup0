@@ -1,0 +1,556 @@
+// 2025-07-28 02:27:59
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+uses_physics = false;
+load_level:bool = false;
+button_max:real = 3;
+
+#event create
+randomise();
+
+alarm_set(0, 300);
+
+global.pause = false;
+
+global.runtime = 0; // track starts
+
+if !variable_global_exists("debug") { // turn all debug things off/on for relase
+	global.debug = true;
+}
+
+if !variable_global_exists("debug_log") { // turn all debug things off/on for relase
+	global.debug_log = false;
+}
+
+if room = level
+{
+	global.runtime = -30;		
+}
+
+selected_scrollable_button = false;
+
+if !variable_global_exists("level_name") {
+	global.level_name = "levels\\test\\test.osab";
+}
+
+if !variable_global_exists("story_level") {
+	global.story_level = false;
+}
+
+if !variable_global_exists("cleared") {
+	global.cleared = false;
+}
+
+if !variable_global_exists("cleared_levels") {
+	global.cleared_levels = 0;
+}
+
+if !variable_global_exists("volume") {
+	global.volume = 0.25;
+}
+
+if !variable_global_exists("fullscreen") {
+	global.fullscreen = true;
+	window_set_fullscreen(global.fullscreen);
+}
+
+audio_master_gain(global.volume);
+
+selected_items = 0;
+
+shortcuts_on = true;
+
+id_of_button_selected = 4;
+
+menu_id = 0;
+
+button = 0;
+
+button_repeat = false;
+
+mouse_off = false;
+
+mouse_xprevious = mouse_x;
+mouse_yprevious = mouse_y;
+
+position = NaN;
+
+move_buttons = 0;
+
+mouse_pressed_y = 0;
+
+pop_up_id = 0;
+in_main_menu = false;
+
+show_game_select_button = false;
+
+global.pop_up = false;
+
+show_debug_message("");
+
+index = 0;
+save[0] = "";
+
+first_value = 0;
+last_value = 10;
+lemon = true;
+
+
+//////////////////
+mdoubleclick =-1;
+clickdouble=0;
+
+level_object_list = [ //object name + siZe
+["all_spike_saw",0.065], //0
+["circle",0.065], //1
+["star",0.065], //2
+["halfcircle",0.07], //3
+["enemy",0.5], //4
+["house",0.07],//5
+["moon",0.063],//6
+["rectangle",0.065], //7
+["rounded_polygon",0.065],//8
+["rounded_rect",0.065],//9
+["snake",0.05],//10
+["spike",0.05],//11
+["spike_floor",0.065],//12
+["spike_saw",0.065],//13
+["spike_saw_hole",0.065],//14
+["sun",0.065],//15
+["large_arrow",0.065],//16
+["heart",0.065],//17
+["hexagon",0.065],//18
+["industrial_circle",0.065],//19
+["lightning",0.065],//20
+["heart",0.065],//21
+["main_boss",0.5],//22
+];
+
+if !file_exists("lemon.png")
+{
+	lemon = false;
+}
+
+if room == main_menu
+{
+	//checks for available levels
+
+    results = [];
+    scr_read_files("levels", ".osab", results); // if the file dir is changed. reloading game maker is needed
+
+    if array_length(results) > 0 {
+        for (var i = 0; i < array_length(results); i++) {
+            show_debug_message("File found: " + results[i]);
+        }
+    } else {
+        show_debug_message("No files found.");
+    }
+
+        save = results;
+
+	if array_length(save) <= 0
+	{
+		show_message("Found no levels. Did you format them corectly?");
+		game_end();
+	}else
+	{
+
+		amount_of_buttons = 0;
+
+		var decrease_i = 0;
+
+		for (var i = 0;i < 11; i += 1)
+		{
+			if amount_of_buttons >= 11
+			{
+				exit;			
+			}
+		
+			if i - decrease_i > array_length(save) - 1
+			{
+				decrease_i += 4;	
+			}
+		
+			//show_debug_message("i: " + string(i));
+			//show_debug_message("lenght: " + string(array_length(save)));
+			//show_debug_message("decrease_i: " + string(decrease_i));
+		
+			var	button_instance = instance_create_layer(room_width,-15 + i * 73,"level_select",obj_button)
+			button_instance.button_title = filename_name(save[i - decrease_i]); //fetch the button display title
+			button_instance.file_path =  save[i - decrease_i]; // path to the file
+			button_instance.image_xscale = 0.3; // x scale of button
+			button_instance.image_yscale = 0.3; // y scale of button
+			button_instance.scrollable = true;  // if the button should scroll (only in layer level_select)
+			button_instance.button_id = i - decrease_i; // id of the button for button for scrolling
+			button_instance.title_position = "left"; // position of the text on button
+			button_instance.selected_button_id = i - decrease_i;
+			amount_of_buttons++;
+		
+
+		}
+		//while amount_of_buttons < 11
+		//{
+		//	var	button_instance = instance_create_layer(room_width,-15 + amount_of_buttons * 73,"level_select",obj_button)
+		//	button_instance.button_title = "";
+		//	button_instance.image_xscale = 0.3;
+		//	button_instance.image_yscale = 0.3;
+		//	button_instance.scrollable = true;
+		//	button_instance.button_id = amount_of_buttons;
+		//	button_instance.title_position = "left";
+		//	button_instance.selected_button_id = amount_of_buttons;
+		//	amount_of_buttons++;		
+		//}	
+		show_debug_message(amount_of_buttons);
+		show_debug_message("array lenght: " + string(array_length(save)));
+		show_debug_message(filename_dir(save[0])); // for path to the folder
+		show_debug_message(filename_name(save[0])); // for name of the file
+
+		var select_panel = instance_create_layer(0,640,"level_buttons",obj_select_panel);
+	}
+}
+
+if !lemon
+{
+			show_message("Error 404: Lemon Not Found.\nThe requested lemon could not be located. It might have been squeezed, zested, or simply never existed. Please check your citrus directory and try again.");
+			game_end();
+	 //show_error("Error: Went to wrong area. Aborting game.", true);
+
+}
+
+//f4_count = 0;
+//f4_pos = 99999;
+
+//if !variable_global_exists("f4_troll") {
+//	global.f4_troll = true;
+//	f4_count = 0;
+//}
+
+
+#event alarm0
+window_set_position(0,0);
+global.f4_troll = false;//!global.f4_troll;
+
+#event step
+if global.debug
+{
+	if keyboard_check_pressed(192) // open console menu with ~
+	{
+		global.debug_log = !global.debug_log;
+	}
+
+	if global.debug_log
+	{
+		show_debug_log(true);
+	}else show_debug_log(false);
+}
+
+//if keyboard_check_pressed(vk_f4)
+//{
+//	if f4_count > 10
+//	{
+//		global.fullscreen = false;
+//		window_set_fullscreen(global.fullscreen);
+//		alarm[0] = 10;
+//		show_message(global.f4_troll ? "deactivating freaky mode D:" : "activating freaky mode");
+//	}else f4_count++;
+//}
+
+//if global.f4_troll
+//{
+//	//window_set_position(random_range(0,display_get_width()),random_range(0,display_get_height()));
+//	window_set_position(f4_pos,0);
+//	f4_pos += 5;
+	
+//	if display_get_width() * 1.1 < f4_pos
+//	{
+//		f4_pos = 0 - room_width * 1.1;
+//	};
+//}
+
+if room == level_select ||  room == editor
+{
+
+	if keyboard_check_pressed(vk_escape)
+	{
+		room_goto(main_menu);	
+	}
+	
+	if room == level_select // fuck this i cant deal with this shit anymore T-T
+	{
+		window_set_cursor(cr_none);	
+	}
+}
+
+if room == level_select
+{
+	
+	if !audio_is_playing(snd_story_level_bg)
+	{
+		audio_play_sound(snd_story_level_bg,0,true);
+	}
+	
+}
+
+if room = level 
+{
+	
+	if keyboard_check_pressed(vk_escape)
+	{
+		global.pause = !global.pause;
+	}
+	
+	if !global.pause
+	{
+		window_set_cursor(cr_none);
+	}else window_set_cursor(cr_default);
+}
+
+
+if !global.pause
+{
+	//global.runtime += time_line.distance / (5 * room_speed); //timeline.distance only exists in the editor while this code runs anywhere
+	global.runtime += 85 / (5 * room_speed);
+	//show_debug_message(global.runtime);
+
+	//show_debug_message(global.runtime);	
+
+}	
+
+button += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
+	
+if !button_repeat // if the user is not in the level select screen
+{
+	if button > button_max // check if the button is not going outside the buttonss
+	{
+		button = button_max;
+	}else if button < 0
+	{
+		button = 0;	
+	}
+}else if button > button_max	
+	{
+		button -= button_max + 1;	
+	}else if button < 0
+	{
+		button += button_max + 1;
+	}
+	
+move_buttons = mouse_wheel_up() - mouse_wheel_down();
+
+if move_buttons == 0
+{
+	move_buttons = (keyboard_check_pressed(vk_up) - keyboard_check_pressed(vk_down)) * 4.5; // find the right value for this so that the buttons dont move
+	//if button = NaN
+	//{
+	//	button = 0;
+	//}
+}
+
+switch menu_id
+{
+	
+	case "0": // main menu
+		button_repeat = false;
+		button_max = 3;
+		in_main_menu = true;
+	
+		instance_activate_layer("main");
+		instance_activate_layer("main_spawned");
+		instance_deactivate_layer("level_buttons");
+		instance_deactivate_layer("options");
+		instance_deactivate_layer("options_spawned");
+		instance_deactivate_layer("credits");
+		instance_deactivate_layer("level_select");
+		break;
+	
+	case "1": // level select
+		button_max = 10;
+		button_repeat = true;
+		in_main_menu = false;
+	
+		instance_deactivate_layer("main");
+		instance_deactivate_layer("main_spawned");
+		instance_deactivate_layer("options");
+		instance_deactivate_layer("options_spawned");
+		instance_deactivate_layer("credits");
+		instance_activate_layer("level_select");
+		instance_activate_layer("level_buttons");
+		break;
+	
+	case "2": // options
+		button_repeat = false;
+		button_max = 3;
+		in_main_menu = false;
+	
+		instance_deactivate_layer("main");
+		instance_deactivate_layer("main_spawned");
+		instance_activate_layer("options");
+		instance_activate_layer("options_spawned");
+		instance_deactivate_layer("credits");
+		instance_deactivate_layer("level_select");
+		instance_deactivate_layer("level_buttons");
+		break;
+	
+		case "21":
+		in_main_menu = false;
+		break;
+	
+	case "3": // credits
+		in_main_menu = false;
+		room_goto(editor);
+	
+		//button_repeat = false;
+		//button_max = 0;	
+		//instance_deactivate_layer("main");
+		//instance_deactivate_layer("options");
+		//instance_activate_layer("credits");
+		//instance_deactivate_layer("level_select");
+		//instance_deactivate_layer("level_buttons");
+		break;
+	
+	case "31":
+		var _editor = instance_find(obj_editor,0);
+		_editor.save = true;
+		show_debug_message("saving");
+		menu_id = -1;
+		break;
+	case "32":
+		var _editor = instance_find(obj_editor,0);
+		_editor.load = true;
+		show_debug_message("loading");
+		menu_id = -1
+		break;
+}
+
+if move_buttons != 0 && room == main_menu && menu_id == "1"
+{
+	if !audio_is_playing(snd_button)
+	{
+		audio_play_sound(snd_button,2,false);
+	}
+}
+
+//check what type of click is happening
+//var 'clickdouble': 0=noclick, 1=singleclick, 2=doubleclick
+mdoubleclick--;
+if (mdoubleclick < 0)
+{
+	clickdouble = 0;
+}
+
+if (mouse_check_button_pressed(mb_left) && mdoubleclick >= 0 && clickdouble == 0.5)
+{
+	clickdouble = 2;
+}
+
+if (mouse_check_button_pressed(mb_left) && mdoubleclick < 0)
+{
+	mdoubleclick = room_speed * 0.25;
+	clickdouble = 0.5;
+}
+
+if (clickdouble == 0.5 && mdoubleclick == 0)
+{
+	clickdouble = 1;
+}
+
+if selected_items < 1
+{
+	shortcuts_on = true;	
+}else shortcuts_on = false;
+
+//show_debug_message(selected_items);
+
+if room == main_menu
+{
+	if menu_id != 1
+	{
+		if !audio_is_playing(snd_menu_bg)
+		{
+			show_debug_message("plaing bg music" + string(room_get_name(room)));
+			audio_stop_all();
+			audio_play_sound(snd_menu_bg,0,true,1,9);
+		}
+	}else audio_stop_sound(snd_menu_bg);
+	
+}else{
+
+if audio_is_playing(snd_menu_bg)
+{
+	show_debug_message("stoped bg music");
+	audio_stop_sound(snd_menu_bg);
+}
+	
+}
+
+
+
+#event draw
+if room == level
+{
+	if global.pause //temp
+	{
+		draw_set_alpha(0.5);
+		draw_rectangle_colour(0, 0, room_width, room_height, c_black,c_black,c_black,c_black,false);
+		draw_set_alpha(0.5);
+		draw_rectangle_colour(0, 0, room_width, 50, c_aqua,c_aqua,c_aqua,c_aqua,false);
+		draw_rectangle_colour(0, room_height, room_width, room_height - 50, c_aqua,c_aqua,c_aqua,c_aqua,false);
+		draw_set_alpha(1);
+		draw_set_colour(c_aqua);
+		draw_set_font (fnt_default);
+		draw_set_valign(fa_middle);
+	}
+}
+
+#event draw_gui
+draw_self();
+
+if room == level
+{
+	var player = instance_find(obj_player,0);
+	var loader = instance_find(level_load,0);
+	if global.pause //temp
+	{
+		if player.dead
+		{
+			draw_set_alpha(0.25);
+
+			draw_set_color(c_red);
+
+			draw_rectangle(0, 0, room_width, room_height, false);
+
+			draw_set_alpha(1);
+			
+			instance_activate_layer("death_menu");
+			draw_text_transformed(room_width * 1/2,room_height * 1/4,"You Failed",5,5,0);
+		}else if loader.win
+		{
+			
+			draw_set_alpha(0.25);
+
+			draw_set_color(c_yellow);
+
+			draw_rectangle(0, 0, room_width, room_height, false);
+
+			draw_set_alpha(1);
+			
+			
+			instance_activate_layer("win_menu");
+			draw_text_transformed(room_width * 1/2,room_height * 1/4,"Level completed!",5,5,0);	
+		}else
+		{
+			instance_activate_layer("pause_menu");
+			draw_text_transformed(room_width * 3/4,room_height * 1/4,"Paused",5,5,0);	
+		}
+		
+		
+	}else
+	{
+		instance_deactivate_layer("pause_menu");	
+		instance_deactivate_layer("death_menu");		
+		instance_deactivate_layer("win_menu");		
+	}
+}
+	
+	
+	

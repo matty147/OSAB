@@ -1,0 +1,9910 @@
+{
+  "meta": {
+    "id": 0,
+    "name": "What the devils?????",
+    "description": "Final level",
+    "lenght": 65,
+    "diff": 9
+  },
+  "level": [
+    {
+      "time": 0,
+      "object_type": "1",
+      "position": [
+        748.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 2,
+      "object_type": "1",
+      "position": [
+        568.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 4,
+      "object_type": "1",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 6,
+      "object_type": "1",
+      "position": [
+        1366.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 8,
+      "object_type": "1",
+      "position": [
+        780.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 10,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 12,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 14,
+      "object_type": "1",
+      "position": [
+        650.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 16,
+      "object_type": "1",
+      "position": [
+        430.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 18,
+      "object_type": "1",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 20,
+      "object_type": "1",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 22,
+      "object_type": "1",
+      "position": [
+        748.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 24,
+      "object_type": "1",
+      "position": [
+        568.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 28,
+      "object_type": "1",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 30,
+      "object_type": "1",
+      "position": [
+        1366.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 32,
+      "object_type": "1",
+      "position": [
+        780.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 34,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 36,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 38,
+      "object_type": "1",
+      "position": [
+        650.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 40,
+      "object_type": "1",
+      "position": [
+        430.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 42,
+      "object_type": "1",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 44,
+      "object_type": "1",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 46,
+      "object_type": "1",
+      "position": [
+        748.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 48,
+      "object_type": "1",
+      "position": [
+        568.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 50,
+      "object_type": "1",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 52,
+      "object_type": "1",
+      "position": [
+        1366.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 54,
+      "object_type": "1",
+      "position": [
+        780.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 56,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 58,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 60,
+      "object_type": "1",
+      "position": [
+        650.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 62,
+      "object_type": "1",
+      "position": [
+        430.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 64,
+      "object_type": "1",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 66,
+      "object_type": "1",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 68,
+      "object_type": "1",
+      "position": [
+        748.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 70,
+      "object_type": "1",
+      "position": [
+        568.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 72,
+      "object_type": "1",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 74,
+      "object_type": "1",
+      "position": [
+        1366.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 76,
+      "object_type": "1",
+      "position": [
+        780.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 78,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 80,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 82,
+      "object_type": "1",
+      "position": [
+        650.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 84,
+      "object_type": "1",
+      "position": [
+        430.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 86,
+      "object_type": "1",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 88,
+      "object_type": "1",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 90,
+      "object_type": "1",
+      "position": [
+        780.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 92,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 94,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 100,
+      "object_type": "22",
+      "position": [
+        683.0,
+        384.0
+      ],
+      "size": [
+        1.0,
+        1.0
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 0.0,
+        "alpha": 0.4,
+        "duration": 0.8,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 105,
+      "object_type": "0",
+      "position": [
+        -50.0,
+        0.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 8.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 105,
+      "object_type": "0",
+      "position": [
+        -50.0,
+        250.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 8.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 105,
+      "object_type": "0",
+      "position": [
+        -50.0,
+        420.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 8.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 105,
+      "object_type": "0",
+      "position": [
+        -50.0,
+        766.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 8.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 117,
+      "object_type": "22",
+      "position": [
+        683.0,
+        384.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 0.0,
+        "alpha": 0.4,
+        "duration": 0.8,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 125,
+      "object_type": "7",
+      "position": [
+        1400.0,
+        0.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 180.0,
+      "move": {
+        "speed": 8.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 125,
+      "object_type": "7",
+      "position": [
+        1400.0,
+        250.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 180.0,
+      "move": {
+        "speed": 8.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 125,
+      "object_type": "7",
+      "position": [
+        1400.0,
+        420.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 180.0,
+      "move": {
+        "speed": 8.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 125,
+      "object_type": "7",
+      "position": [
+        1400.0,
+        766.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 180.0,
+      "move": {
+        "speed": 8.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 134,
+      "object_type": "22",
+      "position": [
+        683.0,
+        384.0
+      ],
+      "size": [
+        3.0,
+        3.0
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 0.0,
+        "alpha": 0.4,
+        "duration": 0.8,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 136,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 138,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 140,
+      "object_type": "1",
+      "position": [
+        650.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 142,
+      "object_type": "1",
+      "position": [
+        430.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 144,
+      "object_type": "1",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 146,
+      "object_type": "1",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 151,
+      "object_type": "22",
+      "position": [
+        -50.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 12.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 153,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 155,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 157,
+      "object_type": "1",
+      "position": [
+        650.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 159,
+      "object_type": "1",
+      "position": [
+        430.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 161,
+      "object_type": "1",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 163,
+      "object_type": "1",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 171,
+      "object_type": "22",
+      "position": [
+        1400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 180.0,
+      "move": {
+        "speed": 12.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 173,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 175,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 177,
+      "object_type": "1",
+      "position": [
+        650.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 179,
+      "object_type": "1",
+      "position": [
+        430.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 181,
+      "object_type": "1",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 183,
+      "object_type": "1",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 191,
+      "object_type": "22",
+      "position": [
+        -50.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 12.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 193,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 195,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 197,
+      "object_type": "1",
+      "position": [
+        650.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 199,
+      "object_type": "1",
+      "position": [
+        430.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 201,
+      "object_type": "1",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 203,
+      "object_type": "1",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 211,
+      "object_type": "22",
+      "position": [
+        1400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 180.0,
+      "move": {
+        "speed": 12.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 213,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 215,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 217,
+      "object_type": "1",
+      "position": [
+        650.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 219,
+      "object_type": "1",
+      "position": [
+        430.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 221,
+      "object_type": "1",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 223,
+      "object_type": "1",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 231,
+      "object_type": "22",
+      "position": [
+        -50.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 12.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 233,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 235,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 237,
+      "object_type": "1",
+      "position": [
+        650.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 239,
+      "object_type": "1",
+      "position": [
+        430.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 241,
+      "object_type": "1",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 243,
+      "object_type": "1",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 249,
+      "object_type": "22",
+      "position": [
+        1400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 180.0,
+      "move": {
+        "speed": 12.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 275,
+      "object_type": "22",
+      "position": [
+        300.0,
+        384.0
+      ],
+      "size": [
+        3.1,
+        3.1
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 0.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 275,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 275,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 20.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 275,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 40.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 275,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 60.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 275,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 260.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 275,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 280.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 275,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 300.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 275,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 320.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 275,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 340.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 275,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 360.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 285,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 285,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 20.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 285,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 40.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 285,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 60.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 285,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 260.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 285,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 280.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 285,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 300.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 285,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 320.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 285,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 340.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 285,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 360.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 295,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 295,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 20.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 295,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 40.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 295,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 60.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 295,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 260.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 295,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 280.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 295,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 300.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 295,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 320.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 295,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 340.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 295,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 360.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 305,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 305,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 20.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 305,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 40.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 305,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 60.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 305,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 260.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 305,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 280.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 305,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 300.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 305,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 320.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 305,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 340.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 305,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 360.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 315,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 315,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 20.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 315,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 40.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 315,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 60.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 315,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 260.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 315,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 280.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 315,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 300.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 315,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 320.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 315,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 340.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 315,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 360.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 325,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 325,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 20.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 325,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 40.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 325,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 60.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 325,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 260.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 325,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 280.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 325,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 300.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 325,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 320.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 325,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 340.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 325,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 360.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 335,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 335,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 20.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 335,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 40.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 335,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 60.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 335,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 320.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 335,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 340.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 335,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 360.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 335,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 260.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 335,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 280.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 335,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 300.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 345,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 345,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 20.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 345,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 40.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 345,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 60.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 345,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 320.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 345,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 340.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 345,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 360.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 345,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 260.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 345,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 280.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 345,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 300.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 355,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 355,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 20.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 355,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 40.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 355,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 60.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 355,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 320.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 355,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 340.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 355,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 360.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 355,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 260.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 355,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 280.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 355,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 300.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 365,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 365,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 20.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 365,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 40.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 365,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 60.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 365,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 320.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 365,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 340.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 365,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 360.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 365,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 260.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 365,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 280.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 365,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 300.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 375,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 375,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 20.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 375,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 40.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 375,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 60.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 375,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 320.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 375,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 340.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 375,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 360.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 375,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 260.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 375,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 280.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 375,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 300.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 385,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 385,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 20.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 385,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 40.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 385,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 60.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 385,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 320.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 385,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 340.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 385,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 360.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 385,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 260.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 385,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 280.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 385,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 300.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 395,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 395,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 20.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 395,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 40.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 395,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 60.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 395,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 320.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 395,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 340.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 395,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 360.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 395,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 260.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 395,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 280.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 395,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 300.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 405,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 405,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 20.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 405,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 40.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 405,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 60.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 405,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 320.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 405,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 340.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 405,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 360.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 405,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 260.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 405,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 280.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 405,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 300.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 415,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 415,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 20.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 415,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 40.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 415,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 60.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 415,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 320.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 415,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 340.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 415,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 360.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 415,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 260.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 415,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 280.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 415,
+      "object_type": "6",
+      "position": [
+        400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 300.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 6.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 430,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 432,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 434,
+      "object_type": "1",
+      "position": [
+        650.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 436,
+      "object_type": "1",
+      "position": [
+        430.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 438,
+      "object_type": "1",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 440,
+      "object_type": "1",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 451,
+      "object_type": "22",
+      "position": [
+        -50.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 12.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 460,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 462,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 464,
+      "object_type": "1",
+      "position": [
+        650.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 466,
+      "object_type": "1",
+      "position": [
+        430.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 468,
+      "object_type": "1",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 470,
+      "object_type": "1",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 490,
+      "object_type": "22",
+      "position": [
+        1400.0,
+        384.0
+      ],
+      "size": [
+        2.5,
+        2.5
+      ],
+      "angle": 180.0,
+      "move": {
+        "speed": 12.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 500,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 502,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 504,
+      "object_type": "1",
+      "position": [
+        650.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 506,
+      "object_type": "1",
+      "position": [
+        430.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 508,
+      "object_type": "1",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 510,
+      "object_type": "1",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 512,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 513,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 514,
+      "object_type": "1",
+      "position": [
+        650.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 516,
+      "object_type": "1",
+      "position": [
+        430.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 518,
+      "object_type": "1",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 520,
+      "object_type": "1",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 522,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 523,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 524,
+      "object_type": "1",
+      "position": [
+        650.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 526,
+      "object_type": "1",
+      "position": [
+        430.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 528,
+      "object_type": "1",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 530,
+      "object_type": "1",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 532,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 533,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 534,
+      "object_type": "1",
+      "position": [
+        650.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 536,
+      "object_type": "1",
+      "position": [
+        430.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 538,
+      "object_type": "1",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 540,
+      "object_type": "1",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 542,
+      "object_type": "1",
+      "position": [
+        748.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 544,
+      "object_type": "1",
+      "position": [
+        568.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 546,
+      "object_type": "1",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 548,
+      "object_type": "1",
+      "position": [
+        1366.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 550,
+      "object_type": "1",
+      "position": [
+        780.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 552,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 554,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 556,
+      "object_type": "1",
+      "position": [
+        650.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 558,
+      "object_type": "1",
+      "position": [
+        430.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 560,
+      "object_type": "1",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 562,
+      "object_type": "1",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 564,
+      "object_type": "1",
+      "position": [
+        748.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 566,
+      "object_type": "1",
+      "position": [
+        568.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 568,
+      "object_type": "1",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 570,
+      "object_type": "1",
+      "position": [
+        1366.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 572,
+      "object_type": "1",
+      "position": [
+        780.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 574,
+      "object_type": "1",
+      "position": [
+        230.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 576,
+      "object_type": "1",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 578,
+      "object_type": "1",
+      "position": [
+        650.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 580,
+      "object_type": "1",
+      "position": [
+        430.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 5.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 600,
+      "object_type": "22",
+      "position": [
+        340.0,
+        384.0
+      ],
+      "size": [
+        2.7,
+        2.7
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 0.0,
+        "alpha": 0.4,
+        "duration": 9.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 600,
+      "object_type": "22",
+      "position": [
+        1026.0,
+        384.0
+      ],
+      "size": [
+        2.7,
+        2.7
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 0.0,
+        "alpha": 0.4,
+        "duration": 9.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 610,
+      "object_type": "7",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 610,
+      "object_type": "7",
+      "position": [
+        -50.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 610,
+      "object_type": "7",
+      "position": [
+        1366.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 180.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 630,
+      "object_type": "7",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 630,
+      "object_type": "7",
+      "position": [
+        -50.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 630,
+      "object_type": "7",
+      "position": [
+        1366.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 180.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 650,
+      "object_type": "7",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 650,
+      "object_type": "7",
+      "position": [
+        -50.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 650,
+      "object_type": "7",
+      "position": [
+        1366.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 180.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 670,
+      "object_type": "7",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 670,
+      "object_type": "7",
+      "position": [
+        -50.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 670,
+      "object_type": "7",
+      "position": [
+        1366.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 180.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 690,
+      "object_type": "7",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 690,
+      "object_type": "7",
+      "position": [
+        -50.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 690,
+      "object_type": "7",
+      "position": [
+        1366.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 180.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 710,
+      "object_type": "7",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 710,
+      "object_type": "7",
+      "position": [
+        -50.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 710,
+      "object_type": "7",
+      "position": [
+        1366.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 180.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 730,
+      "object_type": "7",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 730,
+      "object_type": "7",
+      "position": [
+        -50.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 730,
+      "object_type": "7",
+      "position": [
+        1366.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 180.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 750,
+      "object_type": "7",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 750,
+      "object_type": "7",
+      "position": [
+        -50.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 750,
+      "object_type": "7",
+      "position": [
+        1366.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 180.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 770,
+      "object_type": "7",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 770,
+      "object_type": "7",
+      "position": [
+        -50.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 770,
+      "object_type": "7",
+      "position": [
+        1366.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 180.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 790,
+      "object_type": "7",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 790,
+      "object_type": "7",
+      "position": [
+        -50.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 0.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 790,
+      "object_type": "7",
+      "position": [
+        1366.0,
+        700.0
+      ],
+      "size": [
+        4.0,
+        4.0
+      ],
+      "angle": 180.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 820,
+      "object_type": "22",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 820,
+      "object_type": "0",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 820,
+      "object_type": "0",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 820,
+      "object_type": "0",
+      "position": [
+        200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 820,
+      "object_type": "0",
+      "position": [
+        300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 820,
+      "object_type": "0",
+      "position": [
+        400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 820,
+      "object_type": "0",
+      "position": [
+        900.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 820,
+      "object_type": "0",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 820,
+      "object_type": "0",
+      "position": [
+        1100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 820,
+      "object_type": "0",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 820,
+      "object_type": "0",
+      "position": [
+        1300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 820,
+      "object_type": "0",
+      "position": [
+        1400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 840,
+      "object_type": "22",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 840,
+      "object_type": "0",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 840,
+      "object_type": "0",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 840,
+      "object_type": "0",
+      "position": [
+        200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 840,
+      "object_type": "0",
+      "position": [
+        300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 840,
+      "object_type": "0",
+      "position": [
+        400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 840,
+      "object_type": "0",
+      "position": [
+        900.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 840,
+      "object_type": "0",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 840,
+      "object_type": "0",
+      "position": [
+        1100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 840,
+      "object_type": "0",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 840,
+      "object_type": "0",
+      "position": [
+        1300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 840,
+      "object_type": "0",
+      "position": [
+        1400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 860,
+      "object_type": "22",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 860,
+      "object_type": "0",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 860,
+      "object_type": "0",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 860,
+      "object_type": "0",
+      "position": [
+        200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 860,
+      "object_type": "0",
+      "position": [
+        300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 860,
+      "object_type": "0",
+      "position": [
+        400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 860,
+      "object_type": "0",
+      "position": [
+        900.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 860,
+      "object_type": "0",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 860,
+      "object_type": "0",
+      "position": [
+        1100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 860,
+      "object_type": "0",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 860,
+      "object_type": "0",
+      "position": [
+        1300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 860,
+      "object_type": "0",
+      "position": [
+        1400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 880,
+      "object_type": "22",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 880,
+      "object_type": "0",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 880,
+      "object_type": "0",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 880,
+      "object_type": "0",
+      "position": [
+        200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 880,
+      "object_type": "0",
+      "position": [
+        300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 880,
+      "object_type": "0",
+      "position": [
+        400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 880,
+      "object_type": "0",
+      "position": [
+        900.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 880,
+      "object_type": "0",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 880,
+      "object_type": "0",
+      "position": [
+        1100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 880,
+      "object_type": "0",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 880,
+      "object_type": "0",
+      "position": [
+        1300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 880,
+      "object_type": "0",
+      "position": [
+        1400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 900,
+      "object_type": "22",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 900,
+      "object_type": "0",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 900,
+      "object_type": "0",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 900,
+      "object_type": "0",
+      "position": [
+        200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 900,
+      "object_type": "0",
+      "position": [
+        300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 900,
+      "object_type": "0",
+      "position": [
+        400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 900,
+      "object_type": "0",
+      "position": [
+        900.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 900,
+      "object_type": "0",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 900,
+      "object_type": "0",
+      "position": [
+        1100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 900,
+      "object_type": "0",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 900,
+      "object_type": "0",
+      "position": [
+        1300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 900,
+      "object_type": "0",
+      "position": [
+        1400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 920,
+      "object_type": "22",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 920,
+      "object_type": "0",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 920,
+      "object_type": "0",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 920,
+      "object_type": "0",
+      "position": [
+        200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 920,
+      "object_type": "0",
+      "position": [
+        300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 920,
+      "object_type": "0",
+      "position": [
+        400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 920,
+      "object_type": "0",
+      "position": [
+        900.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 920,
+      "object_type": "0",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 920,
+      "object_type": "0",
+      "position": [
+        1100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 920,
+      "object_type": "0",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 920,
+      "object_type": "0",
+      "position": [
+        1300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 920,
+      "object_type": "0",
+      "position": [
+        1400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 940,
+      "object_type": "22",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 940,
+      "object_type": "0",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 940,
+      "object_type": "0",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 940,
+      "object_type": "0",
+      "position": [
+        200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 940,
+      "object_type": "0",
+      "position": [
+        300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 940,
+      "object_type": "0",
+      "position": [
+        400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 940,
+      "object_type": "0",
+      "position": [
+        900.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 940,
+      "object_type": "0",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 940,
+      "object_type": "0",
+      "position": [
+        1100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 940,
+      "object_type": "0",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 940,
+      "object_type": "0",
+      "position": [
+        1300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 940,
+      "object_type": "0",
+      "position": [
+        1400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 960,
+      "object_type": "22",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 960,
+      "object_type": "0",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 960,
+      "object_type": "0",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 960,
+      "object_type": "0",
+      "position": [
+        200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 960,
+      "object_type": "0",
+      "position": [
+        300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 960,
+      "object_type": "0",
+      "position": [
+        400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 960,
+      "object_type": "0",
+      "position": [
+        900.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 960,
+      "object_type": "0",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 960,
+      "object_type": "0",
+      "position": [
+        1100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 960,
+      "object_type": "0",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 960,
+      "object_type": "0",
+      "position": [
+        1300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 960,
+      "object_type": "0",
+      "position": [
+        1400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 980,
+      "object_type": "22",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 980,
+      "object_type": "0",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 980,
+      "object_type": "0",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 980,
+      "object_type": "0",
+      "position": [
+        200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 980,
+      "object_type": "0",
+      "position": [
+        300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 980,
+      "object_type": "0",
+      "position": [
+        400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 980,
+      "object_type": "0",
+      "position": [
+        900.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 980,
+      "object_type": "0",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 980,
+      "object_type": "0",
+      "position": [
+        1100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 980,
+      "object_type": "0",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 980,
+      "object_type": "0",
+      "position": [
+        1300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 980,
+      "object_type": "0",
+      "position": [
+        1400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1000,
+      "object_type": "22",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1000,
+      "object_type": "0",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1000,
+      "object_type": "0",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1000,
+      "object_type": "0",
+      "position": [
+        200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1000,
+      "object_type": "0",
+      "position": [
+        300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1000,
+      "object_type": "0",
+      "position": [
+        400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1000,
+      "object_type": "0",
+      "position": [
+        900.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1000,
+      "object_type": "0",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1000,
+      "object_type": "0",
+      "position": [
+        1100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1000,
+      "object_type": "0",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1000,
+      "object_type": "0",
+      "position": [
+        1300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1000,
+      "object_type": "0",
+      "position": [
+        1400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1020,
+      "object_type": "22",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1020,
+      "object_type": "0",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1020,
+      "object_type": "0",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1020,
+      "object_type": "0",
+      "position": [
+        200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1020,
+      "object_type": "0",
+      "position": [
+        300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1020,
+      "object_type": "0",
+      "position": [
+        400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1020,
+      "object_type": "0",
+      "position": [
+        900.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1020,
+      "object_type": "0",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1020,
+      "object_type": "0",
+      "position": [
+        1100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1020,
+      "object_type": "0",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1020,
+      "object_type": "0",
+      "position": [
+        1300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1020,
+      "object_type": "0",
+      "position": [
+        1400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1040,
+      "object_type": "22",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1040,
+      "object_type": "0",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1040,
+      "object_type": "0",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1040,
+      "object_type": "0",
+      "position": [
+        200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1040,
+      "object_type": "0",
+      "position": [
+        300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1040,
+      "object_type": "0",
+      "position": [
+        400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1040,
+      "object_type": "0",
+      "position": [
+        900.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1040,
+      "object_type": "0",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1040,
+      "object_type": "0",
+      "position": [
+        1100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1040,
+      "object_type": "0",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1040,
+      "object_type": "0",
+      "position": [
+        1300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1040,
+      "object_type": "0",
+      "position": [
+        1400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1060,
+      "object_type": "22",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1060,
+      "object_type": "0",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1060,
+      "object_type": "0",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1060,
+      "object_type": "0",
+      "position": [
+        200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1060,
+      "object_type": "0",
+      "position": [
+        300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1060,
+      "object_type": "0",
+      "position": [
+        400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1060,
+      "object_type": "0",
+      "position": [
+        900.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1060,
+      "object_type": "0",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1060,
+      "object_type": "0",
+      "position": [
+        1100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1060,
+      "object_type": "0",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1060,
+      "object_type": "0",
+      "position": [
+        1300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1060,
+      "object_type": "0",
+      "position": [
+        1400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1080,
+      "object_type": "22",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1080,
+      "object_type": "0",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1080,
+      "object_type": "0",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1080,
+      "object_type": "0",
+      "position": [
+        200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1080,
+      "object_type": "0",
+      "position": [
+        300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1080,
+      "object_type": "0",
+      "position": [
+        400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1080,
+      "object_type": "0",
+      "position": [
+        900.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1080,
+      "object_type": "0",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1080,
+      "object_type": "0",
+      "position": [
+        1100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1080,
+      "object_type": "0",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1080,
+      "object_type": "0",
+      "position": [
+        1300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1080,
+      "object_type": "0",
+      "position": [
+        1400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1100,
+      "object_type": "22",
+      "position": [
+        683.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1100,
+      "object_type": "0",
+      "position": [
+        0.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1100,
+      "object_type": "0",
+      "position": [
+        100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1100,
+      "object_type": "0",
+      "position": [
+        200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1100,
+      "object_type": "0",
+      "position": [
+        300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1100,
+      "object_type": "0",
+      "position": [
+        400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1100,
+      "object_type": "0",
+      "position": [
+        900.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1100,
+      "object_type": "0",
+      "position": [
+        1000.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1100,
+      "object_type": "0",
+      "position": [
+        1100.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1100,
+      "object_type": "0",
+      "position": [
+        1200.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1100,
+      "object_type": "0",
+      "position": [
+        1300.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    },
+    {
+      "time": 1100,
+      "object_type": "0",
+      "position": [
+        1400.0,
+        -50.0
+      ],
+      "size": [
+        2.0,
+        2.0
+      ],
+      "angle": 90.0,
+      "move": {
+        "speed": 10.0,
+        "alpha": 0.4,
+        "duration": 5.0,
+        "show_hitbox": 25
+      }
+    }
+  ]
+}

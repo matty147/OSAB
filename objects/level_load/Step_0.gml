@@ -68,7 +68,7 @@
 		audio_sound_gain(sound_id,0,7000);	
 	}
 	
-	if player.dead && search != ""
+	if player.dead && search != "" && !instance_exists(obj_enemy)
 	{
 		show_debug_message(pitch);
 		pitch -= 0.01;

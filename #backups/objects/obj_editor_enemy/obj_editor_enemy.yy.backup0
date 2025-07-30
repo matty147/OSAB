@@ -1,0 +1,65 @@
+// 2025-07-30 02:55:27
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+sprite_index = spr_editor_enemy;
+uses_physics = false;
+
+#event create
+
+image_xscale = 0.75;
+
+dragging = false;
+
+edge_size = 15;
+dragged_right_side = 0;
+
+min_lenght_value = 0.1; // changed to smallest grid unit
+max_lenght_value = 999;
+
+block_lenght = 1;
+sub_block = 0.75;
+timeline = instance_find(obj_timeline,0);
+
+#event step
+
+var left_edge  = (mouse_x >= x) && (mouse_x <= x + edge_size);
+var right_edge = (mouse_x >= x + sprite_width - edge_size) && (mouse_x <= x + sprite_width);
+
+if (left_edge || right_edge)
+{
+    
+    if (mouse_check_button_pressed(mb_left))
+    {
+         dragging = true;
+         dragged_right_side = right_edge;
+    }
+}
+
+if (dragging)
+{
+    if (dragged_right_side)
+    {
+        var timeline_pos = floor((mouse_x - timeline.x) / timeline.line_amount_w) * timeline.line_amount_w;
+        block_lenght = timeline_pos / timeline.line_amount_w;
+        show_debug_message(timeline_pos);
+        image_xscale = timeline_pos / 64;
+        image_xscale = clamp(image_xscale,min_lenght_value,max_lenght_value);
+    }
+    
+    show_debug_message($"scale: {image_xscale}");
+    
+    if (mouse_check_button_released(mb_left))
+    {
+        dragging = false;
+    }
+}else
+{
+    // check if any updates where made to the size of the grid
+    image_xscale = block_lenght * timeline.line_amount_w / 64;
+    image_xscale = clamp(image_xscale,min_lenght_value,max_lenght_value);
+}
+
+#event draw
+// draw_sprite_stretched(sprite_index, 0, x, y, 200, 300);
+
+draw_self();
