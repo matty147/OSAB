@@ -252,6 +252,7 @@
     {"id":{"name":"spr_triangle","path":"sprites/spr_triangle/spr_triangle.yy",},},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},},
     {"id":{"name":"Sprite2","path":"sprites/Sprite2/Sprite2.yy",},},
+    {"id":{"name":"Sprite76","path":"sprites/Sprite76/Sprite76.yy",},},
     {"id":{"name":"star","path":"sprites/star/star.yy",},},
     {"id":{"name":"statue","path":"sprites/statue/statue.yy",},},
     {"id":{"name":"subtitle_background","path":"sprites/subtitle_background/subtitle_background.yy",},},
