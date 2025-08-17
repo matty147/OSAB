@@ -4,7 +4,7 @@ var right_edge = (mouse_x >= x + sprite_width - edge_size) && (mouse_x <= x + sp
 if (left_edge || right_edge)
 {
     
-    if (mouse_check_button_pressed(mb_left))
+    if (mouse_check_button_pressed(mb_left) && instance_position(mouse_x,mouse_y,id))
     {
          dragging = true;
          dragged_right_side = right_edge;
