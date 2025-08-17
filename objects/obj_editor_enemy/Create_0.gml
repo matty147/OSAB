@@ -10,5 +10,6 @@ min_lenght_value = 0.1; // changed to smallest grid unit
 max_lenght_value = 999;
 
 block_lenght = 1;
+position = 0;
 sub_block = 0.75;
 timeline = instance_find(obj_timeline,0);
