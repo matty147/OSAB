@@ -6,8 +6,12 @@ dragging = false;
 edge_size = 15;
 dragged_right_side = 0;
 
+middle = false;
+
 min_lenght_value = 0.1; // changed to smallest grid unit
 max_lenght_value = 999;
+
+distance_to_x = 0;
 
 block_lenght = 1;
 position = 0;
