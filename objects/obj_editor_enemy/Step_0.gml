@@ -26,8 +26,19 @@ if (dragging)
 	        image_xscale = timeline_pos / 64;
 	        image_xscale = clamp(image_xscale,min_lenght_value,max_lenght_value);
 	    }else
-		{
-			// reoirjowej
+		{	
+			var new_left = clamp(mouse_x, timeline.x, (x + sprite_width) - (min_lenght_value * 64));
+    
+			var right_edge_x = x + sprite_width;
+    
+			var new_width = right_edge_x - new_left;
+			block_lenght = round(new_width / timeline.line_amount_w);
+			
+			image_xscale = clamp(block_lenght * timeline.line_amount_w / 64, min_lenght_value, max_lenght_value);
+    
+			x = right_edge_x - sprite_width;
+
+			position = round((x - timeline.x) / timeline.line_amount_w);
 		}
 	}
      
