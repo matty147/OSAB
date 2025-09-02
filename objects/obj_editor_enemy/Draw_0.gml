@@ -8,3 +8,10 @@ draw_self();
 //draw_sprite_stretched(spr_level,0,left_edge + x,y,16,32);
 
 //draw_sprite_stretched(spr_level,0,right_edge + x,y,16,32);
+
+//timeline.x
+
+//for (var i = 0; i < 4;i++) // displays lines
+//{
+//	draw_circle(x,timeline.y + sprite_height / 2 + sprite_height * i,5,false);	
+//}

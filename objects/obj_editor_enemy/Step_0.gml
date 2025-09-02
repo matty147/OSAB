@@ -1,5 +1,8 @@
+if (live_call()) return live_result;
+
 var left_edge  = (mouse_x >= x) && (mouse_x <= x + edge_size);
 var right_edge = (mouse_x >= x + sprite_width - edge_size) && (mouse_x <= x + sprite_width);
+
 
 if (mouse_check_button_pressed(mb_left) && instance_position(mouse_x,mouse_y,id))
 {
@@ -17,6 +20,14 @@ if (dragging)
 	    var snapped_x = round((mouse_x - distance_to_x - timeline.x) / timeline.line_amount_w);
 	    position = snapped_x;
 	    x = clamp(timeline.x + snapped_x * timeline.line_amount_w, timeline.x, room_width);
+		
+		
+		if timeline.y - mouse_y < 0
+		{
+			var lane_numb = floor(clamp(abs(timeline.y - mouse_y) / sprite_height,0,3));
+
+			y = timeline.y + sprite_height / 2 + sprite_height * lane_numb;
+		}
 	}else
 	{
 	    if (dragged_right_side)
@@ -51,5 +62,6 @@ if (dragging)
     image_xscale = block_lenght * timeline.line_amount_w / 64;
     image_xscale = clamp(image_xscale,min_lenght_value,max_lenght_value);
 
-	x = clamp(timeline.x + position  * timeline.line_amount_w, timeline.x, room_width);
+	x = clamp(timeline.x + position * timeline.line_amount_w, timeline.x, room_width);
 }
+

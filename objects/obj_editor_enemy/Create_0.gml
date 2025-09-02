@@ -17,3 +17,6 @@ block_lenght = 1;
 position = 0;
 sub_block = 0.75;
 timeline = instance_find(obj_timeline,0);
+timeline_height = timeline.sprite_height;
+
+show_debug_message($"h{timeline_height / 4}");
