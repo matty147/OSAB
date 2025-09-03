@@ -13,6 +13,8 @@ max_lenght_value = 999;
 
 distance_to_x = 0;
 
+//grid_size = 64;
+
 block_lenght = 1;
 position = 0;
 sub_block = 0.75;

@@ -1,8 +1,9 @@
-if (live_call()) return live_result;
+//if (live_call()) return live_result;
 
 var left_edge  = (mouse_x >= x) && (mouse_x <= x + edge_size);
 var right_edge = (mouse_x >= x + sprite_width - edge_size) && (mouse_x <= x + sprite_width);
 
+var grid_size = 0.5;
 
 if (mouse_check_button_pressed(mb_left) && instance_position(mouse_x,mouse_y,id))
 {
