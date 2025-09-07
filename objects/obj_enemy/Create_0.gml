@@ -14,7 +14,7 @@ wave_angle = 0;
 
 _manager = instance_find(manager,0);
 
-level_object_list = _manager.level_object_list;
+level_object_map = _manager.level_object_map;
 
 if !variable_instance_exists(id,"survive_speed") // check if the value is declared if not declare it
 {

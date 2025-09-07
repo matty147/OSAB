@@ -1,8 +1,7 @@
 if set_up
 {
 
-	var spr = "spr_" + string(level_object_list[object_sprite][0]);
-
+	var spr = $"spr_{object_sprite}";
 
 	//show_debug_message(asset_get_index(spr));
 	//show_debug_message(asset_get_index("spr_house"));
@@ -11,8 +10,8 @@ if set_up
 
 	image_index = 0;//asset_get_index("spr_house");
 
-	image_xscale *= real(level_object_list[object_sprite][1]);
-	image_yscale *= real(level_object_list[object_sprite][1]);
+	image_xscale *= real(level_object_map[? object_sprite]);
+	image_yscale *= real(level_object_map[? object_sprite]);
 	set_up = false;
 	
 	
@@ -131,8 +130,8 @@ if !global.pause && move
 			break;
 			
 			case "scale":
-					image_xscale = lerp(image_xscale, end_scale[0] * real(level_object_list[object_sprite][1]),scale_speed[0]);
-					image_yscale = lerp(image_yscale, end_scale[1] * real(level_object_list[object_sprite][1]),scale_speed[1]);
+					image_xscale = lerp(image_xscale, end_scale[0] * real(level_object_map[? object_sprite]),scale_speed[0]);
+					image_yscale = lerp(image_yscale, end_scale[1] * real(level_object_map[? object_sprite]),scale_speed[1]);
 					
 					if survive_speed < 0
 					{

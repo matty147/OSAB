@@ -118,6 +118,30 @@ clickdouble=0;
 //["main_boss",0.5],//22
 //];
 
+level_object_map = ds_map_create();
+level_object_map[? "all_spike_saw"] = 0.065;
+level_object_map[? "circle"] = 0.065;
+level_object_map[? "star"] = 0.065;
+level_object_map[? "halfcircle"] = 0.07;
+level_object_map[? "enemy"] = 0.5;
+level_object_map[? "house"] = 0.07;
+level_object_map[? "moon"] = 0.063;
+level_object_map[? "rectangle"] = 0.065;
+level_object_map[? "rounded_polygon"] = 0.065;
+level_object_map[? "rounded_rect"] = 0.065;
+level_object_map[? "snake"] = 0.05;
+level_object_map[? "spike"] = 0.05;
+level_object_map[? "spike_floor"] = 0.065;
+level_object_map[? "spike_saw"] = 0.065;
+level_object_map[? "spike_saw_hole"] = 0.065;
+level_object_map[? "sun"] = 0.065;
+level_object_map[? "large_arrow"] = 0.065;
+level_object_map[? "heart"] = 0.065;
+level_object_map[? "hexagon"] = 0.065;
+level_object_map[? "industrial_circle"] = 0.065;
+level_object_map[? "lightning"] = 0.065;
+level_object_map[? "main_boss"] = 0.5;
+
 if !file_exists("lemon.png")
 {
 	lemon = false;

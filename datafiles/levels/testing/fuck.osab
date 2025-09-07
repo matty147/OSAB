@@ -9,7 +9,7 @@
   "level": [
   	{
       "time": 0,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         748.0,
         -50.0
@@ -33,7 +33,7 @@
     },
     {
       "time": 5,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         748.0,
         -50.0
@@ -67,7 +67,7 @@
     },
 	{
       "time": 10,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         748.0,
         500.0
@@ -94,7 +94,7 @@
     },
     {
       "time": 15,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         748.0,
         -50.0
@@ -128,7 +128,7 @@
     },
     {
       "time": 15,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         748.0,
         500.0

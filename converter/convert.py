@@ -2,7 +2,7 @@ import json
 import os
 
 # --- Config ---
-input_path = input()  # Change if needed
+input_path = r"C:\\Users\\matty\\source\\GameMakerStudio2\\projects\\JSAB\\converter\\" + input()  # Change if needed
 output_path = os.path.splitext(input_path)[0] + ".json"
 
 # --- Defaults ---
@@ -12,6 +12,32 @@ DEFAULT_HITBOX = 25
 # --- Internal ---
 metadata = {}
 waves = []
+
+OBJECTS = [
+    "all_spike_saw",  # 0
+    "circle",         # 1
+    "star",           # 2
+    "halfcircle",     # 3
+    "enemy",          # 4
+    "house",          # 5
+    "moon",           # 6
+    "rectangle",      # 7
+    "rounded_polygon",# 8
+    "rounded_rect",   # 9
+    "snake",          # 10
+    "spike",          # 11
+    "spike_floor",    # 12
+    "spike_saw",      # 13
+    "spike_saw_hole", # 14
+    "sun",            # 15
+    "large_arrow",    # 16
+    "heart",          # 17
+    "hexagon",        # 18
+    "industrial_circle", # 19
+    "lightning",      # 20
+    "heart",          # 21
+    "main_boss"       # 22
+]
 
 with open(input_path, "r", encoding="utf-8") as f:
     for line in f:
@@ -42,7 +68,7 @@ with open(input_path, "r", encoding="utf-8") as f:
         try:
             entry = {
                 "time": int(parts[0]),
-                "object_type": parts[1],
+                "object_type": OBJECTS[int(parts[1])] if parts[1].isdigit() else parts[1],
                 "position": [float(parts[2]), float(parts[3])],
                 "size": [float(parts[4]), float(parts[4])],
                 "angle": float(parts[5]),
