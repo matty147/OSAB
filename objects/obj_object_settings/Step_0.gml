@@ -5,6 +5,8 @@ if mouse_check_button_pressed(mb_left)
 	if editor_object != -4
 	{
 		valid_editor_object = editor_object;
+		
+		display_name = valid_editor_object.object_name;
 		show_debug_message(editor_object);		
 	}else
 	{

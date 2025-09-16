@@ -146,7 +146,9 @@ if !global.pause && move
 				break
 	}
 
-}else move_towards_point(x,y,0);	
+}else move_towards_point(x,y,0);
+
+
 	//wave only on the y part	
 	//x += cos(real(angle) * (pi / 180)) * real(_speed);
 	//y += sin(real(angle) * (pi / 180)) * real(_speed) + sin(real(wave_angle) * (pi / 180)) * amplitude;

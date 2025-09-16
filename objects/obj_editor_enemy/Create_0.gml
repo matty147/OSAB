@@ -1,4 +1,3 @@
-
 image_xscale = 0.75;
 
 dragging = false;
@@ -14,6 +13,8 @@ max_lenght_value = 999;
 distance_to_x = 0;
 
 //grid_size = 64;
+
+object_name = "ljshdf";
 
 block_lenght = 1;
 position = 0;
