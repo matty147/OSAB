@@ -9,7 +9,7 @@
   "level": [
     {
       "time": 0,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         0.0,
         384.0
@@ -28,7 +28,7 @@
     },
     {
       "time": 4,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         0.0,
         384.0
@@ -47,7 +47,7 @@
     },
     {
       "time": 8,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         0.0,
         384.0
@@ -66,7 +66,7 @@
     },
     {
       "time": 20,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         1366.0,
         520.0
@@ -85,7 +85,7 @@
     },
     {
       "time": 24,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         1366.0,
         520.0
@@ -104,7 +104,7 @@
     },
     {
       "time": 28,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         1366.0,
         520.0
@@ -123,7 +123,7 @@
     },
     {
       "time": 40,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         0.0,
         220.0
@@ -142,7 +142,7 @@
     },
     {
       "time": 44,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         0.0,
         220.0
@@ -161,7 +161,7 @@
     },
     {
       "time": 48,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         0.0,
         220.0
@@ -180,7 +180,7 @@
     },
     {
       "time": 60,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         1366.0,
         100.0
@@ -199,7 +199,7 @@
     },
     {
       "time": 64,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         1366.0,
         100.0
@@ -218,7 +218,7 @@
     },
     {
       "time": 68,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         1366.0,
         100.0
@@ -237,7 +237,7 @@
     },
     {
       "time": 80,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         0.0,
         440.0
@@ -256,7 +256,7 @@
     },
     {
       "time": 84,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         0.0,
         440.0
@@ -275,7 +275,7 @@
     },
     {
       "time": 88,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         0.0,
         440.0
@@ -294,7 +294,7 @@
     },
     {
       "time": 100,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         1366.0,
         600.0
@@ -313,7 +313,7 @@
     },
     {
       "time": 104,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         1366.0,
         600.0
@@ -332,7 +332,7 @@
     },
     {
       "time": 108,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         1366.0,
         600.0
@@ -351,7 +351,7 @@
     },
     {
       "time": 120,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         0.0,
         384.0
@@ -370,7 +370,7 @@
     },
     {
       "time": 124,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         0.0,
         384.0
@@ -389,7 +389,7 @@
     },
     {
       "time": 128,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         0.0,
         384.0
@@ -408,7 +408,7 @@
     },
     {
       "time": 190,
-      "object_type": "14",
+      "object_type": "spike_saw_hole",
       "position": [
         683.0,
         384.0
@@ -427,7 +427,7 @@
     },
     {
       "time": 190,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         0.0,
         120.0
@@ -446,7 +446,7 @@
     },
     {
       "time": 190,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1366.0,
         648.0
@@ -465,7 +465,7 @@
     },
     {
       "time": 194,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         0.0,
         120.0
@@ -484,7 +484,7 @@
     },
     {
       "time": 194,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1366.0,
         648.0
@@ -503,7 +503,7 @@
     },
     {
       "time": 198,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         0.0,
         120.0
@@ -522,7 +522,7 @@
     },
     {
       "time": 198,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1366.0,
         648.0
@@ -541,7 +541,7 @@
     },
     {
       "time": 210,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         0.0,
         120.0
@@ -560,7 +560,7 @@
     },
     {
       "time": 210,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1366.0,
         648.0
@@ -579,7 +579,7 @@
     },
     {
       "time": 214,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         0.0,
         120.0
@@ -598,7 +598,7 @@
     },
     {
       "time": 214,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1366.0,
         648.0
@@ -617,7 +617,7 @@
     },
     {
       "time": 218,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         0.0,
         120.0
@@ -636,7 +636,7 @@
     },
     {
       "time": 218,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1366.0,
         648.0
@@ -655,7 +655,7 @@
     },
     {
       "time": 230,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         120.0,
         0.0
@@ -674,7 +674,7 @@
     },
     {
       "time": 230,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1246.0,
         648.0
@@ -693,7 +693,7 @@
     },
     {
       "time": 234,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         120.0,
         0.0
@@ -712,7 +712,7 @@
     },
     {
       "time": 234,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1246.0,
         648.0
@@ -731,7 +731,7 @@
     },
     {
       "time": 238,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         120.0,
         0.0
@@ -750,7 +750,7 @@
     },
     {
       "time": 238,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1246.0,
         648.0
@@ -769,7 +769,7 @@
     },
     {
       "time": 250,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         120.0,
         0.0
@@ -788,7 +788,7 @@
     },
     {
       "time": 250,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1246.0,
         648.0
@@ -807,7 +807,7 @@
     },
     {
       "time": 254,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         120.0,
         0.0
@@ -826,7 +826,7 @@
     },
     {
       "time": 254,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1246.0,
         648.0
@@ -845,7 +845,7 @@
     },
     {
       "time": 258,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         120.0,
         0.0
@@ -864,7 +864,7 @@
     },
     {
       "time": 258,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1246.0,
         648.0
@@ -883,7 +883,7 @@
     },
     {
       "time": 270,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         0.0,
         120.0
@@ -902,7 +902,7 @@
     },
     {
       "time": 270,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1366.0,
         648.0
@@ -921,7 +921,7 @@
     },
     {
       "time": 274,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         0.0,
         120.0
@@ -940,7 +940,7 @@
     },
     {
       "time": 274,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1366.0,
         648.0
@@ -959,7 +959,7 @@
     },
     {
       "time": 278,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         0.0,
         120.0
@@ -978,7 +978,7 @@
     },
     {
       "time": 278,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1366.0,
         648.0
@@ -997,7 +997,7 @@
     },
     {
       "time": 290,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         0.0,
         120.0
@@ -1016,7 +1016,7 @@
     },
     {
       "time": 290,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1366.0,
         648.0
@@ -1035,7 +1035,7 @@
     },
     {
       "time": 294,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         0.0,
         120.0
@@ -1054,7 +1054,7 @@
     },
     {
       "time": 294,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1366.0,
         648.0
@@ -1073,7 +1073,7 @@
     },
     {
       "time": 298,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         0.0,
         120.0
@@ -1092,7 +1092,7 @@
     },
     {
       "time": 298,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1366.0,
         648.0
@@ -1111,7 +1111,7 @@
     },
     {
       "time": 310,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         200.0,
         0.0
@@ -1130,7 +1130,7 @@
     },
     {
       "time": 310,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1166.0,
         648.0
@@ -1149,7 +1149,7 @@
     },
     {
       "time": 314,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         200.0,
         0.0
@@ -1168,7 +1168,7 @@
     },
     {
       "time": 314,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1166.0,
         648.0
@@ -1187,7 +1187,7 @@
     },
     {
       "time": 318,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         200.0,
         0.0
@@ -1206,7 +1206,7 @@
     },
     {
       "time": 318,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1166.0,
         648.0
@@ -1225,7 +1225,7 @@
     },
     {
       "time": 330,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         200.0,
         0.0
@@ -1244,7 +1244,7 @@
     },
     {
       "time": 330,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1166.0,
         648.0
@@ -1263,7 +1263,7 @@
     },
     {
       "time": 334,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         200.0,
         0.0
@@ -1282,7 +1282,7 @@
     },
     {
       "time": 334,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1166.0,
         648.0
@@ -1301,7 +1301,7 @@
     },
     {
       "time": 338,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         200.0,
         0.0
@@ -1320,7 +1320,7 @@
     },
     {
       "time": 338,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1166.0,
         648.0
@@ -1339,7 +1339,7 @@
     },
     {
       "time": 350,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         1016.0,
         352.0
@@ -1358,7 +1358,7 @@
     },
     {
       "time": 355,
-      "object_type": "12",
+      "object_type": "spike_floor",
       "position": [
         956.0,
         627.0
@@ -1377,7 +1377,7 @@
     },
     {
       "time": 360,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         828.0,
         211.0
@@ -1396,7 +1396,7 @@
     },
     {
       "time": 365,
-      "object_type": "10",
+      "object_type": "snake",
       "position": [
         326.0,
         291.0
@@ -1415,7 +1415,7 @@
     },
     {
       "time": 370,
-      "object_type": "15",
+      "object_type": "sun",
       "position": [
         350.0,
         529.0
@@ -1434,7 +1434,7 @@
     },
     {
       "time": 375,
-      "object_type": "18",
+      "object_type": "hexagon",
       "position": [
         1293.0,
         468.0
@@ -1453,7 +1453,7 @@
     },
     {
       "time": 380,
-      "object_type": "9",
+      "object_type": "rounded_rect",
       "position": [
         664.0,
         269.0
@@ -1472,7 +1472,7 @@
     },
     {
       "time": 385,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         1116.0,
         624.0
@@ -1491,7 +1491,7 @@
     },
     {
       "time": 390,
-      "object_type": "3",
+      "object_type": "halfcircle",
       "position": [
         904.0,
         797.0
@@ -1510,7 +1510,7 @@
     },
     {
       "time": 395,
-      "object_type": "5",
+      "object_type": "house",
       "position": [
         1255.0,
         720.0
@@ -1529,7 +1529,7 @@
     },
     {
       "time": 400,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         436.0,
         730.0
@@ -1548,7 +1548,7 @@
     },
     {
       "time": 405,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         631.0,
         110.0
@@ -1567,7 +1567,7 @@
     },
     {
       "time": 410,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         959.0,
         617.0
@@ -1586,7 +1586,7 @@
     },
     {
       "time": 435,
-      "object_type": "13",
+      "object_type": "spike_saw",
       "position": [
         683.0,
         384.0
@@ -1605,7 +1605,7 @@
     },
     {
       "time": 440,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         0.0,
         120.0
@@ -1624,7 +1624,7 @@
     },
     {
       "time": 440,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1366.0,
         648.0
@@ -1643,7 +1643,7 @@
     },
     {
       "time": 440,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         200.0,
         0.0
@@ -1662,7 +1662,7 @@
     },
     {
       "time": 440,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1166.0,
         648.0
@@ -1681,7 +1681,7 @@
     },
     {
       "time": 444,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         0.0,
         120.0
@@ -1700,7 +1700,7 @@
     },
     {
       "time": 444,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1366.0,
         648.0
@@ -1719,7 +1719,7 @@
     },
     {
       "time": 444,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         200.0,
         0.0
@@ -1738,7 +1738,7 @@
     },
     {
       "time": 444,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1166.0,
         648.0
@@ -1757,7 +1757,7 @@
     },
     {
       "time": 448,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         0.0,
         120.0
@@ -1776,7 +1776,7 @@
     },
     {
       "time": 448,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1366.0,
         648.0
@@ -1795,7 +1795,7 @@
     },
     {
       "time": 448,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         200.0,
         0.0
@@ -1814,7 +1814,7 @@
     },
     {
       "time": 448,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         1166.0,
         648.0
@@ -1833,7 +1833,7 @@
     },
     {
       "time": 460,
-      "object_type": "5",
+      "object_type": "house",
       "position": [
         0.0,
         120.0
@@ -1852,7 +1852,7 @@
     },
     {
       "time": 460,
-      "object_type": "5",
+      "object_type": "house",
       "position": [
         1366.0,
         648.0
@@ -1871,7 +1871,7 @@
     },
     {
       "time": 460,
-      "object_type": "5",
+      "object_type": "house",
       "position": [
         400.0,
         0.0
@@ -1890,7 +1890,7 @@
     },
     {
       "time": 460,
-      "object_type": "5",
+      "object_type": "house",
       "position": [
         966.0,
         648.0
@@ -1909,7 +1909,7 @@
     },
     {
       "time": 464,
-      "object_type": "5",
+      "object_type": "house",
       "position": [
         0.0,
         120.0
@@ -1928,7 +1928,7 @@
     },
     {
       "time": 464,
-      "object_type": "5",
+      "object_type": "house",
       "position": [
         1366.0,
         648.0
@@ -1947,7 +1947,7 @@
     },
     {
       "time": 464,
-      "object_type": "5",
+      "object_type": "house",
       "position": [
         400.0,
         0.0
@@ -1966,7 +1966,7 @@
     },
     {
       "time": 464,
-      "object_type": "5",
+      "object_type": "house",
       "position": [
         966.0,
         648.0
@@ -1985,7 +1985,7 @@
     },
     {
       "time": 468,
-      "object_type": "5",
+      "object_type": "house",
       "position": [
         0.0,
         120.0
@@ -2004,7 +2004,7 @@
     },
     {
       "time": 468,
-      "object_type": "5",
+      "object_type": "house",
       "position": [
         1366.0,
         648.0
@@ -2023,7 +2023,7 @@
     },
     {
       "time": 468,
-      "object_type": "5",
+      "object_type": "house",
       "position": [
         400.0,
         0.0
@@ -2042,7 +2042,7 @@
     },
     {
       "time": 468,
-      "object_type": "5",
+      "object_type": "house",
       "position": [
         966.0,
         648.0
@@ -2061,7 +2061,7 @@
     },
     {
       "time": 480,
-      "object_type": "12",
+      "object_type": "spike_floor",
       "position": [
         0.0,
         120.0
@@ -2080,7 +2080,7 @@
     },
     {
       "time": 480,
-      "object_type": "12",
+      "object_type": "spike_floor",
       "position": [
         1366.0,
         648.0
@@ -2099,7 +2099,7 @@
     },
     {
       "time": 480,
-      "object_type": "12",
+      "object_type": "spike_floor",
       "position": [
         200.0,
         0.0
@@ -2118,7 +2118,7 @@
     },
     {
       "time": 480,
-      "object_type": "12",
+      "object_type": "spike_floor",
       "position": [
         1166.0,
         648.0
@@ -2137,7 +2137,7 @@
     },
     {
       "time": 484,
-      "object_type": "12",
+      "object_type": "spike_floor",
       "position": [
         0.0,
         120.0
@@ -2156,7 +2156,7 @@
     },
     {
       "time": 484,
-      "object_type": "12",
+      "object_type": "spike_floor",
       "position": [
         1366.0,
         648.0
@@ -2175,7 +2175,7 @@
     },
     {
       "time": 484,
-      "object_type": "12",
+      "object_type": "spike_floor",
       "position": [
         200.0,
         0.0
@@ -2194,7 +2194,7 @@
     },
     {
       "time": 484,
-      "object_type": "12",
+      "object_type": "spike_floor",
       "position": [
         1166.0,
         648.0
@@ -2213,7 +2213,7 @@
     },
     {
       "time": 488,
-      "object_type": "12",
+      "object_type": "spike_floor",
       "position": [
         0.0,
         120.0
@@ -2232,7 +2232,7 @@
     },
     {
       "time": 488,
-      "object_type": "12",
+      "object_type": "spike_floor",
       "position": [
         1366.0,
         648.0
@@ -2251,7 +2251,7 @@
     },
     {
       "time": 488,
-      "object_type": "12",
+      "object_type": "spike_floor",
       "position": [
         200.0,
         0.0
@@ -2270,7 +2270,7 @@
     },
     {
       "time": 488,
-      "object_type": "12",
+      "object_type": "spike_floor",
       "position": [
         1166.0,
         648.0
@@ -2289,7 +2289,7 @@
     },
     {
       "time": 500,
-      "object_type": "10",
+      "object_type": "snake",
       "position": [
         0.0,
         120.0
@@ -2308,7 +2308,7 @@
     },
     {
       "time": 500,
-      "object_type": "10",
+      "object_type": "snake",
       "position": [
         1366.0,
         648.0
@@ -2327,7 +2327,7 @@
     },
     {
       "time": 500,
-      "object_type": "10",
+      "object_type": "snake",
       "position": [
         200.0,
         0.0
@@ -2346,7 +2346,7 @@
     },
     {
       "time": 500,
-      "object_type": "10",
+      "object_type": "snake",
       "position": [
         466.0,
         648.0
@@ -2365,7 +2365,7 @@
     },
     {
       "time": 504,
-      "object_type": "10",
+      "object_type": "snake",
       "position": [
         0.0,
         120.0
@@ -2384,7 +2384,7 @@
     },
     {
       "time": 504,
-      "object_type": "10",
+      "object_type": "snake",
       "position": [
         966.0,
         648.0
@@ -2403,7 +2403,7 @@
     },
     {
       "time": 504,
-      "object_type": "10",
+      "object_type": "snake",
       "position": [
         400.0,
         0.0
@@ -2422,7 +2422,7 @@
     },
     {
       "time": 504,
-      "object_type": "10",
+      "object_type": "snake",
       "position": [
         966.0,
         648.0
@@ -2441,7 +2441,7 @@
     },
     {
       "time": 508,
-      "object_type": "10",
+      "object_type": "snake",
       "position": [
         0.0,
         120.0
@@ -2460,7 +2460,7 @@
     },
     {
       "time": 508,
-      "object_type": "10",
+      "object_type": "snake",
       "position": [
         1366.0,
         648.0
@@ -2479,7 +2479,7 @@
     },
     {
       "time": 508,
-      "object_type": "10",
+      "object_type": "snake",
       "position": [
         400.0,
         0.0
@@ -2498,7 +2498,7 @@
     },
     {
       "time": 508,
-      "object_type": "10",
+      "object_type": "snake",
       "position": [
         966.0,
         648.0
@@ -2517,7 +2517,7 @@
     },
     {
       "time": 520,
-      "object_type": "15",
+      "object_type": "sun",
       "position": [
         0.0,
         120.0
@@ -2536,7 +2536,7 @@
     },
     {
       "time": 520,
-      "object_type": "15",
+      "object_type": "sun",
       "position": [
         1366.0,
         648.0
@@ -2555,7 +2555,7 @@
     },
     {
       "time": 520,
-      "object_type": "15",
+      "object_type": "sun",
       "position": [
         200.0,
         0.0
@@ -2574,7 +2574,7 @@
     },
     {
       "time": 520,
-      "object_type": "15",
+      "object_type": "sun",
       "position": [
         1166.0,
         648.0
@@ -2593,7 +2593,7 @@
     },
     {
       "time": 524,
-      "object_type": "15",
+      "object_type": "sun",
       "position": [
         0.0,
         120.0
@@ -2612,7 +2612,7 @@
     },
     {
       "time": 524,
-      "object_type": "15",
+      "object_type": "sun",
       "position": [
         1366.0,
         648.0
@@ -2631,7 +2631,7 @@
     },
     {
       "time": 524,
-      "object_type": "15",
+      "object_type": "sun",
       "position": [
         200.0,
         0.0
@@ -2650,7 +2650,7 @@
     },
     {
       "time": 524,
-      "object_type": "15",
+      "object_type": "sun",
       "position": [
         1166.0,
         648.0
@@ -2669,7 +2669,7 @@
     },
     {
       "time": 528,
-      "object_type": "15",
+      "object_type": "sun",
       "position": [
         0.0,
         120.0
@@ -2688,7 +2688,7 @@
     },
     {
       "time": 528,
-      "object_type": "15",
+      "object_type": "sun",
       "position": [
         1366.0,
         648.0
@@ -2707,7 +2707,7 @@
     },
     {
       "time": 528,
-      "object_type": "15",
+      "object_type": "sun",
       "position": [
         200.0,
         0.0
@@ -2726,7 +2726,7 @@
     },
     {
       "time": 528,
-      "object_type": "15",
+      "object_type": "sun",
       "position": [
         1166.0,
         648.0
@@ -2745,7 +2745,7 @@
     },
     {
       "time": 540,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         0.0,
         120.0
@@ -2764,7 +2764,7 @@
     },
     {
       "time": 540,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         1366.0,
         648.0
@@ -2783,7 +2783,7 @@
     },
     {
       "time": 540,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         400.0,
         0.0
@@ -2802,7 +2802,7 @@
     },
     {
       "time": 540,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         966.0,
         648.0
@@ -2821,7 +2821,7 @@
     },
     {
       "time": 544,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         0.0,
         120.0
@@ -2840,7 +2840,7 @@
     },
     {
       "time": 544,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         1366.0,
         648.0
@@ -2859,7 +2859,7 @@
     },
     {
       "time": 544,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         400.0,
         0.0
@@ -2878,7 +2878,7 @@
     },
     {
       "time": 544,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         966.0,
         648.0
@@ -2897,7 +2897,7 @@
     },
     {
       "time": 548,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         0.0,
         120.0
@@ -2916,7 +2916,7 @@
     },
     {
       "time": 548,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         1366.0,
         648.0
@@ -2935,7 +2935,7 @@
     },
     {
       "time": 548,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         400.0,
         0.0
@@ -2954,7 +2954,7 @@
     },
     {
       "time": 548,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         966.0,
         648.0
@@ -2973,7 +2973,7 @@
     },
     {
       "time": 560,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         0.0,
         120.0
@@ -2992,7 +2992,7 @@
     },
     {
       "time": 560,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         1366.0,
         648.0
@@ -3011,7 +3011,7 @@
     },
     {
       "time": 560,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         200.0,
         0.0
@@ -3030,7 +3030,7 @@
     },
     {
       "time": 560,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         1166.0,
         648.0
@@ -3049,7 +3049,7 @@
     },
     {
       "time": 564,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         0.0,
         120.0
@@ -3068,7 +3068,7 @@
     },
     {
       "time": 564,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         1366.0,
         648.0
@@ -3087,7 +3087,7 @@
     },
     {
       "time": 564,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         200.0,
         0.0
@@ -3106,7 +3106,7 @@
     },
     {
       "time": 564,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         1166.0,
         648.0
@@ -3125,7 +3125,7 @@
     },
     {
       "time": 568,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         0.0,
         120.0
@@ -3144,7 +3144,7 @@
     },
     {
       "time": 568,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         1366.0,
         648.0
@@ -3163,7 +3163,7 @@
     },
     {
       "time": 568,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         200.0,
         0.0
@@ -3182,7 +3182,7 @@
     },
     {
       "time": 568,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         1166.0,
         648.0
@@ -3201,7 +3201,7 @@
     },
     {
       "time": 580,
-      "object_type": "0",
+      "object_type": "all_spike_saw",
       "position": [
         0.0,
         120.0
@@ -3220,7 +3220,7 @@
     },
     {
       "time": 580,
-      "object_type": "0",
+      "object_type": "all_spike_saw",
       "position": [
         1366.0,
         648.0
@@ -3239,7 +3239,7 @@
     },
     {
       "time": 580,
-      "object_type": "0",
+      "object_type": "all_spike_saw",
       "position": [
         400.0,
         0.0
@@ -3258,7 +3258,7 @@
     },
     {
       "time": 580,
-      "object_type": "0",
+      "object_type": "all_spike_saw",
       "position": [
         966.0,
         648.0
@@ -3277,7 +3277,7 @@
     },
     {
       "time": 584,
-      "object_type": "0",
+      "object_type": "all_spike_saw",
       "position": [
         0.0,
         120.0
@@ -3296,7 +3296,7 @@
     },
     {
       "time": 584,
-      "object_type": "0",
+      "object_type": "all_spike_saw",
       "position": [
         1366.0,
         648.0
@@ -3315,7 +3315,7 @@
     },
     {
       "time": 584,
-      "object_type": "0",
+      "object_type": "all_spike_saw",
       "position": [
         400.0,
         0.0
@@ -3334,7 +3334,7 @@
     },
     {
       "time": 584,
-      "object_type": "0",
+      "object_type": "all_spike_saw",
       "position": [
         966.0,
         648.0
@@ -3353,7 +3353,7 @@
     },
     {
       "time": 588,
-      "object_type": "0",
+      "object_type": "all_spike_saw",
       "position": [
         0.0,
         120.0
@@ -3372,7 +3372,7 @@
     },
     {
       "time": 588,
-      "object_type": "0",
+      "object_type": "all_spike_saw",
       "position": [
         1366.0,
         648.0
@@ -3391,7 +3391,7 @@
     },
     {
       "time": 588,
-      "object_type": "0",
+      "object_type": "all_spike_saw",
       "position": [
         400.0,
         0.0
@@ -3410,7 +3410,7 @@
     },
     {
       "time": 588,
-      "object_type": "0",
+      "object_type": "all_spike_saw",
       "position": [
         966.0,
         648.0
@@ -3429,7 +3429,7 @@
     },
     {
       "time": 600,
-      "object_type": "9",
+      "object_type": "rounded_rect",
       "position": [
         0.0,
         120.0
@@ -3448,7 +3448,7 @@
     },
     {
       "time": 600,
-      "object_type": "9",
+      "object_type": "rounded_rect",
       "position": [
         1366.0,
         648.0
@@ -3467,7 +3467,7 @@
     },
     {
       "time": 600,
-      "object_type": "9",
+      "object_type": "rounded_rect",
       "position": [
         200.0,
         0.0
@@ -3486,7 +3486,7 @@
     },
     {
       "time": 600,
-      "object_type": "9",
+      "object_type": "rounded_rect",
       "position": [
         1166.0,
         648.0
@@ -3505,7 +3505,7 @@
     },
     {
       "time": 604,
-      "object_type": "9",
+      "object_type": "rounded_rect",
       "position": [
         0.0,
         120.0
@@ -3524,7 +3524,7 @@
     },
     {
       "time": 604,
-      "object_type": "9",
+      "object_type": "rounded_rect",
       "position": [
         1366.0,
         648.0
@@ -3543,7 +3543,7 @@
     },
     {
       "time": 604,
-      "object_type": "9",
+      "object_type": "rounded_rect",
       "position": [
         200.0,
         0.0
@@ -3562,7 +3562,7 @@
     },
     {
       "time": 604,
-      "object_type": "9",
+      "object_type": "rounded_rect",
       "position": [
         1166.0,
         648.0
@@ -3581,7 +3581,7 @@
     },
     {
       "time": 608,
-      "object_type": "9",
+      "object_type": "rounded_rect",
       "position": [
         0.0,
         120.0
@@ -3600,7 +3600,7 @@
     },
     {
       "time": 608,
-      "object_type": "9",
+      "object_type": "rounded_rect",
       "position": [
         1366.0,
         648.0
@@ -3619,7 +3619,7 @@
     },
     {
       "time": 608,
-      "object_type": "9",
+      "object_type": "rounded_rect",
       "position": [
         200.0,
         0.0
@@ -3638,7 +3638,7 @@
     },
     {
       "time": 608,
-      "object_type": "9",
+      "object_type": "rounded_rect",
       "position": [
         1166.0,
         648.0
@@ -3657,7 +3657,7 @@
     },
     {
       "time": 620,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         0.0,
         120.0
@@ -3676,7 +3676,7 @@
     },
     {
       "time": 620,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         1366.0,
         648.0
@@ -3695,7 +3695,7 @@
     },
     {
       "time": 620,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         400.0,
         0.0
@@ -3714,7 +3714,7 @@
     },
     {
       "time": 620,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         966.0,
         648.0
@@ -3733,7 +3733,7 @@
     },
     {
       "time": 624,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         0.0,
         120.0
@@ -3752,7 +3752,7 @@
     },
     {
       "time": 624,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         1366.0,
         648.0
@@ -3771,7 +3771,7 @@
     },
     {
       "time": 624,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         400.0,
         0.0
@@ -3790,7 +3790,7 @@
     },
     {
       "time": 624,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         966.0,
         648.0
@@ -3809,7 +3809,7 @@
     },
     {
       "time": 628,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         0.0,
         120.0
@@ -3828,7 +3828,7 @@
     },
     {
       "time": 628,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         1366.0,
         648.0
@@ -3847,7 +3847,7 @@
     },
     {
       "time": 628,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         400.0,
         0.0
@@ -3866,7 +3866,7 @@
     },
     {
       "time": 628,
-      "object_type": "17",
+      "object_type": "heart",
       "position": [
         966.0,
         648.0
@@ -3885,7 +3885,7 @@
     },
     {
       "time": 640,
-      "object_type": "19",
+      "object_type": "industrial_circle",
       "position": [
         0.0,
         120.0
@@ -3904,7 +3904,7 @@
     },
     {
       "time": 640,
-      "object_type": "19",
+      "object_type": "industrial_circle",
       "position": [
         1366.0,
         648.0
@@ -3923,7 +3923,7 @@
     },
     {
       "time": 640,
-      "object_type": "19",
+      "object_type": "industrial_circle",
       "position": [
         200.0,
         0.0
@@ -3942,7 +3942,7 @@
     },
     {
       "time": 640,
-      "object_type": "19",
+      "object_type": "industrial_circle",
       "position": [
         1166.0,
         648.0
@@ -3961,7 +3961,7 @@
     },
     {
       "time": 644,
-      "object_type": "19",
+      "object_type": "industrial_circle",
       "position": [
         0.0,
         120.0
@@ -3980,7 +3980,7 @@
     },
     {
       "time": 644,
-      "object_type": "19",
+      "object_type": "industrial_circle",
       "position": [
         1366.0,
         648.0
@@ -3999,7 +3999,7 @@
     },
     {
       "time": 644,
-      "object_type": "19",
+      "object_type": "industrial_circle",
       "position": [
         200.0,
         0.0
@@ -4018,7 +4018,7 @@
     },
     {
       "time": 644,
-      "object_type": "19",
+      "object_type": "industrial_circle",
       "position": [
         1166.0,
         648.0
@@ -4037,7 +4037,7 @@
     },
     {
       "time": 648,
-      "object_type": "19",
+      "object_type": "industrial_circle",
       "position": [
         0.0,
         120.0
@@ -4056,7 +4056,7 @@
     },
     {
       "time": 648,
-      "object_type": "19",
+      "object_type": "industrial_circle",
       "position": [
         1366.0,
         648.0
@@ -4075,7 +4075,7 @@
     },
     {
       "time": 648,
-      "object_type": "19",
+      "object_type": "industrial_circle",
       "position": [
         200.0,
         0.0
@@ -4094,7 +4094,7 @@
     },
     {
       "time": 648,
-      "object_type": "19",
+      "object_type": "industrial_circle",
       "position": [
         1166.0,
         648.0
@@ -4113,7 +4113,7 @@
     },
     {
       "time": 660,
-      "object_type": "13",
+      "object_type": "spike_saw",
       "position": [
         0.0,
         120.0
@@ -4132,7 +4132,7 @@
     },
     {
       "time": 660,
-      "object_type": "13",
+      "object_type": "spike_saw",
       "position": [
         1366.0,
         648.0
@@ -4151,7 +4151,7 @@
     },
     {
       "time": 660,
-      "object_type": "13",
+      "object_type": "spike_saw",
       "position": [
         400.0,
         0.0
@@ -4170,7 +4170,7 @@
     },
     {
       "time": 660,
-      "object_type": "13",
+      "object_type": "spike_saw",
       "position": [
         966.0,
         648.0
@@ -4189,7 +4189,7 @@
     },
     {
       "time": 664,
-      "object_type": "13",
+      "object_type": "spike_saw",
       "position": [
         0.0,
         120.0
@@ -4208,7 +4208,7 @@
     },
     {
       "time": 664,
-      "object_type": "13",
+      "object_type": "spike_saw",
       "position": [
         1366.0,
         648.0
@@ -4227,7 +4227,7 @@
     },
     {
       "time": 664,
-      "object_type": "13",
+      "object_type": "spike_saw",
       "position": [
         400.0,
         0.0
@@ -4246,7 +4246,7 @@
     },
     {
       "time": 664,
-      "object_type": "13",
+      "object_type": "spike_saw",
       "position": [
         966.0,
         648.0
@@ -4265,7 +4265,7 @@
     },
     {
       "time": 668,
-      "object_type": "13",
+      "object_type": "spike_saw",
       "position": [
         0.0,
         120.0
@@ -4284,7 +4284,7 @@
     },
     {
       "time": 668,
-      "object_type": "13",
+      "object_type": "spike_saw",
       "position": [
         1366.0,
         648.0
@@ -4303,7 +4303,7 @@
     },
     {
       "time": 668,
-      "object_type": "13",
+      "object_type": "spike_saw",
       "position": [
         400.0,
         0.0
@@ -4322,7 +4322,7 @@
     },
     {
       "time": 668,
-      "object_type": "13",
+      "object_type": "spike_saw",
       "position": [
         966.0,
         648.0
@@ -4341,7 +4341,7 @@
     },
     {
       "time": 680,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         0.0,
         120.0
@@ -4360,7 +4360,7 @@
     },
     {
       "time": 680,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         1366.0,
         648.0
@@ -4379,7 +4379,7 @@
     },
     {
       "time": 680,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         200.0,
         0.0
@@ -4398,7 +4398,7 @@
     },
     {
       "time": 680,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         1166.0,
         648.0
@@ -4417,7 +4417,7 @@
     },
     {
       "time": 684,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         0.0,
         120.0
@@ -4436,7 +4436,7 @@
     },
     {
       "time": 684,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         1366.0,
         648.0
@@ -4455,7 +4455,7 @@
     },
     {
       "time": 684,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         200.0,
         0.0
@@ -4474,7 +4474,7 @@
     },
     {
       "time": 684,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         1166.0,
         648.0
@@ -4493,7 +4493,7 @@
     },
     {
       "time": 688,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         0.0,
         120.0
@@ -4512,7 +4512,7 @@
     },
     {
       "time": 688,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         1366.0,
         648.0
@@ -4531,7 +4531,7 @@
     },
     {
       "time": 688,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         200.0,
         0.0
@@ -4550,7 +4550,7 @@
     },
     {
       "time": 688,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         1166.0,
         648.0
@@ -4569,7 +4569,7 @@
     },
     {
       "time": 700,
-      "object_type": "6",
+      "object_type": "moon",
       "position": [
         0.0,
         120.0
@@ -4588,7 +4588,7 @@
     },
     {
       "time": 700,
-      "object_type": "6",
+      "object_type": "moon",
       "position": [
         1366.0,
         648.0
@@ -4607,7 +4607,7 @@
     },
     {
       "time": 700,
-      "object_type": "6",
+      "object_type": "moon",
       "position": [
         400.0,
         0.0
@@ -4626,7 +4626,7 @@
     },
     {
       "time": 700,
-      "object_type": "6",
+      "object_type": "moon",
       "position": [
         966.0,
         648.0
@@ -4645,7 +4645,7 @@
     },
     {
       "time": 704,
-      "object_type": "6",
+      "object_type": "moon",
       "position": [
         0.0,
         120.0
@@ -4664,7 +4664,7 @@
     },
     {
       "time": 704,
-      "object_type": "6",
+      "object_type": "moon",
       "position": [
         1366.0,
         648.0
@@ -4683,7 +4683,7 @@
     },
     {
       "time": 704,
-      "object_type": "6",
+      "object_type": "moon",
       "position": [
         400.0,
         0.0
@@ -4702,7 +4702,7 @@
     },
     {
       "time": 704,
-      "object_type": "6",
+      "object_type": "moon",
       "position": [
         966.0,
         648.0
@@ -4721,7 +4721,7 @@
     },
     {
       "time": 708,
-      "object_type": "6",
+      "object_type": "moon",
       "position": [
         0.0,
         120.0
@@ -4740,7 +4740,7 @@
     },
     {
       "time": 708,
-      "object_type": "6",
+      "object_type": "moon",
       "position": [
         1366.0,
         648.0
@@ -4759,7 +4759,7 @@
     },
     {
       "time": 708,
-      "object_type": "6",
+      "object_type": "moon",
       "position": [
         400.0,
         0.0
@@ -4778,7 +4778,7 @@
     },
     {
       "time": 708,
-      "object_type": "6",
+      "object_type": "moon",
       "position": [
         966.0,
         648.0
@@ -4797,7 +4797,7 @@
     },
     {
       "time": 720,
-      "object_type": "20",
+      "object_type": "lightning",
       "position": [
         0.0,
         120.0
@@ -4816,7 +4816,7 @@
     },
     {
       "time": 720,
-      "object_type": "20",
+      "object_type": "lightning",
       "position": [
         1366.0,
         648.0
@@ -4835,7 +4835,7 @@
     },
     {
       "time": 720,
-      "object_type": "20",
+      "object_type": "lightning",
       "position": [
         200.0,
         0.0
@@ -4854,7 +4854,7 @@
     },
     {
       "time": 720,
-      "object_type": "20",
+      "object_type": "lightning",
       "position": [
         1166.0,
         648.0
@@ -4873,7 +4873,7 @@
     },
     {
       "time": 724,
-      "object_type": "20",
+      "object_type": "lightning",
       "position": [
         0.0,
         120.0
@@ -4892,7 +4892,7 @@
     },
     {
       "time": 724,
-      "object_type": "20",
+      "object_type": "lightning",
       "position": [
         1366.0,
         648.0
@@ -4911,7 +4911,7 @@
     },
     {
       "time": 724,
-      "object_type": "20",
+      "object_type": "lightning",
       "position": [
         200.0,
         0.0
@@ -4930,7 +4930,7 @@
     },
     {
       "time": 724,
-      "object_type": "20",
+      "object_type": "lightning",
       "position": [
         1166.0,
         648.0
@@ -4949,7 +4949,7 @@
     },
     {
       "time": 728,
-      "object_type": "20",
+      "object_type": "lightning",
       "position": [
         0.0,
         120.0
@@ -4968,7 +4968,7 @@
     },
     {
       "time": 728,
-      "object_type": "20",
+      "object_type": "lightning",
       "position": [
         1366.0,
         648.0
@@ -4987,7 +4987,7 @@
     },
     {
       "time": 728,
-      "object_type": "20",
+      "object_type": "lightning",
       "position": [
         200.0,
         0.0
@@ -5006,7 +5006,7 @@
     },
     {
       "time": 728,
-      "object_type": "20",
+      "object_type": "lightning",
       "position": [
         1166.0,
         648.0
@@ -5025,7 +5025,7 @@
     },
     {
       "time": 740,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         0.0,
         120.0
@@ -5044,7 +5044,7 @@
     },
     {
       "time": 740,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         1366.0,
         648.0
@@ -5063,7 +5063,7 @@
     },
     {
       "time": 740,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         400.0,
         0.0
@@ -5082,7 +5082,7 @@
     },
     {
       "time": 740,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         966.0,
         648.0
@@ -5101,7 +5101,7 @@
     },
     {
       "time": 744,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         0.0,
         120.0
@@ -5120,7 +5120,7 @@
     },
     {
       "time": 744,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         1366.0,
         648.0
@@ -5139,7 +5139,7 @@
     },
     {
       "time": 744,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         400.0,
         0.0
@@ -5158,7 +5158,7 @@
     },
     {
       "time": 744,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         966.0,
         648.0
@@ -5177,7 +5177,7 @@
     },
     {
       "time": 748,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         0.0,
         120.0
@@ -5196,7 +5196,7 @@
     },
     {
       "time": 748,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         1366.0,
         648.0
@@ -5215,7 +5215,7 @@
     },
     {
       "time": 748,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         400.0,
         0.0
@@ -5234,7 +5234,7 @@
     },
     {
       "time": 748,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         966.0,
         648.0
@@ -5253,7 +5253,7 @@
     },
     {
       "time": 760,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         0.0,
         120.0
@@ -5272,7 +5272,7 @@
     },
     {
       "time": 760,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         1366.0,
         648.0
@@ -5291,7 +5291,7 @@
     },
     {
       "time": 760,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         200.0,
         0.0
@@ -5310,7 +5310,7 @@
     },
     {
       "time": 760,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         1166.0,
         648.0
@@ -5329,7 +5329,7 @@
     },
     {
       "time": 764,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         0.0,
         120.0
@@ -5348,7 +5348,7 @@
     },
     {
       "time": 764,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         1366.0,
         648.0
@@ -5367,7 +5367,7 @@
     },
     {
       "time": 764,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         200.0,
         0.0
@@ -5386,7 +5386,7 @@
     },
     {
       "time": 764,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         1166.0,
         648.0
@@ -5405,7 +5405,7 @@
     },
     {
       "time": 768,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         0.0,
         120.0
@@ -5424,7 +5424,7 @@
     },
     {
       "time": 768,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         1366.0,
         648.0
@@ -5443,7 +5443,7 @@
     },
     {
       "time": 768,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         200.0,
         0.0
@@ -5462,7 +5462,7 @@
     },
     {
       "time": 768,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         1166.0,
         648.0
@@ -5481,7 +5481,7 @@
     },
     {
       "time": 780,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         500.0,
         200.0
@@ -5500,7 +5500,7 @@
     },
     {
       "time": 780,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         100.0,
         200.0
@@ -5519,7 +5519,7 @@
     },
     {
       "time": 790,
-      "object_type": "14",
+      "object_type": "spike_saw_hole",
       "position": [
         900.0,
         600.0
@@ -5538,7 +5538,7 @@
     },
     {
       "time": 790,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         400.0,
         600.0
@@ -5557,7 +5557,7 @@
     },
     {
       "time": 800,
-      "object_type": "18",
+      "object_type": "hexagon",
       "position": [
         700.0,
         100.0
@@ -5576,7 +5576,7 @@
     },
     {
       "time": 800,
-      "object_type": "20",
+      "object_type": "lightning",
       "position": [
         700.0,
         430.0
@@ -5595,7 +5595,7 @@
     },
     {
       "time": 810,
-      "object_type": "4",
+      "object_type": "enemy",
       "position": [
         1300.0,
         700.0
@@ -5614,7 +5614,7 @@
     },
     {
       "time": 810,
-      "object_type": "5",
+      "object_type": "house",
       "position": [
         500.0,
         700.0
@@ -5633,7 +5633,7 @@
     },
     {
       "time": 820,
-      "object_type": "4",
+      "object_type": "enemy",
       "position": [
         200.0,
         500.0
@@ -5652,7 +5652,7 @@
     },
     {
       "time": 820,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         200.0,
         500.0
@@ -5671,7 +5671,7 @@
     },
     {
       "time": 830,
-      "object_type": "14",
+      "object_type": "spike_saw_hole",
       "position": [
         1000.0,
         400.0
@@ -5690,7 +5690,7 @@
     },
     {
       "time": 830,
-      "object_type": "13",
+      "object_type": "spike_saw",
       "position": [
         530.0,
         480.0
@@ -5709,7 +5709,7 @@
     },
     {
       "time": 840,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         600.0,
         300.0
@@ -5728,7 +5728,7 @@
     },
     {
       "time": 840,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         680.0,
         500.0
@@ -5747,7 +5747,7 @@
     },
     {
       "time": 850,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         800.0,
         600.0
@@ -5766,7 +5766,7 @@
     },
     {
       "time": 850,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         240.0,
         530.0
@@ -5785,7 +5785,7 @@
     },
     {
       "time": 860,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         1200.0,
         100.0
@@ -5804,7 +5804,7 @@
     },
     {
       "time": 860,
-      "object_type": "10",
+      "object_type": "snake",
       "position": [
         1250.0,
         280.0
@@ -5823,7 +5823,7 @@
     },
     {
       "time": 870,
-      "object_type": "5",
+      "object_type": "house",
       "position": [
         400.0,
         700.0
@@ -5842,7 +5842,7 @@
     },
     {
       "time": 870,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         400.0,
         700.0
@@ -5861,7 +5861,7 @@
     },
     {
       "time": 880,
-      "object_type": "14",
+      "object_type": "spike_saw_hole",
       "position": [
         300.0,
         500.0
@@ -5880,7 +5880,7 @@
     },
     {
       "time": 880,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         500.0,
         400.0
@@ -5899,7 +5899,7 @@
     },
     {
       "time": 890,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         1100.0,
         300.0
@@ -5918,7 +5918,7 @@
     },
     {
       "time": 890,
-      "object_type": "18",
+      "object_type": "hexagon",
       "position": [
         934.0,
         384.0
@@ -5937,7 +5937,7 @@
     },
     {
       "time": 900,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         500.0,
         400.0
@@ -5956,7 +5956,7 @@
     },
     {
       "time": 900,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         145.0,
         286.0
@@ -5975,7 +5975,7 @@
     },
     {
       "time": 910,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         900.0,
         200.0
@@ -5994,7 +5994,7 @@
     },
     {
       "time": 910,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         810.0,
         690.0
@@ -6013,7 +6013,7 @@
     },
     {
       "time": 920,
-      "object_type": "19",
+      "object_type": "industrial_circle",
       "position": [
         700.0,
         600.0
@@ -6032,7 +6032,7 @@
     },
     {
       "time": 920,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         850.0,
         140.0
@@ -6051,7 +6051,7 @@
     },
     {
       "time": 930,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         1300.0,
         100.0
@@ -6070,7 +6070,7 @@
     },
     {
       "time": 930,
-      "object_type": "16",
+      "object_type": "large_arrow",
       "position": [
         290.0,
         640.0
@@ -6089,7 +6089,7 @@
     },
     {
       "time": 940,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         200.0,
         700.0
@@ -6108,7 +6108,7 @@
     },
     {
       "time": 940,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         580.0,
         240.0
@@ -6127,7 +6127,7 @@
     },
     {
       "time": 950,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         1000.0,
         500.0
@@ -6146,7 +6146,7 @@
     },
     {
       "time": 950,
-      "object_type": "15",
+      "object_type": "sun",
       "position": [
         450.0,
         200.0
@@ -6165,7 +6165,7 @@
     },
     {
       "time": 960,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         600.0,
         400.0
@@ -6184,7 +6184,7 @@
     },
     {
       "time": 960,
-      "object_type": "4",
+      "object_type": "enemy",
       "position": [
         700.0,
         200.0
@@ -6203,7 +6203,7 @@
     },
     {
       "time": 970,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         800.0,
         200.0
@@ -6222,7 +6222,7 @@
     },
     {
       "time": 970,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         450.0,
         280.0
@@ -6241,7 +6241,7 @@
     },
     {
       "time": 980,
-      "object_type": "11",
+      "object_type": "spike",
       "position": [
         1200.0,
         600.0
@@ -6260,7 +6260,7 @@
     },
     {
       "time": 980,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         1000.0,
         300.0
@@ -6279,7 +6279,7 @@
     },
     {
       "time": 990,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         400.0,
         300.0
@@ -6298,7 +6298,7 @@
     },
     {
       "time": 990,
-      "object_type": "8",
+      "object_type": "rounded_polygon",
       "position": [
         850.0,
         390.0
@@ -6317,7 +6317,7 @@
     },
     {
       "time": 1000,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         300.0,
         100.0
@@ -6336,7 +6336,7 @@
     },
     {
       "time": 1000,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         200.0,
         180.0
@@ -6355,7 +6355,7 @@
     },
     {
       "time": 1010,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         1100.0,
         500.0
@@ -6374,7 +6374,7 @@
     },
     {
       "time": 1010,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         367.0,
         260.0
@@ -6393,7 +6393,7 @@
     },
     {
       "time": 1020,
-      "object_type": "3",
+      "object_type": "halfcircle",
       "position": [
         500.0,
         700.0
@@ -6412,7 +6412,7 @@
     },
     {
       "time": 1020,
-      "object_type": "4",
+      "object_type": "enemy",
       "position": [
         1000.0,
         780.0
@@ -6431,7 +6431,7 @@
     },
     {
       "time": 1030,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         900.0,
         400.0
@@ -6450,7 +6450,7 @@
     },
     {
       "time": 1030,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         700.0,
         500.0
@@ -6469,7 +6469,7 @@
     },
     {
       "time": 1040,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         700.0,
         200.0
@@ -6488,7 +6488,7 @@
     },
     {
       "time": 1040,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         1220.0,
         666.0
@@ -6507,7 +6507,7 @@
     },
     {
       "time": 1050,
-      "object_type": "2",
+      "object_type": "star",
       "position": [
         1300.0,
         600.0
@@ -6526,7 +6526,7 @@
     },
     {
       "time": 1050,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         1100.0,
         800.0
@@ -6545,7 +6545,7 @@
     },
     {
       "time": 1060,
-      "object_type": "0",
+      "object_type": "all_spike_saw",
       "position": [
         200.0,
         300.0
@@ -6564,7 +6564,7 @@
     },
     {
       "time": 1060,
-      "object_type": "0",
+      "object_type": "all_spike_saw",
       "position": [
         500.0,
         400.0
@@ -6583,7 +6583,7 @@
     },
     {
       "time": 1070,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         1000.0,
         700.0
@@ -6602,7 +6602,7 @@
     },
     {
       "time": 1070,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         920.0,
         500.0
@@ -6621,7 +6621,7 @@
     },
     {
       "time": 1080,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         600.0,
         500.0
@@ -6640,7 +6640,7 @@
     },
     {
       "time": 1080,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         760.0,
         430.0
@@ -6659,7 +6659,7 @@
     },
     {
       "time": 1090,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         800.0,
         400.0
@@ -6678,7 +6678,7 @@
     },
     {
       "time": 1090,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         600.0,
         350.0
@@ -6697,7 +6697,7 @@
     },
     {
       "time": 1100,
-      "object_type": "6",
+      "object_type": "moon",
       "position": [
         1200.0,
         200.0
@@ -6716,7 +6716,7 @@
     },
     {
       "time": 1100,
-      "object_type": "7",
+      "object_type": "rectangle",
       "position": [
         100.0,
         520.0
@@ -6735,7 +6735,7 @@
     },
     {
       "time": 1105,
-      "object_type": "6",
+      "object_type": "moon",
       "position": [
         500.0,
         500.0
@@ -6754,7 +6754,7 @@
     },
     {
       "time": 1105,
-      "object_type": "1",
+      "object_type": "circle",
       "position": [
         683.0,
         384.0
