@@ -21,9 +21,9 @@ timeline = instance_find(obj_timeline,0);
 timeline_height = timeline.sprite_height;
 
 //basic
-object_time = 0;
+object_time = 10.54;
 object_name = "default_object";
-object_position = [0,0];
-object_size = [1,1];
-object_angle = 0;
+object_position = [545,235];
+object_size = [1,3];
+object_angle = 45;
 

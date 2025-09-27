@@ -1,4 +1,4 @@
-if (live_call()) return live_result;
+//if (live_call()) return live_result;
 
 if editor_object != noone
 {
@@ -21,8 +21,8 @@ if editor_object != noone
 	
 	draw_text_transformed(x + 25, y + sprite_height * 1/5,"General",1.75,1.75,0);
 	draw_line_color(x  + 25, y + sprite_height * 1/5 + 15,x  + string_width("General") * 2.5, y + sprite_height * 1/5 + 15,c_gray,c_gray);
-	draw_text_transformed(x + 25, y + sprite_height * 1/5 + 40,$"Time: [0.000]",1.25,1.25,0);
-	draw_text_transformed(x + 25, y + sprite_height * 1/5 + 70,$"Name: [Qorutle fuck]",1.25,1.25,0);
+	draw_text_transformed(x + 25, y + sprite_height * 1/5 + 40,$"Time: [{editor_object.object_time}]",1.25,1.25,0);
+	draw_text_transformed(x + 25, y + sprite_height * 1/5 + 70,$"Name: [{editor_object.object_name}]",1.25,1.25,0);
 	
 	//transformation
 	
@@ -32,9 +32,9 @@ if editor_object != noone
 	
 	draw_text_transformed(x + 25, y + sprite_height * 2/5,"Transoframtions",1.75,1.75,0);
 	draw_line_color(x  + 25, y + sprite_height * 2/5 + 15,x  + string_width("General") * 2.5, y + sprite_height * 2/5 + 15,c_gray,c_gray);
-	draw_text_transformed(x + 25, y + sprite_height * 2/5 + 40,$"Position: W [758]    H [-50]",1.25,1.25,0);
-	draw_text_transformed(x + 25, y + sprite_height * 2/5 + 70,$"Size:     W [2.0]    H [2.5]",1.25,1.25,0);
-	draw_text_transformed(x + 25, y + sprite_height * 2/5 + 100,$"Angle:      [69]",1.25,1.25,0);
+	draw_text_transformed(x + 25, y + sprite_height * 2/5 + 40,$"Position: W [{editor_object.object_position[0]}]    H [{editor_object.object_position[1]}]",1.25,1.25,0);
+	draw_text_transformed(x + 25, y + sprite_height * 2/5 + 70,$"Size:     W [{editor_object.object_size[0]}]    H [{editor_object.object_size[1]}]",1.25,1.25,0);
+	draw_text_transformed(x + 25, y + sprite_height * 2/5 + 100,$"Angle:      [{editor_object.object_angle}]",1.25,1.25,0);
 }
 
 
