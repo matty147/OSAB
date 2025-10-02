@@ -10,6 +10,8 @@ function strip_special(_str, only_numbs) {
         out = string_replace_all(out, ch, "");
     }
 	
+	//string_digits("123ewf0.123") // could theoreticly use but it removes the . which is not a good thing
+	
 	if only_numbs
 	{	
 	    for (var i = 1; i <= string_length(bad_chars); i++) {
