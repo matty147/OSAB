@@ -1,7 +1,9 @@
 if mouse_check_button_pressed(mb_left)
 {
-	editor_object = instance_place(mouse_x,mouse_y,obj_editor_enemy);
-	
+	// for some reason it sometimes dosent select the right one? usually happens when the lower one is in the same lane as the upper one.
+	editor_object = instance_place(mouse_x,mouse_y,obj_editor_enemy); 
+
+
 	if editor_object != -4
 	{
 		valid_editor_object = editor_object;
