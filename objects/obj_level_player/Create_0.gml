@@ -15,3 +15,5 @@ if checkpoint_manager.current_level < instance_number(obj_checkpoint)
 
 _x = x;
 _y = y;
+
+useing_controller = false;

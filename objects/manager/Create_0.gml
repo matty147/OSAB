@@ -46,6 +46,10 @@ if !variable_global_exists("fullscreen") {
 	window_set_fullscreen(global.fullscreen);
 }
 
+if !variable_global_exists("controllers") {
+	global.controllers = [];
+}
+
 audio_master_gain(global.volume);
 
 selected_items = 0;

@@ -1,7 +1,8 @@
-//if (live_call()) return live_result;
+if (live_call()) return live_result;
 
 if editor_object != noone
 {
+	
 	// menu name
 	var object_name = string_replace_all(display_name,"_"," ");
 	
@@ -21,8 +22,8 @@ if editor_object != noone
 	
 	draw_text_transformed(x + 25, y + sprite_height * 1/5,"General",1.75,1.75,0);
 	draw_line_color(x  + 25, y + sprite_height * 1/5 + 15,x  + string_width("General") * 2.5, y + sprite_height * 1/5 + 15,c_gray,c_gray);
-	draw_text_transformed(x + 25, y + sprite_height * 1/5 + 40,$"Time: [{editor_object.object_time}]",1.25,1.25,0);
-	draw_text_transformed(x + 25, y + sprite_height * 1/5 + 70,$"Name: [{editor_object.object_name}]",1.25,1.25,0);
+	draw_text_transformed(x + 25, y + sprite_height * 1/5 + 40,$"Time: ",1.25,1.25,0);
+	draw_text_transformed(x + 25, y + sprite_height * 1/5 + 70,$"Name: ",1.25,1.25,0);
 	
 	//transformation
 	
@@ -32,9 +33,19 @@ if editor_object != noone
 	
 	draw_text_transformed(x + 25, y + sprite_height * 2/5,"Transoframtions",1.75,1.75,0);
 	draw_line_color(x  + 25, y + sprite_height * 2/5 + 15,x  + string_width("General") * 2.5, y + sprite_height * 2/5 + 15,c_gray,c_gray);
-	draw_text_transformed(x + 25, y + sprite_height * 2/5 + 40,$"Position: W [{editor_object.object_position[0]}]    H [{editor_object.object_position[1]}]",1.25,1.25,0);
-	draw_text_transformed(x + 25, y + sprite_height * 2/5 + 70,$"Size:     W [{editor_object.object_size[0]}]    H [{editor_object.object_size[1]}]",1.25,1.25,0);
-	draw_text_transformed(x + 25, y + sprite_height * 2/5 + 100,$"Angle:      [{editor_object.object_angle}]",1.25,1.25,0);
+	draw_text_transformed(x + 25, y + sprite_height * 2/5 + 40,$"Position: W            H",1.25,1.25,0);
+	draw_text_transformed(x + 25, y + sprite_height * 2/5 + 70,$"Size:       W            H",1.25,1.25,0);
+	draw_text_transformed(x + 25, y + sprite_height * 2/5 + 100,$"Angle:",1.25,1.25,0);
+}
+else
+{
+	inp_time.visible = false; 
+	inp_name.visible = false; 
+	inp_pos_x.visible = false;
+	inp_pos_y.visible = false;
+	inp_size_x.visible = false;
+	inp_size_y.visible = false;
+	inp_angle.visible = false;
 }
 
 

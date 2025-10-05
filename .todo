@@ -2,3 +2,8 @@
  - object_exists()
  
  # group scritps!!!
+
+// editor
+highlight the object selected somehow
+fix objects cliping
+you can write invalid characters into it like japanese chinese or ⌡╥...

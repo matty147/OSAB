@@ -7,3 +7,5 @@ show_typing = false;
 count = 0;
 
 only_numbers = false;
+
+t_ = "";

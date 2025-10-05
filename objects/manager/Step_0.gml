@@ -1,3 +1,5 @@
+//if (live_call()) return live_result;
+
 if global.debug
 {
 	if keyboard_check_pressed(192) // open console menu with ~
@@ -227,3 +229,13 @@ if audio_is_playing(snd_menu_bg)
 	
 }
 
+//if keyboard_check_pressed(vk_backspace)
+//{
+//	show_debug_message("reseting controllers")
+//	global.controllers = [];	
+//}
+
+//if gamepad_get_device_count() < 0
+//{
+//	show_debug_message("keyboard");	
+//}
