@@ -28,7 +28,7 @@ if visible
 		{
 			break;
 		}
-	}
+	} 
 	
 	draw_text_transformed(_x + sprite_width / 2,_y - sprite_height / 2,string(data.name),text_size,text_size,0);
 	//draw_text_transformed(x - screen_x + 30,y - screen_y - sprite_height + 40,"diff: " + string(data.diff),1,1,0);

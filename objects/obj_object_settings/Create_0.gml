@@ -47,7 +47,7 @@ inp_size_x.max_text_lenght = 3;
 inp_size_y.max_text_lenght = 3;
 inp_angle.max_text_lenght = 3;
 
-//
+// fix the output to only accept numbers
 inp_time.only_numbers = true; 
 inp_name.only_numbers = false; 
 inp_pos_x.only_numbers = true;
@@ -56,4 +56,11 @@ inp_size_x.only_numbers = true;
 inp_size_y.only_numbers = true;
 inp_angle.only_numbers = true;
 
-
+//
+inp_time.image_xscale = 1; 
+inp_name.image_xscale = 1; 
+inp_pos_x.image_xscale = 1;
+inp_pos_y.image_xscale = 1;
+inp_size_x.image_xscale = 1;
+inp_size_y.image_xscale = 1;
+inp_angle.image_xscale = 1;

@@ -48,6 +48,13 @@ else
 	inp_angle.visible = false;
 }
 
+inp_time.image_xscale = 1; 
+inp_name.image_xscale = 3.2; 
+inp_pos_x.image_xscale = 1;
+inp_pos_y.image_xscale = 1;
+inp_size_x.image_xscale = 1;
+inp_size_y.image_xscale = 1;
+inp_angle.image_xscale = 1;
 
 
 /*
