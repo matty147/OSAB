@@ -29,7 +29,6 @@ function strip_special(_str, only_numbs) { // problem is that it dosent check fo
 		{
 			out = string_lettersdigits(out);
 		}
-		
 	}
     return out;
 
