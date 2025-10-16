@@ -9,3 +9,9 @@ count = 0;
 only_numbers = false;
 
 t_ = "";
+
+_parent = noone;
+
+save_text = false;
+
+return_key = "default";

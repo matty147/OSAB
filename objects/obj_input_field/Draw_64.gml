@@ -44,7 +44,14 @@ if(mouse_check_button_pressed(mb_left)) {
 		keyboard_string = text;
 		show_typing = true;
 		count = 0;
-	}else typing = false;
+	}else
+	{
+		if typing
+		{	
+			save_text = true;
+		}
+		typing = false;
+	}
 }
 
 if(typing)
@@ -76,3 +83,14 @@ draw_set_color(c_white);
 draw_set_halign(fa_left);
 
 draw_text(x + 10, y, $"{t_}{show_typing && typing ? "_" : ""}");
+
+if (!typing && save_text) // set back to origin
+{
+	save_text = false;
+	if instance_exists(_parent)
+	{
+		show_debug_message($"updated data: {t_}");
+		//_parent = t_;
+		_parent.set_data = [return_key,t_];
+	}
+}

@@ -7,3 +7,5 @@
 highlight the object selected somehow
 fix objects cliping
 you can write invalid characters into it like japanese chinese or ⌡╥...
+can click on object even when multiple are overlayed on top of each other
+fix setting invalid characters into the text field allow _ atleast

@@ -64,3 +64,21 @@ inp_pos_y.image_xscale = 1;
 inp_size_x.image_xscale = 1;
 inp_size_y.image_xscale = 1;
 inp_angle.image_xscale = 1;
+
+inp_time._parent  = id; 
+inp_name._parent  = id; 
+inp_pos_x._parent  = id;
+inp_pos_y._parent  = id;
+inp_size_x._parent  = id;
+inp_size_y._parent   = id;
+inp_angle._parent  = id;
+
+inp_time.return_key  = "time"; 
+inp_name.return_key  = "name"; 
+inp_pos_x.return_key  = "pos_x";
+inp_pos_y.return_key  = "pos_y";
+inp_size_x.return_key  = "size_x";
+inp_size_y.return_key   = "size_y";
+inp_angle.return_key  = "angle";
+
+set_data = [];
