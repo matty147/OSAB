@@ -1,4 +1,23 @@
-//if (live_call()) return live_result;
+if (live_call()) return live_result;
+
+if display_object
+{
+	if (obj_display_object == noone)
+	{
+		obj_display_object = instance_create_layer(object_position[0],object_position[1],"objects",obj_editor_enemy_obj);
+		show_debug_message("created");
+	}
+	
+		// make this update only when there is new data
+		// check if the data given is valid!!!!
+		obj_display_object.sprite_index = asset_get_index($"spr_{sprite}");
+		obj_display_object = object_position[0];
+		obj_display_object = object_position[1];
+		obj_display_object.image_xscale = object_size[0];
+		obj_display_object.image_yscale = object_size[1];
+		obj_display_object.image_angle = object_angle;
+	
+}
 
 var left_edge  = (mouse_x >= x) && (mouse_x <= x + edge_size);
 var right_edge = (mouse_x >= x + sprite_width - edge_size) && (mouse_x <= x + sprite_width);

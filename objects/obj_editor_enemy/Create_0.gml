@@ -24,6 +24,11 @@ timeline_height = timeline.sprite_height;
 object_time = 10.54;
 object_name = "default_object";
 object_position = [545,235];
-object_size = [1,3];
+object_size = [0.25,0.1];
 object_angle = 45;
+sprite = "circle"
 
+
+display_object = true;
+
+obj_display_object = noone;

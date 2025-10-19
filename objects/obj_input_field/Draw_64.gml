@@ -5,7 +5,7 @@ function strip_special(_str, only_numbs) { // problem is that it dosent check fo
 	var bad_chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
     var out = _str;
 
-	if false // use custom chars check or use gml bad default check
+	if true // use custom chars check or use gml bad default check
 	{
 
 	    for (var i = 1; i <= string_length(bad); i++) {
