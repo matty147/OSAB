@@ -18,13 +18,19 @@ block_lenght = 1;
 position = 0;
 sub_block = 0.75;
 timeline = instance_find(obj_timeline,0);
+game_window = instance_find(obj_game_window,0)
+
+_manager = instance_find(manager,0);
+
+level_object_map = _manager.level_object_map;
+
 timeline_height = timeline.sprite_height;
 
 //basic
 object_time = 10.54;
 object_name = "default_object";
 object_position = [545,235];
-object_size = [0.25,0.1];
+object_size = [2,1];
 object_angle = 45;
 sprite = "circle"
 

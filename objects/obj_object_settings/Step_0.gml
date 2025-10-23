@@ -67,6 +67,14 @@ if mouse_check_button_pressed(mb_left)
 		inp_size_y.text  = valid_editor_object.object_size[1];
 		inp_angle.text  = valid_editor_object.object_angle;
 		
+		inp_time.default_var = valid_editor_object.object_time;
+		inp_name.default_var  =  valid_editor_object.object_name;
+		inp_pos_x.default_var  =  valid_editor_object.object_position[0];
+		inp_pos_y.default_var  =  valid_editor_object.object_position[1];
+		inp_size_x.default_var  = valid_editor_object.object_size[0];
+		inp_size_y.default_var  = valid_editor_object.object_size[1];
+		inp_angle.default_var  = valid_editor_object.object_angle;
+		
 		show_debug_message(inp_time.text);
 		
 		display_name = valid_editor_object.object_name;

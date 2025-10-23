@@ -13,3 +13,8 @@ fix objects cliping
 you can write invalid characters into it like japanese chinese or ⌡╥...
 can click on object even when multiple are overlayed on top of each other
 fix setting invalid characters into the text field allow _ atleast
+normalize scale and xy positions
+hide the value/ make it unchangable so its eaisier for me :D
+
+// optimisation
+level select freeplay - loading tanks the fps by a lot

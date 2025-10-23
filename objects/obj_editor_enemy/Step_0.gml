@@ -11,10 +11,10 @@ if display_object
 		// make this update only when there is new data
 		// check if the data given is valid!!!!
 		obj_display_object.sprite_index = asset_get_index($"spr_{sprite}");
-		obj_display_object = object_position[0];
-		obj_display_object = object_position[1];
-		obj_display_object.image_xscale = object_size[0];
-		obj_display_object.image_yscale = object_size[1];
+		obj_display_object.x = game_window.x + object_position[0] / (room_width / game_window.sprite_width);
+		obj_display_object.y = game_window.y + object_position[1] / (room_height / game_window.sprite_height);
+		obj_display_object.image_xscale = real(object_size[0]) * real(level_object_map[? sprite]);
+		obj_display_object.image_yscale = real(object_size[1]) * real(level_object_map[? sprite]);
 		obj_display_object.image_angle = object_angle;
 	
 }

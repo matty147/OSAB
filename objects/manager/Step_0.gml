@@ -10,6 +10,7 @@ if global.debug
 	if global.debug_log
 	{
 		show_debug_log(true);
+		show_debug_overlay(true,true);
 	}else show_debug_log(false);
 }
 
