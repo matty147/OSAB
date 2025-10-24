@@ -4,25 +4,25 @@ if array_length(set_data) != 0
 	switch (set_data[0])
 	{
 		case "time":
-			valid_editor_object.object_time = set_data[1]
+			valid_editor_object.object_time = set_data[1];
 				break;
 		case "name":
-			valid_editor_object.object_name = set_data[1]
+			valid_editor_object.object_name = set_data[1];
 				break;
 		case "pos_x":
-			valid_editor_object.object_position[0] = set_data[1]
+			valid_editor_object.object_position[0] = set_data[1];
 				break;
 		case "pos_y":
-			valid_editor_object.object_position[1] = set_data[1]
+			valid_editor_object.object_position[1] = set_data[1];
 				break;
 		case "size_x":
-			valid_editor_object.object_size[0] = set_data[1]
+			valid_editor_object.object_size[0] = set_data[1];
 				break;
 		case "size_y":
-			valid_editor_object.object_size[1] = set_data[1]
+			valid_editor_object.object_size[1] = set_data[1];
 				break;
 		case "angle":
-			valid_editor_object.object_angle = set_data[1]
+			valid_editor_object.object_angle = set_data[1];
 				break;
 		default:
 			show_debug_message($"wrong key: {set_data[0]}")

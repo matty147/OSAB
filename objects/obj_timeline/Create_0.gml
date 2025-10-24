@@ -11,4 +11,7 @@ line_color = c_gray;
 
 line_width = 1;
 
+time = 0;
+
+tick =	10;
 show_debug_message($"line_amount: {line_amount_h},{line_amount_w}");
