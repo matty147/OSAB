@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_load_level",
+  "%Name":"scr_load_level_old",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_load_level",
+  "name":"scr_load_level_old",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

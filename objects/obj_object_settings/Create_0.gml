@@ -12,13 +12,13 @@ inp_depth = depth - 1;
 
 // create the objects
 live_obj = noone;
-inp_time = instance_create_depth(x + 25, y + sprite_height * 1/5 + 40,inp_depth,obj_input_field);
-inp_name = instance_create_depth(x + 25, y + sprite_height * 1/5 + 70,inp_depth,obj_input_field);
-inp_pos_x = instance_create_depth(x + 25, y + sprite_height * 2/5 + 40,inp_depth,obj_input_field);
-inp_pos_y = instance_create_depth(x + 25, y + sprite_height * 2/5 + 40,inp_depth,obj_input_field);
-inp_size_x = instance_create_depth(x + 25, y + sprite_height * 2/5 + 70,inp_depth,obj_input_field);
-inp_size_y = instance_create_depth(x + 25, y + sprite_height * 2/5 + 70,inp_depth,obj_input_field);
-inp_angle = instance_create_depth(x + 25, y + sprite_height * 2/5 + 100,inp_depth,obj_input_field);
+inp_time = instance_create_depth(x + 25, y + sprite_height * 1/15 + 40,inp_depth,obj_input_field);
+inp_name = instance_create_depth(x + 25, y + sprite_height * 1/15 + 70,inp_depth,obj_input_field);
+inp_pos_x = instance_create_depth(x + 25, y + sprite_height * 1/3 + 40,inp_depth,obj_input_field);
+inp_pos_y = instance_create_depth(x + 25, y + sprite_height * 1/3 + 40,inp_depth,obj_input_field);
+inp_size_x = instance_create_depth(x + 25, y + sprite_height * 1/3 + 70,inp_depth,obj_input_field);
+inp_size_y = instance_create_depth(x + 25, y + sprite_height * 1/3 + 70,inp_depth,obj_input_field);
+inp_angle = instance_create_depth(x + 25, y + sprite_height * 1/3 + 100,inp_depth,obj_input_field);
 
 // hide the objects
 inp_time.visible = false; 

@@ -42,7 +42,7 @@ player = instance_find(obj_player,0);
 	show_debug_message(meta.lenght);
 	show_debug_message(meta.diff);
 	
-	show_debug_message(objects[0])
+	show_debug_message($"aaa {objects[0]}")
 	
 	show_debug_message("finished");
 	read_file = true;

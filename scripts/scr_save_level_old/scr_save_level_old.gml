@@ -1,8 +1,7 @@
-/// @description saves data into a file
+/// @description (depricated DO NOT USE) saves data into a file
 /// @param file_name name of the file + .osab
 /// @param data data from the objects to save
-
-function scr_save_level(file_name, data, description){
+function scr_save_level_old(file_name, data, description){
 	
 	
 	var file_location = get_save_filename(".osab|*.osab","");

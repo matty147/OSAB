@@ -28,7 +28,7 @@ timeline_height = timeline.sprite_height;
 
 //basic
 object_time = 10.54;
-object_name = "default_object";
+object_name = "default_object"; // why do we need a name and a sprite it should be the same thing?
 object_position = [545,235];
 object_size = [2,1];
 object_angle = 45;
