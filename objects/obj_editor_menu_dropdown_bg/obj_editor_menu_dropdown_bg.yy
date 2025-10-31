@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_object_settings",
-    "path":"sprites/spr_object_settings/spr_object_settings.yy",
+    "name":"spr_editor_menu_dropdown_bg",
+    "path":"sprites/spr_editor_menu_dropdown_bg/spr_editor_menu_dropdown_bg.yy",
   },
   "spriteMaskId":null,
   "visible":true,

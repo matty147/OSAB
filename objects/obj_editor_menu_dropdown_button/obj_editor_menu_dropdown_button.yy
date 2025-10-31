@@ -1,7 +1,10 @@
 {
   "$GMObject":"",
   "%Name":"obj_editor_menu_dropdown_button",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_editor_menu_dropdown_button",
   "overriddenProperties":[],
@@ -28,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_object_settings",
-    "path":"sprites/spr_object_settings/spr_object_settings.yy",
+    "name":"spr_editor_menu_dropdown_button",
+    "path":"sprites/spr_editor_menu_dropdown_button/spr_editor_menu_dropdown_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,

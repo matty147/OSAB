@@ -9,6 +9,6 @@ options
 exit
 */
 
-option_numbers = 4;
+option_numbers = 5;
 
-button_space = 20;
+button_space = 10;
