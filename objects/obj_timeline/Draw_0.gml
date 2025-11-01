@@ -1,4 +1,4 @@
-	draw_self();
+draw_self();
 
 for (var i = 0;i <= split_w;i++)
 {

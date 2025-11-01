@@ -23,6 +23,8 @@ if open
 			var inp_but = instance_create_layer(x + 10,inp_menu.y + 10 + (button_space + 64) * o,"objects",obj_editor_menu_dropdown_button);
 			inp_but.depth = inp_menu.depth - 1;
 			inp_but.image_xscale = 3.65;
+			inp_but.icon_id = o;
+			inp_but.display_text = option_text[o]; // check if it exists first tho
 		}
 	}
 }else 
