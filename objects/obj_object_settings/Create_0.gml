@@ -1,3 +1,13 @@
+enum CUR_EDITING
+{
+	NONE,
+	OBJECT,
+	OPTIONS, // add subctg?
+	LEVEL_META
+}
+
+state = CUR_EDITING.NONE;
+
 editor_object = noone;
 
 valid_editor_object = editor_object;

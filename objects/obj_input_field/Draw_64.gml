@@ -2,7 +2,7 @@ if (live_call()) return live_result;
 
 function strip_special(_str, only_numbs) { // problem is that it dosent check for invalid chars like ⁿ⌡↕... or other alphabets (japanes chinese...)
     var bad = "@!#$%^&*(){}[];:'\"<>,?/\\|`~+="; // add what you don’t want
-	var bad_chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+	var bad_chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
     var out = _str;
 
 	if true // use custom chars check or use gml bad default check

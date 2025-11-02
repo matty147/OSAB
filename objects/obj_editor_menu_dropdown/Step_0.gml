@@ -2,16 +2,18 @@ if (live_call()) return live_result;
 
 if mouse_check_button_pressed(mb_left)
 {
-	
-	if position_meeting(mouse_x,mouse_y, obj_editor_menu_dropdown) || position_meeting(mouse_x,mouse_y, obj_editor_menu_dropdown_bg) || position_meeting(mouse_x,mouse_y, obj_editor_menu_dropdown_button)
+	if position_meeting(mouse_x,mouse_y, obj_editor_menu_dropdown)
+	|| position_meeting(mouse_x,mouse_y, obj_editor_menu_dropdown_bg)
+	|| position_meeting(mouse_x,mouse_y, obj_editor_menu_dropdown_button)
 	{
-		open = !open;
+		open = true;
 	}else open = false;
 	
 }
 
 if open
 {
+	
 	if inp_menu == noone
 	{	
 		inp_menu = instance_create_layer(x,y + sprite_height ,"objects",obj_editor_menu_dropdown_bg);
