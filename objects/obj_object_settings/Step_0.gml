@@ -49,6 +49,9 @@ if (state == CUR_EDITING.LEVEL_META)
 // CUR_EDITING.OBJECT
 if mouse_check_button_pressed(mb_left)
 {
+	
+	state = CUR_EDITING.OBJECT;
+	
 	editor_object = instance_position(mouse_x,mouse_y,obj_editor_enemy); 
 
 	if editor_object != -4

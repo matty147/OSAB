@@ -1,4 +1,5 @@
 open = false;
+override = false;
 
 inp_menu = noone;
 
