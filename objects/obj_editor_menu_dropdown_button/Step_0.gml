@@ -37,5 +37,3 @@ if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y, id)
 	alarm[0] = 1; 
 	
 }
-
-show_debug_message($"state: {state}");

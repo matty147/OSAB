@@ -1,5 +1,28 @@
 function scr_load_level(){
 
+	var file_location = get_open_filename(".osab|*.osab","");
+
+	if file_exists(file_location)
+	{
+	
+		var json = "";
+	
+		var file = file_text_open_read(file_location);
+	
+		while(file_text_eof(file) == false)
+		{
+			json += file_text_readln(file);
+		}
+		
+		file_text_close(file);
+
+		
+		level_data = json_parse(json);
+	
+		return level_data; // should i parse the data or leave it just as it is?
+	
+	}
+
 }
 
 

@@ -16,3 +16,8 @@ if keyboard_check(vk_control) && keyboard_check_released(ord("S")) || save_level
 	save_level = 0;
 
 }
+
+if keyboard_check(vk_control) && keyboard_check_released(ord("O"))
+{
+	scr_load_level();	
+}
