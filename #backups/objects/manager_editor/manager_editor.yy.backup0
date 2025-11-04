@@ -1,3 +1,16 @@
+// 2025-11-05 00:11:23
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+uses_physics = false;
+
+#event create
+// these do not need to be global
+editor_meta = ds_map_create();
+
+save_level = false;
+
+
+#event step
 if (keyboard_check(vk_control) && keyboard_check_released(ord("S"))) || save_level
 {
 	var save_objects = [];

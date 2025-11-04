@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_editor_enemy_obj",
+  "%Name":"obj_editor_enemy_display",
   "eventList":[],
   "managed":true,
-  "name":"obj_editor_enemy_obj",
+  "name":"obj_editor_enemy_display",
   "overriddenProperties":[],
   "parent":{
     "name":"level_editor",

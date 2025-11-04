@@ -108,7 +108,7 @@
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_checkpoint_manager","path":"objects/obj_checkpoint_manager/obj_checkpoint_manager.yy",},},
     {"id":{"name":"obj_checkpoint","path":"objects/obj_checkpoint/obj_checkpoint.yy",},},
-    {"id":{"name":"obj_editor_enemy_obj","path":"objects/obj_editor_enemy_obj/obj_editor_enemy_obj.yy",},},
+    {"id":{"name":"obj_editor_enemy_display","path":"objects/obj_editor_enemy_display/obj_editor_enemy_display.yy",},},
     {"id":{"name":"obj_editor_enemy","path":"objects/obj_editor_enemy/obj_editor_enemy.yy",},},
     {"id":{"name":"obj_editor_menu_dropdown_bg","path":"objects/obj_editor_menu_dropdown_bg/obj_editor_menu_dropdown_bg.yy",},},
     {"id":{"name":"obj_editor_menu_dropdown_button","path":"objects/obj_editor_menu_dropdown_button/obj_editor_menu_dropdown_button.yy",},},

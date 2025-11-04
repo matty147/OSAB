@@ -22,7 +22,7 @@ block_lenght = 1;
 position = 0;
 sub_block = 0.75;
 timeline = instance_find(obj_timeline,0);
-game_window = instance_find(obj_game_window,0)
+game_window = instance_find(obj_game_window,0);
 
 _manager = instance_find(manager,0);
 
@@ -36,8 +36,9 @@ object_name = "default_object"; // why do we need a name and a sprite it should 
 object_position = [545,235];
 object_size = [2,1];
 object_angle = 45;
-sprite = "circle"
+sprite = "circle";
 
+mark_delete = false; // gml is stupid and i cant mark and create object at the same time for some reason??????
 
 display_object = true;
 

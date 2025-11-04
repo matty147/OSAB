@@ -1,3 +1,4 @@
+// 2025-11-04 22:29:46
 function scr_load_level(){
 
 	var file_location = get_open_filename(".osab|*.osab","");
@@ -17,6 +18,8 @@ function scr_load_level(){
 		file_text_close(file);
 		
 		level_data = json_parse(json);
+	
+		with (obj_editor_enemy_obj) {instance_destroy();} // cant do this in the same step as creating object or it goes all fucky wucky D:
 	
 		return level_data; // should i parse the data or leave it just as it is?
 	

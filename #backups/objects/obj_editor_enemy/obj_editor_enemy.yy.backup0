@@ -1,10 +1,64 @@
-//if (live_call()) return live_result;
+// 2025-11-04 22:50:11
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+sprite_index = spr_editor_enemy;
+uses_physics = false;
+
+#event create
+image_xscale = 0.75;
+
+var inp_timeline = instance_find(obj_timeline,0);
+
+depth = inp_timeline.depth - 1;
+
+dragging = false;
+
+edge_size = 15;
+dragged_right_side = 0;
+
+middle = false;
+
+min_lenght_value = 0.1; // changed to smallest grid unit
+max_lenght_value = 999;
+
+distance_to_x = 0;
+
+//grid_size = 64;
+
+block_lenght = 1;
+position = 0;
+sub_block = 0.75;
+timeline = instance_find(obj_timeline,0);
+game_window = instance_find(obj_game_window,0);
+
+_manager = instance_find(manager,0);
+
+level_object_map = _manager.level_object_map;
+
+timeline_height = timeline.sprite_height;
+
+//basic
+object_time = 10.54;
+object_name = "default_object"; // why do we need a name and a sprite it should be the same thing?
+object_position = [545,235];
+object_size = [2,1];
+object_angle = 45;
+sprite = "circle";
+
+mark_delete = false; // gml is stupid and i cant mark and create object at the same time for some reason??????
+
+display_object = true;
+
+obj_display_object = noone;
+
+#event step
+if (live_call()) return live_result;
 
 if (display_object)
 {
 	if (obj_display_object == noone)
 	{
-		obj_display_object = instance_create_layer(object_position[0],object_position[1],"objects",obj_editor_enemy_display);
+		obj_display_object = instance_create_layer(object_position[0],object_position[1],"objects",obj_editor_enemy_obj);
 		show_debug_message("created");
 	}
 	
@@ -87,3 +141,23 @@ if (dragging)
 }
 
 if (mark_delete) {show_debug_message("del");instance_destroy();}
+
+
+#event draw
+// draw_sprite_stretched(sprite_index, 0, x, y, 200, 300);
+
+draw_self();
+
+//var left_edge  = (mouse_x >= x) && (mouse_x <= x + edge_size);
+//var right_edge = (mouse_x >= x + sprite_width - edge_size) && (mouse_x <= x + sprite_width);
+
+//draw_sprite_stretched(spr_level,0,left_edge + x,y,16,32);
+
+//draw_sprite_stretched(spr_level,0,right_edge + x,y,16,32);
+
+//timeline.x
+
+//for (var i = 0; i < 4;i++) // displays lines
+//{
+//	draw_circle(x,timeline.y + sprite_height / 2 + sprite_height * i,5,false);	
+//}
