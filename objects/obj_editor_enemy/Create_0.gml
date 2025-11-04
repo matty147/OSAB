@@ -1,5 +1,9 @@
 image_xscale = 0.75;
 
+var inp_timeline = instance_find(obj_timeline,0);
+
+depth = inp_timeline.depth - 1;
+
 dragging = false;
 
 edge_size = 15;

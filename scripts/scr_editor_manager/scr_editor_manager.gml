@@ -15,7 +15,6 @@ function scr_load_level(){
 		}
 		
 		file_text_close(file);
-
 		
 		level_data = json_parse(json);
 	
