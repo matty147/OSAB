@@ -8,6 +8,16 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("S"))) || save_lev
 		array_push(save_objects,instance_find(obj_editor_enemy,count));
 	}
 	
+	array_sort(save_objects,function(a,b) // spawntime does not exists
+	{
+		show_debug_message("a: " + string(a.object_time));
+		show_debug_message("b: " + string(b.object_time));
+		return  a.object_time - b.object_time;
+	}
+	);
+	
+	show_debug_message(save_objects);
+	
 	scr_save_level(editor_meta,save_objects);
 	
 	show_debug_message("level saved!");
@@ -17,7 +27,7 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("S"))) || save_lev
 
 }
 
-if (keyboard_check(vk_control) && keyboard_check_released(ord("O")))
+if (keyboard_check(vk_control) && keyboard_check_released(ord("O")) || load_level)
 {
 	
 	var level_data = scr_load_level();
@@ -48,5 +58,7 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("O")))
 			y = timeline.y + sprite_height / 2 + sprite_height * lane_numb;
 		}
 	}
+
+	load_level = false;
 
 }

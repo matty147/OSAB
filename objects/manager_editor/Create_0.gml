@@ -2,3 +2,4 @@
 editor_meta = ds_map_create();
 
 save_level = false;
+load_level = false;

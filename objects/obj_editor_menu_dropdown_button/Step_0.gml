@@ -15,6 +15,8 @@ if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y, id)
 			break;
 			
 		case "Open":
+			var mng = instance_find(manager_editor,0);
+			mng.load_level = 1;
 			break;
 		
 		case "Options":
