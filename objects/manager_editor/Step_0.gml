@@ -41,7 +41,7 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("O")) || load_leve
 	
 	var sett = instance_find(obj_timeline,0);
 	
-	repeat (array_length(objects))
+	for (var i = 0; i < array_length(objects);i++)
 	{
 		var ede = instance_create_layer(sett.x,sett.y,"containers",obj_editor_enemy);
 		with (ede)
@@ -57,6 +57,30 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("O")) || load_leve
 	
 			y = timeline.y + sprite_height / 2 + sprite_height * lane_numb;
 		}
+		
+		inp_obj = objects[i];
+		inp_move = inp_obj.move;
+		
+		show_debug_message($"inp: {inp_move}");
+		show_debug_message($"inp: {inp_obj}");
+		
+		ede.object_time = inp_obj.time;
+		ede.object_name = inp_obj.object_type;
+		ede.object_position = inp_obj.position;
+		ede.object_size = inp_obj.size;
+		ede.object_angle = inp_obj.angle;
+		ede.sprite = inp_obj.object_type;
+		
+		// move
+		
+		//{ speed : 5, duration : 5, alpha : 0.40, show_hitbox : 25 }
+		
+		ede.object_move = inp_move.speed;
+		ede.object_image_alpha = inp_move.alpha;
+		ede.object_survive_speed = inp_move.duration; 
+		// ede.obj_move = inp_move.move;
+		ede.obj_show_hitbow = inp_move.show_hitbox;
+		
 	}
 
 	load_level = false;

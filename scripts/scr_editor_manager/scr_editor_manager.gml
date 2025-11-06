@@ -1,3 +1,5 @@
+/// @description saves data into a file
+/// @returns parsed json
 function scr_load_level(){
 
 	var file_location = get_open_filename(".osab|*.osab","");
@@ -47,16 +49,24 @@ function scr_save_level(meta_data, level_objects){
     for (var i = 0; i < array_length(level_objects); i++) {
         var obj = level_objects[i];
         var ds_object_data = ds_map_create();
+        var ds_move = ds_map_create();
     
-        ds_map_add(ds_object_data, "time", obj.object_time);
+        ds_map_add(ds_object_data, "time", ceil(obj.object_time));
         ds_map_add(ds_object_data, "object_type", obj.sprite);
         ds_map_add(ds_object_data, "position", obj.object_position);
         ds_map_add(ds_object_data, "size", obj.object_size);
         ds_map_add(ds_object_data, "angle", obj.object_angle);
+		
+		ds_map_add(ds_move,"speed",1);
+		ds_map_add(ds_move,"alpha",1);
+		ds_map_add(ds_move,"duration",5);
+		ds_map_add(ds_move,"move",true);
+		ds_map_add(ds_move,"show_hitbox",0);
+		
+		ds_map_add_map(ds_object_data,"move",ds_move);
     
         ds_list_add_map(ds_level, ds_object_data);
     }
-    
 	
 	show_debug_message("-----------------");
 	show_debug_message(ds_meta);
@@ -70,7 +80,7 @@ function scr_save_level(meta_data, level_objects){
 	
 	show_debug_message(ds_save_data);
 	
-	json = json_encode(ds_save_data,false);
+	json = json_encode(ds_save_data,true);
 	
 	var file_location = get_save_filename(".osab|*.osab","");
 	

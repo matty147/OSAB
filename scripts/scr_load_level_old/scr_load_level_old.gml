@@ -1,5 +1,6 @@
 /// @description (depricated DO NOT USE) loads the data into the editors. Returns two arrays, the first one being the object description and the second one being the objects
 /// @return {array[array,array]} 
+/// @deprecated
 function scr_load_level_old(){ //, time, id, x, y, scale, direction, speed, alpha
 	
 	var file_location = get_open_filename(".osab|*.osab","");

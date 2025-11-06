@@ -2,7 +2,6 @@
 /// @param folder folder that will be searched
 /// @param extension file extension that will be searched
 /// @param results results are stored in there
-
 function scr_read_files(folder, extension, results) {
     
     show_debug_message("Searching folder: " + folder); // Debugging path

@@ -32,11 +32,18 @@ timeline_height = timeline.sprite_height;
 
 //basic
 object_time = 10.54;
-object_name = "default_object"; // why do we need a name and a sprite it should be the same thing?
+object_name = "default_object"; // why do we need a name and a sprite_name it should be the same thing?
 object_position = [545,235];
 object_size = [2,1];
 object_angle = 45;
 sprite = "circle";
+
+// move
+object_move = 1;
+object_image_alpha = 1;
+object_survive_speed = 5; 
+obj_move = true; // no clue what this is but its here :D
+obj_show_hitbow = 25;
 
 mark_delete = false; // gml is stupid and i cant mark and create object at the same time for some reason??????
 

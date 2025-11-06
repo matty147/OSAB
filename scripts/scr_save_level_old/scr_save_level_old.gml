@@ -1,6 +1,7 @@
 /// @description (depricated DO NOT USE) saves data into a file
 /// @param file_name name of the file + .osab
 /// @param data data from the objects to save
+/// @deprecated 
 function scr_save_level_old(file_name, data, description){
 	
 	
