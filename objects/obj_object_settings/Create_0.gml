@@ -14,81 +14,52 @@ valid_editor_object = editor_object;
 
 _manager = instance_find(manager,0);
 
-display_name = "None";
-
 inp_depth = depth - 1;
 
 //movable customizable object in the playing field to make editing easyer
 
-// create the objects
+inp_objects_settings = [
+//   return_key,  x,    y,                            leng, numb, xscale, parent
+	["time",   x + 90,  y + sprite_height * 1/15 + 40,  5,  true,  1, id],	
+	["name",   x + 90,  y + sprite_height * 1/15 + 70,  25, false, 3.2, id],	
+	["pos_x",  x + 135, y + sprite_height * 1/3 +  40,  4,  true,  1, id],	
+	["pos_x",  x + 230, y + sprite_height * 1/3 +  40,  4,  true,  1, id],
+	["size_x", x + 135, y + sprite_height * 1/3 +  70,  3,  true,  1, id],	
+	["size_y", x + 230, y + sprite_height * 1/3 +  70,  3,  true,  1, id],	
+	["angle",  x + 135, y + sprite_height * 1/3 +  100, 3,  true,  1, id]	
+];
+
+objects = [];
+
 live_obj = noone;
-inp_time = instance_create_depth(x + 25, y + sprite_height * 1/15 + 40,inp_depth,obj_input_field);
-inp_name = instance_create_depth(x + 25, y + sprite_height * 1/15 + 70,inp_depth,obj_input_field);
-inp_pos_x = instance_create_depth(x + 25, y + sprite_height * 1/3 + 40,inp_depth,obj_input_field);
-inp_pos_y = instance_create_depth(x + 25, y + sprite_height * 1/3 + 40,inp_depth,obj_input_field);
-inp_size_x = instance_create_depth(x + 25, y + sprite_height * 1/3 + 70,inp_depth,obj_input_field);
-inp_size_y = instance_create_depth(x + 25, y + sprite_height * 1/3 + 70,inp_depth,obj_input_field);
-inp_angle = instance_create_depth(x + 25, y + sprite_height * 1/3 + 100,inp_depth,obj_input_field);
+for (var o = 0; o < array_length(inp_objects_settings); o++)
+{
+	var obj_data = inp_objects_settings[o];
+	var obj = instance_create_depth(obj_data[1],obj_data[2],inp_depth,obj_input_field);
+	obj.visible = false;
+	obj.image_xscale = obj_data[5];
+	obj.max_text_lenght = obj_data[3];
+	obj.only_numbers = obj_data[4];
+	obj._parent = obj_data[6];
+	obj.return_key = obj_data[0];
 
-// hide the objects
-inp_time.visible = false; 
-inp_name.visible = false; 
-inp_pos_x.visible = false;
-inp_pos_y.visible = false;
-inp_size_x.visible = false;
-inp_size_y.visible = false;
-inp_angle.visible = false;
+	
+	objects[o] = obj;
+		
+}
 
-// set their x position
-inp_time.x = 90; 
-inp_name.x = 90; 
-inp_pos_x.x = 135;
-inp_pos_y.x = 230;
-inp_size_x.x = 135;
-inp_size_y.x = 230;
-inp_angle.x = 135;
+// creating object for meta editing
 
-// set their char lenghts
-inp_time.max_text_lenght = 5; 
-inp_name.max_text_lenght = 25; 
-inp_pos_x.max_text_lenght = 4;
-inp_pos_y.max_text_lenght = 4;
-inp_size_x.max_text_lenght = 3;
-inp_size_y.max_text_lenght = 3;
-inp_angle.max_text_lenght = 3;
+inp_meta_id = instance_create_depth(x + 25, y + sprite_height * 1/15 + 40,inp_depth,obj_input_field);
+inp_meta_name = instance_create_depth(x + 25, y + sprite_height * 1/15 + 40,inp_depth,obj_input_field);
+inp_meta_desc = instance_create_depth(x + 25, y + sprite_height * 1/15 + 40,inp_depth,obj_input_field);
+inp_meta_leng = instance_create_depth(x + 25, y + sprite_height * 1/15 + 40,inp_depth,obj_input_field);
+inp_meta_diff = instance_create_depth(x + 25, y + sprite_height * 1/15 + 40,inp_depth,obj_input_field);
 
-// fix the output to only accept numbers
-inp_time.only_numbers = true; 
-inp_name.only_numbers = false; 
-inp_pos_x.only_numbers = true;
-inp_pos_y.only_numbers = true;
-inp_size_x.only_numbers = true;
-inp_size_y.only_numbers = true;
-inp_angle.only_numbers = true;
-
-//
-inp_time.image_xscale = 1; 
-inp_name.image_xscale = 1; 
-inp_pos_x.image_xscale = 1;
-inp_pos_y.image_xscale = 1;
-inp_size_x.image_xscale = 1;
-inp_size_y.image_xscale = 1;
-inp_angle.image_xscale = 1;
-
-inp_time._parent  = id; 
-inp_name._parent  = id; 
-inp_pos_x._parent  = id;
-inp_pos_y._parent  = id;
-inp_size_x._parent  = id;
-inp_size_y._parent   = id;
-inp_angle._parent  = id;
-
-inp_time.return_key  = "time"; 
-inp_name.return_key  = "name"; 
-inp_pos_x.return_key  = "pos_x";
-inp_pos_y.return_key  = "pos_y";
-inp_size_x.return_key  = "size_x";
-inp_size_y.return_key   = "size_y";
-inp_angle.return_key  = "angle";
+inp_meta_id.visible = false; 
+inp_meta_name.visible = false; 
+inp_meta_desc.visible = false;
+inp_meta_leng.visible = false;
+inp_meta_diff.visible = false;
 
 set_data = [];

@@ -1,4 +1,4 @@
-// 2025-11-04 22:50:11
+// 2025-11-08 15:51:03
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_editor_enemy;
@@ -39,11 +39,18 @@ timeline_height = timeline.sprite_height;
 
 //basic
 object_time = 10.54;
-object_name = "default_object"; // why do we need a name and a sprite it should be the same thing?
+object_name = "default_object"; // why do we need a name and a sprite_name it should be the same thing?
 object_position = [545,235];
 object_size = [2,1];
 object_angle = 45;
 sprite = "circle";
+
+// move
+object_move = 1;
+object_image_alpha = 1;
+object_survive_speed = 5; 
+obj_move = true; // no clue what this is but its here :D
+obj_show_hitbow = 25;
 
 mark_delete = false; // gml is stupid and i cant mark and create object at the same time for some reason??????
 
@@ -51,14 +58,15 @@ display_object = true;
 
 obj_display_object = noone;
 
+
 #event step
-if (live_call()) return live_result;
+//if (live_call()) return live_result;
 
 if (display_object)
 {
 	if (obj_display_object == noone)
 	{
-		obj_display_object = instance_create_layer(object_position[0],object_position[1],"objects",obj_editor_enemy_obj);
+		obj_display_object = instance_create_layer(object_position[0],object_position[1],"objects",obj_editor_enemy_display);
 		show_debug_message("created");
 	}
 	
@@ -144,7 +152,7 @@ if (mark_delete) {show_debug_message("del");instance_destroy();}
 
 
 #event draw
-// draw_sprite_stretched(sprite_index, 0, x, y, 200, 300);
+// draw_sprite_stretched(sprite_index, 0, x, y, 200, 300); 
 
 draw_self();
 

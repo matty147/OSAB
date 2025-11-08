@@ -1,3 +1,34 @@
+// 2025-11-08 12:46:26
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+sprite_index = spr_editor_menu_dropdown;
+uses_physics = false;
+
+#event create
+open = false;
+override = false;
+
+inp_menu = noone;
+
+/*
+open
+save
+options
+exit
+*/
+
+option_text = [
+"Save",
+"Open",
+"Options",
+"Exit"
+];
+
+option_numbers = 5;
+
+button_space = 10;
+
+#event step
 if (live_call()) return live_result;
 
 if (mouse_check_button_pressed(mb_left))

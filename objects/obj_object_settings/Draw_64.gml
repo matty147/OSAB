@@ -1,7 +1,7 @@
 if (state == CUR_EDITING.OBJECT)
 {
 
-	if editor_object != noone
+	if (editor_object != noone)
 	{
 	
 		//// menu name
@@ -40,20 +40,14 @@ if (state == CUR_EDITING.OBJECT)
 	}
 	else
 	{
-		inp_time.visible = false; 
-		inp_name.visible = false; 
-		inp_pos_x.visible = false;
-		inp_pos_y.visible = false;
-		inp_size_x.visible = false;
-		inp_size_y.visible = false;
-		inp_angle.visible = false;
+		// Hide all
+		for (var i = 0; i < array_length(objects); i++) {
+		    objects[i].visible = false;
+		}
+
 	}
 
-	inp_time.image_xscale = 1; 
-	inp_name.image_xscale = 3.2; 
-	inp_pos_x.image_xscale = 1;
-	inp_pos_y.image_xscale = 1;
-	inp_size_x.image_xscale = 1;
-	inp_size_y.image_xscale = 1;
-	inp_angle.image_xscale = 1;
+		for (var i = 0; i < array_length(objects); i++) {
+		    objects[i].image_xscale = inp_objects_settings[i][5];
+		}
 }

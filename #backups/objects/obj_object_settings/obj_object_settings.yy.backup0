@@ -1,0 +1,248 @@
+// 2025-11-08 16:05:45
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+sprite_index = spr_object_settings;
+uses_physics = false;
+
+#event create
+enum CUR_EDITING
+{
+	NONE,
+	OBJECT,
+	OPTIONS, // add subctg?
+	LEVEL_META
+}
+
+state = CUR_EDITING.NONE;
+
+editor_object = noone;
+
+valid_editor_object = editor_object;
+
+_manager = instance_find(manager,0);
+
+inp_depth = depth - 1;
+
+//movable customizable object in the playing field to make editing easyer
+
+inp_objects_settings = [
+//   return_key,  x,    y,                            leng, numb, xscale, parent
+	["time",   x + 90,  y + sprite_height * 1/15 + 40,  5,  true,  1, id],	
+	["name",   x + 90,  y + sprite_height * 1/15 + 70,  25, false, 3.2, id],	
+	["pos_x",  x + 135, y + sprite_height * 1/3 +  40,  4,  true,  1, id],	
+	["pos_x",  x + 230, y + sprite_height * 1/3 +  40,  4,  true,  1, id],
+	["size_x", x + 135, y + sprite_height * 1/3 +  70,  3,  true,  1, id],	
+	["size_y", x + 230, y + sprite_height * 1/3 +  70,  3,  true,  1, id],	
+	["angle",  x + 135, y + sprite_height * 1/3 +  100, 3,  true,  1, id]	
+];
+
+objects = [];
+
+live_obj = noone;
+for (var o = 0; o < array_length(inp_objects_settings); o++)
+{
+	var obj_data = inp_objects_settings[o];
+	var obj = instance_create_depth(obj_data[1],obj_data[2],inp_depth,obj_input_field);
+	obj.visible = false;
+	obj.image_xscale = obj_data[5];
+	obj.max_text_lenght = obj_data[3];
+	obj.only_numbers = obj_data[4];
+	obj._parent = obj_data[6];
+	obj.return_key = obj_data[0];
+
+	
+	objects[o] = obj;
+		
+}
+
+// creating object for meta editing
+
+inp_meta_id = instance_create_depth(x + 25, y + sprite_height * 1/15 + 40,inp_depth,obj_input_field);
+inp_meta_name = instance_create_depth(x + 25, y + sprite_height * 1/15 + 40,inp_depth,obj_input_field);
+inp_meta_desc = instance_create_depth(x + 25, y + sprite_height * 1/15 + 40,inp_depth,obj_input_field);
+inp_meta_leng = instance_create_depth(x + 25, y + sprite_height * 1/15 + 40,inp_depth,obj_input_field);
+inp_meta_diff = instance_create_depth(x + 25, y + sprite_height * 1/15 + 40,inp_depth,obj_input_field);
+
+inp_meta_id.visible = false; 
+inp_meta_name.visible = false; 
+inp_meta_desc.visible = false;
+inp_meta_leng.visible = false;
+inp_meta_diff.visible = false;
+
+set_data = [];
+
+#event step
+if (state == CUR_EDITING.LEVEL_META)
+{
+		// inp_meta_id.visible = true; 
+		// inp_meta_name.visible = true; 
+		// inp_meta_desc.visible = true;
+		// inp_meta_leng.visible = true;
+		// inp_meta_diff.visible = true;
+
+
+} else if (state == CUR_EDITING.OBJECT)
+{
+	if (array_length(set_data) != 0)
+	{
+	
+		switch (set_data[0])
+		{
+			case "time":
+				valid_editor_object.object_time = set_data[1];
+					break;
+			case "name":
+				valid_editor_object.object_name = set_data[1];
+					break;
+			case "pos_x":
+				valid_editor_object.object_position[0] = set_data[1];
+					break;
+			case "pos_y":
+				valid_editor_object.object_position[1] = set_data[1];
+					break;
+			case "size_x":
+				valid_editor_object.object_size[0] = set_data[1];
+					break;
+			case "size_y":
+				valid_editor_object.object_size[1] = set_data[1];
+					break;
+			case "angle":
+				valid_editor_object.object_angle = set_data[1];
+					break;
+			default:
+				show_debug_message($"wrong key: {set_data[0]}");
+					break;
+		}
+	
+		show_debug_message($"updated {set_data[0]} with {set_data[1]}");
+	
+		set_data = [];	
+	}
+}else if (state == CUR_EDITING.OPTIONS)
+{
+	
+}
+
+
+// CUR_EDITING.OBJECT
+if (mouse_check_button_pressed(mb_left))
+{
+	
+	state = CUR_EDITING.OBJECT;
+	
+	editor_object = instance_position(mouse_x,mouse_y,obj_editor_enemy); 
+
+	if (editor_object != -4)
+	{
+		
+		valid_editor_object = editor_object;
+		
+		for (var i = 0; i < array_length(objects); i++) {
+		    var obj = objects[i];
+		    
+		    obj.visible = true;
+		    
+		    var key = obj.return_key;
+		    
+		    var def_value = "";
+		    
+		    switch (key)
+		    {
+		    	case "time":
+		    		def_value = valid_editor_object.object_time;
+	    		break;
+		    	
+		    	case "name":
+		    		def_value = valid_editor_object.object_name;
+		    	break;
+		    	
+		    	case "pos_x":
+		    		def_value = valid_editor_object.object_position[0];
+		    	break;
+		    	
+		    	case "pos_y":
+			    	def_value = valid_editor_object.object_position[1];
+		    	break;
+		    	
+		    	case "size_x":
+					def_value = valid_editor_object.object_size[0];
+		    	break;
+		    	
+		    	case "size_y":
+		    		def_value = valid_editor_object.object_size[1];
+		    	break;
+		    	
+    		 	case "angle":
+    		 		def_value = valid_editor_object.object_angle;
+		    	break;
+		    	
+		    	default:
+		    		def_value = "default";
+	    		break;
+		    	
+		    }
+		    
+		    obj.t_ = def_value;
+		    obj.text = def_value;
+		    obj.default_var = def_value;
+		}
+	}else
+	{
+		editor_object = valid_editor_object;
+	}
+}
+
+#event draw_gui
+if (state == CUR_EDITING.OBJECT)
+{
+
+	if (editor_object != noone)
+	{
+	
+		//// menu name
+		//var object_name = string_replace_all(display_name,"_"," ");
+	
+		//draw_set_valign(fa_middle);
+		//draw_set_halign(fa_center);
+		//draw_set_color(c_white);
+	
+		//draw_text_transformed(x + sprite_width / 2, y + string_height(object_name) * 2, object_name,2,2,0);
+	
+		//draw_line_color(x  + 100, y + string_height(object_name) * 2 + 15,x  + sprite_width - 100,y + string_height(object_name) * 2 + 15,c_gray,c_gray);
+	
+		//general
+	
+		draw_set_valign(fa_middle);
+		draw_set_halign(fa_left);
+		draw_set_color(c_white);
+	
+		draw_text_transformed(x + 25, y + sprite_height * 1/15,"General",1.75,1.75,0);
+		draw_line_color(x  + 25, y + sprite_height * 1/15 + 15,x  + string_width("General") * 2.5, y + sprite_height * 1/15 + 15,c_gray,c_gray);
+		draw_text_transformed(x + 25, y + sprite_height * 1/15 + 40,$"Time: ",1.25,1.25,0);
+		draw_text_transformed(x + 25, y + sprite_height * 1/15 + 70,$"Name: ",1.25,1.25,0);
+	
+		//transformation
+	
+		draw_set_valign(fa_middle);
+		draw_set_halign(fa_left);
+		draw_set_color(c_white);
+	
+		draw_text_transformed(x + 25, y + sprite_height * 1/3,"Transformations",1.75,1.75,0);
+		draw_line_color(x  + 25, y + sprite_height * 1/3 + 15,x  + string_width("Transformations") * 2.1, y + sprite_height * 1/3 + 15,c_gray,c_gray);
+		draw_text_transformed(x + 25, y + sprite_height * 1/3 + 40,$"Position: W            H",1.25,1.25,0);
+		draw_text_transformed(x + 25, y + sprite_height * 1/3 + 70,$"Size:       W            H",1.25,1.25,0);
+		draw_text_transformed(x + 25, y + sprite_height * 1/3 + 100,$"Angle:",1.25,1.25,0);
+	}
+	else
+	{
+		// Hide all
+		for (var i = 0; i < array_length(objects); i++) {
+		    objects[i].visible = false;
+		}
+
+	}
+
+		for (var i = 0; i < array_length(objects); i++) {
+		    objects[i].image_xscale = inp_objects_settings[i][5];
+		}
+}

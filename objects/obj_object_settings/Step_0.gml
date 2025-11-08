@@ -1,11 +1,15 @@
 if (state == CUR_EDITING.LEVEL_META)
 {
-
+		// inp_meta_id.visible = true; 
+		// inp_meta_name.visible = true; 
+		// inp_meta_desc.visible = true;
+		// inp_meta_leng.visible = true;
+		// inp_meta_diff.visible = true;
 
 
 } else if (state == CUR_EDITING.OBJECT)
 {
-	if array_length(set_data) != 0
+	if (array_length(set_data) != 0)
 	{
 	
 		switch (set_data[0])
@@ -32,8 +36,8 @@ if (state == CUR_EDITING.LEVEL_META)
 				valid_editor_object.object_angle = set_data[1];
 					break;
 			default:
-				show_debug_message($"wrong key: {set_data[0]}")
-				break
+				show_debug_message($"wrong key: {set_data[0]}");
+					break;
 		}
 	
 		show_debug_message($"updated {set_data[0]} with {set_data[1]}");
@@ -47,54 +51,67 @@ if (state == CUR_EDITING.LEVEL_META)
 
 
 // CUR_EDITING.OBJECT
-if mouse_check_button_pressed(mb_left)
+if (mouse_check_button_pressed(mb_left))
 {
 	
 	state = CUR_EDITING.OBJECT;
 	
 	editor_object = instance_position(mouse_x,mouse_y,obj_editor_enemy); 
 
-	if editor_object != -4
+	if (editor_object != -4)
 	{
 		
 		valid_editor_object = editor_object;
 		
-		inp_time.visible = true; 
-		inp_name.visible = true; 
-		inp_pos_x.visible = true;
-		inp_pos_y.visible = true;
-		inp_size_x.visible = true;
-		inp_size_y.visible = true;
-		inp_angle.visible = true;
-		
-		inp_time.t_ = valid_editor_object.object_time; 
-		inp_name.t_ = valid_editor_object.object_name; 
-		inp_pos_x.t_ = valid_editor_object.object_position[0];
-		inp_pos_y.t_ = valid_editor_object.object_position[1];
-		inp_size_x.t_ = valid_editor_object.object_size[0];
-		inp_size_y.t_ = valid_editor_object.object_size[1];
-		inp_angle.t_ = valid_editor_object.object_angle;
-		
-		inp_time.text = valid_editor_object.object_time;
-		inp_name.text  =  valid_editor_object.object_name;
-		inp_pos_x.text  =  valid_editor_object.object_position[0];
-		inp_pos_y.text  =  valid_editor_object.object_position[1];
-		inp_size_x.text  = valid_editor_object.object_size[0];
-		inp_size_y.text  = valid_editor_object.object_size[1];
-		inp_angle.text  = valid_editor_object.object_angle;
-		
-		inp_time.default_var = valid_editor_object.object_time;
-		inp_name.default_var  =  valid_editor_object.object_name;
-		inp_pos_x.default_var  =  valid_editor_object.object_position[0];
-		inp_pos_y.default_var  =  valid_editor_object.object_position[1];
-		inp_size_x.default_var  = valid_editor_object.object_size[0];
-		inp_size_y.default_var  = valid_editor_object.object_size[1];
-		inp_angle.default_var  = valid_editor_object.object_angle;
-		
-		show_debug_message(inp_time.text);
-		
-		display_name = valid_editor_object.object_name;
-		show_debug_message(editor_object);		
+		for (var i = 0; i < array_length(objects); i++) {
+		    var obj = objects[i];
+		    
+		    obj.visible = true;
+		    
+		    var key = obj.return_key;
+		    
+		    var def_value = "";
+		    
+		    switch (key)
+		    {
+		    	case "time":
+		    		def_value = valid_editor_object.object_time;
+	    		break;
+		    	
+		    	case "name":
+		    		def_value = valid_editor_object.object_name;
+		    	break;
+		    	
+		    	case "pos_x":
+		    		def_value = valid_editor_object.object_position[0];
+		    	break;
+		    	
+		    	case "pos_y":
+			    	def_value = valid_editor_object.object_position[1];
+		    	break;
+		    	
+		    	case "size_x":
+					def_value = valid_editor_object.object_size[0];
+		    	break;
+		    	
+		    	case "size_y":
+		    		def_value = valid_editor_object.object_size[1];
+		    	break;
+		    	
+    		 	case "angle":
+    		 		def_value = valid_editor_object.object_angle;
+		    	break;
+		    	
+		    	default:
+		    		def_value = "default";
+	    		break;
+		    	
+		    }
+		    
+		    obj.t_ = def_value;
+		    obj.text = def_value;
+		    obj.default_var = def_value;
+		}
 	}else
 	{
 		editor_object = valid_editor_object;
