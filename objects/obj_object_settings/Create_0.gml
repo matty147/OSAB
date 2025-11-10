@@ -50,16 +50,30 @@ for (var o = 0; o < array_length(inp_objects_settings); o++)
 
 // creating object for meta editing
 
-inp_meta_id = instance_create_depth(x + 25, y + sprite_height * 1/15 + 40,inp_depth,obj_input_field);
-inp_meta_name = instance_create_depth(x + 25, y + sprite_height * 1/15 + 40,inp_depth,obj_input_field);
-inp_meta_desc = instance_create_depth(x + 25, y + sprite_height * 1/15 + 40,inp_depth,obj_input_field);
-inp_meta_leng = instance_create_depth(x + 25, y + sprite_height * 1/15 + 40,inp_depth,obj_input_field);
-inp_meta_diff = instance_create_depth(x + 25, y + sprite_height * 1/15 + 40,inp_depth,obj_input_field);
+inp_meta_data = [
+	["meta_id",x + 25,y * 1/15 + 40,5,true,1,id], // do we want user to be able and edit these?
+	["meta_name",x + 25,y * 1/15 + 40,5,true,1,id],
+	["meta_desc",x + 25,y * 1/15 + 40,5,true,1,id],
+	["meta_leng",x + 25,y * 1/15 + 40,5,true,1,id],	
+	["meta_diff",x + 25,y * 1/15 + 40,5,true,1,id]	
+];
 
-inp_meta_id.visible = false; 
-inp_meta_name.visible = false; 
-inp_meta_desc.visible = false;
-inp_meta_leng.visible = false;
-inp_meta_diff.visible = false;
+metas = [];
+
+for (var o = 0; o < array_length(inp_meta_data); o++)
+{
+	var meta_obj = inp_meta_data[o];
+	var obj = instance_create_depth(meta_obj[1],meta_obj[2],inp_depth,obj_input_field);
+	obj.visible = false;
+	obj.image_xscale = meta_obj[5];
+	obj.max_text_lenght = meta_obj[3];
+	obj.only_numbers = meta_obj[4];
+	obj._parent = meta_obj[6];
+	obj.return_key = meta_obj[0];
+
+	
+	metas[o] = obj;
+		
+}
 
 set_data = [];

@@ -1,10 +1,9 @@
 if (state == CUR_EDITING.LEVEL_META)
 {
-		// inp_meta_id.visible = true; 
-		// inp_meta_name.visible = true; 
-		// inp_meta_desc.visible = true;
-		// inp_meta_leng.visible = true;
-		// inp_meta_diff.visible = true;
+	for (var i = 0; i < array_length(metas);i++)
+	{
+		metas[i].visible = true;
+	}
 
 
 } else if (state == CUR_EDITING.OBJECT)

@@ -17,7 +17,7 @@ function scr_load_level(){
 		}
 		
 		file_text_close(file);
-		
+			
 		level_data = json_parse(json);
 	
 		return level_data; // should i parse the data or leave it just as it is?
@@ -78,7 +78,7 @@ function scr_save_level(meta_data, level_objects){
 	ds_map_add_map(ds_save_data,"meta",ds_meta);
 	ds_map_add_list(ds_save_data,"level",ds_level);
 	
-	show_debug_message(ds_save_data);
+	// show_debug_message(ds_save_data);
 	
 	json = json_encode(ds_save_data,true);
 	

@@ -86,4 +86,4 @@ if (dragging)
 	x = clamp(timeline.x + position * timeline.line_amount_w, timeline.x, room_width);
 }
 
-if (mark_delete) {show_debug_message("del");instance_destroy();}
+if (mark_delete) {instance_destroy();}

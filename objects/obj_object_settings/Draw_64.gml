@@ -50,4 +50,27 @@ if (state == CUR_EDITING.OBJECT)
 		for (var i = 0; i < array_length(objects); i++) {
 		    objects[i].image_xscale = inp_objects_settings[i][5];
 		}
+}else
+{
+	for (var i = 0; i < array_length(metas);i++)
+	{
+		metas[i].visible = false;
+	}
 }
+
+if (state == CUR_EDITING.LEVEL_META)
+{
+	for (var i = 0; i < array_length(metas);i++)
+	{
+		metas[i].visible = true;
+	}
+}else
+{
+		for (var i = 0; i < array_length(metas);i++)
+	{
+		metas[i].visible = false;
+	}
+}
+
+show_debug_message($"state: {state}");
+show_debug_message($"bool: {state == CUR_EDITING.OBJECT}");
