@@ -1,4 +1,4 @@
-// 2025-11-08 13:08:43
+// 2025-11-10 23:52:05
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_editor_menu_dropdown_button;
@@ -41,6 +41,7 @@ if (mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y, id)
 			with (inp_setting)
 			{
 				state = CUR_EDITING.LEVEL_META;
+				show_debug_message("did meta shits");
 				// state = CUR_EDITING.OPTIONS;
 			}
 			break;
