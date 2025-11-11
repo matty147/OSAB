@@ -1,0 +1,1 @@
+game_window = instance_find(obj_game_window,0);  
