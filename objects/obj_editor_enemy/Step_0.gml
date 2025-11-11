@@ -86,4 +86,11 @@ if (dragging)
 	x = clamp(timeline.x + position * timeline.line_amount_w, timeline.x, room_width);
 }
 
-if (mark_delete) {instance_destroy();}
+if (mark_delete)
+{
+	instance_destroy();
+	if instance_exists(obj_display_object)
+	{
+		instance_destroy(obj_display_object);	
+	}
+}
