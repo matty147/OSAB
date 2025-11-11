@@ -19,3 +19,9 @@ save_text = false;
 return_key = "default";
 
 default_var = "";
+
+text_size = 1.4;
+
+repeat_numb = 0;
+
+star_amount = 5;

@@ -80,7 +80,7 @@ function scr_save_level(meta_data, level_objects){
 	
 	// show_debug_message(ds_save_data);
 	
-	json = json_encode(ds_save_data,true);
+	json = json_encode(ds_save_data,false);
 	
 	var file_location = get_save_filename(".osab|*.osab","");
 	

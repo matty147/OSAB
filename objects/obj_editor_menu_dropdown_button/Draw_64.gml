@@ -1,5 +1,3 @@
-if (live_call()) return live_result;
-
 draw_self();
 
 draw_sprite_ext(spr_editor_meno_dropdown_img,icon_id,x + 32,y + 32,0.75,0.75,1,c_white,1);

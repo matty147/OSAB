@@ -79,10 +79,34 @@ if(t_ == "") && !typing
 	t_ = default_var;
 }
 
+while string_width(t_) * text_size > sprite_width - 15 - 10
+{
+
+	repeat_numb++;
+
+	if string_width(string(t_)) * text_size > sprite_width - 50 - 10
+	{
+		if text_size > 0.7
+		{
+			text_size -= 0.1;
+		}
+		show_debug_message(string_length(t_));
+		
+	}else if text_size < 1 && string_width(string(t_)) * (text_size + 0.1) < sprite_width - 50 - 10
+	{
+		text_size += 0.1;
+	}
+	
+	if repeat_numb > 10
+	{
+		break;
+	}
+} 
+
 draw_set_color(c_white);
 draw_set_halign(fa_left);
 
-draw_text(x + 10, y, $"{t_}{show_typing && typing ? "_" : ""}");
+draw_text_transformed(x + 10,y,string($"{t_}{show_typing && typing ? "_" : ""}"),text_size,text_size,0);
 
 if (t_ != "" && !typing)
 {

@@ -42,20 +42,18 @@ for (var o = 0; o < array_length(inp_objects_settings); o++)
 	obj.only_numbers = obj_data[4];
 	obj._parent = obj_data[6];
 	obj.return_key = obj_data[0];
+	obj.image_yscale = 0.9;
 
-	
 	objects[o] = obj;
-		
 }
 
 // creating object for meta editing
-
 inp_meta_data = [
-	["meta_id",x + 25,y * 1/15 + 40,5,true,1,id], // do we want user to be able and edit these?
-	["meta_name",x + 25,y * 1/15 + 40,5,true,1,id],
-	["meta_desc",x + 25,y * 1/15 + 40,5,true,1,id],
-	["meta_leng",x + 25,y * 1/15 + 40,5,true,1,id],	
-	["meta_diff",x + 25,y * 1/15 + 40,5,true,1,id]	
+	["meta_id",   x + 100,  y + sprite_height * 1/15 + 40,  9, true,  1.3, id], // do we want user to be able and edit ids?
+	["meta_name", x + 100,  y + sprite_height * 1/15 + 70,  25, false, 2.75, id],
+	["meta_desc", x + 100,  y + sprite_height * 1/15 + 100, 25, false, 2.75, id],
+	["meta_leng", x + 100,  y + sprite_height * 1/15 + 130, 5, true,  1, id],	
+	["meta_diff", x + 100,  y + sprite_height * 1/15 + 160, 5, true,  1, id]	
 ];
 
 metas = [];
@@ -70,6 +68,7 @@ for (var o = 0; o < array_length(inp_meta_data); o++)
 	obj.only_numbers = meta_obj[4];
 	obj._parent = meta_obj[6];
 	obj.return_key = meta_obj[0];
+	obj.image_yscale = 0.9;
 
 	
 	metas[o] = obj;
@@ -77,3 +76,5 @@ for (var o = 0; o < array_length(inp_meta_data); o++)
 }
 
 set_data = [];
+
+show_debug_message($"objs: {array_length(objects)} meta: {array_length(metas)}");

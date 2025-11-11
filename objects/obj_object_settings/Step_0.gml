@@ -1,10 +1,29 @@
+/// @description automaticly check and toggle input box visibility
+function update_inputbox_visibility() {
+    var obj_len  = array_length(objects);
+    var meta_len = array_length(metas);
+
+    var show_objects = (state == CUR_EDITING.OBJECT);
+    var show_metas   = (state == CUR_EDITING.LEVEL_META);
+
+    // object inputs
+    for (var i = 0; i < obj_len; i++) {
+        objects[i].visible = show_objects;
+    }
+
+    // meta inputs
+    for (var i = 0; i < meta_len; i++) {
+        metas[i].visible = show_metas;
+    }
+}
+
+
 if (state == CUR_EDITING.LEVEL_META)
 {
 	for (var i = 0; i < array_length(metas);i++)
 	{
 		metas[i].visible = true;
 	}
-
 
 } else if (state == CUR_EDITING.OBJECT)
 {
@@ -115,3 +134,8 @@ if (mouse_check_button_pressed(mb_left))
 		editor_object = valid_editor_object;
 	}
 }
+
+update_inputbox_visibility();
+
+// show_debug_message($"state: {state}");
+// show_debug_message($"bool: {state == CUR_EDITING.OBJECT}");

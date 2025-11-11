@@ -24,7 +24,6 @@ if (mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y, id)
 			with (inp_setting)
 			{
 				state = CUR_EDITING.LEVEL_META;
-				show_debug_message("did meta shits");
 				// state = CUR_EDITING.OPTIONS;
 			}
 			break;
