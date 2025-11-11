@@ -1,4 +1,4 @@
-// 2025-11-08 12:46:17
+// 2025-11-11 22:56:04
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_editor_menu_dropdown;
@@ -33,8 +33,8 @@ if (live_call()) return live_result;
 
 if (mouse_check_button_pressed(mb_left))
 {
-	if position_meeting(mouse_x,mouse_y, obj_editor_menu_dropdown)
-	|| position_meeting(mouse_x,mouse_y, obj_editor_menu_dropdown_bg)
+	if (position_meeting(mouse_x,mouse_y, obj_editor_menu_dropdown)
+	|| position_meeting(mouse_x,mouse_y, obj_editor_menu_dropdown_bg))
 	//|| position_meeting(mouse_x,mouse_y, obj_editor_menu_dropdown_button)
 	{
 		open = true;

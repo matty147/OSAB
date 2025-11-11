@@ -1,4 +1,4 @@
-// 2025-11-05 00:11:15
+// 2025-11-12 00:19:12
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -7,10 +7,48 @@ uses_physics = false;
 // these do not need to be global
 editor_meta = ds_map_create();
 
-save_level = false;
+ds_map_add(editor_meta,"id",0);
+ds_map_add(editor_meta,"name","Default_name");
+ds_map_add(editor_meta,"description","Default");
+ds_map_add(editor_meta,"lenght",0);
+ds_map_add(editor_meta,"diff",0);
 
+save_level = false;
+load_level = false;
+
+set_data = [];
 
 #event step
+
+if (array_length(set_data) != 0)
+{
+	switch (set_data[0])
+	{
+		case "id":
+			editor_meta[? "id"] = set_data[1];
+				break;
+		case "name":
+			editor_meta[? "name"] = set_data[1];
+				break;
+		case "desc":
+			editor_meta[? "description"] = set_data[1];
+				break;
+		case "leng":
+			editor_meta[? "lenght"] = set_data[1];
+				break;
+		case "diff":
+			editor_meta[? "diff"] = set_data[1];
+				break;
+		default:
+			show_debug_message($"wrong key: {set_data[0]}");
+				break;
+	}
+
+	show_debug_message($"updated {set_data[0]} with {set_data[1]}");
+
+	set_data = [];	
+}
+
 if (keyboard_check(vk_control) && keyboard_check_released(ord("S"))) || save_level
 {
 	var save_objects = [];
@@ -21,6 +59,18 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("S"))) || save_lev
 		array_push(save_objects,instance_find(obj_editor_enemy,count));
 	}
 	
+	array_sort(save_objects,function(a,b) // spawntime does not exists
+	{
+		show_debug_message("a: " + string(a.object_time));
+		show_debug_message("b: " + string(b.object_time));
+		return  a.object_time - b.object_time;
+	}
+	);
+	
+	show_debug_message(save_objects);
+	
+	show_debug_message($"{editor_meta[? "name"]}");
+	
 	scr_save_level(editor_meta,save_objects);
 	
 	show_debug_message("level saved!");
@@ -30,7 +80,7 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("S"))) || save_lev
 
 }
 
-if (keyboard_check(vk_control) && keyboard_check_released(ord("O")))
+if (keyboard_check(vk_control) && keyboard_check_released(ord("O")) || load_level)
 {
 	
 	var level_data = scr_load_level();
@@ -44,7 +94,7 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("O")))
 	
 	var sett = instance_find(obj_timeline,0);
 	
-	repeat (array_length(objects))
+	for (var i = 0; i < array_length(objects);i++)
 	{
 		var ede = instance_create_layer(sett.x,sett.y,"containers",obj_editor_enemy);
 		with (ede)
@@ -60,6 +110,32 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("O")))
 	
 			y = timeline.y + sprite_height / 2 + sprite_height * lane_numb;
 		}
+		
+		inp_obj = objects[i];
+		inp_move = inp_obj.move;
+		
+		show_debug_message($"inp: {inp_move}");
+		show_debug_message($"inp: {inp_obj}");
+		
+		ede.object_time = inp_obj.time;
+		ede.object_name = inp_obj.object_type;
+		ede.object_position = inp_obj.position;
+		ede.object_size = inp_obj.size;
+		ede.object_angle = inp_obj.angle;
+		ede.sprite = inp_obj.object_type;
+		
+		// move
+		
+		//{ speed : 5, duration : 5, alpha : 0.40, show_hitbox : 25 }
+		
+		ede.object_move = inp_move.speed;
+		ede.object_image_alpha = inp_move.alpha;
+		ede.object_survive_speed = inp_move.duration; 
+		// ede.obj_move = inp_move.move;
+		ede.obj_show_hitbow = inp_move.show_hitbox;
+		
 	}
+
+	load_level = false;
 
 }

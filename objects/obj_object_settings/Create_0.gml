@@ -48,12 +48,15 @@ for (var o = 0; o < array_length(inp_objects_settings); o++)
 }
 
 // creating object for meta editing
+
+var edit_man = instance_find(manager_editor,0);
+
 inp_meta_data = [
-	["meta_id",   x + 100,  y + sprite_height * 1/15 + 40,  9, true,  1.3, id], // do we want user to be able and edit ids?
-	["meta_name", x + 100,  y + sprite_height * 1/15 + 70,  25, false, 2.75, id],
-	["meta_desc", x + 100,  y + sprite_height * 1/15 + 100, 25, false, 2.75, id],
-	["meta_leng", x + 100,  y + sprite_height * 1/15 + 130, 5, true,  1, id],	
-	["meta_diff", x + 100,  y + sprite_height * 1/15 + 160, 5, true,  1, id]	
+	["id",   x + 100,  y + sprite_height * 1/15 + 40,  9,  true,  1.3,  edit_man], // do we want user to be able and edit ids?
+	["name", x + 100,  y + sprite_height * 1/15 + 70,  25, false, 2.75, edit_man],
+	["desc", x + 100,  y + sprite_height * 1/15 + 100, 25, false, 2.75, edit_man],
+	["leng", x + 100,  y + sprite_height * 1/15 + 130, 5,  true,  1,    edit_man],	
+	["diff", x + 100,  y + sprite_height * 1/15 + 160, 5,  true,  1,    edit_man]
 ];
 
 metas = [];

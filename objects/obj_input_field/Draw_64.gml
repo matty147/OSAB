@@ -79,25 +79,25 @@ if(t_ == "") && !typing
 	t_ = default_var;
 }
 
-while string_width(t_) * text_size > sprite_width - 15 - 10
+while (string_width(t_) * text_size > sprite_width - 15 - 10)
 {
 
 	repeat_numb++;
 
-	if string_width(string(t_)) * text_size > sprite_width - 50 - 10
+	if (string_width(string(t_)) * text_size > sprite_width - 50 - 10)
 	{
-		if text_size > 0.7
+		if (text_size > 0.7)
 		{
 			text_size -= 0.1;
 		}
 		show_debug_message(string_length(t_));
 		
-	}else if text_size < 1 && string_width(string(t_)) * (text_size + 0.1) < sprite_width - 50 - 10
+	}else if (text_size < 1 && string_width(string(t_)) * (text_size + 0.1) < sprite_width - 50 - 10)
 	{
 		text_size += 0.1;
 	}
 	
-	if repeat_numb > 10
+	if (repeat_numb > 10)
 	{
 		break;
 	}
@@ -120,7 +120,7 @@ if (!typing && save_text) // set back to origin
 	if (instance_exists(_parent))
 	{
 		show_debug_message($"updated data: {t_}");
-		//_parent = t_;
+		
 		if (t_ != "")
 		{
 			_parent.set_data = [return_key,t_];

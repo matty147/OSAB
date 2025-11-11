@@ -1,4 +1,4 @@
-// 2025-11-10 23:52:57
+// 2025-11-12 00:09:17
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_object_settings;
@@ -49,20 +49,21 @@ for (var o = 0; o < array_length(inp_objects_settings); o++)
 	obj.only_numbers = obj_data[4];
 	obj._parent = obj_data[6];
 	obj.return_key = obj_data[0];
+	obj.image_yscale = 0.9;
 
-	
 	objects[o] = obj;
-		
 }
 
 // creating object for meta editing
 
+var edit_man = instance_find(manager_editor,0);
+
 inp_meta_data = [
-	["meta_id",x + 25,y * 1/15 + 40,5,true,1,id], // do we want user to be able and edit these?
-	["meta_name",x + 25,y * 1/15 + 40,5,true,1,id],
-	["meta_desc",x + 25,y * 1/15 + 40,5,true,1,id],
-	["meta_leng",x + 25,y * 1/15 + 40,5,true,1,id],	
-	["meta_diff",x + 25,y * 1/15 + 40,5,true,1,id]	
+	["id",   x + 100,  y + sprite_height * 1/15 + 40,  9,  true,  1.3,  edit_man], // do we want user to be able and edit ids?
+	["name", x + 100,  y + sprite_height * 1/15 + 70,  25, false, 2.75, edit_man],
+	["desc", x + 100,  y + sprite_height * 1/15 + 100, 25, false, 2.75, edit_man],
+	["leng", x + 100,  y + sprite_height * 1/15 + 130, 5,  true,  1,    edit_man],	
+	["diff", x + 100,  y + sprite_height * 1/15 + 160, 5,  true,  1,    edit_man]
 ];
 
 metas = [];
@@ -77,6 +78,7 @@ for (var o = 0; o < array_length(inp_meta_data); o++)
 	obj.only_numbers = meta_obj[4];
 	obj._parent = meta_obj[6];
 	obj.return_key = meta_obj[0];
+	obj.image_yscale = 0.9;
 
 	
 	metas[o] = obj;
@@ -85,14 +87,34 @@ for (var o = 0; o < array_length(inp_meta_data); o++)
 
 set_data = [];
 
-#event step
+show_debug_message($"objs: {array_length(objects)} meta: {array_length(metas)}");
+
+#event step automaticly check and toggle input box visibility
+function update_inputbox_visibility() {
+    var obj_len  = array_length(objects);
+    var meta_len = array_length(metas);
+
+    var show_objects = (state == CUR_EDITING.OBJECT);
+    var show_metas   = (state == CUR_EDITING.LEVEL_META);
+
+    // object inputs
+    for (var i = 0; i < obj_len; i++) {
+        objects[i].visible = show_objects;
+    }
+
+    // meta inputs
+    for (var i = 0; i < meta_len; i++) {
+        metas[i].visible = show_metas;
+    }
+}
+
+
 if (state == CUR_EDITING.LEVEL_META)
 {
 	for (var i = 0; i < array_length(metas);i++)
 	{
 		metas[i].visible = true;
 	}
-
 
 } else if (state == CUR_EDITING.OBJECT)
 {
@@ -204,26 +226,19 @@ if (mouse_check_button_pressed(mb_left))
 	}
 }
 
+update_inputbox_visibility();
+
+// show_debug_message($"state: {state}");
+// show_debug_message($"bool: {state == CUR_EDITING.OBJECT}");
+
 #event draw_gui
+if (live_call()) return live_result;
+
 if (state == CUR_EDITING.OBJECT)
 {
 
 	if (editor_object != noone)
 	{
-	
-		//// menu name
-		//var object_name = string_replace_all(display_name,"_"," ");
-	
-		//draw_set_valign(fa_middle);
-		//draw_set_halign(fa_center);
-		//draw_set_color(c_white);
-	
-		//draw_text_transformed(x + sprite_width / 2, y + string_height(object_name) * 2, object_name,2,2,0);
-	
-		//draw_line_color(x  + 100, y + string_height(object_name) * 2 + 15,x  + sprite_width - 100,y + string_height(object_name) * 2 + 15,c_gray,c_gray);
-	
-		//general
-	
 		draw_set_valign(fa_middle);
 		draw_set_halign(fa_left);
 		draw_set_color(c_white);
@@ -245,39 +260,17 @@ if (state == CUR_EDITING.OBJECT)
 		draw_text_transformed(x + 25, y + sprite_height * 1/3 + 70,$"Size:       W            H",1.25,1.25,0);
 		draw_text_transformed(x + 25, y + sprite_height * 1/3 + 100,$"Angle:",1.25,1.25,0);
 	}
-	else
-	{
-		// Hide all
-		for (var i = 0; i < array_length(objects); i++) {
-		    objects[i].visible = false;
-		}
-
-	}
-
-		for (var i = 0; i < array_length(objects); i++) {
-		    objects[i].image_xscale = inp_objects_settings[i][5];
-		}
-}else
+}else if (state == CUR_EDITING.LEVEL_META)
 {
-	for (var i = 0; i < array_length(metas);i++)
-	{
-		metas[i].visible = false;
-	}
+		draw_set_valign(fa_middle);
+		draw_set_halign(fa_left);
+		draw_set_color(c_white);
+	
+		draw_text_transformed(x + 25, y + sprite_height * 1/15,"Meta",1.75,1.75,0);
+		draw_line_color(x  + 25, y + sprite_height * 1/15 + 15,x  + string_width("Meta") * 2.5, y + sprite_height * 1/15 + 15,c_gray,c_gray);
+		draw_text_transformed(x + 25, y + sprite_height * 1/15 + 40,$"Id: ",1.25,1.25,0); // should the user be able to edit this?
+		draw_text_transformed(x + 25, y + sprite_height * 1/15 + 70,$"Name: ",1.25,1.25,0);
+		draw_text_transformed(x + 25, y + sprite_height * 1/15 + 100,$"Desc: ",1.25,1.25,0);
+		draw_text_transformed(x + 25, y + sprite_height * 1/15 + 130,$"Leng: ",1.25,1.25,0); // calc automaticly i guess?
+		draw_text_transformed(x + 25, y + sprite_height * 1/15 + 160,$"Diff: ",1.25,1.25,0); // -//-
 }
-
-if (state == CUR_EDITING.LEVEL_META)
-{
-	for (var i = 0; i < array_length(metas);i++)
-	{
-		metas[i].visible = true;
-	}
-}else
-{
-		for (var i = 0; i < array_length(metas);i++)
-	{
-		metas[i].visible = false;
-	}
-}
-
-show_debug_message($"state: {state}");
-show_debug_message($"bool: {state == CUR_EDITING.OBJECT}");

@@ -38,13 +38,13 @@ function scr_save_level(meta_data, level_objects){
 	ds_meta = ds_map_create();
 	ds_level = ds_list_create();
 	
-	empty = !ds_map_empty(ds_meta);
-
-	ds_map_add(ds_meta,"id",empty ? meta_data.id : "0");
-	ds_map_add(ds_meta,"name",empty ? meta_data.name: "Default name");
-	ds_map_add(ds_meta,"description",empty ? meta_data.description: "Default description");
-	ds_map_add(ds_meta,"lenght",empty ? meta_data.length: 0); // i am a idiot and cannot change this D: (lenght/length)
-	ds_map_add(ds_meta,"diff",empty ? meta_data.diff: 0);
+	empty = ds_map_empty(meta_data);
+	
+	ds_map_add(ds_meta,"id", empty ? "0" : meta_data[? "id"]);
+	ds_map_add(ds_meta,"name", empty ? "Default name": meta_data[? "name"]);
+	ds_map_add(ds_meta,"description", empty ? "Default description" : meta_data[? "desc"]);
+	ds_map_add(ds_meta,"lenght", empty ? 0 :  meta_data[? "leng"]); // i am a idiot and cannot change this D: (lenght/length)
+	ds_map_add(ds_meta,"diff", empty ? 0 : meta_data[? "diff"]);
 
     for (var i = 0; i < array_length(level_objects); i++) {
         var obj = level_objects[i];

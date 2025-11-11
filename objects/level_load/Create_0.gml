@@ -14,7 +14,7 @@ player = instance_find(obj_player,0);
 	
 	level_data = undefined;
 	
-	if file_exists(global.level_name)
+	if (file_exists(global.level_name))
 	{
 	
 		var json = "";

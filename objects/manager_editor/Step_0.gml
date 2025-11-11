@@ -1,3 +1,33 @@
+
+if (array_length(set_data) != 0)
+{
+	switch (set_data[0])
+	{
+		case "id":
+			editor_meta[? "id"] = set_data[1];
+				break;
+		case "name":
+			editor_meta[? "name"] = set_data[1];
+				break;
+		case "desc":
+			editor_meta[? "desc"] = set_data[1];
+				break;
+		case "leng":
+			editor_meta[? "leng"] = set_data[1];
+				break;
+		case "diff":
+			editor_meta[? "diff"] = set_data[1];
+				break;
+		default:
+			show_debug_message($"wrong key: {set_data[0]}");
+				break;
+	}
+
+	show_debug_message($"updated {set_data[0]} with {set_data[1]}");
+
+	set_data = [];	
+}
+
 if (keyboard_check(vk_control) && keyboard_check_released(ord("S"))) || save_level
 {
 	var save_objects = [];
@@ -17,6 +47,8 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("S"))) || save_lev
 	);
 	
 	show_debug_message(save_objects);
+	
+	show_debug_message($"{editor_meta[? "name"]}");
 	
 	scr_save_level(editor_meta,save_objects);
 	
