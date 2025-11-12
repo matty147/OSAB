@@ -113,6 +113,11 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("O")) || load_leve
 		// ede.obj_move = inp_move.move;
 		ede.obj_show_hitbow = inp_move.show_hitbox;
 		
+		editor_meta[? "id"] = meta.id;
+		editor_meta[? "name"] = meta.name;
+		editor_meta[? "desc"] = meta.description;
+		editor_meta[? "leng"] = meta.lenght;
+		editor_meta[? "diff"] = meta.diff;
 	}
 
 	load_level = false;

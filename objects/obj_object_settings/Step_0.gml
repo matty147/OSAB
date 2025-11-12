@@ -22,8 +22,49 @@ if (state == CUR_EDITING.LEVEL_META)
 {
 	for (var i = 0; i < array_length(metas);i++)
 	{
+		var obj = metas[i];
+		
 		metas[i].visible = true;
+		
+	    var key = obj.return_key;
+		    
+		var def_value = "";
+		
+		var ed_manager = instance_find(manager_editor,0);
+		
+		switch (key)
+		{
+			case "id":
+				def_value = ed_manager.editor_meta[? "id"];
+			break;
+			
+			case "name":
+				def_value = ed_manager.editor_meta[? "name"];
+			break;
+			
+			case "desc":
+				def_value = ed_manager.editor_meta[? "desc"];
+			break;
+			
+			case "leng":
+				def_value = ed_manager.editor_meta[? "leng"];
+			break;
+			
+			case "diff":
+				def_value = ed_manager.editor_meta[? "diff"];
+			break;
+			
+			default:
+				show_debug_message($"invalid key: {key}");
+			break;
+		}
+		
+	    obj.t_ = def_value;
+	    obj.text = def_value;
+	    obj.default_var = def_value;
 	}
+
+	
 
 } else if (state == CUR_EDITING.OBJECT)
 {
