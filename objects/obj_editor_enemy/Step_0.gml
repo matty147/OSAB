@@ -89,7 +89,7 @@ if (dragging)
 if (mark_delete)
 {
 	instance_destroy();
-	if instance_exists(obj_display_object)
+	if (instance_exists(obj_display_object))
 	{
 		instance_destroy(obj_display_object);	
 	}

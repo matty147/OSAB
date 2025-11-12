@@ -101,7 +101,21 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("O")) || load_leve
 		ede.object_position = inp_obj.position;
 		ede.object_size = inp_obj.size;
 		ede.object_angle = inp_obj.angle;
-		ede.sprite = inp_obj.object_type;
+		ede.object_sprite = inp_obj.object_type;
+		
+		ede.object_speed = inp_obj.object_speed;
+		ede.object_alpha = inp_obj.object_image_alpha;
+		// ede.object_duration = inp_obj.object_;
+		// ede.object_move = inp_obj.object_;
+		// ede.object_show_hitbox = inp_obj.object_;
+		// ede.object_move_type = inp_obj.object_;
+		// ede.object_spline = inp_obj.object_;
+		// ede.object_positions = inp_obj.object_;
+		// ede.object_bounce = inp_obj.object_;
+		// ede.object_gravity = inp_obj.object_;
+		// ede.object_friction = inp_obj.object_;
+		// ede.object_end_scale = inp_obj.object_;
+		// ede.object_scale_speed = inp_obj.object_;
 		
 		// move
 		

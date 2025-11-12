@@ -59,6 +59,7 @@ inp_meta_data = [
 	["diff", x + 100,  y + sprite_height * 1/15 + 160, 5,  true,  1,    edit_man]
 ];
 
+update_meta = false;
 metas = [];
 
 for (var o = 0; o < array_length(inp_meta_data); o++)

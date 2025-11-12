@@ -39,11 +39,22 @@ object_angle = 45;
 sprite = "circle";
 
 // move
-object_move = 1;
+object_speed = 1;
 object_image_alpha = 1;
 object_survive_speed = 5; 
-obj_move = true; // no clue what this is but its here :D
-obj_show_hitbow = 25;
+object_move = true; // no clue what this is but its here :D
+object_show_hitbow = 25;
+object_move_type = "None";
+
+// will have to add all the values from move_type here T-T
+
+object_spline = false;
+object_positions = [];
+object_bounce = [];
+object_gravity = 0;
+object_friction = true;
+object_end_scale = [];
+object_scale_speed = [];
 
 mark_delete = false; // gml is stupid and i cant mark and create object at the same time for some reason??????
 
