@@ -1,4 +1,4 @@
-// 2025-11-12 00:29:53
+// 2025-11-14 00:18:58
 /// @description saves data into a file
 /// @returns parsed json
 function scr_load_level(){
@@ -58,11 +58,35 @@ function scr_save_level(meta_data, level_objects){
         ds_map_add(ds_object_data, "size", obj.object_size);
         ds_map_add(ds_object_data, "angle", obj.object_angle);
 		
-		ds_map_add(ds_move,"speed",1);
-		ds_map_add(ds_move,"alpha",1);
-		ds_map_add(ds_move,"duration",5);
-		ds_map_add(ds_move,"move",true);
-		ds_map_add(ds_move,"show_hitbox",0);
+		// object_speed = 1;
+		// object_image_alpha = 1;
+		// object_survive_speed = 5; 
+		// object_move = true; // no clue what this is but its here :D
+		// object_show_hitbow = 25;
+		// object_move_type = "None";
+		
+		// object_spline = false;
+		// object_positions = [];
+		// object_bounce = [];
+		// object_gravity = 0; 
+		// object_friction = true;
+		// object_end_scale = [];
+		// object_scale_speed = [];
+		
+		
+		ds_map_add(ds_move,"speed",obj.object_speed);
+		ds_map_add(ds_move,"alpha",obj.object_image_alpha);
+		ds_map_add(ds_move,"duration",obj.object_survive_speed);
+		ds_map_add(ds_move,"move",obj.object_move);
+		ds_map_add(ds_move,"show_hitbox",obj.object_show_hitbow);
+		ds_map_add(ds_move,"move_type",obj.object_move_type);
+		ds_map_add(ds_move,"spline",obj.object_spline);
+		ds_map_add(ds_move,"positions",obj.object_positions);
+		ds_map_add(ds_move,"bounce",obj.object_bounce);
+		ds_map_add(ds_move,"gravity",obj.object_gravity);
+		ds_map_add(ds_move,"friction",obj.object_friction);
+		ds_map_add(ds_move,"end_scale",obj.object_end_scale);
+		ds_map_add(ds_move,"scale_speed",obj.object_scale_speed);
 		
 		ds_map_add_map(ds_object_data,"move",ds_move);
     

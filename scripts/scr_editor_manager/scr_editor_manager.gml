@@ -67,7 +67,7 @@ function scr_save_level(meta_data, level_objects){
 		// object_spline = false;
 		// object_positions = [];
 		// object_bounce = [];
-		// object_gravity = 0;
+		// object_gravity = 0; 
 		// object_friction = true;
 		// object_end_scale = [];
 		// object_scale_speed = [];
@@ -80,7 +80,7 @@ function scr_save_level(meta_data, level_objects){
 		ds_map_add(ds_move,"show_hitbox",obj.object_show_hitbow);
 		ds_map_add(ds_move,"move_type",obj.object_move_type);
 		ds_map_add(ds_move,"spline",obj.object_spline);
-		ds_map_add(ds_move,"positions",obj.object_position);
+		ds_map_add(ds_move,"positions",obj.object_positions);
 		ds_map_add(ds_move,"bounce",obj.object_bounce);
 		ds_map_add(ds_move,"gravity",obj.object_gravity);
 		ds_map_add(ds_move,"friction",obj.object_friction);

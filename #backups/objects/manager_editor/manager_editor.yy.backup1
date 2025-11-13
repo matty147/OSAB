@@ -1,4 +1,4 @@
-// 2025-11-12 00:19:12
+// 2025-11-14 00:18:12
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -7,10 +7,12 @@ uses_physics = false;
 // these do not need to be global
 editor_meta = ds_map_create();
 
-ds_map_add(editor_meta,"id",0);
+randomise();
+
+ds_map_add(editor_meta,"id",irandom_range(0,999999999));
 ds_map_add(editor_meta,"name","Default_name");
-ds_map_add(editor_meta,"description","Default");
-ds_map_add(editor_meta,"lenght",0);
+ds_map_add(editor_meta,"desc","Default");
+ds_map_add(editor_meta,"leng",0);
 ds_map_add(editor_meta,"diff",0);
 
 save_level = false;
@@ -19,7 +21,6 @@ load_level = false;
 set_data = [];
 
 #event step
-
 if (array_length(set_data) != 0)
 {
 	switch (set_data[0])
@@ -31,10 +32,10 @@ if (array_length(set_data) != 0)
 			editor_meta[? "name"] = set_data[1];
 				break;
 		case "desc":
-			editor_meta[? "description"] = set_data[1];
+			editor_meta[? "desc"] = set_data[1];
 				break;
 		case "leng":
-			editor_meta[? "lenght"] = set_data[1];
+			editor_meta[? "leng"] = set_data[1];
 				break;
 		case "diff":
 			editor_meta[? "diff"] = set_data[1];
@@ -118,11 +119,27 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("O")) || load_leve
 		show_debug_message($"inp: {inp_obj}");
 		
 		ede.object_time = inp_obj.time;
-		ede.object_name = inp_obj.object_type;
+		ede.Sprite = inp_obj.object_type;
 		ede.object_position = inp_obj.position;
 		ede.object_size = inp_obj.size;
 		ede.object_angle = inp_obj.angle;
-		ede.sprite = inp_obj.object_type;
+		ede.object_sprite = inp_obj.object_type;
+		
+		inp_move = inp_obj.move;
+		
+		ede.object_speed =			variable_struct_exists(inp_move,"speed")? inp_move.speed : speed;
+		ede.object_alpha =			variable_struct_exists(inp_move,"alpha")? inp_move.alpha : image_alpha;
+		ede.object_show_hitbox =	variable_struct_exists(inp_move,"duration")? real(inp_move.duration) * 85 : 25;
+		ede.object_duration =		variable_struct_exists(inp_move,"show_hitbox")? inp_move.show_hitbox : false;
+		ede.object_move =			true;
+		ede.object_move_type =		variable_struct_exists(inp_move,"move_type")? inp_move.move_type :  "None";
+		ede.object_spline = 		variable_struct_exists(inp_move,"spline")? inp_move.spline : false;
+		ede.object_positions =		variable_struct_exists(inp_move,"positions")? inp_move.positions : [];
+		ede.object_bounce = 		variable_struct_exists(inp_move,"bounce")? inp_move.bounce : false;
+		ede.object_gravity =		variable_struct_exists(inp_move,"gravity")? inp_move.gravity : 0;
+		ede.object_friction =		variable_struct_exists(inp_move,"friction")? inp_move.friction : false;
+		ede.object_end_scale =		variable_struct_exists(inp_move,"end_scale")? inp_move.end_scale : ede.object_size ;
+		ede.object_scale_speed =	variable_struct_exists(inp_move,"scale_speed")? inp_move.scale_speed : ede.object_size;
 		
 		// move
 		
@@ -134,6 +151,11 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("O")) || load_leve
 		// ede.obj_move = inp_move.move;
 		ede.obj_show_hitbow = inp_move.show_hitbox;
 		
+		editor_meta[? "id"] = meta.id;
+		editor_meta[? "name"] = meta.name;
+		editor_meta[? "desc"] = meta.description;
+		editor_meta[? "leng"] = meta.lenght;
+		editor_meta[? "diff"] = meta.diff;
 	}
 
 	load_level = false;
