@@ -1,4 +1,4 @@
-/// @func   spline(t, knotlist)
+/// @func   scr_spline(t, knotlist)
 ///
 /// @desc   Returns the Catmull-Rom interpolation of the given
 ///         knot values at the given parameter position.
@@ -17,7 +17,7 @@
 ///
 /// GMLscripts.com/license
 
-function spline(t, knotlist)
+function scr_spline(t, knotlist)
 {
     var nknots, nspans, span, k, c3, c2, c1, c0;
     nknots = ds_list_size(knotlist);

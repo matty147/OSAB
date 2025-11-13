@@ -5,4 +5,4 @@ if instance_exists(game_window)
     draw_self();
     
     gpu_set_scissor(0, 0, display_get_width(), display_get_height());
-}
+}                                                             

@@ -1,4 +1,4 @@
-if set_up
+if (set_up)
 {
 
 	var spr = $"spr_{object_sprite}";
@@ -15,15 +15,15 @@ if set_up
 	set_up = false;
 	
 	
-	if move_type == "bounce"
+	if (move_type == "bounce")
 	{
 		hspd = bounce[0];
 		vspd = bounce[1];
 	}
 
-	show_debug_message($"move_type: {move_type}")
+	show_debug_message($"move_type: {move_type}");
 
-if move_type == "position" && splines
+if (move_type == "position" && splines)
 {
 	show_debug_message(array_length(positions));
 
@@ -40,14 +40,14 @@ if move_type == "position" && splines
 
 }
 
-if !global.pause && move
+if (!global.pause && move)
 {
-	if show_hitbox < 00
+	if (show_hitbox < 00)
 	{
 		hitbox = true;
 	}else show_hitbox--;
 
-	if hitbox == true
+	if (hitbox == true)
 	{
 		image_alpha = 1; 
 	}
@@ -59,7 +59,7 @@ if !global.pause && move
 			x += cos(real(angle) * (pi / 180)) * real(_speed);
 			y += sin(real(angle) * (pi / 180)) * real(_speed);
 		
-			if survive_speed < 0
+			if (survive_speed < 0)
 			{
 				instance_destroy();
 			}else survive_speed--;
@@ -67,17 +67,17 @@ if !global.pause && move
 		
 		case "position":
 			
-			if splines
+			if (splines)
 			{
 				
 				//show_debug_message($"spline cur loc: {spline_cur_location}")
 				
-				x = spline(spline_cur_location, points_x);
-				y = spline(spline_cur_location, points_y);
+				x = scr_spline(spline_cur_location, points_x);
+				y = scr_spline(spline_cur_location, points_y);
 			
 				spline_cur_location += _speed;
 			
-				if spline_cur_location >= 1
+				if (spline_cur_location >= 1)
 				{
 					ds_list_destroy(points_x);
 					ds_list_destroy(points_y);
@@ -89,13 +89,13 @@ if !global.pause && move
 				var _x = positions[positions_cur_position][0];
 				var _y = positions[positions_cur_position][1];
 		
-				if abs(x - _x) <= 10 && abs(y - _y) <= 10
+				if (abs(x - _x) <= 10 && abs(y - _y) <= 10)
 				{
 					positions_cur_position++;
 				}else move_towards_point(_x,_y,_speed);		
 			
 			
-				if positions_cur_position >= array_length(positions)
+				if (positions_cur_position >= array_length(positions))
 				{
 					instance_destroy();
 				}
@@ -108,7 +108,7 @@ if !global.pause && move
 			
 			x += hspd;
 			
-			if y < room_height - sprite_height/2
+			if (y < room_height - sprite_height / 2)
 			{
 				y += vspd;
 			}
@@ -122,7 +122,7 @@ if !global.pause && move
 				hspd *= 0.9;
 			}
 
-			if survive_speed < 0
+			if (survive_speed < 0)
 			{
 				instance_destroy();
 			}else survive_speed--;
@@ -133,7 +133,7 @@ if !global.pause && move
 					image_xscale = lerp(image_xscale, end_scale[0] * real(level_object_map[? object_sprite]),scale_speed[0]);
 					image_yscale = lerp(image_yscale, end_scale[1] * real(level_object_map[? object_sprite]),scale_speed[1]);
 					
-					if survive_speed < 0
+					if (survive_speed < 0)
 					{
 						instance_destroy();
 					}else survive_speed--;
@@ -143,7 +143,7 @@ if !global.pause && move
 			default:
 				show_debug_message("invalid object");
 				instance_destroy();
-				break
+				break;
 	}
 
 }else move_towards_point(x,y,0);

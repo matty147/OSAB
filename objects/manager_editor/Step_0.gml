@@ -1,4 +1,3 @@
-
 if (array_length(set_data) != 0)
 {
 	switch (set_data[0])
@@ -103,19 +102,43 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("O")) || load_leve
 		ede.object_angle = inp_obj.angle;
 		ede.object_sprite = inp_obj.object_type;
 		
-		ede.object_speed = inp_obj.object_speed;
-		ede.object_alpha = inp_obj.object_image_alpha;
-		// ede.object_duration = inp_obj.object_;
-		// ede.object_move = inp_obj.object_;
-		// ede.object_show_hitbox = inp_obj.object_;
-		// ede.object_move_type = inp_obj.object_;
-		// ede.object_spline = inp_obj.object_;
-		// ede.object_positions = inp_obj.object_;
-		// ede.object_bounce = inp_obj.object_;
-		// ede.object_gravity = inp_obj.object_;
-		// ede.object_friction = inp_obj.object_;
-		// ede.object_end_scale = inp_obj.object_;
-		// ede.object_scale_speed = inp_obj.object_;
+		
+// instance.object_sprite = objects[current_index].object_type;
+// instance.image_xscale = size[0];
+// instance.image_yscale = size[1];
+// instance.angle = objects[current_index].angle;
+// instance._speed = move.speed;
+// instance.image_alpha = move.alpha;
+// instance.survive_speed = real(move.duration) * 85;
+// instance.move = true; //????
+// instance.show_hitbox = real(move.show_hitbox);
+ 
+// instance.move_type = variable_struct_exists(move, "move_type") ? move.move_type : "None";	
+// instance.positions = variable_struct_exists(move, "positions") ? move.positions : [];
+// instance.bounce = variable_struct_exists(move, "bounce") ? move.bounce: [0,0]; 
+// instance._gravity = variable_struct_exists(move, "gravity") ? move.gravity: 0;
+// instance.splines = variable_struct_exists(move, "spline") ? move.spline: false;
+// instance._friction = variable_struct_exists(move, "friction") ? move.friction: false;
+// instance.end_scale = variable_struct_exists(move, "end_scale") ? move.end_scale: [size[0],size[1]];
+// instance.scale_speed = variable_struct_exists(move, "end_scale") ? move.scale_speed: [move.speed,move.speed];
+		
+		inp_move = inp_obj.move;
+		
+		show_debug_message($"inpmove: {inp_move}");
+		
+		ede.object_speed =			inp_move.speed;
+		ede.object_alpha =			inp_move.alpha;
+		ede.object_show_hitbox =	inp_move.duration;
+		ede.object_duration =		inp_move.show_hitbox;
+		ede.object_move =			true;
+		ede.object_move_type =		inp_move.move_type;
+		ede.object_spline = 		(undefined != inp_move.spline) ? inp_move.spline : false;
+		ede.object_positions =		inp_move.positions;
+		ede.object_bounce = 		inp_move.bounce;
+		ede.object_gravity =		inp_move.gravity;
+		ede.object_friction =		inp_move.friction;
+		ede.object_end_scale =		inp_move.end_scale;
+		ede.object_scale_speed =	inp_move.scale_speed;
 		
 		// move
 		

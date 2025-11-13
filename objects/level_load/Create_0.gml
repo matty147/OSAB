@@ -42,14 +42,14 @@ player = instance_find(obj_player,0);
 	show_debug_message(meta.lenght);
 	show_debug_message(meta.diff);
 	
-	show_debug_message($"aaa {objects[0]}")
+	show_debug_message($"aaa {objects[0]}");
 	
 	show_debug_message("finished");
 	read_file = true;
 	
 	show_debug_message("object count: " + string(array_length(objects)));
 	
-	if array_length(objects) <= 0
+	if (array_length(objects) <= 0)
 	{
 		show_message("Error: This level contains no content! Returning to the main menu.");
 		room_goto(main_menu);
@@ -65,7 +65,7 @@ player = instance_find(obj_player,0);
 	
 	show_debug_message("found song: " + string(search));
 
-	if search != ""
+	if (search != "")
 	{
 		pitch = 1.0;
 		sound_id = audio_create_stream(filename_dir(global.level_name) + "\\" + search);

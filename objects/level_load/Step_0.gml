@@ -1,6 +1,6 @@
-	if floor(global.runtime) == 0  && search != ""
+	if (floor(global.runtime) == 0  && search != "")
 	{
-		if !audio_is_playing(sound_id)
+		if (!audio_is_playing(sound_id))
 		{
 			show_debug_message("playing sound");
 			audio_play_sound(sound_id, 1, false,1);
@@ -8,15 +8,15 @@
 		
 	}
 	
-	if global.runtime > 1 && search != "" && !win
+	if (global.runtime > 1 && search != "" && !win)
 	{
 	
-		if global.pause && !player.dead
+		if (global.pause && !player.dead)
 		{
 			audio_pause_sound(sound_id);
 		}else 
 		{
-			if audio_is_paused(sound_id)
+			if (audio_is_paused(sound_id))
 			{
 				audio_resume_sound(sound_id);
 			}
@@ -24,7 +24,7 @@
 	}
 	
 	//spawning enemies on the same frame
-	while current_index < array_length(objects) && objects[current_index].time == floor(global.runtime)
+	while (current_index < array_length(objects) && objects[current_index].time == floor(global.runtime))
 	{
 			
 		var position = objects[current_index].position;
@@ -55,46 +55,46 @@
 		current_index++;
 	}
 	
-	if floor(global.runtime) <= objects[array_length(objects) - 1].time && !instance_exists(obj_enemy)
+	if (floor(global.runtime) <= objects[array_length(objects) - 1].time && !instance_exists(obj_enemy))
 	{
 		end_game = 250;
-	}else if !global.pause
+	}else if (!global.pause)
 	{	
 		end_game--;
 	}
 	
-	if end_game = 249 && search != ""
+	if (end_game = 249 && search != "")
 	{
 		audio_sound_gain(sound_id,0,7000);	
 	}
 	
-	if player.dead && search != "" && !instance_exists(obj_enemy)
+	if (player.dead && search != "" && !instance_exists(obj_enemy))
 	{
 		show_debug_message(pitch);
 		pitch -= 0.01;
 		audio_sound_pitch(sound_id, pitch);
 		
-		if pitch < 0
+		if (pitch < 0)
 		{
 			audio_stop_sound(sound_id);
 		}
 	}
 
-	if instance_number(obj_enemy) <= 0 && end_game < 0
+	if (instance_number(obj_enemy) <= 0 && end_game < 0)
 	{
 		win = true;
 		global.pause = true;
 		
-		if search != ""
+		if (search != "")
 		{
 			audio_stop_sound(sound_id);
-			if audio_deleted
+			if (audio_deleted)
 			{
 				audio_deleted = audio_destroy_stream(sound_id);
 			}
 		}
 		
-		if !global.cleared && global.story_level
+		if (!global.cleared && global.story_level)
 		{
 			show_debug_message("cleared + story" + string(global.cleared_levels));
 			global.cleared_levels++;
