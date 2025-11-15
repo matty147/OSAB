@@ -1,9 +1,19 @@
-// 2025-11-07 00:44:54
+// 2025-11-15 17:51:22
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
 
 #event create
+game_window = instance_find(obj_game_window,0);  
 
+#event draw
+if (instance_exists(game_window))
+{
+    gpu_set_scissor(game_window.x, game_window.y, game_window.sprite_width, game_window.sprite_height);
+    
+    draw_self();
+    
+    gpu_set_scissor(0, 0, display_get_width(), display_get_height());
+}                                                             
 
 #event draw_gui

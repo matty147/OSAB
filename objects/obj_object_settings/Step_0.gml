@@ -1,4 +1,7 @@
-/// @description automaticly check and toggle input box visibility
+if (live_call()) return live_result;
+
+// automaticly check and toggle input box visibility
+
 function update_inputbox_visibility() {
     var obj_len  = array_length(objects);
     var meta_len = array_length(metas);
@@ -76,10 +79,20 @@ if (state == CUR_EDITING.LEVEL_META)
 		switch (set_data[0])
 		{
 			case "time":
-				valid_editor_object.object_time = set_data[1];
+				valid_editor_object.object_time = real(set_data[1]);
+				valid_editor_object.editor_object_time = real(set_data[1]);
+				
+				show_debug_message(set_data[1]);
+				
+				with (valid_editor_object)
+				{
+					editor_x = timeline.x + timeline.line_amount_w * object_time;
+					position = round((x - timeline.x) / timeline.line_amount_w) - timeline.timeline_offset;
+				}
+				
 					break;
 			case "name":
-				valid_editor_object.object_name = set_data[1];
+				valid_editor_object.object_name = set_data[1]; 
 					break;
 			case "pos_x":
 				valid_editor_object.object_position[0] = set_data[1];

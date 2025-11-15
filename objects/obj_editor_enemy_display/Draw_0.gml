@@ -1,4 +1,4 @@
-if instance_exists(game_window)
+if (instance_exists(game_window))
 {
     gpu_set_scissor(game_window.x, game_window.y, game_window.sprite_width, game_window.sprite_height);
     

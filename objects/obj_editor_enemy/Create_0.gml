@@ -15,6 +15,7 @@ dragged_right_side = 0;
 
 middle = false;
 
+// this is bs why do i have this????
 min_lenght_value = 0.1; // changed to smallest grid unit
 max_lenght_value = 999;
 
@@ -61,3 +62,6 @@ mark_delete = false; // gml is stupid and i cant mark and create object at the s
 display_object = true;
 
 obj_display_object = noone;
+
+editor_x = -1;
+editor_object_time = -1;

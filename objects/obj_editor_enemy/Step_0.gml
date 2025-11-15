@@ -39,7 +39,8 @@ if (dragging)
 	{
 	    var snapped_x = round((mouse_x - distance_to_x - timeline.x) / timeline.line_amount_w) - timeline.timeline_offset;
 	    position = snapped_x;
-	    x = clamp(timeline.x + (snapped_x + timeline.timeline_offset) * timeline.line_amount_w,timeline.x, room_width);
+	    // x = clamp(timeline.x + (snapped_x + timeline.timeline_offset) * timeline.line_amount_w,timeline.x, room_width);
+	    x = clamp(timeline.x + (snapped_x + timeline.timeline_offset) * timeline.line_amount_w,0, room_width);
 
 		
 		
@@ -84,5 +85,16 @@ if (dragging)
     image_xscale = block_lenght * timeline.line_amount_w / 64;
     image_xscale = clamp(image_xscale,min_lenght_value,max_lenght_value);
 
-	x = clamp(timeline.x + (position + timeline.timeline_offset) * timeline.line_amount_w, timeline.x, room_width);
+	// x = clamp(timeline.x + (position + timeline.timeline_offset) * timeline.line_amount_w, timeline.x, room_width);
+	x = clamp(timeline.x + (position + timeline.timeline_offset) * timeline.line_amount_w, -room_width, room_width);
+}
+
+object_time = round((x - timeline.x) / timeline.line_amount_w) - timeline.timeline_offset;
+
+if (editor_object_time >= 0)
+{
+	x = editor_x;
+	object_time = editor_object_time;
+	position = round((x - timeline.x) / timeline.line_amount_w) - timeline.timeline_offset;
+	editor_object_time = -1;
 }

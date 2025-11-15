@@ -1,4 +1,4 @@
-// 2025-11-15 15:31:48
+// 2025-11-15 21:54:26
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_editor_enemy;
@@ -22,6 +22,7 @@ dragged_right_side = 0;
 
 middle = false;
 
+// this is bs why do i have this????
 min_lenght_value = 0.1; // changed to smallest grid unit
 max_lenght_value = 999;
 
@@ -69,6 +70,9 @@ display_object = true;
 
 obj_display_object = noone;
 
+editor_x = -1;
+editor_object_time = -1;
+
 #event step
 if (live_call()) return live_result;
 
@@ -111,7 +115,8 @@ if (dragging)
 	{
 	    var snapped_x = round((mouse_x - distance_to_x - timeline.x) / timeline.line_amount_w) - timeline.timeline_offset;
 	    position = snapped_x;
-	    x = clamp(timeline.x + (snapped_x + timeline.timeline_offset) * timeline.line_amount_w,timeline.x, room_width);
+	    // x = clamp(timeline.x + (snapped_x + timeline.timeline_offset) * timeline.line_amount_w,timeline.x, room_width);
+	    x = clamp(timeline.x + (snapped_x + timeline.timeline_offset) * timeline.line_amount_w,0, room_width);
 
 		
 		
@@ -156,8 +161,26 @@ if (dragging)
     image_xscale = block_lenght * timeline.line_amount_w / 64;
     image_xscale = clamp(image_xscale,min_lenght_value,max_lenght_value);
 
-	x = clamp(timeline.x + (position + timeline.timeline_offset) * timeline.line_amount_w, timeline.x, room_width);
+	// x = clamp(timeline.x + (position + timeline.timeline_offset) * timeline.line_amount_w, timeline.x, room_width);
+	x = clamp(timeline.x + (position + timeline.timeline_offset) * timeline.line_amount_w, -room_width, room_width);
+}
+
+object_time = round((x - timeline.x) / timeline.line_amount_w) - timeline.timeline_offset;
+
+if (editor_object_time >= 0)
+{
+	x = editor_x;
+	object_time = editor_object_time;
+	position = round((x - timeline.x) / timeline.line_amount_w) - timeline.timeline_offset;
+	editor_object_time = -1;
 }
 
 #event draw
-draw_self();
+if (instance_exists(timeline))
+{
+    gpu_set_scissor(timeline.x, timeline.y, timeline.sprite_width, timeline.sprite_height);
+    
+    draw_self();
+    
+    gpu_set_scissor(0, 0, display_get_width(), display_get_height());
+}      

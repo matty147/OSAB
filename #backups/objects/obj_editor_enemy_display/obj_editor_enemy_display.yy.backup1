@@ -1,0 +1,9 @@
+// 2025-11-07 00:44:54
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+uses_physics = false;
+
+#event create
+
+
+#event draw_gui

@@ -1,8 +1,8 @@
 if (mouse_wheel_up() || mouse_wheel_down())
 {
-    timeline_offset -= mouse_wheel_up() - mouse_wheel_down();
+    timeline_offset += mouse_wheel_down() - mouse_wheel_up();
     
-    timeline_offset = clamp(timeline_offset,0,10000000);
+    timeline_offset = clamp(timeline_offset,timeline_offset,0);
     
     show_debug_message(timeline_offset);
 }

@@ -1,4 +1,4 @@
-// 2025-11-12 00:07:16
+// 2025-11-15 21:56:53
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_object_settings;
@@ -66,6 +66,7 @@ inp_meta_data = [
 	["diff", x + 100,  y + sprite_height * 1/15 + 160, 5,  true,  1,    edit_man]
 ];
 
+update_meta = false;
 metas = [];
 
 for (var o = 0; o < array_length(inp_meta_data); o++)
@@ -89,7 +90,11 @@ set_data = [];
 
 show_debug_message($"objs: {array_length(objects)} meta: {array_length(metas)}");
 
-#event step automaticly check and toggle input box visibility
+#event step
+if (live_call()) return live_result;
+
+// automaticly check and toggle input box visibility
+
 function update_inputbox_visibility() {
     var obj_len  = array_length(objects);
     var meta_len = array_length(metas);
@@ -111,9 +116,52 @@ function update_inputbox_visibility() {
 
 if (state == CUR_EDITING.LEVEL_META)
 {
-	for (var i = 0; i < array_length(metas);i++)
+	if (update_meta)
 	{
-		metas[i].visible = true;
+		update_meta = false;
+		for (var i = 0; i < array_length(metas);i++)
+		{
+			var obj = metas[i];
+			
+			metas[i].visible = true;
+			
+		    var key = obj.return_key;
+			    
+			var def_value = "";
+			
+			var ed_manager = instance_find(manager_editor,0);
+			
+			switch (key)
+			{
+				case "id":
+					def_value = ed_manager.editor_meta[? "id"];
+				break;
+				
+				case "name":
+					def_value = ed_manager.editor_meta[? "name"];
+				break;
+				
+				case "desc":
+					def_value = ed_manager.editor_meta[? "desc"];
+				break;
+				
+				case "leng":
+					def_value = ed_manager.editor_meta[? "leng"];
+				break;
+				
+				case "diff":
+					def_value = ed_manager.editor_meta[? "diff"];
+				break;
+				
+				default:
+					show_debug_message($"invalid key: {key}");
+				break;
+			}
+			
+		    obj.t_ = def_value;
+		    obj.text = def_value;
+		    obj.default_var = def_value;
+		}
 	}
 
 } else if (state == CUR_EDITING.OBJECT)
@@ -124,10 +172,20 @@ if (state == CUR_EDITING.LEVEL_META)
 		switch (set_data[0])
 		{
 			case "time":
-				valid_editor_object.object_time = set_data[1];
+				valid_editor_object.object_time = real(set_data[1]);
+				valid_editor_object.editor_object_time = real(set_data[1]);
+				
+				show_debug_message(set_data[1]);
+				
+				with (valid_editor_object)
+				{
+					editor_x = timeline.x + timeline.line_amount_w * object_time;
+					position = round((x - timeline.x) / timeline.line_amount_w) - timeline.timeline_offset;
+				}
+				
 					break;
 			case "name":
-				valid_editor_object.object_name = set_data[1];
+				valid_editor_object.object_name = set_data[1]; 
 					break;
 			case "pos_x":
 				valid_editor_object.object_position[0] = set_data[1];
