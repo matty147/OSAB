@@ -57,22 +57,6 @@ function scr_save_level(meta_data, level_objects){
         ds_map_add(ds_object_data, "size", obj.object_size);
         ds_map_add(ds_object_data, "angle", obj.object_angle);
 		
-		// object_speed = 1;
-		// object_image_alpha = 1;
-		// object_survive_speed = 5; 
-		// object_move = true; // no clue what this is but its here :D
-		// object_show_hitbow = 25;
-		// object_move_type = "None";
-		
-		// object_spline = false;
-		// object_positions = [];
-		// object_bounce = [];
-		// object_gravity = 0; 
-		// object_friction = true;
-		// object_end_scale = [];
-		// object_scale_speed = [];
-		
-		
 		ds_map_add(ds_move,"speed",obj.object_speed);
 		ds_map_add(ds_move,"alpha",obj.object_image_alpha);
 		ds_map_add(ds_move,"duration",obj.object_survive_speed);

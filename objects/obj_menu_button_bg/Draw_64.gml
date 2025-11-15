@@ -1,7 +1,7 @@
 draw_set_color(c_white);
 draw_set_halign(fa_center);
 
-if display_text
+if (display_text)
 {
 	draw_line(x + margin_x, line_y, x + sprite_width - margin_x, line_y);
 
@@ -11,20 +11,20 @@ if display_text
 	if (instance.menu_id == 0) {
 	    text = "Welcome";
 	} else if (instance.menu_id == 2) || (instance.menu_id == 20) || (instance.menu_id == 21) || (instance.menu_id == 22){
-		if hidden
+		if (hidden)
 		{
-			if instance.menu_id == 20	
+			if (instance.menu_id == 20)	
 			{
 				text = "Game settings";
-			}else if instance.menu_id == 21
+			}else if (instance.menu_id == 21)
 			{
 				text = "Audio settings";
-			}else if instance.menu_id == 22
+			}else if (instance.menu_id == 22)
 			{
 				text = "Credits";
 			}
 			
-		}else text = "Options"
+		}else text = "Options";
 	} else if (instance.menu_id == 1){
 		text = string(name);
 	}
@@ -34,24 +34,24 @@ if display_text
 	
 	var repeat_numb = 0;
 	
-	while string_width(string(text)) * text_size > sprite_width
+	while (string_width(string(text)) * text_size > sprite_width)
 	{
 	
 		repeat_numb++;
 	
-		if string_width(string(text)) * text_size > sprite_width - 50
+		if (string_width(string(text)) * text_size > sprite_width - 50)
 		{
-			if text_size > 0.5
+			if (text_size > 0.5)
 			{
 				text_size -= 0.1;
 			}
 			show_debug_message(string_length(text));
-		}else if text_size < 1 && string_width(string(text)) * (text_size + 0.1) < sprite_width - 50
+		}else if (text_size < 1 && string_width(string(text)) * (text_size + 0.1) < sprite_width - 50)
 		{
 			text_size += 0.1;
 		}
 		
-		if repeat_numb > 10
+		if (repeat_numb > 10)
 		{
 			break;	
 		}
@@ -59,7 +59,7 @@ if display_text
 	
 	draw_text_transformed(x + sprite_width / 2, text_y, text,text_size,text_size,0);
 	
-	if text = "Credits"
+	if (text == "Credits")
 	{
 		draw_set_halign(fa_left);
 		draw_text_transformed(x + 25,y + 150,"Programming: Inkk_ing",0.7,0.7,0);
@@ -70,7 +70,7 @@ if display_text
 		draw_text_transformed(x + 30,y + 380,"HyuN - Disorder",0.5,0.5,0);
 		draw_text_transformed(x + 30,y + 410,"fur:trash - what the devils?????",0.5,0.5,0);
 		draw_text_transformed(x + 30,y + 440,"Polyphia - The Audacity",0.5,0.5,0);
-	}else if text = "Audio settings"
+	}else if (text == "Audio settings")
 	{
 		draw_set_halign(fa_left);
 		draw_text_transformed(x + 25,y + 193,"Global volume",0.5,0.5,0);
@@ -78,19 +78,19 @@ if display_text
 }
 
 
-if level_info
+if (level_info)
 {
 	
 	//show_debug_message("last: " + string(last_id_of_button_selected) + "new: " + string(instance.id_of_button_selected));
 	
-	if instance.id_of_button_selected != last_id_of_button_selected && instance.selected_scrollable_button
+	if (instance.id_of_button_selected != last_id_of_button_selected && instance.selected_scrollable_button)
 	{
 		loaded_level_data = false;
 		last_id_of_button_selected = instance.id_of_button_selected;		
 		//show_debug_message("update");
 	}
 	
-	if !loaded_level_data && true
+	if (!loaded_level_data && true)
 	{
 		loaded_level_data = true;
 		var level_data = undefined;	
@@ -102,7 +102,7 @@ if level_info
 			while(file_text_eof(file_name) == false)
 			{
 				var line = file_text_readln(file_name);
-				if string_trim(line) == "},"
+				if (string_trim(line) == "},")
 				{
 					json += "}\n";
 					json += "}";
@@ -116,12 +116,12 @@ if level_info
 		
 			level_data = json_parse(json);
 		
-			if level_data != undefined
+			if (level_data != undefined)
 			{			
 				
 				var meta = level_data.meta;
 				
-				if string_length(string(meta.description)) > 80
+				if (string_length(string(meta.description)) > 80)
 				{
 					meta.description = string_copy(string(meta.description), 1, 80) + "...";
 				}
@@ -139,7 +139,7 @@ if level_info
 				diff = "-";
 			}
 			
-			if display_image != ""
+			if (display_image != "")
 			{
 				sprite_delete(display_image);
 			}
@@ -154,7 +154,7 @@ if level_info
 	
 			var search = file_find_first(png_path, fa_directory);
 			
-			if search == ""
+			if (search == "")
 			{
 				//show_debug_message("no");
 				search = file_find_first(jpg_path, fa_directory);
@@ -163,7 +163,7 @@ if level_info
 	
 			show_debug_message(search);
 			show_debug_message(string(file_location) + string(search));
-			if search != ""
+			if (search != "")
 			{
 				display_image = sprite_add(string(file_location) + "\\" + string(search),0,false,false,0,0);
 		
@@ -176,7 +176,7 @@ if level_info
 					var spr_height = sprite_get_height(display_image);
 			
 					picture_scale_x = max_width / spr_width;
-					picture_scale_y = max_height / spr_height
+					picture_scale_y = max_height / spr_height;
 					
 			    } else {
 					display_image = "";
@@ -185,7 +185,7 @@ if level_info
 		
 		}else display_image = "";
 		
-		if sound_id != "" 
+		if (sound_id != "" )
 		{
 			audio_stop_sound(sound_id);
 			audio_destroy_stream(sound_id);
@@ -198,7 +198,7 @@ if level_info
 	
 		show_debug_message("found song: " + string(search));
 
-		if search != ""
+		if (search != "")
 		{
 			sound_id = audio_create_stream(filename_dir(music_path) + "\\" + search);
 			audio_play_sound(sound_id, 1, false,1);
@@ -215,7 +215,7 @@ if level_info
 	draw_text_transformed(x + sprite_width / 4 ,325,"lenght: " + string(lenght),2,2,0);	
 	draw_text_transformed(x + sprite_width / 4 * 3 ,325,"difficulty: " + string(diff),2,2,0);
 	
-	if display_image != ""
+	if (display_image != "")
 	{
 		draw_sprite_ext(display_image,0,sprite_width / 4,375,picture_scale_x,picture_scale_y,0,c_white,1);
 	}

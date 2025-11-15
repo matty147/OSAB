@@ -18,6 +18,7 @@ hide the value/ make it unchangable so its eaisier for me :D
 obj_editor_enemy - why do we need a name and a sprite it should be the same thing?
 if entered level editor with keys and the mouse is not on screen there is no way to controll anything - may be with more things
 finish the fucking save shit you already have the fucking data why not use it????????
+that fucker editor_enemy moves really strangely with the curent offset???
 
 // optimisation
 level select freeplay - loading tanks the fps by a lot

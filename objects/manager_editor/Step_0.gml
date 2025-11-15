@@ -68,7 +68,10 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("O")) || load_leve
 	
 	show_debug_message("object count: " + string(array_length(objects)));
 	
-	with (obj_editor_enemy) {mark_delete = true;} // gml is stupid and i cant mark and create object at the same time for some reason??????
+	with (obj_editor_enemy) {
+		instance_destroy();
+		instance_destroy(obj_editor_enemy_display);
+	}
 	
 	var sett = instance_find(obj_timeline,0);
 	

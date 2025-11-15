@@ -1,15 +1,19 @@
-// 2025-11-08 15:51:03
+// 2025-11-15 01:58:32
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_editor_enemy;
 uses_physics = false;
 
 #event create
+
+timeline = instance_find(obj_timeline,0);
+game_window = instance_find(obj_game_window,0);
+
+_manager = instance_find(manager,0);
+
 image_xscale = 0.75;
 
-var inp_timeline = instance_find(obj_timeline,0);
-
-depth = inp_timeline.depth - 1;
+depth = timeline.depth - 1;
 
 dragging = false;
 
@@ -28,10 +32,6 @@ distance_to_x = 0;
 block_lenght = 1;
 position = 0;
 sub_block = 0.75;
-timeline = instance_find(obj_timeline,0);
-game_window = instance_find(obj_game_window,0);
-
-_manager = instance_find(manager,0);
 
 level_object_map = _manager.level_object_map;
 
@@ -46,18 +46,28 @@ object_angle = 45;
 sprite = "circle";
 
 // move
-object_move = 1;
+object_speed = 1;
 object_image_alpha = 1;
 object_survive_speed = 5; 
-obj_move = true; // no clue what this is but its here :D
-obj_show_hitbow = 25;
+object_move = true; // no clue what this is but its here :D
+object_show_hitbow = 25;
+object_move_type = "None";
+
+// will have to add all the values from move_type here T-T
+
+object_spline = false;
+object_positions = [];
+object_bounce = [];
+object_gravity = 0;
+object_friction = true;
+object_end_scale = [];
+object_scale_speed = [];
 
 mark_delete = false; // gml is stupid and i cant mark and create object at the same time for some reason??????
 
 display_object = true;
 
 obj_display_object = noone;
-
 
 #event step
 //if (live_call()) return live_result;
@@ -97,10 +107,10 @@ if (mouse_check_button_pressed(mb_left) && instance_position(mouse_x,mouse_y,id)
 
 if (dragging)
 {
-	if (middle)
+	if (middle) // moving
 	{
 	    var snapped_x = round((mouse_x - distance_to_x - timeline.x) / timeline.line_amount_w);
-	    position = snapped_x;
+	    position = snapped_x + timeline.timeline_offset;
 	    x = clamp(timeline.x + snapped_x * timeline.line_amount_w, timeline.x, room_width);
 		
 		
@@ -110,7 +120,7 @@ if (dragging)
 
 			y = timeline.y + sprite_height / 2 + sprite_height * lane_numb;
 		}
-	}else
+	}else // scaling
 	{
 	    if (dragged_right_side)
 	    {
@@ -145,27 +155,8 @@ if (dragging)
     image_xscale = block_lenght * timeline.line_amount_w / 64;
     image_xscale = clamp(image_xscale,min_lenght_value,max_lenght_value);
 
-	x = clamp(timeline.x + position * timeline.line_amount_w, timeline.x, room_width);
+	x = clamp(timeline.x + (position + timeline.timeline_offset) * timeline.line_amount_w, timeline.x, room_width);
 }
 
-if (mark_delete) {show_debug_message("del");instance_destroy();}
-
-
 #event draw
-// draw_sprite_stretched(sprite_index, 0, x, y, 200, 300); 
-
 draw_self();
-
-//var left_edge  = (mouse_x >= x) && (mouse_x <= x + edge_size);
-//var right_edge = (mouse_x >= x + sprite_width - edge_size) && (mouse_x <= x + sprite_width);
-
-//draw_sprite_stretched(spr_level,0,left_edge + x,y,16,32);
-
-//draw_sprite_stretched(spr_level,0,right_edge + x,y,16,32);
-
-//timeline.x
-
-//for (var i = 0; i < 4;i++) // displays lines
-//{
-//	draw_circle(x,timeline.y + sprite_height / 2 + sprite_height * i,5,false);	
-//}

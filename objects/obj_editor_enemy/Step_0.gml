@@ -35,10 +35,10 @@ if (mouse_check_button_pressed(mb_left) && instance_position(mouse_x,mouse_y,id)
 
 if (dragging)
 {
-	if (middle)
+	if (middle) // moving
 	{
 	    var snapped_x = round((mouse_x - distance_to_x - timeline.x) / timeline.line_amount_w);
-	    position = snapped_x;
+	    position = snapped_x + timeline.timeline_offset;
 	    x = clamp(timeline.x + snapped_x * timeline.line_amount_w, timeline.x, room_width);
 		
 		
@@ -48,7 +48,7 @@ if (dragging)
 
 			y = timeline.y + sprite_height / 2 + sprite_height * lane_numb;
 		}
-	}else
+	}else // scaling
 	{
 	    if (dragged_right_side)
 	    {
@@ -83,14 +83,5 @@ if (dragging)
     image_xscale = block_lenght * timeline.line_amount_w / 64;
     image_xscale = clamp(image_xscale,min_lenght_value,max_lenght_value);
 
-	x = clamp(timeline.x + position * timeline.line_amount_w, timeline.x, room_width);
-}
-
-if (mark_delete)
-{
-	instance_destroy();
-	if (instance_exists(obj_display_object))
-	{
-		instance_destroy(obj_display_object);	
-	}
+	x = clamp(timeline.x + (position + timeline.timeline_offset) * timeline.line_amount_w, timeline.x, room_width);
 }

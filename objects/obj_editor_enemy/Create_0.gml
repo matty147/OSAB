@@ -1,8 +1,12 @@
+
+timeline = instance_find(obj_timeline,0);
+game_window = instance_find(obj_game_window,0);
+
+_manager = instance_find(manager,0);
+
 image_xscale = 0.75;
 
-var inp_timeline = instance_find(obj_timeline,0);
-
-depth = inp_timeline.depth - 1;
+depth = timeline.depth - 1;
 
 dragging = false;
 
@@ -21,10 +25,6 @@ distance_to_x = 0;
 block_lenght = 1;
 position = 0;
 sub_block = 0.75;
-timeline = instance_find(obj_timeline,0);
-game_window = instance_find(obj_game_window,0);
-
-_manager = instance_find(manager,0);
 
 level_object_map = _manager.level_object_map;
 

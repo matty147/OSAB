@@ -32,7 +32,7 @@ instance = instance_find(manager, 0);
 default_yscale = image_yscale;
 needeed_scale = default_yscale;
 
-if hidden
+if (hidden)
 {
 	display_text = false;
 	image_alpha = 0;
