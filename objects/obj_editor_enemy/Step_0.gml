@@ -1,4 +1,4 @@
-//if (live_call()) return live_result;
+if (live_call()) return live_result;
 
 if (display_object)
 {
@@ -37,9 +37,10 @@ if (dragging)
 {
 	if (middle) // moving
 	{
-	    var snapped_x = round((mouse_x - distance_to_x - timeline.x) / timeline.line_amount_w);
-	    position = snapped_x + timeline.timeline_offset;
-	    x = clamp(timeline.x + snapped_x * timeline.line_amount_w, timeline.x, room_width);
+	    var snapped_x = round((mouse_x - distance_to_x - timeline.x) / timeline.line_amount_w) - timeline.timeline_offset;
+	    position = snapped_x;
+	    x = clamp(timeline.x + (snapped_x + timeline.timeline_offset) * timeline.line_amount_w,timeline.x, room_width);
+
 		
 		
 		if (timeline.y - mouse_y < 0)
@@ -69,7 +70,7 @@ if (dragging)
     
 			x = right_edge_x - sprite_width;
 
-			position = round((x - timeline.x) / timeline.line_amount_w);
+			position = round((x - timeline.x) / timeline.line_amount_w) - timeline.timeline_offset;
 		}
 	}
      

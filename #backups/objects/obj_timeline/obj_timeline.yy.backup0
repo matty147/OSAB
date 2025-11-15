@@ -1,4 +1,4 @@
-// 2025-11-15 01:10:02
+// 2025-11-15 12:10:34
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_timeline;
@@ -28,7 +28,7 @@ timeline_offset = 0; // seconds?
 #event step
 if (mouse_wheel_up() || mouse_wheel_down())
 {
-    timeline_offset -= mouse_wheel_down() - mouse_wheel_up();
+    timeline_offset -= mouse_wheel_up() - mouse_wheel_down();
     
     timeline_offset = clamp(timeline_offset,0,10000000);
     
