@@ -58,11 +58,11 @@ object_friction = true;
 object_end_scale = [];
 object_scale_speed = [];
 
-mark_delete = false; // gml is stupid and i cant mark and create object at the same time for some reason??????
-
 display_object = true;
 
 obj_display_object = noone;
 
 editor_x = -1;
 editor_object_time = -1;
+
+selected = false;

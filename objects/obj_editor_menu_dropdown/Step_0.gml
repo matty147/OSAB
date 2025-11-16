@@ -1,4 +1,4 @@
-if (live_call()) return live_result;
+// if (live_call()) return live_result;
 
 if (mouse_check_button_pressed(mb_left))
 {

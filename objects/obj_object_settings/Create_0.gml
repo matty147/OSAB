@@ -1,9 +1,18 @@
+if (live_call()) return live_result;
+
 enum CUR_EDITING
 {
 	NONE,
 	OBJECT,
 	OPTIONS, // add subctg?
 	LEVEL_META
+}
+
+enum MOVE_TYPE{
+    NONE,
+    POSITION,
+    BOUNCE,
+    SCALE
 }
 
 state = CUR_EDITING.NONE;
@@ -18,6 +27,25 @@ inp_depth = depth - 1;
 
 //movable customizable object in the playing field to make editing easyer
 
+// object_speed = 1;
+// object_image_alpha = 1;
+// object_survive_speed = 5; 
+// object_move = true; // no clue what this is but its here :D
+// object_show_hitbow = 25;
+// object_move_type = "None";
+
+// // will have to add all the values from move_type here T-T
+
+// object_spline = false;
+// object_positions = [];
+// object_bounce = [];
+// object_gravity = 0;
+// object_friction = true;
+// object_end_scale = [];
+// object_scale_speed = [];
+
+inp_dropdown = instance_create_depth(x + 135, y + sprite_height * 1/3 +  150,inp_depth,obj_input_dropdown);
+
 inp_objects_settings = [
 //   return_key,  x,    y,                            leng, numb, xscale, parent
 	["time",   x + 90,  y + sprite_height * 1/15 + 40,  5,  true,  1, id],	
@@ -26,8 +54,23 @@ inp_objects_settings = [
 	["pos_x",  x + 230, y + sprite_height * 1/3 +  40,  4,  true,  1, id],
 	["size_x", x + 135, y + sprite_height * 1/3 +  70,  3,  true,  1, id],	
 	["size_y", x + 230, y + sprite_height * 1/3 +  70,  3,  true,  1, id],	
-	["angle",  x + 135, y + sprite_height * 1/3 +  100, 3,  true,  1, id]	
+	["angle",  x + 135, y + sprite_height * 1/3 +  100, 3,  true,  1, id],	
+	// advanced
+	["speed",			x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id],	
+	["image_alpha", 	x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id],	
+	["survive_speed",	x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id],	
+	["show_hitbow", 	x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id],	
+	["move_type",		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id],
+	["spline",  		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [1]],	
+	["positions",		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [1]],	
+	["bounce",  		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [2]],	
+	["gravity", 		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [2]],	
+	["friction",		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [2]],	
+	["end_scale",		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [3]],	
+	["scale_speed", 	x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [3]]
 ];
+
+cur_move_type = MOVE_TYPE.NONE;
 
 objects = [];
 

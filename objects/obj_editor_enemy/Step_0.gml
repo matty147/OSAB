@@ -42,8 +42,6 @@ if (dragging)
 	    // x = clamp(timeline.x + (snapped_x + timeline.timeline_offset) * timeline.line_amount_w,timeline.x, room_width);
 	    x = clamp(timeline.x + (snapped_x + timeline.timeline_offset) * timeline.line_amount_w,0, room_width);
 
-		
-		
 		if (timeline.y - mouse_y < 0)
 		{
 			var lane_numb = floor(clamp(abs(timeline.y - mouse_y) / sprite_height,0,3));

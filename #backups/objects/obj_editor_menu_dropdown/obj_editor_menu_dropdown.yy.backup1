@@ -1,4 +1,4 @@
-// 2025-11-11 22:56:04
+// 2025-11-16 15:07:49
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_editor_menu_dropdown;
@@ -29,7 +29,7 @@ option_numbers = 5;
 button_space = 10;
 
 #event step
-if (live_call()) return live_result;
+// if (live_call()) return live_result;
 
 if (mouse_check_button_pressed(mb_left))
 {

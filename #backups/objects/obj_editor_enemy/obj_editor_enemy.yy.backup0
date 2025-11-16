@@ -1,4 +1,4 @@
-// 2025-11-16 01:23:34
+// 2025-11-16 16:14:15
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_editor_enemy;
@@ -65,14 +65,14 @@ object_friction = true;
 object_end_scale = [];
 object_scale_speed = [];
 
-mark_delete = false; // gml is stupid and i cant mark and create object at the same time for some reason??????
-
 display_object = true;
 
 obj_display_object = noone;
 
 editor_x = -1;
 editor_object_time = -1;
+
+selected = false;
 
 #event step
 // if (live_call()) return live_result;
@@ -119,8 +119,6 @@ if (dragging)
 	    // x = clamp(timeline.x + (snapped_x + timeline.timeline_offset) * timeline.line_amount_w,timeline.x, room_width);
 	    x = clamp(timeline.x + (snapped_x + timeline.timeline_offset) * timeline.line_amount_w,0, room_width);
 
-		
-		
 		if (timeline.y - mouse_y < 0)
 		{
 			var lane_numb = floor(clamp(abs(timeline.y - mouse_y) / sprite_height,0,3));
@@ -184,6 +182,11 @@ if (instance_exists(timeline))
     gpu_set_scissor(timeline.x, timeline.y, timeline.sprite_width, timeline.sprite_height);
     
     draw_self();
+    
+    if (selected)
+	{
+		draw_circle_color(x,y,2,c_aqua,c_aqua,false);	
+	}
     
     gpu_set_scissor(0, 0, display_get_width(), display_get_height());
 }      

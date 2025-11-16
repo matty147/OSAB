@@ -1,0 +1,22 @@
+// 2025-11-16 17:02:07
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+sprite_index = spr_input_dropdown_button;
+uses_physics = false;
+
+#event create
+
+display_text = "";
+parent = noone;
+
+#event step
+
+if (mouse_check_button_pressed(mb_left) &&  instance_position(mouse_x,mouse_y,id))
+{
+    parent.inp_dropdown_text = display_text;
+    parent.update_value = true;
+}
+
+#event draw_gui
+
+draw_text_color(x,y,display_text,c_white,c_white,c_white,c_white,1);

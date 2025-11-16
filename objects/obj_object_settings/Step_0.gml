@@ -9,6 +9,8 @@ function update_inputbox_visibility() {
     var show_objects = (state == CUR_EDITING.OBJECT);
     var show_metas   = (state == CUR_EDITING.LEVEL_META);
 
+    inp_dropdown.visible = show_objects;
+
     // object inputs
     for (var i = 0; i < obj_len; i++) {
         objects[i].visible = show_objects;
@@ -62,13 +64,32 @@ if (state == CUR_EDITING.LEVEL_META)
 				
 				default:
 					show_debug_message($"invalid key: {key}");
-				break;
 			}
 			
 		    obj.t_ = def_value;
 		    obj.text = def_value;
 		    obj.default_var = def_value;
 		}
+	}
+
+	var toggle_active = cur_move_type;
+
+	for (var o = 12;o > array_length(inp_objects_settings))
+	{
+		var obj = objects;
+		var data = inp_objects_settings[o];
+		
+		var toggle = false;
+		
+		 for (var b = 0; b < array_length(data[7]); b++)
+		 {
+		 	if (bdata[7][b] == toggle_active)
+		 	{
+		 		show_debug_message("active");
+		 		toggle = true;
+		 	}
+		 }
+		 obj.visible = toggle;
 	}
 
 } else if (state == CUR_EDITING.OBJECT)
@@ -150,7 +171,14 @@ if (mouse_check_button_pressed(mb_left))
 
 		state = CUR_EDITING.OBJECT;
 		
+		if (instance_exists(valid_editor_object))
+		{
+			valid_editor_object.selected = false;
+		}
+		
 		valid_editor_object = editor_object;
+		
+		valid_editor_object.selected = true;
 		
 		for (var i = 0; i < array_length(objects); i++) {
 		    var obj = objects[i];

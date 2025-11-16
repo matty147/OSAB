@@ -59,4 +59,4 @@ This project is developed as a school assignment. Please check with the contribu
 
 *Made with ❤️ by students passionate about game development*
 
-(We used AI to improve the read.me file because i can't right properly </3)
+(We used AI to improve the read.me file because i can't write properly </3)

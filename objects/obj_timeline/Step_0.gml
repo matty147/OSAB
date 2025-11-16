@@ -24,9 +24,9 @@ if (mouse_check_button_pressed(mb_right) &&  instance_position(mouse_x,mouse_y,i
     
     with (ede)
     {
-	    var snapped_x = round((x - distance_to_x - timeline.x) / timeline.line_amount_w);
+	    var snapped_x = floor((x - distance_to_x - timeline.x) / timeline.line_amount_w) - timeline.timeline_offset;
 	    position = snapped_x;
-	    x = clamp(timeline.x + snapped_x * timeline.line_amount_w, timeline.x, room_width);
+	    x = clamp(timeline.x + (snapped_x + timeline.timeline_offset) * timeline.line_amount_w, timeline.x, room_width);
 	    
 		var lane_numb = floor(clamp(abs(timeline.y - y) / sprite_height,0,3));
 
