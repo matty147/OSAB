@@ -1,0 +1,83 @@
+// 2025-11-16 01:11:34
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+sprite_index = spr_slider;
+uses_physics = false;
+moved_position_x:int = 0;
+moved_position_y:int = 0;
+
+#event create
+display_text = true;
+original_x = x;
+original_y = y;
+instance = instance_find(manager,0);
+
+//handle = instance_create_layer(x,y,"options_spawned",obj_slider_hold);
+//handle.image_xscale = 0.5;
+//handle.image_yscale = 0.5;
+//handle.x = x + sprite_width * (global.volume);
+
+//show_debug_message(global.volume)
+//show_debug_message("x: " + string(handle.x));
+
+dragging = false;
+
+#event step
+if (global.pop_up)
+{
+	if (instance.pop_up_id == 2)
+	{
+		display_text = true;
+		image_alpha = clamp(image_alpha + 0.1, 0, 1);	
+	}
+		
+	x = lerp(x,moved_position_x,0.1);
+}else
+{
+	display_text = false;
+	image_alpha = clamp(image_alpha - 0.05, 0, 1);	
+	x = lerp(x,original_x,0.1);
+}
+	
+if (instance.pop_up_id != 2)
+{
+	image_alpha = clamp(image_alpha - 0.05, 0, 1);	
+	display_text = false;	
+}
+
+if (mouse_check_button(mb_left) && position_meeting(mouse_x,mouse_y,id) && image_alpha != 0)
+{
+	dragging = true;
+}
+
+if (mouse_check_button_released(mb_left))
+{
+	dragging = false;
+}
+
+if (dragging)
+{
+	global.volume = clamp((mouse_x - x) / (sprite_width),0,1);
+}
+
+if (global.volume < 0.01)
+{
+	global.volume = 0;	
+}
+
+audio_master_gain(global.volume);
+//show_debug_message(global.volume);
+
+//handle.x = x + sprite_width * (global.volume);
+
+#event draw
+
+
+#event draw_gui
+if (display_text)
+{
+	var handle_x = x + (sprite_width - 40) * (global.volume) + 20;
+	draw_self();
+	draw_line_width_color(x + 10,y,handle_x,y,10,c_grey,c_grey);
+	draw_sprite_ext(spr_slider_hold,0,handle_x,y,0.5,0.5,0,c_white,1);
+}

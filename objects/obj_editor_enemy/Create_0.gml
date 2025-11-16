@@ -5,6 +5,7 @@ game_window = instance_find(obj_game_window,0);
 _manager = instance_find(manager,0);
 
 image_xscale = 0.75;
+image_yscale = 0.75;
 
 depth = timeline.depth - 1;
 

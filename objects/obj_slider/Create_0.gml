@@ -10,3 +10,5 @@ instance = instance_find(manager,0);
 
 //show_debug_message(global.volume)
 //show_debug_message("x: " + string(handle.x));
+
+dragging = false;

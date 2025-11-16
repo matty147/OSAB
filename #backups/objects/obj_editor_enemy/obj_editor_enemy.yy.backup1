@@ -1,4 +1,4 @@
-// 2025-11-16 01:02:53
+// 2025-11-16 01:13:55
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_editor_enemy;
@@ -176,8 +176,6 @@ if (editor_object_time >= 0)
 }
 
 visible = place_meeting(x,y,obj_timeline);
-
-show_debug_message(visible);
 
 #event draw
 if (instance_exists(timeline))

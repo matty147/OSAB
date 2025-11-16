@@ -121,6 +121,19 @@ if (state == CUR_EDITING.LEVEL_META)
 	
 		set_data = [];	
 	}
+	
+	if (keyboard_check_pressed(vk_delete))
+	{
+		if (instance_exists(valid_editor_object))
+		{
+			with (valid_editor_object)
+			{
+				instance_destroy();
+				instance_destroy(obj_display_object);
+				valid_editor_object = noone;
+			}
+		}
+	}
 }else if (state == CUR_EDITING.OPTIONS)
 {
 	

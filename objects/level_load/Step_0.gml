@@ -63,7 +63,7 @@
 		end_game--;
 	}
 	
-	if (end_game = 249 && search != "")
+	if (end_game == 249 && search != "")
 	{
 		audio_sound_gain(sound_id,0,7000);	
 	}

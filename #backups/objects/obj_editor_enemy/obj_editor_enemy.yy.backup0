@@ -1,4 +1,4 @@
-// 2025-11-16 01:03:38
+// 2025-11-16 01:23:34
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_editor_enemy;
@@ -12,6 +12,7 @@ game_window = instance_find(obj_game_window,0);
 _manager = instance_find(manager,0);
 
 image_xscale = 0.75;
+image_yscale = 0.75;
 
 depth = timeline.depth - 1;
 

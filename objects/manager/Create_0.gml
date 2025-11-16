@@ -6,47 +6,47 @@ global.pause = false;
 
 global.runtime = 0; // track starts
 
-if !variable_global_exists("debug") { // turn all debug things off/on for relase
+if (!variable_global_exists("debug")) { // turn all debug things off/on for relase
 	global.debug = true;
 }
 
-if !variable_global_exists("debug_log") { // turn all debug things off/on for relase
+if (!variable_global_exists("debug_log")) { // turn all debug things off/on for relase
 	global.debug_log = false;
 }
 
-if room = level
+if (room == level)
 {
 	global.runtime = -30;		
 }
 
 selected_scrollable_button = false;
 
-if !variable_global_exists("level_name") {
+if (!variable_global_exists("level_name")) {
 	global.level_name = "levels\\test\\test.osab";
 }
 
-if !variable_global_exists("story_level") {
+if (!variable_global_exists("story_level")) {
 	global.story_level = false;
 }
 
-if !variable_global_exists("cleared") {
+if (!variable_global_exists("cleared")) {
 	global.cleared = false;
 }
 
-if !variable_global_exists("cleared_levels") {
+if (!variable_global_exists("cleared_levels")) {
 	global.cleared_levels = 0;
 }
 
-if !variable_global_exists("volume") {
+if (!variable_global_exists("volume")) {
 	global.volume = 0.25;
 }
 
-if !variable_global_exists("fullscreen") {
+if (!variable_global_exists("fullscreen")) {
 	global.fullscreen = true;
 	window_set_fullscreen(global.fullscreen);
 }
 
-if !variable_global_exists("controllers") {
+if (!variable_global_exists("controllers")) {
 	global.controllers = [];
 }
 

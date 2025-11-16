@@ -1,4 +1,4 @@
-// 2025-11-16 01:30:58
+// 2025-11-11 20:44:51
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -48,14 +48,14 @@ player = instance_find(obj_player,0);
 	show_debug_message(meta.lenght);
 	show_debug_message(meta.diff);
 	
-	show_debug_message($"aaa {objects[0]}");
+	show_debug_message($"aaa {objects[0]}")
 	
 	show_debug_message("finished");
 	read_file = true;
 	
 	show_debug_message("object count: " + string(array_length(objects)));
 	
-	if (array_length(objects) <= 0)
+	if array_length(objects) <= 0
 	{
 		show_message("Error: This level contains no content! Returning to the main menu.");
 		room_goto(main_menu);
@@ -71,7 +71,7 @@ player = instance_find(obj_player,0);
 	
 	show_debug_message("found song: " + string(search));
 
-	if (search != "")
+	if search != ""
 	{
 		pitch = 1.0;
 		sound_id = audio_create_stream(filename_dir(global.level_name) + "\\" + search);
@@ -83,9 +83,9 @@ player = instance_find(obj_player,0);
 	audio_deleted = 0;
 
 #event step
-	if (floor(global.runtime) == 0  && search != "")
+	if floor(global.runtime) == 0  && search != ""
 	{
-		if (!audio_is_playing(sound_id))
+		if !audio_is_playing(sound_id)
 		{
 			show_debug_message("playing sound");
 			audio_play_sound(sound_id, 1, false,1);
@@ -93,15 +93,15 @@ player = instance_find(obj_player,0);
 		
 	}
 	
-	if (global.runtime > 1 && search != "" && !win)
+	if global.runtime > 1 && search != "" && !win
 	{
 	
-		if (global.pause && !player.dead)
+		if global.pause && !player.dead
 		{
 			audio_pause_sound(sound_id);
 		}else 
 		{
-			if (audio_is_paused(sound_id))
+			if audio_is_paused(sound_id)
 			{
 				audio_resume_sound(sound_id);
 			}
@@ -109,7 +109,7 @@ player = instance_find(obj_player,0);
 	}
 	
 	//spawning enemies on the same frame
-	while (current_index < array_length(objects) && objects[current_index].time == floor(global.runtime))
+	while current_index < array_length(objects) && objects[current_index].time == floor(global.runtime)
 	{
 			
 		var position = objects[current_index].position;
@@ -140,46 +140,46 @@ player = instance_find(obj_player,0);
 		current_index++;
 	}
 	
-	if (floor(global.runtime) <= objects[array_length(objects) - 1].time && !instance_exists(obj_enemy))
+	if floor(global.runtime) <= objects[array_length(objects) - 1].time && !instance_exists(obj_enemy)
 	{
 		end_game = 250;
-	}else if (!global.pause)
+	}else if !global.pause
 	{	
 		end_game--;
 	}
 	
-	if (end_game == 249 && search != "")
+	if end_game = 249 && search != ""
 	{
 		audio_sound_gain(sound_id,0,7000);	
 	}
 	
-	if (player.dead && search != "" && !instance_exists(obj_enemy))
+	if player.dead && search != "" && !instance_exists(obj_enemy)
 	{
 		show_debug_message(pitch);
 		pitch -= 0.01;
 		audio_sound_pitch(sound_id, pitch);
 		
-		if (pitch < 0)
+		if pitch < 0
 		{
 			audio_stop_sound(sound_id);
 		}
 	}
 
-	if (instance_number(obj_enemy) <= 0 && end_game < 0)
+	if instance_number(obj_enemy) <= 0 && end_game < 0
 	{
 		win = true;
 		global.pause = true;
 		
-		if (search != "")
+		if search != ""
 		{
 			audio_stop_sound(sound_id);
-			if (audio_deleted)
+			if audio_deleted
 			{
 				audio_deleted = audio_destroy_stream(sound_id);
 			}
 		}
 		
-		if (!global.cleared && global.story_level)
+		if !global.cleared && global.story_level
 		{
 			show_debug_message("cleared + story" + string(global.cleared_levels));
 			global.cleared_levels++;

@@ -1,4 +1,4 @@
-// 2025-11-16 00:38:55
+// 2025-11-16 01:48:43
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_object_settings;
@@ -213,6 +213,19 @@ if (state == CUR_EDITING.LEVEL_META)
 		show_debug_message($"updated {set_data[0]} with {set_data[1]}");
 	
 		set_data = [];	
+	}
+	
+	if (keyboard_check_pressed(vk_delete))
+	{
+		if (instance_exists(valid_editor_object))
+		{
+			with (valid_editor_object)
+			{
+				instance_destroy();
+				instance_destroy(obj_display_object);
+				valid_editor_object = noone;
+			}
+		}
 	}
 }else if (state == CUR_EDITING.OPTIONS)
 {
