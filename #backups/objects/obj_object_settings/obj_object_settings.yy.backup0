@@ -1,4 +1,4 @@
-// 2025-11-16 20:50:22
+// 2025-11-16 21:13:16
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_object_settings;
@@ -152,9 +152,12 @@ function update_inputbox_visibility() {
 
     //object inputs
     for (var i = 0; i < obj_len; i++) {
-        if (i < 11) {
-        	objects[i].visible = show_objects;
-    	}
+    	if (show_objects && cur_move_type != MOVE_TYPE.NONE)
+    	{
+	        if (i < 11) {
+	        	objects[i].visible = show_objects;
+	    	}
+    	}else objects[i].visible = show_objects;
     }
 
     // meta inputs
@@ -253,6 +256,48 @@ if (state == CUR_EDITING.LEVEL_META)
 			case "angle":
 				valid_editor_object.object_angle = set_data[1];
 					break;
+			
+			// did not manage in time :/		
+			// case "speed":
+			// 	def_value = ed_manager.editor_meta[? "speed"];
+			// 		break;
+			
+			// case "image_alpha":
+			// 	def_value = ed_manager.editor_meta[? "speed"];
+			// 		break;
+			
+			// case "survive_speed":
+			// 	def_value = ed_manager.editor_meta[? "speed"];
+			// 		break;
+			
+			// case "show_hitbow":
+			// 	def_value = ed_manager.editor_meta[? "speed"];
+			// 		break;	
+			
+			// case "spline":
+			// 	def_value = ed_manager.editor_meta[? "speed"];
+			// 		break;
+			
+			// case "positions":
+			// 	def_value = ed_manager.editor_meta[? "speed"];
+			// 		break;
+			
+			// case "gravity":
+			// 	def_value = ed_manager.editor_meta[? "speed"];
+			// 		break;
+			
+			// case "friction":
+			// 	def_value = ed_manager.editor_meta[? "speed"];
+			// 		break;
+			
+			// case "end_scale":
+			// 	def_value = ed_manager.editor_meta[? "speed"];
+			// 		break;
+			
+			// case "scale_speed":
+			// 	def_value = ed_manager.editor_meta[? "speed"];
+			// 		break;		
+			
 			default:
 				show_debug_message($"wrong key: {set_data[0]}");
 					break;
@@ -292,7 +337,6 @@ if (update_state)
 		var data = inp_objects_settings[o];
 		 
 		 obj.visible = (data[7] == toggle_active);
-		 show_debug_message($"ob: {obj.visible} vs {(data[7] == toggle_active)}");
 	}
 }
 

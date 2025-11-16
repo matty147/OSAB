@@ -1,4 +1,4 @@
-// 2025-11-16 16:12:21
+// 2025-11-16 16:14:15
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_editor_enemy;
@@ -64,8 +64,6 @@ object_gravity = 0;
 object_friction = true;
 object_end_scale = [];
 object_scale_speed = [];
-
-mark_delete = false; // gml is stupid and i cant mark and create object at the same time for some reason??????
 
 display_object = true;
 

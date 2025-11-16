@@ -22,6 +22,7 @@ when dragging left and scrolling at the same time the object jumps to the previo
 when editor_enemy is mostly offsreen it changes the time for some reason^
 objercts can overlap - pls fix this or i very sad and das not gud D:\]
 wtf is wrong with me for doing ln 37 in obj_object_settings draw_gui event. the user cant edit that shit D:. we have to add array editing fml
+why is ther a object_name and a sprite value????????????????
 
 
 // optimisation
