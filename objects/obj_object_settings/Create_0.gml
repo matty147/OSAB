@@ -44,7 +44,8 @@ inp_depth = depth - 1;
 // object_end_scale = [];
 // object_scale_speed = [];
 
-inp_dropdown = instance_create_depth(x + 135, y + sprite_height * 1/3 +  150,inp_depth,obj_input_dropdown);
+inp_dropdown = instance_create_depth(x + 135, y + sprite_height * 1/3 + 200,inp_depth,obj_input_dropdown);
+inp_dropdown.image_yscale = 0.5;
 
 inp_objects_settings = [
 //   return_key,  x,    y,                            leng, numb, xscale, parent
@@ -56,19 +57,21 @@ inp_objects_settings = [
 	["size_y", x + 230, y + sprite_height * 1/3 +  70,  3,  true,  1, id],	
 	["angle",  x + 135, y + sprite_height * 1/3 +  100, 3,  true,  1, id],	
 	// advanced
-	["speed",			x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id],	
-	["image_alpha", 	x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id],	
-	["survive_speed",	x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id],	
-	["show_hitbow", 	x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id],	
-	["move_type",		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id],
-	["spline",  		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [1]],	
-	["positions",		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [1]],	
-	["bounce",  		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [2]],	
-	["gravity", 		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [2]],	
-	["friction",		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [2]],	
-	["end_scale",		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [3]],	
-	["scale_speed", 	x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [3]]
+	["speed",			x + 135, y + sprite_height * 1/3 + 130, 3,  true,  1, id],	
+	["image_alpha", 	x + 300, y + sprite_height * 1/3 + 130, 3,  true,  1, id],	
+	["survive_speed",	x + 135, y + sprite_height * 1/3 + 160, 3,  true,  1, id],	
+	["show_hitbow", 	x + 300, y + sprite_height * 1/3 + 160, 3,  true,  1, id],
+	
+	["spline",  		x + 135, y + sprite_height * 1/3 + 265, 3,  true,  1, id, 1],	
+	["positions",		x + 135, y + sprite_height * 1/3 + 295, 3,  true,  1, id, 1],	
+	["bounce",  		x + 135, y + sprite_height * 1/3 + 265, 3,  true,  1, id, 2],	
+	["gravity", 		x + 300, y + sprite_height * 1/3 + 265, 3,  true,  1, id, 2],	
+	["friction",		x + 135, y + sprite_height * 1/3 + 295, 3,  true,  1, id, 2],	
+	["end_scale",		x + 135, y + sprite_height * 1/3 + 265, 3,  true,  1, id, 3],	
+	["scale_speed", 	x + 135, y + sprite_height * 1/3 + 295, 3,  true,  1, id, 3]
 ];
+
+update_state = false;
 
 cur_move_type = MOVE_TYPE.NONE;
 

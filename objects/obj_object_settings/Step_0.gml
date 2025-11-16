@@ -11,9 +11,11 @@ function update_inputbox_visibility() {
 
     inp_dropdown.visible = show_objects;
 
-    // object inputs
+    //object inputs
     for (var i = 0; i < obj_len; i++) {
-        objects[i].visible = show_objects;
+        if (i < 11) {
+        	objects[i].visible = show_objects;
+    	}
     }
 
     // meta inputs
@@ -71,27 +73,6 @@ if (state == CUR_EDITING.LEVEL_META)
 		    obj.default_var = def_value;
 		}
 	}
-
-	var toggle_active = cur_move_type;
-
-	for (var o = 12;o > array_length(inp_objects_settings))
-	{
-		var obj = objects;
-		var data = inp_objects_settings[o];
-		
-		var toggle = false;
-		
-		 for (var b = 0; b < array_length(data[7]); b++)
-		 {
-		 	if (bdata[7][b] == toggle_active)
-		 	{
-		 		show_debug_message("active");
-		 		toggle = true;
-		 	}
-		 }
-		 obj.visible = toggle;
-	}
-
 } else if (state == CUR_EDITING.OBJECT)
 {
 	if (array_length(set_data) != 0)
@@ -160,6 +141,21 @@ if (state == CUR_EDITING.LEVEL_META)
 	
 }
 
+if (update_state)
+{
+	update_state = false;
+	
+	var toggle_active = cur_move_type;
+
+	for (var o = 11;o < array_length(inp_objects_settings);o++)
+	{
+		var obj = objects[o];
+		var data = inp_objects_settings[o];
+		 
+		 obj.visible = (data[7] == toggle_active);
+		 show_debug_message($"ob: {obj.visible} vs {(data[7] == toggle_active)}");
+	}
+}
 
 // CUR_EDITING.OBJECT
 if (mouse_check_button_pressed(mb_left))

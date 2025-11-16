@@ -25,7 +25,30 @@ if (state == CUR_EDITING.OBJECT)
 		draw_text_transformed(x + 25, y + sprite_height * 1/3 + 40,$"Position: W            H",1.25,1.25,0);
 		draw_text_transformed(x + 25, y + sprite_height * 1/3 + 70,$"Size:       W            H",1.25,1.25,0);
 		draw_text_transformed(x + 25, y + sprite_height * 1/3 + 100,$"Angle:",1.25,1.25,0);
+		
+		draw_text_transformed(x + 25, y + sprite_height * 1/3 + 130,$"Speed:",1.25,1.25,0);
+		draw_text_transformed(x + 225, y + sprite_height * 1/3 + 130,$"Alpha:",1.25,1.25,0);
+		draw_text_transformed(x + 25, y + sprite_height * 1/3 + 160,$"Survive:",1.25,1.25,0);
+		draw_text_transformed(x + 225, y + sprite_height * 1/3 + 160,$"hitbox:",1.25,1.25,0);
+		
+		draw_text_transformed(x + 25, y + sprite_height * 1/3 + 215,$"Move type:",1.25,1.25,0);
+		
+		if (cur_move_type == MOVE_TYPE.POSITION)
+		{
+			draw_text_transformed(x + 25, y + sprite_height * 1/3 + 265,$"Spline:",1.25,1.25,0);
+			draw_text_transformed(x + 25, y + sprite_height * 1/3 + 295,$"positions:",1.25,1.25,0); //???????? wtf am i doing?
+		}else if (cur_move_type == MOVE_TYPE.BOUNCE)
+		{
+			draw_text_transformed(x + 25, y + sprite_height * 1/3 + 265,$"Bounce:",1.25,1.25,0);
+			draw_text_transformed(x + 225, y + sprite_height * 1/3 + 265,$"Gravity:",1.25,1.25,0);
+			draw_text_transformed(x + 25, y + sprite_height * 1/3 + 295,$"Friction:",1.25,1.25,0);
+		}else if (cur_move_type == MOVE_TYPE.SCALE)
+		{
+			draw_text_transformed(x + 25, y + sprite_height * 1/3 + 265,$"Fin scale:",1.25,1.25,0);
+			draw_text_transformed(x + 25, y + sprite_height * 1/3 + 295,$"Spd scale:",1.25,1.25,0);
+		}
 	}
+	
 }else if (state == CUR_EDITING.LEVEL_META)
 {
 		draw_set_valign(fa_middle);

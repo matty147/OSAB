@@ -20,7 +20,8 @@ if entered level editor with keys and the mouse is not on screen there is no way
 finish the fucking save shit you already have the fucking data why not use it????????
 when dragging left and scrolling at the same time the object jumps to the previous position without updating its own
 when editor_enemy is mostly offsreen it changes the time for some reason^
-objercts can overlap - pls fix this or i very sad and das not gud D:
+objercts can overlap - pls fix this or i very sad and das not gud D:\]
+wtf is wrong with me for doing ln 37 in obj_object_settings draw_gui event. the user cant edit that shit D:. we have to add array editing fml
 
 
 // optimisation

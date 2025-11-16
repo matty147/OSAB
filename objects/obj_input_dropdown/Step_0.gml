@@ -1,5 +1,5 @@
 
-if (live_call()) return live_result;
+// if (live_call()) return live_result;
 
 if (mouse_check_button_pressed(mb_left))
 {
@@ -42,6 +42,9 @@ if (open)
 if (update_value)
 {
     update_value = false;
+    
+    object_settings.update_state = true;
+    
     switch (inp_dropdown_text)
     {
         case "None":

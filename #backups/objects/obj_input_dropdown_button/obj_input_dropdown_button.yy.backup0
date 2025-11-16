@@ -1,4 +1,4 @@
-// 2025-11-16 17:02:07
+// 2025-11-16 19:37:21
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_input_dropdown_button;
@@ -19,4 +19,4 @@ if (mouse_check_button_pressed(mb_left) &&  instance_position(mouse_x,mouse_y,id
 
 #event draw_gui
 
-draw_text_color(x,y,display_text,c_white,c_white,c_white,c_white,1);
+draw_text_color(x + 10,y,display_text,c_white,c_white,c_white,c_white,1);

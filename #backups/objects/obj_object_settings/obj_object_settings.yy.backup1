@@ -1,4 +1,4 @@
-// 2025-11-16 19:03:53
+// 2025-11-16 20:50:21
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_object_settings;
@@ -51,7 +51,8 @@ inp_depth = depth - 1;
 // object_end_scale = [];
 // object_scale_speed = [];
 
-inp_dropdown = instance_create_depth(x + 135, y + sprite_height * 1/3 +  150,inp_depth,obj_input_dropdown);
+inp_dropdown = instance_create_depth(x + 135, y + sprite_height * 1/3 + 200,inp_depth,obj_input_dropdown);
+inp_dropdown.image_yscale = 0.5;
 
 inp_objects_settings = [
 //   return_key,  x,    y,                            leng, numb, xscale, parent
@@ -63,19 +64,21 @@ inp_objects_settings = [
 	["size_y", x + 230, y + sprite_height * 1/3 +  70,  3,  true,  1, id],	
 	["angle",  x + 135, y + sprite_height * 1/3 +  100, 3,  true,  1, id],	
 	// advanced
-	["speed",			x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id],	
-	["image_alpha", 	x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id],	
-	["survive_speed",	x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id],	
-	["show_hitbow", 	x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id],	
-	["move_type",		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id],
-	["spline",  		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [1]],	
-	["positions",		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [1]],	
-	["bounce",  		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [2]],	
-	["gravity", 		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [2]],	
-	["friction",		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [2]],	
-	["end_scale",		x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [3]],	
-	["scale_speed", 	x + 135, y + sprite_height * 1/3 +  200, 3,  true,  1, id, [3]]
+	["speed",			x + 135, y + sprite_height * 1/3 + 130, 3,  true,  1, id],	
+	["image_alpha", 	x + 300, y + sprite_height * 1/3 + 130, 3,  true,  1, id],	
+	["survive_speed",	x + 135, y + sprite_height * 1/3 + 160, 3,  true,  1, id],	
+	["show_hitbow", 	x + 300, y + sprite_height * 1/3 + 160, 3,  true,  1, id],
+	
+	["spline",  		x + 135, y + sprite_height * 1/3 + 265, 3,  true,  1, id, 1],	
+	["positions",		x + 135, y + sprite_height * 1/3 + 295, 3,  true,  1, id, 1],	
+	["bounce",  		x + 135, y + sprite_height * 1/3 + 265, 3,  true,  1, id, 2],	
+	["gravity", 		x + 300, y + sprite_height * 1/3 + 265, 3,  true,  1, id, 2],	
+	["friction",		x + 135, y + sprite_height * 1/3 + 295, 3,  true,  1, id, 2],	
+	["end_scale",		x + 135, y + sprite_height * 1/3 + 265, 3,  true,  1, id, 3],	
+	["scale_speed", 	x + 135, y + sprite_height * 1/3 + 295, 3,  true,  1, id, 3]
 ];
+
+update_state = false;
 
 cur_move_type = MOVE_TYPE.NONE;
 
@@ -147,9 +150,11 @@ function update_inputbox_visibility() {
 
     inp_dropdown.visible = show_objects;
 
-    // object inputs
+    //object inputs
     for (var i = 0; i < obj_len; i++) {
+        if (i < 11) {
         objects[i].visible = show_objects;
+    	}
     }
 
     // meta inputs
@@ -207,27 +212,6 @@ if (state == CUR_EDITING.LEVEL_META)
 		    obj.default_var = def_value;
 		}
 	}
-
-	var toggle_active = cur_move_type;
-
-	for (var o = 12;o > array_length(inp_objects_settings))
-	{
-		var obj = objects;
-		var data = inp_objects_settings[o];
-		
-		var toggle = false;
-		
-		 for (var b = 0; b < array_length(data[7]); b++)
-		 {
-		 	if (bdata[7][b] == toggle_active)
-		 	{
-		 		show_debug_message("active");
-		 		toggle = true;
-		 	}
-		 }
-		 obj.visible = toggle;
-	}
-
 } else if (state == CUR_EDITING.OBJECT)
 {
 	if (array_length(set_data) != 0)
@@ -296,6 +280,21 @@ if (state == CUR_EDITING.LEVEL_META)
 	
 }
 
+if (update_state)
+{
+	update_state = false;
+	
+	var toggle_active = cur_move_type;
+
+	for (var o = 11;o < array_length(inp_objects_settings);o++)
+	{
+		var obj = objects[o];
+		var data = inp_objects_settings[o];
+		 
+		 obj.visible = (data[7] == toggle_active);
+		 show_debug_message($"ob: {obj.visible} vs {(data[7] == toggle_active)}");
+	}
+}
 
 // CUR_EDITING.OBJECT
 if (mouse_check_button_pressed(mb_left))
@@ -404,7 +403,30 @@ if (state == CUR_EDITING.OBJECT)
 		draw_text_transformed(x + 25, y + sprite_height * 1/3 + 40,$"Position: W            H",1.25,1.25,0);
 		draw_text_transformed(x + 25, y + sprite_height * 1/3 + 70,$"Size:       W            H",1.25,1.25,0);
 		draw_text_transformed(x + 25, y + sprite_height * 1/3 + 100,$"Angle:",1.25,1.25,0);
+		
+		draw_text_transformed(x + 25, y + sprite_height * 1/3 + 130,$"Speed:",1.25,1.25,0);
+		draw_text_transformed(x + 225, y + sprite_height * 1/3 + 130,$"Alpha:",1.25,1.25,0);
+		draw_text_transformed(x + 25, y + sprite_height * 1/3 + 160,$"Survive:",1.25,1.25,0);
+		draw_text_transformed(x + 225, y + sprite_height * 1/3 + 160,$"hitbox:",1.25,1.25,0);
+		
+		draw_text_transformed(x + 25, y + sprite_height * 1/3 + 215,$"Move type:",1.25,1.25,0);
+		
+		if (cur_move_type == MOVE_TYPE.POSITION)
+		{
+			draw_text_transformed(x + 25, y + sprite_height * 1/3 + 265,$"Spline:",1.25,1.25,0);
+			draw_text_transformed(x + 25, y + sprite_height * 1/3 + 295,$"positions:",1.25,1.25,0); //???????? wtf am i doing?
+		}else if (cur_move_type == MOVE_TYPE.BOUNCE)
+		{
+			draw_text_transformed(x + 25, y + sprite_height * 1/3 + 265,$"Bounce:",1.25,1.25,0);
+			draw_text_transformed(x + 225, y + sprite_height * 1/3 + 265,$"Gravity:",1.25,1.25,0);
+			draw_text_transformed(x + 25, y + sprite_height * 1/3 + 295,$"Friction:",1.25,1.25,0);
+		}else if (cur_move_type == MOVE_TYPE.SCALE)
+		{
+			draw_text_transformed(x + 25, y + sprite_height * 1/3 + 265,$"Fin scale:",1.25,1.25,0);
+			draw_text_transformed(x + 25, y + sprite_height * 1/3 + 295,$"Spd scale:",1.25,1.25,0);
+		}
 	}
+	
 }else if (state == CUR_EDITING.LEVEL_META)
 {
 		draw_set_valign(fa_middle);

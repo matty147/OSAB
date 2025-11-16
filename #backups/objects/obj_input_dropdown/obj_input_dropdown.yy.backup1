@@ -1,4 +1,4 @@
-// 2025-11-16 18:55:11
+// 2025-11-16 19:37:27
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_input_dropdown;
@@ -29,7 +29,7 @@ object_settings = instance_find(obj_object_settings,0);
 
 #event step
 
-if (live_call()) return live_result;
+// if (live_call()) return live_result;
 
 if (mouse_check_button_pressed(mb_left))
 {
@@ -72,6 +72,9 @@ if (open)
 if (update_value)
 {
     update_value = false;
+    
+    object_settings.update_state = true;
+    
     switch (inp_dropdown_text)
     {
         case "None":

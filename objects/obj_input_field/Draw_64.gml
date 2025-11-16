@@ -106,8 +106,10 @@ while (string_width(t_) * text_size > sprite_width - 15 - 10)
 draw_set_color(c_white);
 draw_set_halign(fa_left);
 
-draw_text_transformed(x + 10,y,string($"{t_}{show_typing && typing ? "_" : ""}"),text_size,text_size,0);
-
+if (!place_meeting(x,y,obj_input_dropdown_button))
+{
+	draw_text_transformed(x + 10,y,string($"{t_}{show_typing && typing ? "_" : ""}"),text_size,text_size,0);
+}
 if (t_ != "" && !typing)
 {
 	default_var = t_;
