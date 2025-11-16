@@ -1,4 +1,4 @@
-if (live_call()) return live_result;
+// if (live_call()) return live_result;
 
 if (display_object)
 {
@@ -98,3 +98,5 @@ if (editor_object_time >= 0)
 	position = round((x - timeline.x) / timeline.line_amount_w) - timeline.timeline_offset;
 	editor_object_time = -1;
 }
+
+visible = place_meeting(x,y,obj_timeline);

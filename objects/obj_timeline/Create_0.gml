@@ -17,3 +17,5 @@ tick =	10;
 show_debug_message($"line_amount: {line_amount_h},{line_amount_w}");
 
 timeline_offset = 0; // seconds?
+
+timeline = instance_find(obj_timeline,0);

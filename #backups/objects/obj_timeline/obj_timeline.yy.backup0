@@ -1,4 +1,4 @@
-// 2025-11-15 18:25:23
+// 2025-11-16 00:59:06
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_timeline;
@@ -24,6 +24,8 @@ tick =	10;
 show_debug_message($"line_amount: {line_amount_h},{line_amount_w}");
 
 timeline_offset = 0; // seconds?
+
+timeline = instance_find(obj_timeline,0);
 
 #event step
 if (mouse_wheel_up() || mouse_wheel_down())
@@ -53,7 +55,7 @@ for (var i = 0;i <= split_w;i++)
 {
     draw_line_width_color(x + line_amount_w * i,y,x + line_amount_w * i,y + sprite_height,line_width,line_color,line_color);
     
-    draw_text_ext_transformed_color(x + line_amount_w * i,y - 20,$"{time + tick * i}",1,10,0.75,0.75,0,c_white,c_white,c_white,c_white,1);
+    draw_text_ext_transformed_color(x + line_amount_w * i,y - 20,$"{(-timeline.timeline_offset + i)}",1,10,0.75,0.75,0,c_white,c_white,c_white,c_white,1);
 }
 
 for (var i = 0;i <= split_h;i++)

@@ -99,6 +99,14 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("O")) || load_leve
 		show_debug_message($"inp: {inp_obj}");
 		
 		ede.object_time = inp_obj.time;
+		ede.editor_object_time = inp_obj.time;
+		
+		with (ede)
+		{
+			editor_x = timeline.x + timeline.line_amount_w * object_time;
+			position = round((x - timeline.x) / timeline.line_amount_w) - timeline.timeline_offset;
+		}
+		
 		ede.sprite = inp_obj.object_type;
 		ede.object_position = inp_obj.position;
 		ede.object_size = inp_obj.size;

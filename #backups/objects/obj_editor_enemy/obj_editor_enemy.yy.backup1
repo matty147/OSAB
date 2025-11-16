@@ -1,4 +1,4 @@
-// 2025-11-15 21:54:26
+// 2025-11-16 01:02:53
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_editor_enemy;
@@ -74,7 +74,7 @@ editor_x = -1;
 editor_object_time = -1;
 
 #event step
-if (live_call()) return live_result;
+// if (live_call()) return live_result;
 
 if (display_object)
 {
@@ -174,6 +174,10 @@ if (editor_object_time >= 0)
 	position = round((x - timeline.x) / timeline.line_amount_w) - timeline.timeline_offset;
 	editor_object_time = -1;
 }
+
+visible = place_meeting(x,y,obj_timeline);
+
+show_debug_message(visible);
 
 #event draw
 if (instance_exists(timeline))
