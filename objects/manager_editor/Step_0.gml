@@ -1,3 +1,10 @@
+
+if (keyboard_check_pressed(ord("G")))
+{
+	show_debug_message(array_length(editor_enemy_instance_table));
+	show_debug_message(editor_enemy_instance_table);
+}
+
 if (array_length(set_data) != 0)
 {
 	switch (set_data[0])

@@ -31,6 +31,8 @@ if (mouse_check_button_pressed(mb_right) &&  instance_position(mouse_x,mouse_y,i
 		var lane_numb = floor(clamp(abs(timeline.y - y) / sprite_height,0,3));
 
 		y = timeline.y + sprite_height / 2 + sprite_height * lane_numb;
+		
+		
     }
 }
 

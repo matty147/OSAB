@@ -196,6 +196,7 @@
     {"id":{"name":"GMLive","path":"scripts/GMLive/GMLive.yy",},},
     {"id":{"name":"GMLiveAPI_js","path":"scripts/GMLiveAPI_js/GMLiveAPI_js.yy",},},
     {"id":{"name":"GMLiveAPI","path":"scripts/GMLiveAPI/GMLiveAPI.yy",},},
+    {"id":{"name":"scr_arrays","path":"scripts/scr_arrays/scr_arrays.yy",},},
     {"id":{"name":"scr_editor_manager","path":"scripts/scr_editor_manager/scr_editor_manager.yy",},},
     {"id":{"name":"scr_get_level_data","path":"scripts/scr_get_level_data/scr_get_level_data.yy",},},
     {"id":{"name":"scr_load_level_old","path":"scripts/scr_load_level_old/scr_load_level_old.yy",},},
