@@ -2,6 +2,8 @@
 
 // automaticly check and toggle input box visibility
 
+// show_debug_message(instance_number(obj_editor_enemy));
+
 function update_inputbox_visibility() {
     var obj_len  = array_length(objects);
     var meta_len = array_length(metas);
@@ -81,6 +83,8 @@ if (state == CUR_EDITING.LEVEL_META)
 	if (array_length(set_data) != 0)
 	{
 	
+		update_display_object = true;
+	
 		switch (set_data[0])
 		{
 			case "time":
@@ -90,7 +94,8 @@ if (state == CUR_EDITING.LEVEL_META)
 				valid_editor_object.object_time = real(set_data[1]);
 				valid_editor_object.editor_object_time = real(set_data[1]);
 				
-				show_debug_message(set_data[1]);
+				// show_debug_message(set_data[1]);
+				
 				
 				with (valid_editor_object)
 				{

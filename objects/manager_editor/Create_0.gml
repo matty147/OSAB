@@ -13,3 +13,5 @@ save_level = false;
 load_level = false;
 
 set_data = [];
+
+editor_enemy_instance_table = [];

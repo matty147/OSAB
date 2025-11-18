@@ -33,7 +33,7 @@ level_object_map = _manager.level_object_map;
 timeline_height = timeline.sprite_height;
 
 //basic
-object_time = 10.54;
+object_time = 10;
 object_name = "default_object"; // why do we need a name and a sprite_name it should be the same thing?
 object_position = [545,235];
 object_size = [2,1];
@@ -59,6 +59,7 @@ object_end_scale = [];
 object_scale_speed = [];
 
 display_object = true;
+update_display_object = false;
 
 obj_display_object = noone;
 
