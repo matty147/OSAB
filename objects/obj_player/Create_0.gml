@@ -4,7 +4,7 @@ image_index = 0;
 image_scale = 0;
 mod_image_scale = 0;
 
-move = 6;
+move = 1000;
 _speed = 10;
 
 def_speed = _speed;

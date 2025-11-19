@@ -150,6 +150,7 @@
     {"id":{"name":"obj_mouth_down","path":"objects/obj_mouth_down/obj_mouth_down.yy",},},
     {"id":{"name":"obj_mouth_up","path":"objects/obj_mouth_up/obj_mouth_up.yy",},},
     {"id":{"name":"obj_object_settings","path":"objects/obj_object_settings/obj_object_settings.yy",},},
+    {"id":{"name":"obj_player_2","path":"objects/obj_player_2/obj_player_2.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_rect","path":"objects/obj_rect/obj_rect.yy",},},
     {"id":{"name":"obj_rock","path":"objects/obj_rock/obj_rock.yy",},},

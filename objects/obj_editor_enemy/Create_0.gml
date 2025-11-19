@@ -59,7 +59,7 @@ object_end_scale = [];
 object_scale_speed = [];
 
 display_object = true;
-update_display_object = false;
+update_display_object = true;
 
 obj_display_object = noone;
 
