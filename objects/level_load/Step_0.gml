@@ -55,7 +55,7 @@
 		current_index++;
 	}
 	
-	if (floor(global.runtime) <= objects[array_length(objects) - 1].time && !instance_exists(obj_enemy))
+	if (global.runtime <= objects[array_length(objects) - 1].time && instance_exists(obj_enemy))
 	{
 		end_game = 250;
 	}else if (!global.pause)
@@ -63,14 +63,21 @@
 		end_game--;
 	}
 	
-	if (end_game == 249 && search != "")
+	if (end_game <= 240 && search != "")
 	{
 		audio_sound_gain(sound_id,0,7000);	
 	}
 	
-	if (player.dead && search != "" && !instance_exists(obj_enemy))
+	// show_debug_message(end_game)
+	
+	if end_game == 240
 	{
-		show_debug_message(pitch);
+		show_debug_message($"{end_game == 240} {global.runtime} {instance_number(obj_enemy)} {objects[array_length(objects) - 1].time}");
+	}
+	
+	if (player.dead && search != "")
+	{
+		show_debug_message($"pitch: {pitch}");
 		pitch -= 0.01;
 		audio_sound_pitch(sound_id, pitch);
 		

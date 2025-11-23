@@ -6,7 +6,7 @@ win = false;
 
 read_file = false;
 
-end_game = 0;
+end_game = 250;
 
 player = instance_find(obj_player,0);
 
