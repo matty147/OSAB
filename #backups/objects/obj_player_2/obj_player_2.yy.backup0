@@ -1,3 +1,35 @@
+// 2025-11-23 23:14:51
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+sprite_index = spr_player;
+uses_physics = false;
+
+#event create
+image_speed = 0;
+image_index = 0;
+
+image_xscale = 0.75;
+image_yscale = 0.75;
+
+_speed = 10;
+def_speed = _speed;
+
+dash_time = 1; 
+
+health = 3;
+dead = false;
+
+coyote_dash_time = 0;
+
+hit_cooldown = 0;
+
+#event alarm0 invincibility
+
+
+#event alarm1
+
+
+#event step
 
 if (!global.pause)
 {
@@ -83,4 +115,17 @@ if (!global.pause)
 if (dead)
 {
 	image_speed = 0;
+}
+
+#event draw
+// if (live_call()) return live_result;
+
+draw_self();
+
+if (dash_time > 1)
+{
+	var behind_player_x = x - lengthdir_x(2 * dash_time * _speed,image_angle);
+	var behind_player_y = y - lengthdir_y(2 * dash_time * _speed,image_angle);
+
+	draw_sprite_ext(spr_player,	0,behind_player_x,behind_player_y,0.5,0.5,image_angle,c_white,1);
 }

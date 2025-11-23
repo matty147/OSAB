@@ -1,25 +1,17 @@
 image_speed = 0;
 image_index = 0;
 
-image_scale = 0;
-mod_image_scale = 0;
+image_xscale = 0.75;
+image_yscale = 0.75;
 
-move = 1000;
 _speed = 10;
-
 def_speed = _speed;
-dash_speed = 1;
 
-dash = false;
-dash_cooldown = false;
-is_dashing = false;
+dash_time = 1; 
 
-is_invincible = false;
-invincible_time = 0.5;
-
-damaged = false;
-
-
-health = 3; // maybe add multiple for other player bc this is a global variable
+health = 3;
 dead = false;
 
+coyote_dash_time = 0;
+
+hit_cooldown = 0;

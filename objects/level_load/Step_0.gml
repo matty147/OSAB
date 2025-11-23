@@ -75,8 +75,8 @@
 	
 	if (player.dead && search != "")
 	{
-		show_debug_message($"pitch: {pitch}");
-		pitch -= 0.01;
+		pitch = clamp(pitch - 0.01,0, pitch);
+		
 		audio_sound_pitch(sound_id, pitch);
 		
 		if (pitch < 0)

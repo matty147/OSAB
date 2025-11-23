@@ -1,4 +1,4 @@
-// 2025-11-16 01:33:05
+// 2025-11-23 23:08:56
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -54,7 +54,7 @@ if (!variable_global_exists("fullscreen")) {
 	window_set_fullscreen(global.fullscreen);
 }
 
-if !variable_global_exists("controllers") {
+if (!variable_global_exists("controllers")) {
 	global.controllers = [];
 }
 
@@ -524,7 +524,7 @@ draw_self();
 
 if room == level
 {
-	var player = instance_find(obj_player,0);
+	var player = instance_find(obj_player_2,0);
 	var loader = instance_find(level_load,0);
 	if global.pause //temp
 	{
