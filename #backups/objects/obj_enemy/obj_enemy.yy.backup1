@@ -1,3 +1,94 @@
+// 2025-11-23 16:06:07
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+sprite_index = spr_enemy;
+uses_physics = false;
+
+#event create
+image_speed = 0;
+set_up = true;
+//survive_speed = random_range(100, 100); //change!!!!
+hitbox = false;
+
+if (!variable_instance_exists(id,"show_hitbox") )
+{
+	show_hitbox = 25;
+}
+
+amplitude = 2; // 10 is realy cool 
+frequency = 2;
+wave_angle = 0;
+
+_manager = instance_find(manager,0);
+
+level_object_map = _manager.level_object_map;
+
+if (!variable_instance_exists(id,"survive_speed")) // check if the value is declared if not declare it
+{
+	survive_speed = 0;	
+}
+
+	object_sprite = 0;	
+
+if (!variable_instance_exists(id,"angle")) // check if the value is declared if not declare it
+{
+	angle = 0;	
+}
+
+if (!variable_instance_exists(id,"_speed")) // check if the value is declared if not declare it
+{
+	_speed = 0;	
+}
+
+if (!variable_instance_exists(id,"spawned_time"))
+{
+	spawned_time = 0;
+}
+
+if (!variable_instance_exists(id,"move"))
+{
+	move = false;	
+}
+
+if (!variable_instance_exists(id,"positions"))
+{
+	positions = [];	
+}
+
+if (!variable_instance_exists(id,"move_type"))
+{
+	move_type = "None";
+}
+
+if (!variable_instance_exists(id,"bounce"))
+{
+	bounce = [0,0];
+}
+
+if (!variable_instance_exists(id,"_gravity"))
+{
+	_gravity = 0;
+}
+
+_friction = false;
+
+hspd = bounce[0];
+vspd = bounce[1];
+
+positions_cur_position = 0;
+
+points_x = ds_list_create();
+points_y = ds_list_create();
+
+pointx = [];
+pointy = [];
+
+end_scale = [];
+scale_speed = [];
+
+spline_cur_location = 0;
+
+#event step
 if (set_up)
 {
 
@@ -25,17 +116,17 @@ if (set_up)
 
 if (move_type == "position" && splines)
 {
-	// show_debug_message(array_length(positions));
+	show_debug_message(array_length(positions));
 
 	for (var i = 0;array_length(positions) > i;i++)
 	{
-		// show_debug_message($"{positions[i][0]},{positions[i][1]}");
+		show_debug_message($"{positions[i][0]},{positions[i][1]}");
 	
 			ds_list_add(points_x,positions[i][0]);
 			ds_list_add(points_y,positions[i][1]);
 	}
 
-	// show_debug_message($"spline: {points_x},{points_y}");
+	show_debug_message($"spline: {points_x},{points_y}");
 }
 
 }
@@ -141,7 +232,7 @@ if (!global.pause && move)
 				break;
 			
 			default:
-				// show_debug_message("invalid object");
+				show_debug_message("invalid object");
 				instance_destroy();
 				break;
 	}
@@ -178,3 +269,7 @@ if (!global.pause && move)
 	//x += cos((real(angle) + 90) * (pi / 180)) * wave_offset;
 	//y += sin((real(angle) + 90) * (pi / 180)) * wave_offset;
 
+
+
+#event draw
+draw_self();
