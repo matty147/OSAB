@@ -1,25 +1,31 @@
 
+function scr_input_get(p, act) {
+	
+    var k = input_map[p][act];
+
+    if (is_struct(k) && k.has("neg") && k.has("pos")) {
+        return keyboard_check(k.pos) - keyboard_check(k.neg);
+    }
+
+    return keyboard_check_pressed(k);
+}
+
+
+
 if (!global.pause)
 {
-	var dash = keyboard_check_pressed(vk_shift) || keyboard_check_pressed(vk_space);
+	show_debug_message(player_ide);
 	
-	if (dash)
-	{
-		coyote_dash_time = 7;
-	}else coyote_dash_time = clamp(coyote_dash_time - 1, 0, coyote_dash_time);
+	var dash = scr_input_get(player_ide, ACT.DASH);
 	
-	
-	var move_x = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-	if (move_x == 0)
-	{
-		move_x = keyboard_check(vk_right) - keyboard_check(vk_left);
+	if (dash) {
+	    coyote_dash_time = 7;
+	} else {
+	    coyote_dash_time = clamp(coyote_dash_time - 1, 0, coyote_dash_time);
 	}
 	
-	var move_y = keyboard_check(ord("S")) - keyboard_check(ord("W"));
-	if (move_y == 0)
-	{
-		move_y = keyboard_check(vk_down) - keyboard_check(vk_up);
-	}
+	var move_x = scr_input_get(player_ide, ACT.MOVE_X);
+	var move_y = scr_input_get(player_ide, ACT.MOVE_Y);
 	
 	
 	if (move_x != 0 || move_y != 0) {
@@ -41,8 +47,8 @@ if (!global.pause)
 	y += move_y * _speed * dash_time;
 	x += move_x * _speed * dash_time;
 	
-	x = clamp(x,0,room_width);
-	y = clamp(y,0,room_height);
+	x = clamp(x,8,room_width - 8);
+	y = clamp(y,8,room_height - 8);
 
 
 	if (keyboard_check(vk_anykey))
