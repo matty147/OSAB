@@ -96,32 +96,6 @@ lemon = true;
 mdoubleclick =-1;
 clickdouble=0;
 
-//level_object_list = [ //object name + size //could load dinamicly from a file so the user could add own objects? also this is ugly asf
-//["all_spike_saw",0.065], //0
-//["circle",0.065], //1
-//["star",0.065], //2
-//["halfcircle",0.07], //3
-//["enemy",0.5], //4
-//["house",0.07],//5
-//["moon",0.063],//6
-//["rectangle",0.065], //7
-//["rounded_polygon",0.065],//8
-//["rounded_rect",0.065],//9
-//["snake",0.05],//10
-//["spike",0.05],//11
-//["spike_floor",0.065],//12
-//["spike_saw",0.065],//13
-//["spike_saw_hole",0.065],//14
-//["sun",0.065],//15
-//["large_arrow",0.065],//16
-//["heart",0.065],//17
-//["hexagon",0.065],//18
-//["industrial_circle",0.065],//19
-//["lightning",0.065],//20
-//["heart",0.065],//21 // lmao this fucker is here twice XD
-//["main_boss",0.5],//22
-//];
-
 level_object_map = ds_map_create();
 level_object_map[? "all_spike_saw"] = 0.065;
 level_object_map[? "circle"] = 0.065;

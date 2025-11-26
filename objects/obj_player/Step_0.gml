@@ -12,7 +12,7 @@ function scr_input_get(p, act) {
 
 if (!global.pause)
 {
-	show_debug_message(player_ide);
+	// show_debug_message(player_ide);
 	
 	var dash = scr_input_get(player_ide, ACT.DASH);
 	
@@ -84,4 +84,5 @@ if (!global.pause)
 if (dead)
 {
 	image_speed = 0;
+	instance_destroy();
 }

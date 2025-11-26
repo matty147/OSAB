@@ -1,7 +1,7 @@
 
 all_playes_dead = true;
 
-for (var pl = 0; pl < player_amount;pl++)
+for (var pl = 0; pl < instance_number(obj_player);pl++)
 {
 	var check_player = instance_find(obj_player,pl);
 	
@@ -10,6 +10,8 @@ for (var pl = 0; pl < player_amount;pl++)
 		all_playes_dead = false;
 	}
 }
+
+show_debug_message(all_playes_dead);
 
 if (all_playes_dead)
 {

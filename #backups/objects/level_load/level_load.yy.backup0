@@ -1,4 +1,4 @@
-// 2025-11-23 23:17:03
+// 2025-11-26 11:39:36
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -16,183 +16,230 @@ end_game = 250;
 
 player = instance_find(obj_player,0);
 
-	//load file
-	
-	level_data = undefined;
-	
-	if (file_exists(global.level_name))
+//load file
+
+level_data = undefined;
+
+if (file_exists(global.level_name))
+{
+
+	var json = "";
+
+	var file = file_text_open_read(global.level_name);
+
+	while(file_text_eof(file) == false)
 	{
+		json += file_text_readln(file);
+	}
 	
-		var json = "";
+	file_text_close(file);
+
 	
-		var file = file_text_open_read(global.level_name);
+	level_data = json_parse(json);
+
+}
+
+meta = level_data.meta;
+objects = level_data.level;
+
+show_debug_message(meta.id);
+show_debug_message(meta.name);
+show_debug_message(meta.description);
+show_debug_message(meta.lenght);
+show_debug_message(meta.diff);
+
+show_debug_message($"aaa {objects[0]}");
+
+show_debug_message("finished");
+read_file = true;
+
+show_debug_message("object count: " + string(array_length(objects)));
+
+if (array_length(objects) <= 0)
+{
+	show_message("Error: This level contains no content! Returning to the main menu.");
+	room_goto(main_menu);
+}
+
+var path = filename_dir(global.level_name) + "\\*.ogg";
+//var path = folder + "\\*";
+
+show_debug_message(path);
+
+search = file_find_first(path, fa_directory);
+file_find_close();
+
+show_debug_message("found song: " + string(search));
+
+if (search != "")
+{
+	pitch = 1.0;
+	sound_id = audio_create_stream(filename_dir(global.level_name) + "\\" + search);
+}
+
+show_debug_message("glob: " + (string(global.cleared) + "(level_load)"));
+show_debug_message("stor: " + (string(global.story_level) + "(level_load)"));
+
+audio_deleted = 0;
+
+player_amount = 4;
+
+for (var p = 0; p < player_amount; p++)
+{
+	var inp_player = instance_create_layer(x,y,"main",obj_player);
+	inp_player.player_ide = p;
 	
-		while(file_text_eof(file) == false)
-		{
-			json += file_text_readln(file);
-		}
+	switch (p)
+	{
+		case 0:
+			inp_player.sprite_index = spr_player;
+		break;
 		
-		file_text_close(file);
-
+		case 1:
+			inp_player.sprite_index = spr_player_yellow;
+		break;
 		
-		level_data = json_parse(json);
-	
+		case 2:
+			inp_player.sprite_index = spr_player_orange;
+		break;
+		
+		case 3:
+			inp_player.sprite_index = spr_player_green;
+		break;
+		
+		default:
+			inp_player.sprite_index = spr_player;
+		break;
 	}
-	
-	meta = level_data.meta;
-	objects = level_data.level;
-	
-	show_debug_message(meta.id);
-	show_debug_message(meta.name);
-	show_debug_message(meta.description);
-	show_debug_message(meta.lenght);
-	show_debug_message(meta.diff);
-	
-	show_debug_message($"aaa {objects[0]}");
-	
-	show_debug_message("finished");
-	read_file = true;
-	
-	show_debug_message("object count: " + string(array_length(objects)));
-	
-	if (array_length(objects) <= 0)
-	{
-		show_message("Error: This level contains no content! Returning to the main menu.");
-		room_goto(main_menu);
-	}
-	
-	var path = filename_dir(global.level_name) + "\\*.ogg";
-	//var path = folder + "\\*";
+}
 
-	show_debug_message(path);
-	
-	search = file_find_first(path, fa_directory);
-	file_find_close();
-	
-	show_debug_message("found song: " + string(search));
-
-	if (search != "")
-	{
-		pitch = 1.0;
-		sound_id = audio_create_stream(filename_dir(global.level_name) + "\\" + search);
-	}
-
-	show_debug_message("glob: " + (string(global.cleared) + "(level_load)"));
-	show_debug_message("stor: " + (string(global.story_level) + "(level_load)"));
-	
-	audio_deleted = 0;
+all_playes_dead = false;
 
 #event step
-	if (floor(global.runtime) == 0  && search != "")
-	{
-		if (!audio_is_playing(sound_id))
-		{
-			show_debug_message("playing sound");
-			audio_play_sound(sound_id, 1, false,1);
-		}
-		
-	}
-	
-	if (global.runtime > 1 && search != "" && !win)
-	{
-	
-		if (global.pause && !player.dead)
-		{
-			audio_pause_sound(sound_id);
-		}else 
-		{
-			if (audio_is_paused(sound_id))
-			{
-				audio_resume_sound(sound_id);
-			}
-		}
-	}
-	
-	//spawning enemies on the same frame
-	while (current_index < array_length(objects) && objects[current_index].time == floor(global.runtime))
-	{
-			
-		var position = objects[current_index].position;
-		var size = objects[current_index].size;
-		var move = objects[current_index].move;
-			
-		var instance = instance_create_layer(position[0],position[1],"spawned",obj_enemy);
-		
-		instance.object_sprite = objects[current_index].object_type;
-		instance.image_xscale = size[0];
-		instance.image_yscale = size[1];
-		instance.angle = objects[current_index].angle;
-		instance._speed = move.speed;
-		instance.image_alpha = move.alpha;
-		instance.survive_speed = real(move.duration) * 85;
-		instance.move = true; //????
-		instance.show_hitbox = real(move.show_hitbox);
-		 
-		instance.move_type = variable_struct_exists(move, "move_type") ? move.move_type : "None";	
-		instance.positions = variable_struct_exists(move, "positions") ? move.positions : [];
-		instance.bounce = variable_struct_exists(move, "bounce") ? move.bounce: [0,0]; 
-		instance._gravity = variable_struct_exists(move, "gravity") ? move.gravity: 0;
-		instance.splines = variable_struct_exists(move, "spline") ? move.spline: false;
-		instance._friction = variable_struct_exists(move, "friction") ? move.friction: false;
-		instance.end_scale = variable_struct_exists(move, "end_scale") ? move.end_scale: [size[0],size[1]];
-		instance.scale_speed = variable_struct_exists(move, "end_scale") ? move.scale_speed: [move.speed,move.speed];
 
-		current_index++;
-	}
-	
-	if (global.runtime <= objects[array_length(objects) - 1].time || instance_exists(obj_enemy))
-	{
-		end_game = 250;
-	}else if (!global.pause)
-	{	
-		end_game--;
-	}
-	
-	if (end_game <= 240 && search != "")
-	{
-		audio_sound_gain(sound_id,0,2000);	
-	}
-	
-	if (end_game == 240)
-	{
-		show_debug_message($"{end_game == 240} {global.runtime} {instance_number(obj_enemy)} {objects[array_length(objects) - 1].time}");
-	}
-	
-	if (player.dead && search != "")
-	{
-		pitch = clamp(pitch - 0.01,0, pitch);
-		
-		audio_sound_pitch(sound_id, pitch);
-		
-		if (pitch < 0)
-		{
-			audio_stop_sound(sound_id);
-		}
-	}
+all_playes_dead = true;
 
-	if (instance_number(obj_enemy) <= 0 && end_game < 0)
+for (var pl = 0; pl < instance_number(obj_player);pl++)
+{
+	var check_player = instance_find(obj_player,pl);
+	
+	if (!check_player.dead)
 	{
-		win = true;
-		global.pause = true;
-		
-		if (search != "")
-		{
-			audio_stop_sound(sound_id);
-			if (audio_deleted)
-			{
-				audio_deleted = audio_destroy_stream(sound_id);
-			}
-		}
-		
-		if (!global.cleared && global.story_level)
-		{
-			show_debug_message("cleared + story" + string(global.cleared_levels));
-			global.cleared_levels++;
-			global.cleared = true;
-			show_debug_message("cleared + story" + string(global.cleared_levels));
-		}
-		//room_goto(main_menu);
-		//game_end();	
+		all_playes_dead = false;
 	}
+}
+
+show_debug_message(all_playes_dead);
+
+if (all_playes_dead)
+{
+	global.pause = true;
+}
+
+if (floor(global.runtime) == 0  && search != "")
+{
+	if (!audio_is_playing(sound_id))
+	{
+		show_debug_message("playing sound");
+		audio_play_sound(sound_id, 1, false,1);
+	}
+	
+}
+
+if (global.runtime > 1 && search != "" && !win)
+{
+	if (global.pause && !all_playes_dead)
+	{
+		audio_pause_sound(sound_id);
+	}else 
+	{
+		if (audio_is_paused(sound_id))
+		{
+			audio_resume_sound(sound_id);
+		}
+	}
+}
+
+//spawning enemies on the same frame
+while (current_index < array_length(objects) && objects[current_index].time == floor(global.runtime))
+{
+		
+	var position = objects[current_index].position;
+	var size = objects[current_index].size;
+	var move = objects[current_index].move;
+		
+	var instance = instance_create_layer(position[0],position[1],"spawned",obj_enemy);
+	
+	instance.object_sprite = objects[current_index].object_type;
+	instance.image_xscale = size[0];
+	instance.image_yscale = size[1];
+	instance.angle = objects[current_index].angle;
+	instance._speed = move.speed;
+	instance.image_alpha = move.alpha;
+	instance.survive_speed = real(move.duration) * 85;
+	instance.move = true; //????
+	instance.show_hitbox = real(move.show_hitbox);
+	 
+	instance.move_type = variable_struct_exists(move, "move_type") ? move.move_type : "None";	
+	instance.positions = variable_struct_exists(move, "positions") ? move.positions : [];
+	instance.bounce = variable_struct_exists(move, "bounce") ? move.bounce: [0,0]; 
+	instance._gravity = variable_struct_exists(move, "gravity") ? move.gravity: 0;
+	instance.splines = variable_struct_exists(move, "spline") ? move.spline: false;
+	instance._friction = variable_struct_exists(move, "friction") ? move.friction: false;
+	instance.end_scale = variable_struct_exists(move, "end_scale") ? move.end_scale: [size[0],size[1]];
+	instance.scale_speed = variable_struct_exists(move, "end_scale") ? move.scale_speed: [move.speed,move.speed];
+
+	current_index++;
+}
+
+if (global.runtime <= objects[array_length(objects) - 1].time || instance_exists(obj_enemy))
+{
+	end_game = 250;
+}else if (!global.pause)
+{	
+	end_game--;
+}
+
+if (end_game <= 240 && search != "")
+{
+	audio_sound_gain(sound_id,0,2000);	
+}
+
+if (all_playes_dead && search != "")
+{
+	pitch = clamp(pitch - 0.01,0, pitch);
+	
+	audio_sound_pitch(sound_id, pitch);
+	
+	if (pitch < 0)
+	{
+		audio_stop_sound(sound_id);
+	}
+}
+
+if (instance_number(obj_enemy) <= 0 && end_game < 0)
+{
+	win = true;
+	global.pause = true;
+	
+	if (search != "")
+	{
+		audio_stop_sound(sound_id);
+		if (audio_deleted)
+		{
+			audio_deleted = audio_destroy_stream(sound_id);
+		}
+	}
+	
+	if (!global.cleared && global.story_level)
+	{
+		show_debug_message("cleared + story" + string(global.cleared_levels));
+		global.cleared_levels++;
+		global.cleared = true;
+		show_debug_message("cleared + story" + string(global.cleared_levels));
+	}
+	//room_goto(main_menu);
+	//game_end();	
+}
 	
 //	show_debug_message(global.runtime)

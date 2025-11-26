@@ -1,12 +1,11 @@
 draw_self();
 
-if room == level
+if (room == level)
 {
-	var player = instance_find(obj_player,0);
 	var loader = instance_find(level_load,0);
-	if global.pause //temp
+	if (global.pause) //temp
 	{
-		if player.dead
+		if (loader.all_playes_dead)
 		{
 			draw_set_alpha(0.25);
 
@@ -18,7 +17,7 @@ if room == level
 			
 			instance_activate_layer("death_menu");
 			draw_text_transformed(room_width * 1/2,room_height * 1/4,"You Failed",5,5,0);
-		}else if loader.win
+		}else if (loader.win)
 		{
 			
 			draw_set_alpha(0.25);
