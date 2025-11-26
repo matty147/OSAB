@@ -84,5 +84,7 @@ if (!global.pause)
 if (dead)
 {
 	image_speed = 0;
-	instance_destroy();
+	instance_destroy(); // instance_change()?
+	var dead_player = instance_create_depth(x,y,depth,obj_dead_player);
+	dead_player.player_ide = player_ide;
 }

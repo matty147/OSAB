@@ -1,0 +1,40 @@
+// 2025-11-26 12:00:10
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+sprite_index = spr_dead_player;
+uses_physics = false;
+
+#event create
+player_ide = 0;
+
+t = 0;
+increment = 6; //degrees -- freq = 1 oscillation per second (1Hz) in a 30 fps room
+amplitude = 15; //pixels of peak oscillation
+
+//clone the y-position (or use x instead if you're doing horizontal oscillation)
+yy = y;
+
+x_speed = 0.5;
+
+loader = instance_find(level_load,0);
+
+#event step
+
+
+if (loader.all_playes_dead)
+{
+    instance_destroy();
+}
+
+
+if (!global.pause)
+{
+    t = (t + increment) mod 360;
+    shift = amplitude * dsin(t);
+    
+    //clone the movement from the object's speed and direction
+    yy += vspeed;
+    y = yy + shift; //vertical wave motion
+    
+    x -= x_speed;
+}

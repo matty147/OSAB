@@ -1,4 +1,4 @@
-// 2025-11-26 11:39:45
+// 2025-11-26 11:51:12
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_player;
@@ -152,7 +152,9 @@ if (!global.pause)
 if (dead)
 {
 	image_speed = 0;
-	instance_destroy()''
+	instance_destroy(); // instance_change()?
+	var dead_player = instance_create_depth(x,y,depth,obj_dead_player);
+	dead_player.player_ide = player_ide;
 }
 
 #event draw
