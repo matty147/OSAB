@@ -1,16 +1,14 @@
 
 function scr_input_get(p, act) {
-	
+
     var k = input_map[p][act];
 
-    if (is_struct(k) && k.has("neg") && k.has("pos")) {
+    if (is_struct(k)) {
         return keyboard_check(k.pos) - keyboard_check(k.neg);
     }
 
     return keyboard_check_pressed(k);
 }
-
-
 
 if (!global.pause)
 {
@@ -33,7 +31,6 @@ if (!global.pause)
 	    move_x /= length;
 	    move_y /= length;
 	}
-	
 	
 	if (dash && dash_time <= 1 || coyote_dash_time > 0 && dash_time <= 1)
 	{
@@ -61,14 +58,12 @@ if (!global.pause)
 	if (instance_place(x, y, _inst) && _inst.hitbox == true && hit_cooldown <= 0 && dash_time == 1)
 	{
 		hit_cooldown = 50;
-		health--;
+		_health--;
 	}else hit_cooldown = clamp(hit_cooldown - 1, -1, hit_cooldown);
 	
-	
-	if (health < 0)
+	if (_health < 0)
 	{
 		dead = true;
-		global.pause = true;
 	}
 	
 	if (hit_cooldown > 0)
@@ -77,11 +72,11 @@ if (!global.pause)
 		
 		if (image_index % 2 == 0)
 		{
-			image_index = (3 - health) * 2;
+			image_index = (3 - _health) * 2;
 		}
 	}else
 	{
-		image_index = (3 - health) * 2;
+		image_index = (3 - _health) * 2;
 		image_speed = 0;	
 	}
 }

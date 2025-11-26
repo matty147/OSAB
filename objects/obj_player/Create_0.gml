@@ -9,13 +9,14 @@ def_speed = _speed;
 
 dash_time = 1; 
 
-health = 3;
+_health = 3;
 dead = false;
 
 coyote_dash_time = 0;
 
 hit_cooldown = 0;
 
+// actions
 enum ACT
 {
 	DASH,
@@ -25,16 +26,28 @@ enum ACT
 
 input_map = array_create(3);
 
-input_map[1] = {
-    DASH: vk_shift,
-    MOVE_X: { neg: ord("A"), pos: ord("D") },
-    MOVE_Y: { neg: ord("W"), pos: ord("S") }
-};
+// for player 1
+input_map[0] = array_create(3);
+input_map[0][ACT.DASH]   = vk_lshift;
+input_map[0][ACT.MOVE_X] = { neg: ord("A"), pos: ord("D") };
+input_map[0][ACT.MOVE_Y] = { neg: ord("W"), pos: ord("S") };
 
-input_map[2] = {
-    DASH: vk_space,
-    MOVE_X: { neg: vk_left, pos: vk_right },
-    MOVE_Y: { neg: vk_up, pos: vk_down }
-};
+// for player 2
+input_map[1] = array_create(3);
+input_map[1][ACT.DASH]   = vk_space;
+input_map[1][ACT.MOVE_X] = { neg: vk_left, pos: vk_right };
+input_map[1][ACT.MOVE_Y] = { neg: vk_up,   pos: vk_down };
 
-player_ide = 1;
+// for player 3
+input_map[2] = array_create(3);
+input_map[2][ACT.DASH]   = ord("C");
+input_map[2][ACT.MOVE_X] = { neg: ord("F"), pos: ord("H") };
+input_map[2][ACT.MOVE_Y] = { neg: ord("T"),   pos: ord("G") };
+
+// for player 4
+input_map[3] = array_create(3);
+input_map[3][ACT.DASH]   = ord("N");
+input_map[3][ACT.MOVE_X] = { neg: ord("J"), pos: ord("L") };
+input_map[3][ACT.MOVE_Y] = { neg: ord("I"),   pos: ord("K") };
+
+player_ide = 0;
