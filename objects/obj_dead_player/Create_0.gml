@@ -1,3 +1,5 @@
+image_speed = 0;
+
 player_ide = 0;
 
 t = 0;
@@ -7,6 +9,8 @@ amplitude = 15; //pixels of peak oscillation
 //clone the y-position (or use x instead if you're doing horizontal oscillation)
 yy = y;
 
-x_speed = 0.5;
+x_speed = 1;
 
 loader = instance_find(level_load,0);
+
+inactive = 50;
