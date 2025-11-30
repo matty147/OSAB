@@ -1,4 +1,4 @@
-// 2025-11-30 02:24:22
+// 2025-11-30 22:14:28
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -104,7 +104,7 @@ for (var p = 0; p < player_amount; p++)
 		case 2:
 			inp_player.sprite_index = spr_player_orange;
 			inp_player.p_device = "controller";
-			inp_player.controller_id = 2;
+			inp_player.controller_id = 5;
 		break;
 		
 		case 3:

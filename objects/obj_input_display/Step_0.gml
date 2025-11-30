@@ -37,7 +37,7 @@ if (array_length(gamepads) > 0)
     {
         if ( gamepad_button_check_pressed(gamepads[c],gp_face1))
         {
-            show_debug_message($"aaa {c}");
+            show_debug_message($"aaa {c} vs {gamepads[c]}");
             
             if (array_length(input_map) < 4 && !array_contains(allready_added_con,c))
             {
@@ -47,6 +47,8 @@ if (array_length(gamepads) > 0)
         }
     }
 }
+
+// show_debug_message(gamepads);
 
 if (array_length(input_map) < 4)
 {

@@ -98,7 +98,7 @@ for (var p = 0; p < player_amount; p++)
 		case 2:
 			inp_player.sprite_index = spr_player_orange;
 			inp_player.p_device = "controller";
-			inp_player.controller_id = 2;
+			inp_player.controller_id = 5;
 		break;
 		
 		case 3:

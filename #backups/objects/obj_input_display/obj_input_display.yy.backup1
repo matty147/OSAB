@@ -1,4 +1,4 @@
-// 2025-11-30 02:25:45
+// 2025-11-30 22:39:15
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_input_map_display;
@@ -69,7 +69,7 @@ if (array_length(gamepads) > 0)
     {
         if ( gamepad_button_check_pressed(gamepads[c],gp_face1))
         {
-            show_debug_message($"aaa {c}");
+            show_debug_message($"aaa {c} vs {gamepads[c]}");
             
             if (array_length(input_map) < 4 && !array_contains(allready_added_con,c))
             {
@@ -79,6 +79,8 @@ if (array_length(gamepads) > 0)
         }
     }
 }
+
+// show_debug_message(gamepads);
 
 if (array_length(input_map) < 4)
 {
