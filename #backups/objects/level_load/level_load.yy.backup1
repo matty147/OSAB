@@ -1,4 +1,4 @@
-// 2025-11-26 11:39:30
+// 2025-11-30 02:23:57
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -93,18 +93,24 @@ for (var p = 0; p < player_amount; p++)
 	{
 		case 0:
 			inp_player.sprite_index = spr_player;
+			inp_player.p_device = "keyboard";
 		break;
 		
 		case 1:
 			inp_player.sprite_index = spr_player_yellow;
+			inp_player.p_device = "keyboard";
 		break;
 		
 		case 2:
 			inp_player.sprite_index = spr_player_orange;
+			inp_player.p_device = "controller";
+			inp_player.controller_id = 2;
 		break;
 		
 		case 3:
 			inp_player.sprite_index = spr_player_green;
+			inp_player.p_device = "controller";
+			inp_player.controller_id = 0;
 		break;
 		
 		default:
@@ -119,7 +125,7 @@ all_playes_dead = false;
 
 all_playes_dead = true;
 
-for (var pl = 0; pl < instance_number();pl++)
+for (var pl = 0; pl < instance_number(obj_player);pl++)
 {
 	var check_player = instance_find(obj_player,pl);
 	

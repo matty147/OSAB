@@ -1,5 +1,8 @@
 image_speed = 0;
 
+image_xscale = 0.75;
+image_yscale = 0.75;
+
 player_ide = 0;
 
 t = 0;

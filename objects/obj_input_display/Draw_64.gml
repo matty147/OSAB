@@ -1,6 +1,3 @@
-
-
-
 for (var i = 0; i < array_length(input_map);i++)
 {
     var input = input_map[i];

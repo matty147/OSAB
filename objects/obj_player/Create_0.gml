@@ -50,4 +50,13 @@ input_map[3][ACT.DASH]   = ord("N");
 input_map[3][ACT.MOVE_X] = { neg: ord("J"), pos: ord("L") };
 input_map[3][ACT.MOVE_Y] = { neg: ord("I"),   pos: ord("K") };
 
+// for player controller
+input_map[4] = array_create(3);
+input_map[4][ACT.DASH]   = gp_face1;
+input_map[4][ACT.MOVE_X] = gp_axislh;
+input_map[4][ACT.MOVE_Y] = gp_axislv;
+
 player_ide = 0;
+
+p_device = "keyboard";
+controller_id = 2;

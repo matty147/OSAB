@@ -1,20 +1,32 @@
 
-function scr_input_get(p, act) {
+function scr_input_get(p, act, device, controller_id) {
 
-    var k = input_map[p][act];
-
-    if (is_struct(k)) {
-        return keyboard_check(k.pos) - keyboard_check(k.neg);
-    }
-
-    return keyboard_check_pressed(k);
+	if (device == "keyboard")
+	{
+	    var k = input_map[p][act];
+	
+	    if (is_struct(k)) {
+	        return keyboard_check(k.pos) - keyboard_check(k.neg);
+	    }
+	
+	    return keyboard_check_pressed(k);
+	}else
+	{
+	    var k = input_map[4][act];
+	
+		if (act != ACT.DASH)
+		{
+			return gamepad_axis_value(controller_id,k);
+		}
+	
+	    return gamepad_button_check_pressed(controller_id,k);
+	}
 }
 
 if (!global.pause)
 {
-	// show_debug_message(player_ide);
 	
-	var dash = scr_input_get(player_ide, ACT.DASH);
+	var dash = scr_input_get(player_ide, ACT.DASH, p_device, controller_id);
 	
 	if (dash) {
 	    coyote_dash_time = 7;
@@ -22,8 +34,9 @@ if (!global.pause)
 	    coyote_dash_time = clamp(coyote_dash_time - 1, 0, coyote_dash_time);
 	}
 	
-	var move_x = scr_input_get(player_ide, ACT.MOVE_X);
-	var move_y = scr_input_get(player_ide, ACT.MOVE_Y);
+	
+	var move_x = scr_input_get(player_ide, ACT.MOVE_X, p_device, controller_id);
+	var move_y = scr_input_get(player_ide, ACT.MOVE_Y, p_device, controller_id);
 	
 	
 	if (move_x != 0 || move_y != 0) {
@@ -48,7 +61,7 @@ if (!global.pause)
 	y = clamp(y,8,room_height - 8);
 
 
-	if (keyboard_check(vk_anykey))
+	if (abs(scr_input_get(player_ide, ACT.MOVE_X, p_device, controller_id)) || abs(scr_input_get(player_ide, ACT.MOVE_Y, p_device, controller_id)))
 	{
 		image_angle = lerp(image_angle,	arctan2(move_y * -1 ,move_x) * (180 / pi), 0.25);
 	}
@@ -84,7 +97,7 @@ if (!global.pause)
 if (dead)
 {
 	image_speed = 0;
-	instance_destroy(); // instance_change()?
+	instance_destroy();
 	var dead_player = instance_create_depth(x,y,depth,obj_dead_player);
 	dead_player.player_ide = player_ide;
 }

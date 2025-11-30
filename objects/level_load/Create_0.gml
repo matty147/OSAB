@@ -87,18 +87,24 @@ for (var p = 0; p < player_amount; p++)
 	{
 		case 0:
 			inp_player.sprite_index = spr_player;
+			inp_player.p_device = "keyboard";
 		break;
 		
 		case 1:
 			inp_player.sprite_index = spr_player_yellow;
+			inp_player.p_device = "keyboard";
 		break;
 		
 		case 2:
 			inp_player.sprite_index = spr_player_orange;
+			inp_player.p_device = "controller";
+			inp_player.controller_id = 2;
 		break;
 		
 		case 3:
 			inp_player.sprite_index = spr_player_green;
+			inp_player.p_device = "controller";
+			inp_player.controller_id = 0;
 		break;
 		
 		default:

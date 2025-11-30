@@ -1,4 +1,4 @@
-// 2025-11-26 11:59:50
+// 2025-11-26 12:01:15
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_dead_player;
@@ -19,6 +19,13 @@ x_speed = 0.5;
 loader = instance_find(level_load,0);
 
 #event step
+
+
+if (loader.all_playes_dead)
+{
+    instance_destroy();
+}
+
 
 if (!global.pause)
 {
