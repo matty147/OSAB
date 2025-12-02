@@ -76,35 +76,40 @@ show_debug_message("stor: " + (string(global.story_level) + "(level_load)"));
 
 audio_deleted = 0;
 
-player_amount = 4;
+player_amount = clamp(array_length(global.input_map),1,4);
 
 for (var p = 0; p < player_amount; p++)
 {
 	var inp_player = instance_create_layer(x,y,"main",obj_player);
 	inp_player.player_ide = p;
+	inp_player.p_device = (global.input_map[p] == INPUT_METHODS.CONTROLLER) ? "controller" : "keyboard";
+	
+	if (global.input_map[p] == INPUT_METHODS.CONTROLLER)
+	{
+		inp_player.controller_id = ;
+	}
+	
+	if (a)
+	{
+		// fal
+	}
 	
 	switch (p)
 	{
 		case 0:
 			inp_player.sprite_index = spr_player;
-			inp_player.p_device = "keyboard";
 		break;
 		
 		case 1:
 			inp_player.sprite_index = spr_player_yellow;
-			inp_player.p_device = "keyboard";
 		break;
 		
 		case 2:
 			inp_player.sprite_index = spr_player_orange;
-			inp_player.p_device = "controller";
-			inp_player.controller_id = 5;
 		break;
 		
 		case 3:
 			inp_player.sprite_index = spr_player_green;
-			inp_player.p_device = "controller";
-			inp_player.controller_id = 0;
 		break;
 		
 		default:

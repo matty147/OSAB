@@ -1,5 +1,5 @@
 
-image_xscale = (array_length(input_map) * 74) / sprite_get_width(sprite_index);
+image_xscale = (16 + array_length(input_map) * 74) / sprite_get_width(sprite_index);
 
 // if (keyboard_check_pressed(ord("P")))
 // {

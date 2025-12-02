@@ -2,10 +2,7 @@
 enum INPUT_METHODS {
     KEYBOARDS,
     CONTROLLER,
-    
 }
-
-input_map = [];
 
 input_map_max = 4;
 
@@ -21,3 +18,12 @@ allready_added_con = [];
 allready_added_key = [];
 
 player = instance_find(obj_player,1);
+
+if (!variable_global_exists("input_map")) {
+	global.input_map = [];
+}
+
+if (level == room)
+{
+    visible = false;
+}
