@@ -12,7 +12,7 @@
 
 image_speed = 0;
 image_index = 0;
-mouse_hover = true
+mouse_hover = true;
 display_text = true;
 pop_up = false;
 selected_button_id = 1;

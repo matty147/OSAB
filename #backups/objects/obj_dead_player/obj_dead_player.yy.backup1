@@ -1,10 +1,15 @@
-// 2025-11-26 12:01:15
+// 2025-12-03 23:52:37
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_dead_player;
 uses_physics = false;
 
 #event create
+image_speed = 0;
+
+image_xscale = 0.75;
+image_yscale = 0.75;
+
 player_ide = 0;
 
 t = 0;
@@ -14,12 +19,26 @@ amplitude = 15; //pixels of peak oscillation
 //clone the y-position (or use x instead if you're doing horizontal oscillation)
 yy = y;
 
-x_speed = 0.5;
+x_speed = 1;
 
 loader = instance_find(level_load,0);
 
+inactive = 50;
+
+device = "keyboard";
+
+controller_id = 0;
+
+points = [0,0,0];
+
 #event step
 
+image_index = player_ide;
+
+if (x < -100)
+{
+    instance_destroy();
+}
 
 if (loader.all_playes_dead)
 {
@@ -37,4 +56,45 @@ if (!global.pause)
     y = yy + shift; //vertical wave motion
     
     x -= x_speed;
+}
+
+inactive = clamp(inactive - 1,0,inactive);
+
+if (inactive == 0 && place_meeting(x,y,obj_player))
+{
+	instance_nearest(x,y,obj_player).p_revivies_other++;
+	
+    var player = instance_create_depth(x,y,depth,obj_player);
+    player.player_ide = player_ide;
+    player.hit_cooldown = 50;
+    player.p_device = device;
+    player.controller_id = controller_id;
+    player.p_hit = points[0];
+    player.p_deaths = points[1];
+    player.p_revive_other = points[2];
+    
+	switch (player_ide)
+	{
+		case 0:
+			player.sprite_index = spr_player;
+		break;
+		
+		case 1:
+			player.sprite_index = spr_player_yellow;
+		break;
+		
+		case 2:
+			player.sprite_index = spr_player_orange;
+		break;
+		
+		case 3:
+			player.sprite_index = spr_player_green;
+		break;
+		
+		default:
+			player.sprite_index = spr_player;
+		break;
+	}
+    
+    instance_destroy();
 }

@@ -1,4 +1,4 @@
-// 2025-11-30 02:22:15
+// 2025-12-03 23:57:30
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_player;
@@ -66,7 +66,14 @@ input_map[4][ACT.MOVE_Y] = gp_axislv;
 player_ide = 0;
 
 p_device = "keyboard";
-controller_id = 0;
+controller_id = 2;
+// keyboard_id = 0;
+
+x = 0;
+
+p_hit = 0;
+p_deaths = 0;
+p_revive_other = 0;
 
 #event alarm0 invincibility
 
@@ -147,6 +154,7 @@ if (!global.pause)
 	
 	if (instance_place(x, y, _inst) && _inst.hitbox == true && hit_cooldown <= 0 && dash_time == 1)
 	{
+		p_hit++;
 		hit_cooldown = 50;
 		_health--;
 	}else hit_cooldown = clamp(hit_cooldown - 1, -1, hit_cooldown);
@@ -173,15 +181,18 @@ if (!global.pause)
 
 if (dead)
 {
+	p_deaths++;
+	
 	image_speed = 0;
 	instance_destroy();
 	var dead_player = instance_create_depth(x,y,depth,obj_dead_player);
 	dead_player.player_ide = player_ide;
+	dead_player.device = p_device;
+	dead_player.controller_id = controller_id;
+	dead_player.points = [p_hit, p_deaths, p_revive_other];
 }
 
 #event draw
-// if (live_call()) return live_result;
-
 draw_self();
 
 if (dash_time > 1)
@@ -191,3 +202,5 @@ if (dash_time > 1)
 
 	draw_sprite_ext(sprite_index, 0,behind_player_x,behind_player_y,0.5,0.5,image_angle,c_white,1);
 }
+
+draw_text(x,y,$"{p_hit}{p_revive_other}{p_revivies_other}");

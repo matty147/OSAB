@@ -70,6 +70,7 @@ if (!global.pause)
 	
 	if (instance_place(x, y, _inst) && _inst.hitbox == true && hit_cooldown <= 0 && dash_time == 1)
 	{
+		p_hit++;
 		hit_cooldown = 50;
 		_health--;
 	}else hit_cooldown = clamp(hit_cooldown - 1, -1, hit_cooldown);
@@ -96,10 +97,13 @@ if (!global.pause)
 
 if (dead)
 {
+	p_deaths++;
+	
 	image_speed = 0;
 	instance_destroy();
 	var dead_player = instance_create_depth(x,y,depth,obj_dead_player);
 	dead_player.player_ide = player_ide;
 	dead_player.device = p_device;
 	dead_player.controller_id = controller_id;
+	dead_player.points = [p_hit, p_deaths, p_revive_other];
 }

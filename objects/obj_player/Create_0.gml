@@ -63,3 +63,7 @@ controller_id = 2;
 // keyboard_id = 0;
 
 x = 0;
+
+p_hit = 0;
+p_deaths = 0;
+p_revive_other = 0;

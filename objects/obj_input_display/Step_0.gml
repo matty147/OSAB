@@ -1,7 +1,13 @@
-if (live_call()) return live_result;
+//if (live_call()) return live_result;
 
-var xscale = (32 + array_length(global.input_map) * 74) / sprite_get_width(sprite_index);
-image_xscale = lerp(image_xscale,xscale,0.1);
+if (array_length(global.input_map) > 0)
+{
+	var xscale = (32 + array_length(global.input_map) * 74) / sprite_get_width(sprite_index);
+}else xscale = 0;
+// image_xscale = lerp(image_xscale,xscale,0.1);
+image_xscale += (xscale - image_xscale) * 0.1;
+
+show_debug_message(image_xscale);
 
 if (keyboard_check_pressed(ord("P")))
 {
@@ -27,8 +33,6 @@ if (array_length(global.gamepads) > 0)
     }
 }
 
-// show_debug_message(global.gamepads);
-
 if (array_length(global.input_map) < 4)
 {
     if (keyboard_check_pressed(vk_space))
@@ -37,7 +41,7 @@ if (array_length(global.input_map) < 4)
     }
 }
 
-// if (array_length(global.input_map) > 0 && xscale >= 0)
-// {
-// 	visible = true;
-// }else visible = false;
+if (image_xscale >= 0.01)
+{
+	visible = true;
+}else visible = false;

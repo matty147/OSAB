@@ -1,4 +1,4 @@
-// 2025-11-30 22:39:15
+// 2025-12-03 23:36:11
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_input_map_display;
@@ -9,123 +9,136 @@ uses_physics = false;
 enum INPUT_METHODS {
     KEYBOARDS,
     CONTROLLER,
-    
 }
-
-input_map = [];
 
 input_map_max = 4;
 
 image_yscale = 2;
+image_xscale = 0;
 
 short_key = vk_multiply;
 
 wait = 0;
 
-gamepads = [];
-
-allready_added_con = [];
-allready_added_key = [];
+already_added_con = [];
+already_added_key = [];
 
 player = instance_find(obj_player,1);
 
-#event step
+// this is where the curent in use inputs devices are stored
+if (!variable_global_exists("input_map")) {
+	global.input_map = [];
+}
 
-image_xscale = (array_length(input_map) * 74) / sprite_get_width(sprite_index);
-
-// if (keyboard_check_pressed(ord("P")))
-// {
-//     input_map = [];
-//     wait = 2;
-// }
-
-// if (array_length(input_map) < input_map_max && wait < 0)
-// {
-//     if (keyboard_check_pressed(vk_anykey))
-//     {
-//         show_debug_message(keyboard_key);
-//         short_key = keyboard_key;
-//         input_map = [];
-        
-//     }
-// }
-
-// wait--;
-
-// if (keyboard_check_pressed(short_key))
-// {
-//     show_debug_message("this shit works");
-// }
-
-
-if (array_length(gamepads) > 0)
+// this is where all of the controller ids are saved please do not delete this or it will fuck up everything using controllers
+if (!variable_global_exists("gamepads"))
 {
-    var _h = gamepad_axis_value(gamepads[0], gp_axislh);
-    var _v = gamepad_axis_value(gamepads[0], gp_axislv);
-    x += _h * 4;
-    y += _v * 4;
+	global.gamepads = [];
+}
 
-    for (var c = 0; c < array_length(gamepads);c++)
+if (level == room)
+{
+    visible = false;
+}
+
+y = room_height - sprite_height;
+
+#event step
+/if (live_call()) return live_result;
+
+if (array_length(global.input_map) > 0)
+{
+	var xscale = (32 + array_length(global.input_map) * 74) / sprite_get_width(sprite_index);
+}else xscale = 0;
+// image_xscale = lerp(image_xscale,xscale,0.1);
+image_xscale += (xscale - image_xscale) * 0.1;
+
+show_debug_message(image_xscale);
+
+if (keyboard_check_pressed(ord("P")))
+{
+    global.input_map = [];
+    already_added_con = [];
+    already_added_key = [];
+}
+
+if (array_length(global.gamepads) > 0)
+{
+    for (var c = 0; c < array_length(global.gamepads);c++)
     {
-        if ( gamepad_button_check_pressed(gamepads[c],gp_face1))
+        if (gamepad_button_check_pressed(global.gamepads[c],gp_face1))
         {
-            show_debug_message($"aaa {c} vs {gamepads[c]}");
+            show_debug_message($"aaa {c} vs {global.gamepads[c]}");
             
-            if (array_length(input_map) < 4 && !array_contains(allready_added_con,c))
+            if (array_length(global.input_map) < 4 && !array_contains(already_added_con,c))
             {
-                array_push(input_map,INPUT_METHODS.CONTROLLER);
-                array_push(allready_added_con,c);
+                array_push(global.input_map,[INPUT_METHODS.CONTROLLER,global.gamepads[c]]);
+                array_push(already_added_con,c);
             }
         }
     }
 }
 
-// show_debug_message(gamepads);
-
-if (array_length(input_map) < 4)
+if (array_length(global.input_map) < 4)
 {
     if (keyboard_check_pressed(vk_space))
     {
-        array_push(input_map,INPUT_METHODS.KEYBOARDS); // tf should i do here?
+        array_push(global.input_map,INPUT_METHODS.KEYBOARDS); // tf should i do here?
     }
 }
 
-// show_debug_message(array_length(gamepads));
+if (image_xscale >= 0.01)
+{
+	visible = true;
+}else visible = false;
 
-#event async_system
+#event async_system controller manager
 
 if (async_load[? "event_type"] == "gamepad discovered")
 {
     var _pad = async_load[? "pad_index"];
     gamepad_set_axis_deadzone(_pad, 0.2);
-    array_push(gamepads, _pad);
+    array_push(global.gamepads, _pad);
     
     show_debug_message($"conected: {_pad}");
 }
 else if (async_load[? "event_type"] == "gamepad lost")
 {
     var _pad = async_load[? "pad_index"];
-    var _index = array_get_index(gamepads, _pad);
-    array_delete(gamepads, _index, 1);
+    var _index = array_get_index(global.gamepads, _pad);
+    array_delete(global.gamepads, _index, 1);
 }
 
 #event draw_gui
-for (var i = 0; i < array_length(input_map);i++)
+// if (live_call()) return live_result;
+
+for (var i = 0; i < array_length(global.input_map);i++)
 {
-    var input = input_map[i];
-    
-    var sprite = Sprite76;
-    
-    switch (input)
-    {
-        case INPUT_METHODS.KEYBOARDS:
-                sprite = spr_keyboard_icon;
-            break;
-        
-        case INPUT_METHODS.CONTROLLER:
-                sprite = spr_controller_icon;
-            break;
-    }
-    
-    draw_sprite(sprite, 0, x + (i * 64 + 16), y);
+	if (position_meeting(x + (i * 74 + 16) + 48,y,id))
+	{
+	    var input = global.input_map[i];
+	    
+	    // show_debug_message(input);
+	    
+	    if (is_array(input))
+	    {
+	    	input = input[0];
+	    }
+	    
+	    var sprite = Sprite76;
+	    
+	    switch (input)
+	    {
+	        case INPUT_METHODS.KEYBOARDS:
+	                sprite = spr_keyboard_icon;
+	            break;
+	        
+	        case INPUT_METHODS.CONTROLLER:
+	                sprite = spr_controller_icon;
+	            break;
+	    }
+	    
+		draw_sprite_ext(sprite, 0, x + (i * 74 + 16), y,1,1,0,c_white,1);
+
+	}
 }

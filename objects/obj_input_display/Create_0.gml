@@ -7,6 +7,7 @@ enum INPUT_METHODS {
 input_map_max = 4;
 
 image_yscale = 2;
+image_xscale = 0;
 
 short_key = vk_multiply;
 

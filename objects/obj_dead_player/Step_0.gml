@@ -28,11 +28,16 @@ inactive = clamp(inactive - 1,0,inactive);
 
 if (inactive == 0 && place_meeting(x,y,obj_player))
 {
+	instance_nearest(x,y,obj_player).p_revive_other++;
+	
     var player = instance_create_depth(x,y,depth,obj_player);
     player.player_ide = player_ide;
     player.hit_cooldown = 50;
     player.p_device = device;
     player.controller_id = controller_id;
+    player.p_hit = points[0];
+    player.p_deaths = points[1];
+    player.p_revive_other = points[2];
     
 	switch (player_ide)
 	{

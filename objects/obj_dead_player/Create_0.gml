@@ -21,3 +21,5 @@ inactive = 50;
 device = "keyboard";
 
 controller_id = 0;
+
+points = [0,0,0];

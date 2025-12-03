@@ -1,28 +1,32 @@
-if (live_call()) return live_result;
+// if (live_call()) return live_result;
 
 for (var i = 0; i < array_length(global.input_map);i++)
 {
-    var input = global.input_map[i];
-    
-    // show_debug_message(input);
-    
-    if (is_array(input))
-    {
-    	input = input[0];
-    }
-    
-    var sprite = Sprite76;
-    
-    switch (input)
-    {
-        case INPUT_METHODS.KEYBOARDS:
-                sprite = spr_keyboard_icon;
-            break;
-        
-        case INPUT_METHODS.CONTROLLER:
-                sprite = spr_controller_icon;
-            break;
-    }
-    
-    draw_sprite(sprite, 0, x + (i * 74 + 16), y);
+	if (position_meeting(x + (i * 74 + 16) + 48,y,id))
+	{
+	    var input = global.input_map[i];
+	    
+	    // show_debug_message(input);
+	    
+	    if (is_array(input))
+	    {
+	    	input = input[0];
+	    }
+	    
+	    var sprite = Sprite76;
+	    
+	    switch (input)
+	    {
+	        case INPUT_METHODS.KEYBOARDS:
+	                sprite = spr_keyboard_icon;
+	            break;
+	        
+	        case INPUT_METHODS.CONTROLLER:
+	                sprite = spr_controller_icon;
+	            break;
+	    }
+	    
+		draw_sprite_ext(sprite, 0, x + (i * 74 + 16), y,1,1,0,c_white,1);
+
+	}
 }
