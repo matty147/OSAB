@@ -32,3 +32,5 @@ if (level == room)
 {
     visible = false;
 }
+
+y = room_height - sprite_height;

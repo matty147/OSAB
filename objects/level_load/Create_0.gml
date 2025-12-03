@@ -87,7 +87,7 @@ keyboard_user_id = 0;
 
 for (var p = 0; p < player_amount; p++)
 {
-	var inp_player = instance_create_layer(x,y,"main",obj_player);
+	var inp_player = instance_create_layer(room_width / 2,room_height / 2,"main",obj_player);
 	inp_player.player_ide = p;
 	inp_player.p_device = (is_array(global.input_map[p])) ? "controller" : "keyboard";
 	

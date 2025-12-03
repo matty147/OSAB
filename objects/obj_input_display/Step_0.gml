@@ -1,5 +1,7 @@
+if (live_call()) return live_result;
 
-image_xscale = (16 + array_length(global.input_map) * 74) / sprite_get_width(sprite_index);
+var xscale = (32 + array_length(global.input_map) * 74) / sprite_get_width(sprite_index);
+image_xscale = lerp(image_xscale,xscale,0.1);
 
 if (keyboard_check_pressed(ord("P")))
 {
@@ -35,4 +37,7 @@ if (array_length(global.input_map) < 4)
     }
 }
 
-// show_debug_message(array_length(global.gamepads));
+// if (array_length(global.input_map) > 0 && xscale >= 0)
+// {
+// 	visible = true;
+// }else visible = false;

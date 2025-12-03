@@ -1,3 +1,5 @@
+if (live_call()) return live_result;
+
 for (var i = 0; i < array_length(global.input_map);i++)
 {
     var input = global.input_map[i];
@@ -22,5 +24,5 @@ for (var i = 0; i < array_length(global.input_map);i++)
             break;
     }
     
-    draw_sprite(sprite, 0, x + (i * 64 + 16), y);
+    draw_sprite(sprite, 0, x + (i * 74 + 16), y);
 }
