@@ -78,20 +78,21 @@ audio_deleted = 0;
 
 player_amount = clamp(array_length(global.input_map),1,4);
 
+keyboard_user_id = 0;
+
 for (var p = 0; p < player_amount; p++)
 {
 	var inp_player = instance_create_layer(x,y,"main",obj_player);
 	inp_player.player_ide = p;
-	inp_player.p_device = (global.input_map[p] == INPUT_METHODS.CONTROLLER) ? "controller" : "keyboard";
+	inp_player.p_device = (is_array(global.input_map[p])) ? "controller" : "keyboard";
 	
-	if (global.input_map[p] == INPUT_METHODS.CONTROLLER)
+	if (is_array(global.input_map[p]))
 	{
-		inp_player.controller_id = ;
-	}
-	
-	if (a)
+		inp_player.controller_id = global.input_map[p][1];
+	}else
 	{
-		// fal
+		inp_player.keyboard_id = keyboard_user_id;
+		keyboard_user_id++;
 	}
 	
 	switch (p)

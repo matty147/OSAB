@@ -60,3 +60,4 @@ player_ide = 0;
 
 p_device = "keyboard";
 controller_id = 2;
+// keyboard_id = 0;

@@ -1,6 +1,13 @@
-for (var i = 0; i < array_length(input_map);i++)
+for (var i = 0; i < array_length(global.input_map);i++)
 {
-    var input = input_map[i];
+    var input = global.input_map[i];
+    
+    // show_debug_message(input);
+    
+    if (is_array(input))
+    {
+    	input = input[0];
+    }
     
     var sprite = Sprite76;
     
