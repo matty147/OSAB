@@ -17,3 +17,7 @@ x_speed = 1;
 loader = instance_find(level_load,0);
 
 inactive = 50;
+
+device = "keyboard";
+
+controller_id = 0;

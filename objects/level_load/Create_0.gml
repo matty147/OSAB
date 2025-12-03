@@ -76,6 +76,11 @@ show_debug_message("stor: " + (string(global.story_level) + "(level_load)"));
 
 audio_deleted = 0;
 
+if (array_length(global.input_map) <= 0)
+{
+	array_push(global.input_map,INPUT_METHODS.KEYBOARDS);
+}
+
 player_amount = clamp(array_length(global.input_map),1,4);
 
 keyboard_user_id = 0;

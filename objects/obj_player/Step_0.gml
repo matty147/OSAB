@@ -100,4 +100,6 @@ if (dead)
 	instance_destroy();
 	var dead_player = instance_create_depth(x,y,depth,obj_dead_player);
 	dead_player.player_ide = player_ide;
+	dead_player.device = p_device;
+	dead_player.controller_id = controller_id;
 }

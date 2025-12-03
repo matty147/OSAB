@@ -31,6 +31,8 @@ if (inactive == 0 && place_meeting(x,y,obj_player))
     var player = instance_create_depth(x,y,depth,obj_player);
     player.player_ide = player_ide;
     player.hit_cooldown = 50;
+    player.p_device = device;
+    player.controller_id = controller_id;
     
 	switch (player_ide)
 	{
