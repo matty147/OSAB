@@ -15,3 +15,8 @@ load_level = false;
 set_data = [];
 
 editor_enemy_instance_table = [];
+
+if (os_type != 0 )
+{
+	show_message("This editor sadly only works on windows, you can still create the levels on other platforst but you sadly cannot save nor load them :/");
+}

@@ -1,4 +1,3 @@
-
 function scr_input_get(p, act, device, controller_id) {
 
 	if (device == "keyboard")
@@ -34,10 +33,8 @@ if (!global.pause)
 	    coyote_dash_time = clamp(coyote_dash_time - 1, 0, coyote_dash_time);
 	}
 	
-	
 	var move_x = scr_input_get(player_ide, ACT.MOVE_X, p_device, controller_id);
 	var move_y = scr_input_get(player_ide, ACT.MOVE_Y, p_device, controller_id);
-	
 	
 	if (move_x != 0 || move_y != 0) {
 	    var length = sqrt(sqr(move_x) + sqr(move_y));
@@ -48,7 +45,7 @@ if (!global.pause)
 	if (dash && dash_time <= 1 || coyote_dash_time > 0 && dash_time <= 1)
 	{
 		show_debug_message(coyote_dash_time);
-		
+		remember_data[? "dash"]++;
 		dash_time = 3.5;
 		coyote_dash_time = 0;
 	}else dash_time = clamp(dash_time - 0.2,1,dash_time);
@@ -60,7 +57,6 @@ if (!global.pause)
 	x = clamp(x,8,room_width - 8);
 	y = clamp(y,8,room_height - 8);
 
-
 	if (abs(scr_input_get(player_ide, ACT.MOVE_X, p_device, controller_id)) || abs(scr_input_get(player_ide, ACT.MOVE_Y, p_device, controller_id)))
 	{
 		image_angle = lerp(image_angle,	arctan2(move_y * -1 ,move_x) * (180 / pi), 0.25);
@@ -70,7 +66,7 @@ if (!global.pause)
 	
 	if (instance_place(x, y, _inst) && _inst.hitbox == true && hit_cooldown <= 0 && dash_time == 1)
 	{
-		p_hit++;
+		remember_data[? "hit"]++;
 		hit_cooldown = 50;
 		_health--;
 	}else hit_cooldown = clamp(hit_cooldown - 1, -1, hit_cooldown);
@@ -97,7 +93,7 @@ if (!global.pause)
 
 if (dead)
 {
-	p_deaths++;
+	remember_data[? "death"]++;
 	
 	image_speed = 0;
 	instance_destroy();
@@ -105,5 +101,11 @@ if (dead)
 	dead_player.player_ide = player_ide;
 	dead_player.device = p_device;
 	dead_player.controller_id = controller_id;
-	dead_player.points = [p_hit, p_deaths, p_revive_other];
+	dead_player.points = remember_data;
+}
+
+if (distance_to_point(0,0) < camp_distance || distance_to_point(room_width,0) < camp_distance || distance_to_point(0,room_height) < camp_distance || distance_to_point(room_width,room_height) < camp_distance)
+{
+	// show_debug_message($"player {player_ide} is in a corner camping");
+	remember_data[? "corner_camp"]++;
 }

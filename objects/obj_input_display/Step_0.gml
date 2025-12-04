@@ -4,10 +4,8 @@ if (array_length(global.input_map) > 0)
 {
 	var xscale = (32 + array_length(global.input_map) * 74) / sprite_get_width(sprite_index);
 }else xscale = 0;
-// image_xscale = lerp(image_xscale,xscale,0.1);
-image_xscale += (xscale - image_xscale) * 0.1;
 
-show_debug_message(image_xscale);
+image_xscale += (xscale - image_xscale) * 0.1;
 
 if (keyboard_check_pressed(ord("P")))
 {

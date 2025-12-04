@@ -60,10 +60,13 @@ player_ide = 0;
 
 p_device = "keyboard";
 controller_id = 2;
-// keyboard_id = 0;
 
-x = 0;
+camp_distance = 200;
 
-p_hit = 0;
-p_deaths = 0;
-p_revive_other = 0;
+remember_data = ds_map_create();
+
+ds_map_add(remember_data,"hit",0);
+ds_map_add(remember_data,"death",0);
+ds_map_add(remember_data,"revive",0);
+ds_map_add(remember_data,"dash",0);
+ds_map_add(remember_data,"corner_camp",0);	

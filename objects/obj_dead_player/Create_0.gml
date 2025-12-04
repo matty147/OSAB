@@ -22,4 +22,4 @@ device = "keyboard";
 
 controller_id = 0;
 
-points = [0,0,0];
+points = ds_map_create();

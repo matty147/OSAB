@@ -101,7 +101,13 @@ if (all_playes_dead && search != "")
 
 if (instance_number(obj_enemy) <= 0 && end_game < 0)
 {
+	display_score_board = true;	
+}
+
+if (instance_number(obj_enemy) <= 0 && end_game < 0)
+{
 	win = true;
+	
 	global.pause = true;
 	
 	if (search != "")

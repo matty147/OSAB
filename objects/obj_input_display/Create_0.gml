@@ -6,9 +6,6 @@ enum INPUT_METHODS {
 
 input_map_max = 4;
 
-image_yscale = 2;
-image_xscale = 0;
-
 short_key = vk_multiply;
 
 wait = 0;
@@ -33,5 +30,14 @@ if (level == room)
 {
     visible = false;
 }
+
+image_yscale = 2;
+
+image_xscale = 0;
+
+// if (array_length(global.input_map) > 0)
+// {
+// 	image_xscale = (32 + array_length(global.input_map) * 74) / sprite_get_width(sprite_index);
+// }else image_xscale = 0;
 
 y = room_height - sprite_height;
