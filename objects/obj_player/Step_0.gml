@@ -27,16 +27,19 @@ if (!global.pause)
 	
 	var dash = scr_input_get(player_ide, ACT.DASH, p_device, controller_id);
 	
-	if (dash) {
+	if (dash)
+	{
 	    coyote_dash_time = 7;
-	} else {
+	} else
+	{
 	    coyote_dash_time = clamp(coyote_dash_time - 1, 0, coyote_dash_time);
 	}
 	
 	var move_x = scr_input_get(player_ide, ACT.MOVE_X, p_device, controller_id);
 	var move_y = scr_input_get(player_ide, ACT.MOVE_Y, p_device, controller_id);
 	
-	if (move_x != 0 || move_y != 0) {
+	if (move_x != 0 || move_y != 0)
+	{
 	    var length = sqrt(sqr(move_x) + sqr(move_y));
 	    move_x /= length;
 	    move_y /= length;
@@ -44,7 +47,7 @@ if (!global.pause)
 	
 	if (dash && dash_time <= 1 || coyote_dash_time > 0 && dash_time <= 1)
 	{
-		show_debug_message(coyote_dash_time);
+		// show_debug_message(coyote_dash_time);
 		remember_data[? "dash"]++;
 		dash_time = 3.5;
 		coyote_dash_time = 0;
@@ -104,8 +107,29 @@ if (dead)
 	dead_player.points = remember_data;
 }
 
-if (distance_to_point(0,0) < camp_distance || distance_to_point(room_width,0) < camp_distance || distance_to_point(0,room_height) < camp_distance || distance_to_point(room_width,room_height) < camp_distance)
+// points
+
+if (!global.pause)
 {
-	// show_debug_message($"player {player_ide} is in a corner camping");
-	remember_data[? "corner_camp"]++;
+	if (distance_to_point(0,0) < camp_distance || distance_to_point(room_width,0) < camp_distance || distance_to_point(0,room_height) < camp_distance || distance_to_point(room_width,room_height) < camp_distance)
+	{
+		// show_debug_message($"player {player_ide} is in a corner camping");
+		remember_data[? "corner_camp"]++;
+	}
+	
+	
+	// lmao this is bad XD
+	near_point = (floor(global.runtime) % 50 == 0) ? [x,y] : near_point;
+	
+	// show_debug_message(afk_timer);
+	
+	if (distance_to_point(near_point[0], near_point[1]) < 50)
+	{
+		afk_timer--;
+	}else afk_timer = 100;
+	
+	if (afk_timer < 0)
+	{
+		remember_data[? "afk"]++;
+	}
 }

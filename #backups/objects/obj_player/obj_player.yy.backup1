@@ -1,4 +1,4 @@
-// 2025-12-03 23:57:30
+// 2025-12-06 14:02:19
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_player;
@@ -67,13 +67,21 @@ player_ide = 0;
 
 p_device = "keyboard";
 controller_id = 2;
-// keyboard_id = 0;
 
-x = 0;
+camp_distance = 200;
 
-p_hit = 0;
-p_deaths = 0;
-p_revive_other = 0;
+remember_data = ds_map_create();
+
+afk_timer = 0;
+near_point = [-1000,-1000];
+
+// the last value is the weight of the stat, aka what we will prioritize over what. the bigget number the better
+ds_map_add(remember_data,"hit",0); // 0// the worst that can happen if there isnt anything better
+ds_map_add(remember_data,"death",0); // 1
+ds_map_add(remember_data,"revive",0); // 5
+ds_map_add(remember_data,"dash",0); // 2
+ds_map_add(remember_data,"corner_camp",0); // 3	
+ds_map_add(remember_data,"afk",0); // 2
 
 #event alarm0 invincibility
 
@@ -82,7 +90,6 @@ p_revive_other = 0;
 
 
 #event step
-
 function scr_input_get(p, act, device, controller_id) {
 
 	if (device == "keyboard")
@@ -112,18 +119,19 @@ if (!global.pause)
 	
 	var dash = scr_input_get(player_ide, ACT.DASH, p_device, controller_id);
 	
-	if (dash) {
+	if (dash)
+	{
 	    coyote_dash_time = 7;
-	} else {
+	} else
+	{
 	    coyote_dash_time = clamp(coyote_dash_time - 1, 0, coyote_dash_time);
 	}
-	
 	
 	var move_x = scr_input_get(player_ide, ACT.MOVE_X, p_device, controller_id);
 	var move_y = scr_input_get(player_ide, ACT.MOVE_Y, p_device, controller_id);
 	
-	
-	if (move_x != 0 || move_y != 0) {
+	if (move_x != 0 || move_y != 0)
+	{
 	    var length = sqrt(sqr(move_x) + sqr(move_y));
 	    move_x /= length;
 	    move_y /= length;
@@ -131,8 +139,8 @@ if (!global.pause)
 	
 	if (dash && dash_time <= 1 || coyote_dash_time > 0 && dash_time <= 1)
 	{
-		show_debug_message(coyote_dash_time);
-		
+		// show_debug_message(coyote_dash_time);
+		remember_data[? "dash"]++;
 		dash_time = 3.5;
 		coyote_dash_time = 0;
 	}else dash_time = clamp(dash_time - 0.2,1,dash_time);
@@ -144,7 +152,6 @@ if (!global.pause)
 	x = clamp(x,8,room_width - 8);
 	y = clamp(y,8,room_height - 8);
 
-
 	if (abs(scr_input_get(player_ide, ACT.MOVE_X, p_device, controller_id)) || abs(scr_input_get(player_ide, ACT.MOVE_Y, p_device, controller_id)))
 	{
 		image_angle = lerp(image_angle,	arctan2(move_y * -1 ,move_x) * (180 / pi), 0.25);
@@ -154,7 +161,7 @@ if (!global.pause)
 	
 	if (instance_place(x, y, _inst) && _inst.hitbox == true && hit_cooldown <= 0 && dash_time == 1)
 	{
-		p_hit++;
+		remember_data[? "hit"]++;
 		hit_cooldown = 50;
 		_health--;
 	}else hit_cooldown = clamp(hit_cooldown - 1, -1, hit_cooldown);
@@ -181,7 +188,7 @@ if (!global.pause)
 
 if (dead)
 {
-	p_deaths++;
+	remember_data[? "death"]++;
 	
 	image_speed = 0;
 	instance_destroy();
@@ -189,7 +196,34 @@ if (dead)
 	dead_player.player_ide = player_ide;
 	dead_player.device = p_device;
 	dead_player.controller_id = controller_id;
-	dead_player.points = [p_hit, p_deaths, p_revive_other];
+	dead_player.points = remember_data;
+}
+
+// points
+
+if (!global.pause)
+{
+	if (distance_to_point(0,0) < camp_distance || distance_to_point(room_width,0) < camp_distance || distance_to_point(0,room_height) < camp_distance || distance_to_point(room_width,room_height) < camp_distance)
+	{
+		// show_debug_message($"player {player_ide} is in a corner camping");
+		remember_data[? "corner_camp"]++;
+	}
+	
+	
+	// lmao this is bad XD
+	near_point = (floor(global.runtime) % 50 == 0) ? [x,y] : near_point;
+	
+	// show_debug_message(afk_timer);
+	
+	if (distance_to_point(near_point[0], near_point[1]) < 50)
+	{
+		afk_timer--;
+	}else afk_timer = 100;
+	
+	if (afk_timer < 0)
+	{
+		remember_data[? "afk"]++;
+	}
 }
 
 #event draw
@@ -203,4 +237,6 @@ if (dash_time > 1)
 	draw_sprite_ext(sprite_index, 0,behind_player_x,behind_player_y,0.5,0.5,image_angle,c_white,1);
 }
 
-draw_text(x,y,$"{p_hit}{p_revive_other}{p_revivies_other}");
+// draw_text_color(x,y - 40,remember_data[? "afk"],c_white,c_white,c_white,c_white,1);
+
+// draw_circle_color(near_point[0],near_point[1],1,c_white,c_white,false);

@@ -1,4 +1,4 @@
-// 2025-12-03 23:36:11
+// 2025-12-08 00:12:45
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_input_map_display;
@@ -12,9 +12,6 @@ enum INPUT_METHODS {
 }
 
 input_map_max = 4;
-
-image_yscale = 2;
-image_xscale = 0;
 
 short_key = vk_multiply;
 
@@ -41,19 +38,26 @@ if (level == room)
     visible = false;
 }
 
+image_yscale = 2.75;
+
+image_xscale = 0;
+
+// if (array_length(global.input_map) > 0)
+// {
+// 	image_xscale = (32 + array_length(global.input_map) * 74) / sprite_get_width(sprite_index);
+// }else image_xscale = 0;
+
 y = room_height - sprite_height;
 
 #event step
-/if (live_call()) return live_result;
+if (live_call()) return live_result;
 
 if (array_length(global.input_map) > 0)
 {
-	var xscale = (32 + array_length(global.input_map) * 74) / sprite_get_width(sprite_index);
-}else xscale = 0;
-// image_xscale = lerp(image_xscale,xscale,0.1);
-image_xscale += (xscale - image_xscale) * 0.1;
+	var xscale = (32 + clamp(array_length(global.input_map) + 1,1,4) * 74) / sprite_get_width(sprite_index);
+}else xscale = (32 + 74) / sprite_get_width(sprite_index);;
 
-show_debug_message(image_xscale);
+image_xscale += (xscale - image_xscale) * 0.1;
 
 if (keyboard_check_pressed(ord("P")))
 {
@@ -87,10 +91,10 @@ if (array_length(global.input_map) < 4)
     }
 }
 
-if (image_xscale >= 0.01)
-{
-	visible = true;
-}else visible = false;
+// if (image_xscale >= 0.01)
+// {
+// 	visible = true;
+// }else visible = false;
 
 #event async_system controller manager
 
@@ -110,8 +114,26 @@ else if (async_load[? "event_type"] == "gamepad lost")
 }
 
 #event draw_gui
-// if (live_call()) return live_result;
+if (live_call()) return live_result;
 
+// ghosts
+for (var i = 0; i < 4;i++)
+{
+	if (i == array_length(global.input_map))
+	{
+		if (array_length(global.gamepads) > 0) // tf you mean [4]?????? // skill isue ngl
+		{
+	    	sprite = (floor((global.runtime) / 20) % 2 == 0) ? spr_controller_icon : spr_keyboard_icon;
+		}else sprite = spr_keyboard_icon;
+		
+		draw_sprite_ext(sprite, 0, x + (i * 74 + 16), y,1,1,0,c_white,0.5);
+		draw_text_color(x + (i * 74 + 16) + 32,y + 67 ,$"P{i + 1}",c_white,c_white,c_white,c_white,1);
+	}
+}
+
+show_debug_message(global.gamepads);
+
+// real
 for (var i = 0; i < array_length(global.input_map);i++)
 {
 	if (position_meeting(x + (i * 74 + 16) + 48,y,id))
@@ -139,6 +161,7 @@ for (var i = 0; i < array_length(global.input_map);i++)
 	    }
 	    
 		draw_sprite_ext(sprite, 0, x + (i * 74 + 16), y,1,1,0,c_white,1);
+		draw_text_color(x + (i * 74 + 16) + 32,y + 67 ,$"P{i + 1}",c_white,c_white,c_white,c_white,1);
 
 	}
 }

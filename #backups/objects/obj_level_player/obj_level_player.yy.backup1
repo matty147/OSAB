@@ -1,0 +1,72 @@
+// 2025-12-06 14:01:54
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+sprite_index = spr_player;
+uses_physics = false;
+
+#event create
+image_speed = 0;
+image_index = 0;
+
+checkpoint_manager = instance_find(obj_checkpoint_manager,0);
+
+if checkpoint_manager.current_level < instance_number(obj_checkpoint)
+{
+	x = checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].x;
+	y = checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].y;
+} else 
+{
+	x = checkpoint_manager.checkpoint_list[checkpoint_manager.current_level - 1].x;
+	y = checkpoint_manager.checkpoint_list[checkpoint_manager.current_level - 1].y;
+}
+
+_x = x;
+_y = y;
+
+useing_controller = false;
+
+#event step
+var checkpoint = checkpoint_manager.checkpoint_list[checkpoint_manager.current_level];
+
+
+if checkpoint.visible
+{
+	_x = checkpoint.x;
+	_y = checkpoint.y;
+}
+
+if point_distance(x,y,_x,_y) > 1
+{
+
+	x = lerp(x,_x,0.1);
+	y = lerp(y,_y,0.1);
+	
+}
+
+if keyboard_check_pressed(ord("K")) && place_meeting(x,y,obj_checkpoint)
+{
+	if checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].cleared == false
+	{
+		global.cleared_levels++;
+		checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].cleared = true;
+	}
+}
+
+if keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)
+{
+	if place_meeting(x,y,obj_checkpoint)
+	{
+		audio_play_sound(snd_level_enter,0,false);
+		//global.level_name = "levels\\test\\test.osab";
+		global.story_level = true;
+		global.cleared = checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].cleared;
+		global.level_name = checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].level_name;
+		show_debug_message("started: " + string(global.level_name) + "\ncleared: " + string(global.cleared));
+		
+		audio_stop_sound(snd_story_level_bg);
+		
+		room_goto(checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].cutscene);	
+	}
+}
+
+//view_camera[0] = 

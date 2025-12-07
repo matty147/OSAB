@@ -1,9 +1,9 @@
-//if (live_call()) return live_result;
+if (live_call()) return live_result;
 
 if (array_length(global.input_map) > 0)
 {
-	var xscale = (32 + array_length(global.input_map) * 74) / sprite_get_width(sprite_index);
-}else xscale = 0;
+	var xscale = (32 + clamp(array_length(global.input_map) + 1,1,4) * 74) / sprite_get_width(sprite_index);
+}else xscale = (32 + 74) / sprite_get_width(sprite_index);;
 
 image_xscale += (xscale - image_xscale) * 0.1;
 
@@ -39,7 +39,7 @@ if (array_length(global.input_map) < 4)
     }
 }
 
-if (image_xscale >= 0.01)
-{
-	visible = true;
-}else visible = false;
+// if (image_xscale >= 0.01)
+// {
+// 	visible = true;
+// }else visible = false;
