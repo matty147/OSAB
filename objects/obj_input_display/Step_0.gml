@@ -1,9 +1,9 @@
 if (live_call()) return live_result;
 
-if (array_length(global.input_map) > 0)
+if (array_length(global.input_map) > 0) // this code is used to change the size of the object based on the amount of controllers are conected
 {
-	var xscale = (32 + clamp(array_length(global.input_map) + 1,1,4) * 74) / sprite_get_width(sprite_index);
-}else xscale = (32 + 74) / sprite_get_width(sprite_index);;
+	var xscale = (32 + clamp(array_length(global.input_map) + 1,4,4) * 74) / sprite_get_width(sprite_index);
+}else xscale = (32 + 74 * 4) / sprite_get_width(sprite_index);;
 
 image_xscale += (xscale - image_xscale) * 0.1;
 

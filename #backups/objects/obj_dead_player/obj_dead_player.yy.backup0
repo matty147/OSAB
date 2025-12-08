@@ -1,4 +1,4 @@
-// 2025-12-04 00:03:36
+// 2025-12-08 08:49:59
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_dead_player;
@@ -7,14 +7,14 @@ uses_physics = false;
 #event create
 image_speed = 0;
 
-image_xscale = 0.75;
-image_yscale = 0.75;
+image_xscale = 0.5;
+image_yscale = 0.5;
 
 player_ide = 0;
 
 t = 0;
-increment = 6; //degrees -- freq = 1 oscillation per second (1Hz) in a 30 fps room
-amplitude = 15; //pixels of peak oscillation
+increment = 3; //degrees -- freq = 1 oscillation per second (1Hz) in a 30 fps room
+amplitude = 30; //pixels of peak oscillation
 
 //clone the y-position (or use x instead if you're doing horizontal oscillation)
 yy = y;
@@ -29,7 +29,7 @@ device = "keyboard";
 
 controller_id = 0;
 
-points = [0,0,0];
+points = ds_map_create();
 
 #event step
 
@@ -62,16 +62,15 @@ inactive = clamp(inactive - 1,0,inactive);
 
 if (inactive == 0 && place_meeting(x,y,obj_player))
 {
-	instance_nearest(x,y,obj_player).p_revive_other++;
+	var p_saved = instance_nearest(x,y,obj_player);
+	p_saved.remember_data[? "revive"]++; 
 	
-    var player = instance_create_depth(x,y,depth,obj_player);
+    var player = instance_create_depth(p_saved.x,p_saved.y,depth,obj_player);
     player.player_ide = player_ide;
     player.hit_cooldown = 50;
     player.p_device = device;
     player.controller_id = controller_id;
-    player.p_hit = points[0];
-    player.p_deaths = points[1];
-    player.p_revive_other = points[2];
+    player.remember_data = points;
     
 	switch (player_ide)
 	{

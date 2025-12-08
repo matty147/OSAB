@@ -1,13 +1,13 @@
 image_speed = 0;
 
-image_xscale = 0.75;
-image_yscale = 0.75;
+image_xscale = 0.5;
+image_yscale = 0.5;
 
 player_ide = 0;
 
 t = 0;
-increment = 6; //degrees -- freq = 1 oscillation per second (1Hz) in a 30 fps room
-amplitude = 15; //pixels of peak oscillation
+increment = 3; //degrees -- freq = 1 oscillation per second (1Hz) in a 30 fps room
+amplitude = 30; //pixels of peak oscillation
 
 //clone the y-position (or use x instead if you're doing horizontal oscillation)
 yy = y;
