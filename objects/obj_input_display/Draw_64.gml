@@ -1,4 +1,4 @@
-if (live_call()) return live_result;
+// if (live_call()) return live_result;
 
 // ghosts
 for (var i = 0; i < 4;i++)
@@ -16,16 +16,12 @@ for (var i = 0; i < 4;i++)
 	}
 }
 
-// show_debug_message(global.gamepads);
-
 // real
 for (var i = 0; i < array_length(global.input_map);i++)
 {
 	if (position_meeting(x + (i * 74 + 16) + 48,y,id))
 	{
 	    var input = global.input_map[i];
-	    
-	    // show_debug_message(input);
 	    
 	    if (is_array(input))
 	    {
@@ -53,6 +49,5 @@ for (var i = 0; i < array_length(global.input_map);i++)
 
 if (array_length(global.input_map) <= 4) // todo make this more visible / better text
 {
-	// draw_text_transformed_color(x + (clamp((array_length(global.input_map) + 1),1.6,1.6)* 74 + 16) + 32,y,"Press the SPACEBAR or the A button to join",0.9,0.9,0,c_white,c_white,c_white,c_white,1);
-	draw_text_transformed_color(x + (clamp((array_length(global.input_map) + 1),1.6,1.6)* 74 + 16) + 32,y,"Press [SPACE] button or the [A] button to join",0.9,0.9,0,c_white,c_white,c_white,c_white,1);
+		draw_text_transformed_color(x + (clamp((array_length(global.input_map) + 1),1.6,1.6)* 74 + 16) + 32,y,"Press [SPACE] button or the [A] button to join",0.9,0.9,0,c_white,c_white,c_white,c_white,1);
 }

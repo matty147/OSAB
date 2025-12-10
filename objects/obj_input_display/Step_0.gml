@@ -1,4 +1,4 @@
-if (live_call()) return live_result;
+// if (live_call()) return live_result;
 
 if (array_length(global.input_map) > 0) // this code is used to change the size of the object based on the amount of controllers are conected
 {
@@ -38,8 +38,3 @@ if (array_length(global.input_map) < 4)
         array_push(global.input_map,INPUT_METHODS.KEYBOARDS); // tf should i do here?
     }
 }
-
-// if (image_xscale >= 0.01)
-// {
-// 	visible = true;
-// }else visible = false;

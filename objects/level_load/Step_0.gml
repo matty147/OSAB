@@ -11,8 +11,6 @@ for (var pl = 0; pl < instance_number(obj_player);pl++)
 	}
 }
 
-show_debug_message(all_playes_dead);
-
 if (all_playes_dead)
 {
 	global.pause = true;

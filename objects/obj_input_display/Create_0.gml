@@ -35,9 +35,4 @@ image_yscale = 2.75;
 
 image_xscale = 0;
 
-// if (array_length(global.input_map) > 0)
-// {
-// 	image_xscale = (32 + array_length(global.input_map) * 74) / sprite_get_width(sprite_index);
-// }else image_xscale = 0;
-
 y = room_height - sprite_height;

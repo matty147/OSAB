@@ -291,6 +291,7 @@
     {"id":{"name":"spr_rectangle","path":"sprites/spr_rectangle/spr_rectangle.yy",},},
     {"id":{"name":"spr_rounded_polygon","path":"sprites/spr_rounded_polygon/spr_rounded_polygon.yy",},},
     {"id":{"name":"spr_rounded_rect","path":"sprites/spr_rounded_rect/spr_rounded_rect.yy",},},
+    {"id":{"name":"spr_scoreboard","path":"sprites/spr_scoreboard/spr_scoreboard.yy",},},
     {"id":{"name":"spr_select_panel","path":"sprites/spr_select_panel/spr_select_panel.yy",},},
     {"id":{"name":"spr_slider_hold","path":"sprites/spr_slider_hold/spr_slider_hold.yy",},},
     {"id":{"name":"spr_slider","path":"sprites/spr_slider/spr_slider.yy",},},
