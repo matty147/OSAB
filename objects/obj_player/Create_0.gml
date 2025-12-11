@@ -64,6 +64,8 @@ controller_id = 2;
 camp_distance = 200;
 
 remember_data = ds_map_create();
+inp_score_board = instance_find(obj_points_scoreboard_manager,0);
+update_score = false;
 
 afk_timer = 0;
 near_point = [-1000,-1000];
@@ -75,3 +77,4 @@ ds_map_add(remember_data,"revive",0); // 5
 ds_map_add(remember_data,"dash",0); // 2
 ds_map_add(remember_data,"corner_camp",0); // 3	
 ds_map_add(remember_data,"afk",0); // 2
+ds_map_add(remember_data,"moved_distance",0); // 1

@@ -47,8 +47,11 @@ if (!global.pause)
 	
 	if (dash && dash_time <= 1 || coyote_dash_time > 0 && dash_time <= 1)
 	{
-		// show_debug_message(coyote_dash_time);
+		// update the stats
 		remember_data[? "dash"]++;
+		update_score = true;
+		
+		
 		dash_time = 3.5;
 		coyote_dash_time = 0;
 	}else dash_time = clamp(dash_time - 0.2,1,dash_time);
@@ -70,6 +73,9 @@ if (!global.pause)
 	if (instance_place(x, y, _inst) && _inst.hitbox == true && hit_cooldown <= 0 && dash_time == 1)
 	{
 		remember_data[? "hit"]++;
+		update_score = true;
+		
+		
 		hit_cooldown = 50;
 		_health--;
 	}else hit_cooldown = clamp(hit_cooldown - 1, -1, hit_cooldown);
@@ -97,6 +103,7 @@ if (!global.pause)
 if (dead)
 {
 	remember_data[? "death"]++;
+	update_score = true;
 	
 	image_speed = 0;
 	instance_destroy();
@@ -115,6 +122,7 @@ if (!global.pause)
 	{
 		// show_debug_message($"player {player_ide} is in a corner camping");
 		remember_data[? "corner_camp"]++;
+		update_score = true;
 	}
 	
 	
@@ -131,5 +139,20 @@ if (!global.pause)
 	if (afk_timer < 0)
 	{
 		remember_data[? "afk"]++;
+		update_score = true;
+		
 	}
+	
+	//move distance
+	if (move_x != 0 || move_y != 0)
+	{
+		remember_data[? "moved_distance"] += 0.1;
+		update_score = true;
+	}
+}
+
+if (update_score)
+{
+	update_score = false;
+	inp_score_board.player_stats[player_ide] = remember_data;
 }

@@ -287,6 +287,7 @@
     {"id":{"name":"spr_player_orange","path":"sprites/spr_player_orange/spr_player_orange.yy",},},
     {"id":{"name":"spr_player_yellow","path":"sprites/spr_player_yellow/spr_player_yellow.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
+    {"id":{"name":"spr_ranks","path":"sprites/spr_ranks/spr_ranks.yy",},},
     {"id":{"name":"spr_rect","path":"sprites/spr_rect/spr_rect.yy",},},
     {"id":{"name":"spr_rectangle","path":"sprites/spr_rectangle/spr_rectangle.yy",},},
     {"id":{"name":"spr_rounded_polygon","path":"sprites/spr_rounded_polygon/spr_rounded_polygon.yy",},},
