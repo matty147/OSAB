@@ -1,6 +1,6 @@
 // show_debug_message(player_stats);
 
-if (keyboard_check_pressed(vk_backspace))
+if (score_board_display_time > 0)
 {
     if (score_instances == noone)
     {
@@ -35,4 +35,7 @@ if (keyboard_check_pressed(vk_backspace))
                 scoreb.rank = rank;
         }
     }
+}else
+{
+    with (obj_points_scoreboard) {instance_destroy();}
 }

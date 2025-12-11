@@ -97,14 +97,16 @@ if (all_playes_dead && search != "")
 	}
 }
 
-if (instance_number(obj_enemy) <= 0 && end_game < 0)
-{
-	display_score_board = true;	
-}
 
 if (instance_number(obj_enemy) <= 0 && end_game < 0)
 {
 	win = true;
+
+	if (player_amount > 1 && !already_shown_score_board)
+	{
+		obj_points_scoreboard_manager.display_score_board = 20;
+		already_shown_score_board = true;
+	}obj_points_scoreboard_manager.display_score_board--;
 	
 	global.pause = true;
 	
@@ -124,8 +126,6 @@ if (instance_number(obj_enemy) <= 0 && end_game < 0)
 		global.cleared = true;
 		show_debug_message("cleared + story" + string(global.cleared_levels));
 	}
-	//room_goto(main_menu);
-	//game_end();	
 }
 	
 //	show_debug_message(global.runtime)

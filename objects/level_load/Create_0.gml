@@ -132,3 +132,4 @@ for (var p = 0; p < player_amount; p++)
 all_playes_dead = false;
 
 display_score_board = false;
+already_shown_score_board = false;

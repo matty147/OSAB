@@ -3,7 +3,8 @@ draw_self();
 if (room == level)
 {
 	var loader = instance_find(level_load,0);
-	if (global.pause) //temp
+	var scoreboard = instance_find(obj_points_scoreboard_manager,0);
+	if (global.pause && !scoreboard.display_score_board <= 0)
 	{
 		if (loader.all_playes_dead)
 		{
