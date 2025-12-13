@@ -1,6 +1,48 @@
+// 2025-12-13 21:02:11
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+uses_physics = false;
+
+#event create
+
+image_speed = 0;
+image_index = 0;
+
+player_number = array_length(global.input_map);
+
+best_achivment = "";
+
+/*
+    S = nohit
+    A = 1 - 2 hit
+    B = death
+    C = 2 deaths
+    F = multiple death / or fail
+*/
+
+enum RANKS
+{
+    S,
+    A,
+    B,
+    C,
+    F
+}
+
+player_numb = array_length(global.input_map);
+
+display_score_board = true;
+
+score_instances = noone;
+
+player_stats = array_create(player_numb);
+
+score_board_display_time = 0;
+
+#event step
 // show_debug_message(score_board_display_time);
 
-if (score_board_display_time > 50)
+if (score_board_display_time > 0)
 {
     // show_debug_message("display");
     if (score_instances == noone)
@@ -45,3 +87,6 @@ if (score_board_display_time > 50)
 }
 
 if (global.pause) {with (obj_points_scoreboard) {instance_destroy();} score_instances = noone;}
+
+
+#event draw_gui

@@ -100,31 +100,37 @@ if (all_playes_dead && search != "")
 
 if (instance_number(obj_enemy) <= 0 && end_game < 0)
 {
-	win = true;
-
-	if (player_amount > 1 && !already_shown_score_board)
+	if (player_amount > 0 && !already_shown_score_board)
 	{
-		obj_points_scoreboard_manager.display_score_board = 20;
+		scoreboard_manager.score_board_display_time = default_scoreboard_display_time;
 		already_shown_score_board = true;
-	}obj_points_scoreboard_manager.display_score_board--;
-	
-	global.pause = true;
-	
-	if (search != "")
+	}if (!global.pause)
 	{
-		audio_stop_sound(sound_id);
-		if (audio_deleted)
-		{
-			audio_deleted = audio_destroy_stream(sound_id);
-		}
+		scoreboard_manager.score_board_display_time--;
 	}
 	
-	if (!global.cleared && global.story_level)
+	if (scoreboard_manager.score_board_display_time <= 0)
 	{
-		show_debug_message("cleared + story" + string(global.cleared_levels));
-		global.cleared_levels++;
-		global.cleared = true;
-		show_debug_message("cleared + story" + string(global.cleared_levels));
+		win = true;
+		
+		global.pause = true;
+	
+		if (search != "")
+		{
+			audio_stop_sound(sound_id);
+			if (audio_deleted)
+			{
+				audio_deleted = audio_destroy_stream(sound_id);
+			}
+		}
+		
+		if (!global.cleared && global.story_level)
+		{
+			show_debug_message("cleared + story" + string(global.cleared_levels));
+			global.cleared_levels++;
+			global.cleared = true;
+			show_debug_message("cleared + story" + string(global.cleared_levels));
+		}
 	}
 }
 	

@@ -133,3 +133,6 @@ all_playes_dead = false;
 
 display_score_board = false;
 already_shown_score_board = false;
+default_scoreboard_display_time = 450; 
+
+scoreboard_manager = instance_find(obj_points_scoreboard_manager,0);

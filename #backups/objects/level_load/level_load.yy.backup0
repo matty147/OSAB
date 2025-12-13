@@ -1,4 +1,4 @@
-// 2025-11-30 22:14:28
+// 2025-12-13 21:07:09
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -82,35 +82,51 @@ show_debug_message("stor: " + (string(global.story_level) + "(level_load)"));
 
 audio_deleted = 0;
 
-player_amount = 4;
+if (array_length(global.input_map) <= 0)
+{
+	array_push(global.input_map,INPUT_METHODS.KEYBOARDS);
+}
+
+player_amount = clamp(array_length(global.input_map),1,4);
+
+keyboard_user_id = 0;
 
 for (var p = 0; p < player_amount; p++)
 {
-	var inp_player = instance_create_layer(x,y,"main",obj_player);
+	var rand_range = 100;
+	
+	var randx = random_range(-rand_range,rand_range);
+	var randy = random_range(-rand_range,rand_range);
+	
+	var inp_player = instance_create_layer(room_width / 2 + randx,room_height / 2 + randy,"main",obj_player);
 	inp_player.player_ide = p;
+	inp_player.p_device = (is_array(global.input_map[p])) ? "controller" : "keyboard";
+	
+	if (is_array(global.input_map[p]))
+	{
+		inp_player.controller_id = global.input_map[p][1];
+	}else
+	{
+		inp_player.keyboard_id = keyboard_user_id;
+		keyboard_user_id++;
+	}
 	
 	switch (p)
 	{
 		case 0:
 			inp_player.sprite_index = spr_player;
-			inp_player.p_device = "keyboard";
 		break;
 		
 		case 1:
 			inp_player.sprite_index = spr_player_yellow;
-			inp_player.p_device = "keyboard";
 		break;
 		
 		case 2:
 			inp_player.sprite_index = spr_player_orange;
-			inp_player.p_device = "controller";
-			inp_player.controller_id = 5;
 		break;
 		
 		case 3:
 			inp_player.sprite_index = spr_player_green;
-			inp_player.p_device = "controller";
-			inp_player.controller_id = 0;
 		break;
 		
 		default:
@@ -120,6 +136,12 @@ for (var p = 0; p < player_amount; p++)
 }
 
 all_playes_dead = false;
+
+display_score_board = false;
+already_shown_score_board = false;
+default_scoreboard_display_time = 450; 
+
+scoreboard_manager = instance_find(obj_points_scoreboard_manager,0);
 
 #event step
 
@@ -134,8 +156,6 @@ for (var pl = 0; pl < instance_number(obj_player);pl++)
 		all_playes_dead = false;
 	}
 }
-
-show_debug_message(all_playes_dead);
 
 if (all_playes_dead)
 {
@@ -223,29 +243,41 @@ if (all_playes_dead && search != "")
 	}
 }
 
+
 if (instance_number(obj_enemy) <= 0 && end_game < 0)
 {
-	win = true;
-	global.pause = true;
-	
-	if (search != "")
+	if (player_amount > 0 && !already_shown_score_board)
 	{
-		audio_stop_sound(sound_id);
-		if (audio_deleted)
+		scoreboard_manager.score_board_display_time = default_scoreboard_display_time;
+		already_shown_score_board = true;
+	}if (!global.pause)
+	{
+		scoreboard_manager.score_board_display_time--;
+	}
+	
+	if (scoreboard_manager.score_board_display_time <= 0)
+	{
+		win = true;
+		
+		global.pause = true;
+	
+		if (search != "")
 		{
-			audio_deleted = audio_destroy_stream(sound_id);
+			audio_stop_sound(sound_id);
+			if (audio_deleted)
+			{
+				audio_deleted = audio_destroy_stream(sound_id);
+			}
+		}
+		
+		if (!global.cleared && global.story_level)
+		{
+			show_debug_message("cleared + story" + string(global.cleared_levels));
+			global.cleared_levels++;
+			global.cleared = true;
+			show_debug_message("cleared + story" + string(global.cleared_levels));
 		}
 	}
-	
-	if (!global.cleared && global.story_level)
-	{
-		show_debug_message("cleared + story" + string(global.cleared_levels));
-		global.cleared_levels++;
-		global.cleared = true;
-		show_debug_message("cleared + story" + string(global.cleared_levels));
-	}
-	//room_goto(main_menu);
-	//game_end();	
 }
 	
 //	show_debug_message(global.runtime)
