@@ -1,4 +1,4 @@
-// 2025-12-14 01:54:41
+// 2025-12-14 21:49:27
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -195,9 +195,20 @@ if (array_length(meta.checkpoints) > current_checkpoint_index)
 	
 	if (array_length(meta.checkpoints) > 0 && floor(meta.checkpoints[current_checkpoint_index]) == floor(global.runtime))
 	{
-		show_debug_message($"checkpoint!!! {meta.checkpoints[current_checkpoint_index]}");
+		// show_debug_message($"checkpoint!!! {meta.checkpoints[current_checkpoint_index]}");
 		
 		var checkpoint = instance_create_layer(x,y,"main",obj_level_checkpoint);
+		
+		for (var obj = 0; obj < array_length(objects); obj++)
+		{
+			// show_debug_message($"now checking object {objects[obj].time} with the id {obj}");
+			
+			if (meta.checkpoints[current_checkpoint_index] <= objects[obj].time)
+			{
+				show_debug_message($"this is the nearest object{objects[obj].time} at id: {obj}");
+				break;
+			}
+		}
 		
 		current_checkpoint_index++;
 		

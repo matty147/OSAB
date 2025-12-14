@@ -1,4 +1,4 @@
-// 2025-11-26 11:34:35
+// 2025-12-14 23:05:24
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -54,8 +54,8 @@ if (!variable_global_exists("fullscreen")) {
 	window_set_fullscreen(global.fullscreen);
 }
 
-if (!variable_global_exists("controllers")) {
-	global.controllers = [];
+if (!variable_global_exists("checkpoint")) {
+	global.checkpoint = [0,0]; // start time and object index
 }
 
 audio_master_gain(global.volume);
@@ -499,7 +499,8 @@ draw_self();
 if (room == level)
 {
 	var loader = instance_find(level_load,0);
-	if (global.pause) //temp
+	var scoreboard = instance_find(obj_points_scoreboard_manager,0);
+	if (global.pause && !scoreboard.display_score_board <= 0)
 	{
 		if (loader.all_playes_dead)
 		{

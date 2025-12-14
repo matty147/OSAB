@@ -1,7 +1,7 @@
 
 if (!global.pause && !checkpoint_hit)
 {
-
+    visible = true;
     x -= move_speed;
     
     // var nearest_player = instance_nearest(x,obj_player);
@@ -42,4 +42,4 @@ if (!global.pause && !checkpoint_hit)
             }
         }
     }
-}
+}else visible = false;
