@@ -1,4 +1,4 @@
-// 2025-12-14 02:06:15
+// 2025-12-14 15:39:42
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_dead_player;
@@ -31,7 +31,7 @@ controller_id = 0;
 
 points = ds_map_create();
 
-checkpoint_hit = true;
+checkpoint_hit = false;
 
 #event step
 
@@ -64,8 +64,12 @@ if (!global.pause)
 
 inactive = clamp(inactive - 1,0,inactive);
 
+show_debug_message(checkpoint_hit);
+
 if (inactive == 0 && place_meeting(x,y,obj_player) || checkpoint_hit)
 {
+	checkpoint_hit = false;
+	
 	var p_saved = instance_nearest(x,y,obj_player);
 	p_saved.remember_data[? "revive"]++; 
 	

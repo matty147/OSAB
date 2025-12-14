@@ -28,8 +28,12 @@ if (!global.pause)
 
 inactive = clamp(inactive - 1,0,inactive);
 
+// show_debug_message(checkpoint_hit);
+
 if (inactive == 0 && place_meeting(x,y,obj_player) || checkpoint_hit)
 {
+	checkpoint_hit = false;
+	
 	var p_saved = instance_nearest(x,y,obj_player);
 	p_saved.remember_data[? "revive"]++; 
 	
