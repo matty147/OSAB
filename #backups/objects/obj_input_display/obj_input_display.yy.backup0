@@ -1,4 +1,4 @@
-// 2025-12-08 09:07:20
+// 2025-12-14 01:46:06
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_input_map_display;
@@ -42,15 +42,10 @@ image_yscale = 2.75;
 
 image_xscale = 0;
 
-// if (array_length(global.input_map) > 0)
-// {
-// 	image_xscale = (32 + array_length(global.input_map) * 74) / sprite_get_width(sprite_index);
-// }else image_xscale = 0;
-
 y = room_height - sprite_height;
 
 #event step
-if (live_call()) return live_result;
+// if (live_call()) return live_result;
 
 if (array_length(global.input_map) > 0) // this code is used to change the size of the object based on the amount of controllers are conected
 {
@@ -91,20 +86,14 @@ if (array_length(global.input_map) < 4)
     }
 }
 
-// if (image_xscale >= 0.01)
-// {
-// 	visible = true;
-// }else visible = false;
-
 #event async_system controller manager
-
 if (async_load[? "event_type"] == "gamepad discovered")
 {
     var _pad = async_load[? "pad_index"];
     gamepad_set_axis_deadzone(_pad, 0.2);
     array_push(global.gamepads, _pad);
     
-    show_debug_message($"conected: {_pad}");
+    show_debug_message($"conected: {_pad} {gamepad_get_description(_pad)}");
 }
 else if (async_load[? "event_type"] == "gamepad lost")
 {
@@ -114,7 +103,7 @@ else if (async_load[? "event_type"] == "gamepad lost")
 }
 
 #event draw_gui
-if (live_call()) return live_result;
+// if (live_call()) return live_result;
 
 // ghosts
 for (var i = 0; i < 4;i++)
@@ -128,11 +117,8 @@ for (var i = 0; i < 4;i++)
 		
 		draw_sprite_ext(sprite, 0, x + (i * 74 + 16), y,1,1,0,c_white,0.5);
 		draw_text_color(x + (i * 74 + 16) + 32,y + 67 ,$"P{i + 1}",c_white,c_white,c_white,c_white,1);
-		
 	}
 }
-
-// show_debug_message(global.gamepads);
 
 // real
 for (var i = 0; i < array_length(global.input_map);i++)
@@ -140,8 +126,6 @@ for (var i = 0; i < array_length(global.input_map);i++)
 	if (position_meeting(x + (i * 74 + 16) + 48,y,id))
 	{
 	    var input = global.input_map[i];
-	    
-	    // show_debug_message(input);
 	    
 	    if (is_array(input))
 	    {
@@ -169,6 +153,5 @@ for (var i = 0; i < array_length(global.input_map);i++)
 
 if (array_length(global.input_map) <= 4) // todo make this more visible / better text
 {
-	// draw_text_transformed_color(x + (clamp((array_length(global.input_map) + 1),1.6,1.6)* 74 + 16) + 32,y,"Press the SPACEBAR or the A button to join",0.9,0.9,0,c_white,c_white,c_white,c_white,1);
-	draw_text_transformed_color(x + (clamp((array_length(global.input_map) + 1),1.6,1.6)* 74 + 16) + 32,y,"Press [SPACE] button or the [A] button to join",0.9,0.9,0,c_white,c_white,c_white,c_white,1);
+		draw_text_transformed_color(x + (clamp((array_length(global.input_map) + 1),1.6,1.6)* 74 + 16) + 32,y,"Press [SPACE] button or the [A] button to join",0.9,0.9,0,c_white,c_white,c_white,c_white,1);
 }

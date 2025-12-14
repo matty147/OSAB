@@ -1,0 +1,35 @@
+// 2025-12-14 00:28:06
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+sprite_index = spr_button;
+uses_physics = false;
+
+#event create
+image_speed = 0;
+image_index = 0;
+
+image_xscale = 0.5;
+image_yscale = 0.5;
+
+rank = RANKS.F;
+
+bg_color = #33a5a5;
+
+#event step
+
+
+#event draw_gui
+if (live_call()) return live_result;
+
+draw_self();
+
+bg_color = #0c7a7a;
+
+draw_rectangle_color(x - sprite_width + 20, y + sprite_height / 2  - 20 , x - sprite_width + 100, y - sprite_height / 2 + 10, bg_color, bg_color, bg_color, bg_color, false);
+
+draw_sprite(spr_ranks, rank, x - sprite_width + 60, y - 5);
+
+draw_set_halign(fa_left);
+draw_set_valign(fa_middle);
+
+draw_text_transformed_color(x - sprite_width + 130, y - 5, "This player is a idiot.", 2,2,0,c_black, c_black, c_black, c_black,1);

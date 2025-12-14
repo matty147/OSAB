@@ -2,6 +2,7 @@ audio_master_gain(global.volume);
 audio_stop_all();
 
 current_index = 0;
+current_checkpoint_index = 0;
 win = false;
 
 read_file = false;
@@ -36,11 +37,14 @@ if (file_exists(global.level_name))
 meta = level_data.meta;
 objects = level_data.level;
 
+meta.checkpoints = variable_struct_exists(meta, "checkpoints") ? meta.checkpoints : [];
+
 show_debug_message(meta.id);
 show_debug_message(meta.name);
 show_debug_message(meta.description);
 show_debug_message(meta.lenght);
 show_debug_message(meta.diff);
+show_debug_message(meta.checkpoints);
 
 show_debug_message($"aaa {objects[0]}");
 

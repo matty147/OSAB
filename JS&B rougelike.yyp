@@ -141,6 +141,7 @@
     {"id":{"name":"obj_input_dropdown","path":"objects/obj_input_dropdown/obj_input_dropdown.yy",},},
     {"id":{"name":"obj_input_field","path":"objects/obj_input_field/obj_input_field.yy",},},
     {"id":{"name":"obj_level_camera","path":"objects/obj_level_camera/obj_level_camera.yy",},},
+    {"id":{"name":"obj_level_checkpoint","path":"objects/obj_level_checkpoint/obj_level_checkpoint.yy",},},
     {"id":{"name":"obj_level_player","path":"objects/obj_level_player/obj_level_player.yy",},},
     {"id":{"name":"obj_level_select_info_box","path":"objects/obj_level_select_info_box/obj_level_select_info_box.yy",},},
     {"id":{"name":"obj_logo","path":"objects/obj_logo/obj_logo.yy",},},

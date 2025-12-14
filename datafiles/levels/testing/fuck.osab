@@ -4,7 +4,8 @@
     "name": "fuck",
     "description": "Final level",
     "lenght": 0,
-    "diff": 0
+    "diff": 0,
+    "checkpoints": [10,15,20]
   },
   "level": [
   	{

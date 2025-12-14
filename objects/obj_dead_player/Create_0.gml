@@ -23,3 +23,5 @@ device = "keyboard";
 controller_id = 0;
 
 points = ds_map_create();
+
+checkpoint_hit = true;

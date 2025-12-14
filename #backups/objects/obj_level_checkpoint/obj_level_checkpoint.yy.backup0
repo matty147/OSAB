@@ -1,0 +1,44 @@
+// 2025-12-14 02:10:23
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+uses_physics = false;
+
+#event create
+x = room_width;
+y = 0;
+
+move_speed = 3;
+
+line_color = #09f9d9;
+
+show_debug_message(move_speed);
+
+checkpoint_hit = false;
+
+#event step
+
+if (!global.pause && !checkpoint_hit)
+{
+
+    x -= move_speed;
+    
+    with (obj_player)
+    {
+        var level_checkpoint = instance_find(obj_level_checkpoint,0);
+        
+        if (abs(x - level_checkpoint.x) < 20)
+        {
+            instance_destroy(level_checkpoint);
+            
+            with (obj_dead_player)
+            {
+                checkpoint_hit = true;
+            }
+        }
+    }
+
+}
+
+#event draw_gui
+
+draw_line_width_color(x,y,x,room_height,5, line_color, line_color);

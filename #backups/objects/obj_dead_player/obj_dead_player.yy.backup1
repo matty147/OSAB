@@ -1,4 +1,4 @@
-// 2025-12-08 08:49:57
+// 2025-12-14 02:06:15
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_dead_player;
@@ -14,7 +14,7 @@ player_ide = 0;
 
 t = 0;
 increment = 3; //degrees -- freq = 1 oscillation per second (1Hz) in a 30 fps room
-amplitude = 60; //pixels of peak oscillation
+amplitude = 30; //pixels of peak oscillation
 
 //clone the y-position (or use x instead if you're doing horizontal oscillation)
 yy = y;
@@ -31,13 +31,17 @@ controller_id = 0;
 
 points = ds_map_create();
 
+checkpoint_hit = true;
+
 #event step
 
 image_index = player_ide;
 
-if (x < -100)
+if (x < -100) // should improve this in the future bc this is crap
 {
-    instance_destroy();
+    x = -300;
+    x_speed = 0;
+    visible = false;
 }
 
 if (loader.all_playes_dead)
@@ -60,7 +64,7 @@ if (!global.pause)
 
 inactive = clamp(inactive - 1,0,inactive);
 
-if (inactive == 0 && place_meeting(x,y,obj_player))
+if (inactive == 0 && place_meeting(x,y,obj_player) || checkpoint_hit)
 {
 	var p_saved = instance_nearest(x,y,obj_player);
 	p_saved.remember_data[? "revive"]++; 

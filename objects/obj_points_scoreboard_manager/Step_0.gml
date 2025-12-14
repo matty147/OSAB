@@ -12,13 +12,15 @@ if (score_board_display_time > 50)
             var pstat = player_stats[i];
             
             var rank = RANKS.F; 
-            var hits = pstat[? "hit"];
+            var hit = pstat[? "hit"];
             var death = pstat[? "death"];
             
-            if (hits == 0)
+            show_debug_message($"hit: {hit} deaths: {death}");
+            
+            if (hit == 0)
             {
                 rank = RANKS.S;
-            }else if (hits <= 2)
+            }else if (hit <= 2)
             {
                 rank = RANKS.A;
             }else if (death == 1)

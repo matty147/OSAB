@@ -1,4 +1,4 @@
-// 2025-12-13 21:07:09
+// 2025-12-14 01:54:41
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -8,6 +8,7 @@ audio_master_gain(global.volume);
 audio_stop_all();
 
 current_index = 0;
+current_checkpoint_index = 0;
 win = false;
 
 read_file = false;
@@ -42,11 +43,14 @@ if (file_exists(global.level_name))
 meta = level_data.meta;
 objects = level_data.level;
 
+meta.checkpoints = variable_struct_exists(meta, "checkpoints") ? meta.checkpoints : [];
+
 show_debug_message(meta.id);
 show_debug_message(meta.name);
 show_debug_message(meta.description);
 show_debug_message(meta.lenght);
 show_debug_message(meta.diff);
+show_debug_message(meta.checkpoints);
 
 show_debug_message($"aaa {objects[0]}");
 
@@ -183,6 +187,21 @@ if (global.runtime > 1 && search != "" && !win)
 		{
 			audio_resume_sound(sound_id);
 		}
+	}
+}
+
+if (array_length(meta.checkpoints) > current_checkpoint_index)
+{
+	
+	if (array_length(meta.checkpoints) > 0 && floor(meta.checkpoints[current_checkpoint_index]) == floor(global.runtime))
+	{
+		show_debug_message($"checkpoint!!! {meta.checkpoints[current_checkpoint_index]}");
+		
+		var checkpoint = instance_create_layer(x,y,"main",obj_level_checkpoint);
+		
+		current_checkpoint_index++;
+		
+		show_debug_message(current_checkpoint_index);
 	}
 }
 

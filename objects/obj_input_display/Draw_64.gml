@@ -12,7 +12,6 @@ for (var i = 0; i < 4;i++)
 		
 		draw_sprite_ext(sprite, 0, x + (i * 74 + 16), y,1,1,0,c_white,0.5);
 		draw_text_color(x + (i * 74 + 16) + 32,y + 67 ,$"P{i + 1}",c_white,c_white,c_white,c_white,1);
-		
 	}
 }
 

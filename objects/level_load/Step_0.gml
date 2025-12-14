@@ -40,6 +40,21 @@ if (global.runtime > 1 && search != "" && !win)
 	}
 }
 
+if (array_length(meta.checkpoints) > current_checkpoint_index)
+{
+	
+	if (array_length(meta.checkpoints) > 0 && floor(meta.checkpoints[current_checkpoint_index]) == floor(global.runtime))
+	{
+		show_debug_message($"checkpoint!!! {meta.checkpoints[current_checkpoint_index]}");
+		
+		var checkpoint = instance_create_layer(x,y,"main",obj_level_checkpoint);
+		
+		current_checkpoint_index++;
+		
+		show_debug_message(current_checkpoint_index);
+	}
+}
+
 //spawning enemies on the same frame
 while (current_index < array_length(objects) && objects[current_index].time == floor(global.runtime))
 {

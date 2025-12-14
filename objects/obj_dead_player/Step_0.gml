@@ -1,9 +1,11 @@
 
 image_index = player_ide;
 
-if (x < -100)
+if (x < -100) // should improve this in the future bc this is crap
 {
-    instance_destroy();
+    x = -300;
+    x_speed = 0;
+    visible = false;
 }
 
 if (loader.all_playes_dead)
@@ -26,7 +28,7 @@ if (!global.pause)
 
 inactive = clamp(inactive - 1,0,inactive);
 
-if (inactive == 0 && place_meeting(x,y,obj_player))
+if (inactive == 0 && place_meeting(x,y,obj_player) || checkpoint_hit)
 {
 	var p_saved = instance_nearest(x,y,obj_player);
 	p_saved.remember_data[? "revive"]++; 
