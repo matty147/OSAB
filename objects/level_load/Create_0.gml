@@ -1,8 +1,9 @@
 audio_master_gain(global.volume);
 audio_stop_all();
 
-current_index = 0;
-current_checkpoint_index = 0;
+current_index = global.checkpoint[1];
+global.runtime = global.checkpoint[0];
+current_checkpoint_index = global.checkpoint[2];
 win = false;
 
 read_file = false;
@@ -39,14 +40,14 @@ objects = level_data.level;
 
 meta.checkpoints = variable_struct_exists(meta, "checkpoints") ? meta.checkpoints : [];
 
-show_debug_message(meta.id);
-show_debug_message(meta.name);
-show_debug_message(meta.description);
-show_debug_message(meta.lenght);
-show_debug_message(meta.diff);
-show_debug_message(meta.checkpoints);
+show_debug_message($"meta.id: {meta.id}");
+show_debug_message($"meta.name: {meta.name}");
+show_debug_message($"meta.description: {meta.description}");
+show_debug_message($"meta.lenght: {meta.lenght}");
+show_debug_message($"meta.difficulty: {meta.diff}");
+show_debug_message($"meta.checkpoints: {meta.checkpoints}");
 
-show_debug_message($"aaa {objects[0]}");
+show_debug_message($"objects {objects[0]}");
 
 show_debug_message("finished");
 read_file = true;
@@ -140,3 +141,5 @@ already_shown_score_board = false;
 default_scoreboard_display_time = 450; 
 
 scoreboard_manager = instance_find(obj_points_scoreboard_manager,0);
+
+show_debug_message($"the current checkpoint values are : {global.checkpoint[0]} {global.checkpoint[1]} {global.checkpoint[2]}");

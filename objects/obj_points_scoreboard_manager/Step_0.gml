@@ -15,7 +15,7 @@ if (score_board_display_time > 50)
             var hit = pstat[? "hit"];
             var death = pstat[? "death"];
             
-            show_debug_message($"hit: {hit} deaths: {death}");
+            // show_debug_message($"hit: {hit} deaths: {death}");
             
             if (hit == 0)
             {

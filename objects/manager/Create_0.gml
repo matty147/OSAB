@@ -47,7 +47,7 @@ if (!variable_global_exists("fullscreen")) {
 }
 
 if (!variable_global_exists("checkpoint")) {
-	global.checkpoint = [0,0]; // start time and object index
+	global.checkpoint = [0,0,0]; // start time and object index, checkpoint index
 }
 
 audio_master_gain(global.volume);
@@ -142,7 +142,7 @@ if room == main_menu
 
         save = results;
 
-	if array_length(save) <= 0
+	if (array_length(save) <= 0)
 	{
 		show_message("Found no levels. Did you format them corectly?");
 		game_end();
@@ -155,21 +155,17 @@ if room == main_menu
 
 		for (var i = 0;i < 11; i += 1)
 		{
-			if amount_of_buttons >= 11
+			if (amount_of_buttons >= 11)
 			{
 				exit;			
 			}
 		
-			if i - decrease_i > array_length(save) - 1
+			if (i - decrease_i > array_length(save) - 1)
 			{
 				decrease_i += 4;	
 			}
 		
-			//show_debug_message("i: " + string(i));
-			//show_debug_message("lenght: " + string(array_length(save)));
-			//show_debug_message("decrease_i: " + string(decrease_i));
-		
-			var	button_instance = instance_create_layer(room_width,-15 + i * 73,"level_select",obj_button)
+			var	button_instance = instance_create_layer(room_width,-15 + i * 73,"level_select",obj_button);
 			button_instance.button_title = filename_name(save[i - decrease_i]); //fetch the button display title
 			button_instance.file_path =  save[i - decrease_i]; // path to the file
 			button_instance.image_xscale = 0.3; // x scale of button
@@ -179,21 +175,8 @@ if room == main_menu
 			button_instance.title_position = "left"; // position of the text on button
 			button_instance.selected_button_id = i - decrease_i;
 			amount_of_buttons++;
-		
-
 		}
-		//while amount_of_buttons < 11
-		//{
-		//	var	button_instance = instance_create_layer(room_width,-15 + amount_of_buttons * 73,"level_select",obj_button)
-		//	button_instance.button_title = "";
-		//	button_instance.image_xscale = 0.3;
-		//	button_instance.image_yscale = 0.3;
-		//	button_instance.scrollable = true;
-		//	button_instance.button_id = amount_of_buttons;
-		//	button_instance.title_position = "left";
-		//	button_instance.selected_button_id = amount_of_buttons;
-		//	amount_of_buttons++;		
-		//}	
+
 		show_debug_message(amount_of_buttons);
 		show_debug_message("array lenght: " + string(array_length(save)));
 		show_debug_message(filename_dir(save[0])); // for path to the folder
@@ -203,7 +186,7 @@ if room == main_menu
 	}
 }
 
-if !lemon
+if (!lemon)
 {
 			show_message("Error 404: Lemon Not Found.\nThe requested lemon could not be located. It might have been squeezed, zested, or simply never existed. Please check your citrus directory and try again.");
 			game_end();

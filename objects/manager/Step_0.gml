@@ -84,16 +84,12 @@ if !button_repeat // if the user is not in the level select screen
 	
 move_buttons = mouse_wheel_up() - mouse_wheel_down();
 
-if move_buttons == 0
+if (move_buttons == 0)
 {
 	move_buttons = (keyboard_check_pressed(vk_up) - keyboard_check_pressed(vk_down)) * 4.5; // find the right value for this so that the buttons dont move
-	//if button = NaN
-	//{
-	//	button = 0;
-	//}
 }
 
-switch menu_id
+switch (menu_id)
 {
 	
 	case "0": // main menu
@@ -161,11 +157,12 @@ switch menu_id
 		show_debug_message("saving");
 		menu_id = -1;
 		break;
+		
 	case "32":
 		var _editor = instance_find(obj_editor,0);
 		_editor.load = true;
 		show_debug_message("loading");
-		menu_id = -1
+		menu_id = -1;
 		break;
 }
 

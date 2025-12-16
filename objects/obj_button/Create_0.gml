@@ -20,7 +20,7 @@ can_interact = false;
 
 file_path = "";
 
-if hidden
+if (hidden)
 {
 	display_text = false;	
 }
@@ -34,7 +34,7 @@ clicked = false;
 original_x = x;
 original_y = y;
 
-if show_extra_buttons
+if (show_extra_buttons)
 {
 	button_story_mode = instance_create_layer(x - 30,y,"main_spawned",obj_button);
 	button_story_mode.image_alpha = 0;
@@ -68,3 +68,5 @@ instance_activate_layer("main");
 instance_deactivate_layer("options");
 instance_deactivate_layer("credits");
 instance_deactivate_layer("level_select");
+
+restart_from_checkpoint = false;

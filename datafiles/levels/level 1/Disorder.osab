@@ -4,7 +4,8 @@
     "name": "Disorder",
     "description": "First story level",
     "lenght": 65,
-    "diff": 3
+    "diff": 3,
+	"checkpoints": [200,400,800]
   },
   "level": [
     {

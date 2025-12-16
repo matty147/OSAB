@@ -2,10 +2,11 @@
 
 function button_pressed(menu_id, instance)
 {
-		if scrollable
+		if (scrollable)
 		{
 			global.level_name = file_path;
 			show_debug_message(global.level_name);
+			global.checkpoint = [0,0,0];
 			room_goto(level);
 		}
 
@@ -92,12 +93,18 @@ function button_pressed(menu_id, instance)
 			case "41": // retry
 			//show_debug_message("global level name" + string(global.level_name));
 				audio_stop_all();
+			
+				if (!restart_from_checkpoint)
+				{
+					global.checkpoint = [0,0,0];
+				}else show_debug_message("starting from checkpoint");
+			
 				room_restart();
 				return -1;
 				
 			case "42": // exit level or go to next level select
 				audio_stop_all();
-				if global.story_level 
+				if (global.story_level) 
 				{
 					room_goto(level_select);
 				}else
@@ -119,37 +126,36 @@ function button_pressed(menu_id, instance)
 			case "11":
 				window_enable_borderless_fullscreen(false);
 				return -1;
-				
 	}
 	return menu_id;
 } 
 
 var instance = instance_find(manager,0); //find manager object to fetch values
 
-if keyboard_check_pressed(vk_escape) && instance.menu_id != 0 || keyboard_check_pressed(vk_backspace) && instance.menu_id != 0
+if (keyboard_check_pressed(vk_escape) && instance.menu_id != 0 || keyboard_check_pressed(vk_backspace) && instance.menu_id != 0)
 {
 	global.pop_up = false;
 	instance.show_game_select_button = false;
 	instance.menu_id = floor(instance.menu_id/10);
-	if !audio_is_playing(snd_back)
+	if (!audio_is_playing(snd_back))
 	{
 		audio_play_sound(snd_back, 2, false);
 	}
 }
 
 
-if button_id % 2 == 0 && scrollable
+if (button_id % 2 == 0 && scrollable)
 {
 	image_index = 2;	
 }else image_index = 2; //0
  
 // hide mouse when inactive
-if point_distance(instance.mouse_xprevious, instance.mouse_yprevious, mouse_x, mouse_y) // if mouse is moving
+if (point_distance(instance.mouse_xprevious, instance.mouse_yprevious, mouse_x, mouse_y)) // if mouse is moving
 { 
 	window_set_cursor(cr_default); //can make a 
 	instance.mouse_off = false;
 }
-else if alarm[0] <= 0
+else if (alarm[0] <= 0)
 {
 	//alarm[0] = fps * 5; // mouse stoped moving for 3 s. alarm 0 will activate only when when 
 }
