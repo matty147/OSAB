@@ -156,3 +156,5 @@ if (update_score)
 	update_score = false;
 	inp_score_board.player_stats[player_ide] = remember_data;
 }
+
+remember_data[? "time_alive"]++;

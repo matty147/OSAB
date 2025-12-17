@@ -7,3 +7,5 @@ image_yscale = 0.5;
 rank = RANKS.F;
 
 bg_color = #33a5a5;
+
+achivment_name = "Failed fetching the data";

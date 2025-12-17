@@ -71,10 +71,12 @@ afk_timer = 0;
 near_point = [-1000,-1000];
 
 // the last value is the weight of the stat, aka what we will prioritize over what. the bigget number the better
-ds_map_add(remember_data,"hit",0); // 0// the worst that can happen if there isnt anything better
+ds_map_add(remember_data,"hit",0); // 0 // the worst that can happen if there isnt anything better
 ds_map_add(remember_data,"death",0); // 1
 ds_map_add(remember_data,"revive",0); // 5
 ds_map_add(remember_data,"dash",0); // 2
 ds_map_add(remember_data,"corner_camp",0); // 3	
 ds_map_add(remember_data,"afk",0); // 2
 ds_map_add(remember_data,"moved_distance",0); // 1
+ds_map_add(remember_data,"time_alive",0); // 1
+ds_map_add(remember_data,"heighest_surive_time",0); // 1

@@ -32,3 +32,5 @@ score_instances = noone;
 player_stats = array_create(player_numb);
 
 score_board_display_time = 0;
+
+achievement = [];
