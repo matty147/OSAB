@@ -1,4 +1,4 @@
-// 2025-12-06 14:04:30
+// 2025-12-19 00:02:07
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_player;
@@ -71,17 +71,24 @@ controller_id = 2;
 camp_distance = 200;
 
 remember_data = ds_map_create();
+inp_score_board = instance_find(obj_points_scoreboard_manager,0);
+update_score = false;
 
 afk_timer = 0;
 near_point = [-1000,-1000];
 
 // the last value is the weight of the stat, aka what we will prioritize over what. the bigget number the better
-ds_map_add(remember_data,"hit",0); // 0// the worst that can happen if there isnt anything better
+ds_map_add(remember_data,"hit",0); // 0 // the worst that can happen if there isnt anything better
 ds_map_add(remember_data,"death",0); // 1
 ds_map_add(remember_data,"revive",0); // 5
 ds_map_add(remember_data,"dash",0); // 2
 ds_map_add(remember_data,"corner_camp",0); // 3	
 ds_map_add(remember_data,"afk",0); // 2
+ds_map_add(remember_data,"moved_distance",0); // 1
+ds_map_add(remember_data,"time_alive",0); // 1
+ds_map_add(remember_data,"alone_time_alive",0); // 1
+ds_map_add(remember_data,"alone_checkpoint",0); // 1
+ds_map_add(remember_data,"heighest_surive_time",0); // 1
 
 #event alarm0 invincibility
 
@@ -139,8 +146,11 @@ if (!global.pause)
 	
 	if (dash && dash_time <= 1 || coyote_dash_time > 0 && dash_time <= 1)
 	{
-		// show_debug_message(coyote_dash_time);
+		// update the stats
 		remember_data[? "dash"]++;
+		update_score = true;
+		
+		
 		dash_time = 3.5;
 		coyote_dash_time = 0;
 	}else dash_time = clamp(dash_time - 0.2,1,dash_time);
@@ -162,6 +172,9 @@ if (!global.pause)
 	if (instance_place(x, y, _inst) && _inst.hitbox == true && hit_cooldown <= 0 && dash_time == 1)
 	{
 		remember_data[? "hit"]++;
+		update_score = true;
+		
+		
 		hit_cooldown = 50;
 		_health--;
 	}else hit_cooldown = clamp(hit_cooldown - 1, -1, hit_cooldown);
@@ -189,6 +202,7 @@ if (!global.pause)
 if (dead)
 {
 	remember_data[? "death"]++;
+	update_score = true;
 	
 	image_speed = 0;
 	instance_destroy();
@@ -207,6 +221,7 @@ if (!global.pause)
 	{
 		// show_debug_message($"player {player_ide} is in a corner camping");
 		remember_data[? "corner_camp"]++;
+		update_score = true;
 	}
 	
 	
@@ -223,8 +238,26 @@ if (!global.pause)
 	if (afk_timer < 0)
 	{
 		remember_data[? "afk"]++;
+		update_score = true;
+		
+	}
+	
+	//move distance
+	if (move_x != 0 || move_y != 0)
+	{
+		remember_data[? "moved_distance"] += 0.1;
+		update_score = true;
 	}
 }
+
+if (update_score)
+{
+	update_score = false;
+	inp_score_board.player_stats[player_ide] = remember_data;
+}
+
+remember_data[? "time_alive"]++;
+remember_data[? "alone_time_alive"] += (instance_number(obj_player) == 1) ? 1 : 0;
 
 #event draw
 draw_self();

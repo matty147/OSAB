@@ -201,3 +201,6 @@ if (!lemon)
 //	global.f4_troll = true;
 //	f4_count = 0;
 //}
+
+// scoreboard for testing
+// var scoreb = instance_create_layer(x + room_width ,y + room_height / 2,"manager",obj_points_scoreboard);

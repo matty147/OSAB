@@ -158,3 +158,4 @@ if (update_score)
 }
 
 remember_data[? "time_alive"]++;
+remember_data[? "alone_time_alive"] += (instance_number(obj_player) == 1) ? 1 : 0;

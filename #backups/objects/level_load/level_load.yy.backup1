@@ -1,4 +1,4 @@
-// 2025-12-14 21:48:53
+// 2025-12-19 01:30:16
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -7,8 +7,9 @@ uses_physics = false;
 audio_master_gain(global.volume);
 audio_stop_all();
 
-current_index = 0;
-current_checkpoint_index = 0;
+current_index = global.checkpoint[1];
+global.runtime = global.checkpoint[0];
+current_checkpoint_index = global.checkpoint[2];
 win = false;
 
 read_file = false;
@@ -45,14 +46,14 @@ objects = level_data.level;
 
 meta.checkpoints = variable_struct_exists(meta, "checkpoints") ? meta.checkpoints : [];
 
-show_debug_message(meta.id);
-show_debug_message(meta.name);
-show_debug_message(meta.description);
-show_debug_message(meta.lenght);
-show_debug_message(meta.diff);
-show_debug_message(meta.checkpoints);
+show_debug_message($"meta.id: {meta.id}");
+show_debug_message($"meta.name: {meta.name}");
+show_debug_message($"meta.description: {meta.description}");
+show_debug_message($"meta.lenght: {meta.lenght}");
+show_debug_message($"meta.difficulty: {meta.diff}");
+show_debug_message($"meta.checkpoints: {meta.checkpoints}");
 
-show_debug_message($"aaa {objects[0]}");
+show_debug_message($"objects {objects[0]}");
 
 show_debug_message("finished");
 read_file = true;
@@ -147,7 +148,7 @@ default_scoreboard_display_time = 450;
 
 scoreboard_manager = instance_find(obj_points_scoreboard_manager,0);
 
-global.runtime = 100;
+// show_debug_message($"the current checkpoint values are : {global.checkpoint[0]} {global.checkpoint[1]} {global.checkpoint[2]}");
 
 #event step
 
@@ -203,11 +204,12 @@ if (array_length(meta.checkpoints) > current_checkpoint_index)
 		
 		for (var obj = 0; obj < array_length(objects); obj++)
 		{
-			// show_debug_message($"now checking object {objects[obj].time} with the id {obj}");
+			show_debug_message($"now checking object {objects[obj].time} with the id {obj}");
 			
 			if (meta.checkpoints[current_checkpoint_index] <= objects[obj].time)
 			{
 				show_debug_message($"this is the nearest object{objects[obj].time} at id: {obj}");
+				global.checkpoint = [objects[obj].time, obj, current_checkpoint_index + 1]; // time, obj index
 				break;
 			}
 		}

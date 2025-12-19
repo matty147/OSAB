@@ -79,4 +79,6 @@ ds_map_add(remember_data,"corner_camp",0); // 3
 ds_map_add(remember_data,"afk",0); // 2
 ds_map_add(remember_data,"moved_distance",0); // 1
 ds_map_add(remember_data,"time_alive",0); // 1
+ds_map_add(remember_data,"alone_time_alive",0); // 1
+ds_map_add(remember_data,"alone_checkpoint",0); // 1
 ds_map_add(remember_data,"heighest_surive_time",0); // 1

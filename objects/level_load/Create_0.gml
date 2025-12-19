@@ -142,4 +142,4 @@ default_scoreboard_display_time = 450;
 
 scoreboard_manager = instance_find(obj_points_scoreboard_manager,0);
 
-show_debug_message($"the current checkpoint values are : {global.checkpoint[0]} {global.checkpoint[1]} {global.checkpoint[2]}");
+// show_debug_message($"the current checkpoint values are : {global.checkpoint[0]} {global.checkpoint[1]} {global.checkpoint[2]}");

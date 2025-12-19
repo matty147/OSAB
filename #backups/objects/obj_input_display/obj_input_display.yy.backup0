@@ -1,4 +1,4 @@
-// 2025-12-14 01:46:06
+// 2025-12-18 22:34:19
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_input_map_display;
@@ -38,7 +38,7 @@ if (level == room)
     visible = false;
 }
 
-image_yscale = 2.75;
+image_yscale = 3;
 
 image_xscale = 0;
 
@@ -105,6 +105,9 @@ else if (async_load[? "event_type"] == "gamepad lost")
 #event draw_gui
 // if (live_call()) return live_result;
 
+//shift the object a bit lower so i dont need to fix this crap
+y += 15;
+
 // ghosts
 for (var i = 0; i < 4;i++)
 {
@@ -155,3 +158,5 @@ if (array_length(global.input_map) <= 4) // todo make this more visible / better
 {
 		draw_text_transformed_color(x + (clamp((array_length(global.input_map) + 1),1.6,1.6)* 74 + 16) + 32,y,"Press [SPACE] button or the [A] button to join",0.9,0.9,0,c_white,c_white,c_white,c_white,1);
 }
+
+y -= 15;

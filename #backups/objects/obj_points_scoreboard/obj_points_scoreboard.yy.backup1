@@ -1,4 +1,4 @@
-// 2025-12-14 14:40:03
+// 2025-12-19 01:42:13
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_button;
@@ -14,6 +14,14 @@ image_yscale = 0.5;
 rank = RANKS.F;
 
 bg_color = #33a5a5;
+
+achievment_names = [["Achievment","You got a testing achivement congrats"],0];
+
+def_display_time = 100; // default_scoreboard_display_time / 3 (decalred in loadmenu create)
+
+display_time = -1;
+
+curr_index = 10;
 
 #event step
 
@@ -32,4 +40,16 @@ draw_sprite(spr_ranks, rank, x - sprite_width + 60, y - 5);
 draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
 
-draw_text_transformed_color(x - sprite_width + 130, y - 5, "This player is an idiot.", 2,2,0,c_black, c_black, c_black, c_black,1);
+if (display_time <= 0)
+{
+    curr_index = clamp(curr_index++,0,array_length(achievment_names) -1);
+    display_time = def_display_time;
+    show_debug_message("changed text");
+}display_time--;
+
+var cur_achievement = achievment_names[1]; // i am not switching throght the list D:
+
+// show_debug_message(cur_achivement);
+
+draw_text_transformed_color(x - sprite_width + 115, y - sprite_height / 2 + 30, cur_achievement[0], 2,2,0,c_black, c_black, c_black, c_black,1);
+draw_text_ext_transformed_color(x - sprite_width + 115, y + 10, cur_achievement[1],15,sprite_width * 2/3, 1.25,1.25,0,c_black, c_black, c_black, c_black,1);

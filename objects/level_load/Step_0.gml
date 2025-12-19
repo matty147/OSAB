@@ -51,11 +51,11 @@ if (array_length(meta.checkpoints) > current_checkpoint_index)
 		
 		for (var obj = 0; obj < array_length(objects); obj++)
 		{
-			show_debug_message($"now checking object {objects[obj].time} with the id {obj}");
+			// show_debug_message($"now checking object {objects[obj].time} with the id {obj}");
 			
 			if (meta.checkpoints[current_checkpoint_index] <= objects[obj].time)
 			{
-				show_debug_message($"this is the nearest object{objects[obj].time} at id: {obj}");
+				// show_debug_message($"this is the nearest object{objects[obj].time} at id: {obj}");
 				global.checkpoint = [objects[obj].time, obj, current_checkpoint_index + 1]; // time, obj index
 				break;
 			}

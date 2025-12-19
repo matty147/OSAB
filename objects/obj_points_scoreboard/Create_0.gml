@@ -8,4 +8,10 @@ rank = RANKS.F;
 
 bg_color = #33a5a5;
 
-achivment_name = "Failed fetching the data";
+achievment_names = [["Achievment","You got a testing achivement congrats"],0];
+
+def_display_time = 100; // default_scoreboard_display_time / 3 (decalred in loadmenu create)
+
+display_time = -1;
+
+curr_index = 10;

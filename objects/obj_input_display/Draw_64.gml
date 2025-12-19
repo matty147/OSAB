@@ -1,5 +1,8 @@
 // if (live_call()) return live_result;
 
+//shift the object a bit lower so i dont need to fix this crap
+y += 15;
+
 // ghosts
 for (var i = 0; i < 4;i++)
 {
@@ -50,3 +53,5 @@ if (array_length(global.input_map) <= 4) // todo make this more visible / better
 {
 		draw_text_transformed_color(x + (clamp((array_length(global.input_map) + 1),1.6,1.6)* 74 + 16) + 32,y,"Press [SPACE] button or the [A] button to join",0.9,0.9,0,c_white,c_white,c_white,c_white,1);
 }
+
+y -= 15;
