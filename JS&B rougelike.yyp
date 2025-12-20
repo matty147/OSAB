@@ -221,6 +221,7 @@
     {"id":{"name":"snd_level_boss","path":"sounds/snd_level_boss/snd_level_boss.yy",},},
     {"id":{"name":"snd_level_enter","path":"sounds/snd_level_enter/snd_level_enter.yy",},},
     {"id":{"name":"snd_menu_bg","path":"sounds/snd_menu_bg/snd_menu_bg.yy",},},
+    {"id":{"name":"snd_player_join","path":"sounds/snd_player_join/snd_player_join.yy",},},
     {"id":{"name":"snd_story_level_bg","path":"sounds/snd_story_level_bg/snd_story_level_bg.yy",},},
     {"id":{"name":"sound1_scene1","path":"sounds/sound1_scene1/sound1_scene1.yy",},},
     {"id":{"name":"big_tree","path":"sprites/big_tree/big_tree.yy",},},

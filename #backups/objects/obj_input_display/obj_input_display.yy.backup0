@@ -1,4 +1,4 @@
-// 2025-12-18 22:34:19
+// 2025-12-20 17:03:09
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_input_map_display;
@@ -21,17 +21,6 @@ already_added_con = [];
 already_added_key = [];
 
 player = instance_find(obj_player,1);
-
-// this is where the curent in use inputs devices are stored
-if (!variable_global_exists("input_map")) {
-	global.input_map = [];
-}
-
-// this is where all of the controller ids are saved please do not delete this or it will fuck up everything using controllers
-if (!variable_global_exists("gamepads"))
-{
-	global.gamepads = [];
-}
 
 if (level == room)
 {
@@ -71,6 +60,7 @@ if (array_length(global.gamepads) > 0)
             
             if (array_length(global.input_map) < 4 && !array_contains(already_added_con,c))
             {
+            	audio_play_sound(snd_player_join,1,false);
                 array_push(global.input_map,[INPUT_METHODS.CONTROLLER,global.gamepads[c]]);
                 array_push(already_added_con,c);
             }
@@ -83,6 +73,7 @@ if (array_length(global.input_map) < 4)
     if (keyboard_check_pressed(vk_space))
     {
         array_push(global.input_map,INPUT_METHODS.KEYBOARDS); // tf should i do here?
+        audio_play_sound(snd_player_join,1,false);
     }
 }
 

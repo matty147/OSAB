@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_dash",
+  "%Name":"snd_player_join",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.205624,
-  "name":"snd_dash",
+  "duration":0.9,
+  "name":"snd_player_join",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_dash.wav",
+  "soundFile":"snd_player_join.mp3",
   "type":0,
-  "volume":0.5,
+  "volume":1.0,
 }

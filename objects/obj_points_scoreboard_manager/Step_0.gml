@@ -4,39 +4,55 @@ function check_achievements_conditions(stats)
     var ach = [[["Nothing","You did absolutely nothing this round"],-1]];
     
     
-    if (player_numb == 3)
+    if (player_numb == 4)
     {
         array_push(ach,[["Full Blast","Play a match with 4 players"],0]);
     }
     
-    if (stats[? "revive"] >= 1)
+    if (stats[? "hit"] == 0)
+    {
+        array_push(ach,[["Pro","Finished the level without taking a single hit"],4]);
+    }
+    
+    if (stats[? "hit"] == 10)
+    {
+        array_push(ach,[["Punching Bag","Absorbed more hits than intended"],4]);
+    }
+    
+    if (stats[? "dash"] == 0)
+    {
+        array_push(ach,[["Dashless","Didn't dash a single time"],4]);
+    }
+    
+    if (stats[? "revive"] >= 4)
     {
         array_push(ach,[["Hero","Revived your teammates many times"],4]);
     }
     
-    if (stats[? "dash"] > 10)
+    
+    if (stats[? "dash"] / (level_length / room_speed) * 60 >= 30)
     {
         array_push(ach,[["I Am Speed","Dashed way too much"],3]);
     }
     
-    if (stats[? "corner_cmap"] > 10)
+    if ((stats[? "corner_camp"] + 241) / level_length * 100 >= 25)
     {
         array_push(ach,[["Corner Lover","Spent most of the level hiding in a corner"],2]);
     }
     
-    if (stats[? "afk"] > 10)
+    if ((stats[? "afk"] + 241) / level_length * 100 >= 50)
     {
         array_push(ach,[["Are You Even There?","Moved very little during the level"],1]);
     }
     
-    if (stats[? "moved_distance"] > 10)
+    if ((stats[? "moved_distance"] + 241) / level_length * 100 >= 25)
     {
         array_push(ach,[["Hyperactive","Moved far more than necessary"],2]);
     }
     
-    if (stats[? "alone_time_alive"] > 10 && player_numb > 1)
+    if (((stats[? "alone_time_alive"]  + 241) / level_length) * 100 > 75  && player_numb > 1)
     {
-        array_push(ach,[["Lone Alpha","Survived most of the level without teammates"],5]);
+        array_push(ach,[["Lone Alpha","Survived most of the level without any teammates"],5]);
     }
     
     // sort the array form heighest to lowest
@@ -65,16 +81,22 @@ function check_achievements_conditions(stats)
 
 if (score_board_display_time > 50)
 {
+    if (instance_exists(obj_dead_player))
+    {
+        with (obj_dead_player) {checkpoint_hit = true;}
+    }
     // show_debug_message("display");
     if (score_instances == noone)
     {
-        // show_debug_message("created");
+        show_debug_message($"level time: {level_length}");
         
         for (var i = 0; i < player_numb; i++)
         {
             achievement = [];
             
             var pstat = player_stats[i];
+            
+            show_debug_message($"p{i}: {json_encode(pstat)}");
             
             var rank = RANKS.F; 
             var hit = pstat[? "hit"];

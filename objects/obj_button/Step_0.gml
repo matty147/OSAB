@@ -2,14 +2,13 @@
 
 function button_pressed(menu_id, instance)
 {
-		if (scrollable)
-		{
-			global.level_name = file_path;
-			show_debug_message(global.level_name);
-			global.checkpoint = [0,0,0];
-			room_goto(level);
-		}
-
+	if (scrollable)
+	{
+		global.level_name = file_path;
+		show_debug_message(global.level_name);
+		global.checkpoint = [0,0,0];
+		room_goto(level);
+	}
 	
 	instance.button = 0; 
 	
@@ -143,11 +142,7 @@ if (keyboard_check_pressed(vk_escape) && instance.menu_id != 0 || keyboard_check
 	}
 }
 
-
-if (button_id % 2 == 0 && scrollable)
-{
-	image_index = 2;	
-}else image_index = 2; //0
+image_index = 2;
  
 // hide mouse when inactive
 if (point_distance(instance.mouse_xprevious, instance.mouse_yprevious, mouse_x, mouse_y)) // if mouse is moving
@@ -163,37 +158,35 @@ else if (alarm[0] <= 0)
 instance.mouse_xprevious = mouse_x;
 instance.mouse_yprevious = mouse_y;
 
-if instance.move_buttons != 0 &&  mouse_wheel_up() - mouse_wheel_down() == 0
+if (instance.move_buttons != 0 &&  mouse_wheel_up() - mouse_wheel_down() == 0)
 {
 	alarm[0] = 1;	
 }
 
-if instance_place(mouse_x,mouse_y - 32,obj_select_panel) // the mouse is not perfect so we need to move it down a bit so there is no dead space
+if (instance_place(mouse_x,mouse_y - 32,obj_select_panel)) // the mouse is not perfect so we need to move it down a bit so there is no dead space
 {
 	can_interact = false;
 }else can_interact = true;
 
-if can_interact && button_id != -1
+if (can_interact && button_id != -1)
 {
-	//show_debug_message("scroll: " + string(scrollable));
 	instance.selected_scrollable_button = scrollable;
 }else instance.selected_scrollable_button = false;
 
-if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off 
+if (position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off)
 {
 	
-	if !(scrollable && !can_interact) // cant interact if button is hiden behind by obj_select_panel (mouse is touching select panel)
+	if (!(scrollable && !can_interact)) // cant interact if button is hiden behind by obj_select_panel (mouse is touching select panel)
 	{
 		image_index = 1;
 	
 		instance.id_of_button_selected = selected_button_id;
-
 	
-		if mouse_check_button_released(mb_left)
+		if (mouse_check_button_released(mb_left))
 		{
-			if image_alpha > 0
+			if (image_alpha > 0)
 			{
-				if !audio_is_playing(snd_click)
+				if (!audio_is_playing(snd_click))
 				{	
 					audio_play_sound(snd_click, 2, false);
 				}
@@ -202,17 +195,17 @@ if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off
 		}
 	}
 
-}else if button_id == instance.button && instance.mouse_off
+}else if (button_id == instance.button && instance.mouse_off)
 {
 	image_index = 1;
 	
 	instance.id_of_button_selected = selected_button_id;
 	
-	if keyboard_check_released(vk_enter)
+	if (keyboard_check_released(vk_enter))
 	{
-		if image_alpha > 0
+		if (image_alpha > 0)
 		{
-			if !audio_is_playing(snd_click)
+			if (!audio_is_playing(snd_click))
 			{
 				audio_play_sound(snd_click, 2, false);
 			}
@@ -221,13 +214,13 @@ if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off
 	}
 }
 
-if scrollable
+if (scrollable)
 {
 	
-	if position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off
+	if (position_meeting(mouse_x,mouse_y,id) && !instance.mouse_off)
 	{
 		image_xscale = 0.55;
-	}else if button_id == instance.button && instance.mouse_off
+	}else if (button_id == instance.button && instance.mouse_off)
 	{
 		image_xscale = 0.55;
 	}else image_xscale = 0.5;
@@ -235,7 +228,7 @@ if scrollable
 	//smooth moving from point A to point B
 	y = lerp(y, y + instance.move_buttons * 32,0.5);
 	
-	if y < - 30 // moving from top to bottom
+	if (y < - 30) // moving from top to bottom
 	{
 		y = y + room_height + 30;	
 		
@@ -246,20 +239,20 @@ if scrollable
 		
 			//check if the list is not overflowing and if so, fixes it.
 		
-			if instance.last_value < 0
+			if (instance.last_value < 0)
 			{
 				instance.last_value = array_length(instance.save) - 1;
 			}
-			else if instance.last_value >= array_length(instance.save)
+			else if (instance.last_value >= array_length(instance.save))
 			{	
 			instance.last_value = 0;
 			}
 			
-			if instance.first_value < 0
+			if (instance.first_value < 0)
 			{
 				instance.first_value = array_length(instance.save)-1;
 			}
-			else if instance.first_value >= array_length(instance.save)
+			else if (instance.first_value >= array_length(instance.save))
 			{
 				instance.first_value = 0;
 			}
@@ -274,7 +267,7 @@ if scrollable
 		file_path = (instance.save[instance.last_value]);
 	}
 
-	if y > room_height + 30 // moving from bottom to top
+	if (y > room_height + 30) // moving from bottom to top
 	{
 		y = y - room_height - 30;
 		
@@ -284,20 +277,20 @@ if scrollable
 			
 			//check if the list is not overflowing and if so, fixes it.
 			
-			if instance.first_value < 0
+			if (instance.first_value < 0)
 			{
 				instance.first_value = array_length(instance.save)-1;
 			}
-			else if instance.first_value >= array_length(instance.save)
+			else if (instance.first_value >= array_length(instance.save))
 			{
 				instance.first_value = 0;
 			}
 						
-			if instance.last_value < 0
+			if (instance.last_value < 0)
 			{
 				instance.last_value = array_length(instance.save) - 1;
 			}
-			else if instance.last_value >= array_length(instance.save)
+			else if (instance.last_value >= array_length(instance.save))
 			{
 				instance.last_value = 0;
 			}
@@ -316,50 +309,50 @@ if(scrollable){
 	image_xscale = 0.5;
 }
 
-if instance.menu_id == "0" || instance.menu_id == "5"
+if (instance.menu_id == "0" || instance.menu_id == "5")
 {
 	instance.pop_up_id = 0;
 }
 
-if move
+if (move)
 {
-	if global.pop_up || instance.show_game_select_button && instance.menu_id == 0
+	if (global.pop_up || instance.show_game_select_button && instance.menu_id == 0)
 	{
-		if hidden && instance.pop_up_id == button_number || hidden && instance.pop_up_id == 0
+		if (hidden && instance.pop_up_id == button_number || hidden && instance.pop_up_id == 0)
 		{
 			display_text = true;
 			image_alpha = clamp(image_alpha + 0.1, 0, 1);	
 		}
 
-		if moved_position_x != -1
+		if (moved_position_x != -1)
 		{
 			x = lerp(x,moved_position_x + sprite_width,0.1);
 		}
 		
-		if moved_position_y != -1
+		if (moved_position_y != -1)
 		{
 			y = lerp(y,moved_position_y + sprite_height / 2,0.1);
 		}
 	}else
 	{
-		if hidden
+		if (hidden)
 		{
 			display_text = false;
 			image_alpha = clamp(image_alpha - 0.05, 0, 1);	
 		}
 		
-		if moved_position_x != -1
+		if (moved_position_x != -1)
 		{
 			x = lerp(x,original_x,0.1);
 		}
 		
-		if moved_position_y != -1
+		if (moved_position_y != -1)
 		{
 			y = lerp(y,original_y,0.1);
 		}
 	}
 	
-	if instance.pop_up_id != button_number && button_number != 0
+	if (instance.pop_up_id != button_number && button_number != 0)
 	{
 		image_alpha = clamp(image_alpha - 0.05, 0, 1);	
 		display_text = false;	
@@ -367,9 +360,9 @@ if move
 	
 }
 
-if show_extra_buttons
+if (show_extra_buttons)
 {
-	if instance.in_main_menu
+	if (instance.in_main_menu)
 	{
 		button_free_play.visible = true;
 		button_story_mode.visible = true;

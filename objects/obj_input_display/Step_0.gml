@@ -24,6 +24,7 @@ if (array_length(global.gamepads) > 0)
             
             if (array_length(global.input_map) < 4 && !array_contains(already_added_con,c))
             {
+            	audio_play_sound(snd_player_join,1,false);
                 array_push(global.input_map,[INPUT_METHODS.CONTROLLER,global.gamepads[c]]);
                 array_push(already_added_con,c);
             }
@@ -36,5 +37,6 @@ if (array_length(global.input_map) < 4)
     if (keyboard_check_pressed(vk_space))
     {
         array_push(global.input_map,INPUT_METHODS.KEYBOARDS); // tf should i do here?
+        audio_play_sound(snd_player_join,1,false);
     }
 }

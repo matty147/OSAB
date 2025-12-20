@@ -48,17 +48,17 @@ if (!global.pause)
 	if (dash && dash_time <= 1 || coyote_dash_time > 0 && dash_time <= 1)
 	{
 		// update the stats
-		remember_data[? "dash"]++;
+		remember_data[? "dash"] += (collect_points) ? 1: 0;
 		update_score = true;
+		audio_play_sound(snd_dash,1,false);
 		
-		
-		dash_time = 3.5;
+		dash_time = 5;
 		coyote_dash_time = 0;
+		vibration_amount = 0.5;
 	}else dash_time = clamp(dash_time - 0.2,1,dash_time);
 	
-	
-	y += move_y * _speed * dash_time;
-	x += move_x * _speed * dash_time;
+	y += move_y * _speed * clamp(dash_time,1,3.5);
+	x += move_x * _speed * clamp(dash_time,1,3.5);
 	
 	x = clamp(x,8,room_width - 8);
 	y = clamp(y,8,room_height - 8);
@@ -72,18 +72,20 @@ if (!global.pause)
 	
 	if (instance_place(x, y, _inst) && _inst.hitbox == true && hit_cooldown <= 0 && dash_time == 1)
 	{
-		remember_data[? "hit"]++;
+		remember_data[? "hit"] += (collect_points) ? 1: 0;
 		update_score = true;
-		
+		audio_play_sound(snd_hit,1,false);
 		
 		hit_cooldown = 50;
 		_health--;
+		vibration_amount = 2;
 	}else hit_cooldown = clamp(hit_cooldown - 1, -1, hit_cooldown);
 	
 	if (_health < 0)
 	{
 		dead = true;
 	}
+}
 	
 	if (hit_cooldown > 0)
 	{
@@ -98,11 +100,10 @@ if (!global.pause)
 		image_index = (3 - _health) * 2;
 		image_speed = 0;	
 	}
-}
 
 if (dead)
 {
-	remember_data[? "death"]++;
+	remember_data[? "death"] += (collect_points) ? 1: 0;
 	update_score = true;
 	
 	image_speed = 0;
@@ -114,14 +115,15 @@ if (dead)
 	dead_player.points = remember_data;
 }
 
+
 // points
 
-if (!global.pause)
+if (!global.pause && collect_points)
 {
 	if (distance_to_point(0,0) < camp_distance || distance_to_point(room_width,0) < camp_distance || distance_to_point(0,room_height) < camp_distance || distance_to_point(room_width,room_height) < camp_distance)
 	{
 		// show_debug_message($"player {player_ide} is in a corner camping");
-		remember_data[? "corner_camp"]++;
+		remember_data[? "corner_camp"] += (collect_points) ? 1: 0;
 		update_score = true;
 	}
 	
@@ -159,3 +161,9 @@ if (update_score)
 
 remember_data[? "time_alive"]++;
 remember_data[? "alone_time_alive"] += (instance_number(obj_player) == 1) ? 1 : 0;
+
+if (!global.pause) // controller rumble
+{
+	gamepad_set_vibration(controller_id, vibration_amount, vibration_amount);
+	vibration_amount -= 0.05;
+}else gamepad_set_vibration(controller_id, 0, 0);

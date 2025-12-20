@@ -49,6 +49,8 @@ show_debug_message($"meta.checkpoints: {meta.checkpoints}");
 
 show_debug_message($"objects {objects[0]}");
 
+show_debug_message($"level lenght: {array_last(objects).time}");
+
 show_debug_message("finished");
 read_file = true;
 
@@ -139,6 +141,8 @@ all_playes_dead = false;
 display_score_board = false;
 already_shown_score_board = false;
 default_scoreboard_display_time = 750; 
+
+level_length = 0;
 
 scoreboard_manager = instance_find(obj_points_scoreboard_manager,0);
 

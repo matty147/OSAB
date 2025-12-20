@@ -38,46 +38,42 @@ if room == level_select
 	
 }
 
-if room = level 
+if (room = level) //?????????????
 {
 	
-	if keyboard_check_pressed(vk_escape)
+	if (keyboard_check_pressed(vk_escape))
 	{
 		global.pause = !global.pause;
 	}
 	
-	if !global.pause
+	if (!global.pause)
 	{
 		window_set_cursor(cr_none);
 	}else window_set_cursor(cr_default);
 }
 
 
-if !global.pause
+if (!global.pause)
 {
-	//global.runtime += time_line.distance / (5 * room_speed); //timeline.distance only exists in the editor while this code runs anywhere
 	global.runtime += 85 / (5 * room_speed);
-	//show_debug_message(global.runtime);
-
-	//show_debug_message(global.runtime);	
 
 }	
 
 button += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
 	
-if !button_repeat // if the user is not in the level select screen
+if (!button_repeat) // if the user is not in the level select screen
 {
-	if button > button_max // check if the button is not going outside the buttonss
+	if (button > button_max) // check if the button is not going outside the buttonss
 	{
 		button = button_max;
-	}else if button < 0
+	}else if (button < 0)
 	{
 		button = 0;	
 	}
-}else if button > button_max	
+}else if (button > button_max)	
 	{
 		button -= button_max + 1;	
-	}else if button < 0
+	}else if (button < 0)
 	{
 		button += button_max + 1;
 	}

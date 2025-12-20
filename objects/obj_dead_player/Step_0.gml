@@ -35,14 +35,24 @@ if (inactive == 0 && place_meeting(x,y,obj_player) || checkpoint_hit)
 	checkpoint_hit = false;
 	
 	var p_saved = instance_nearest(x,y,obj_player);
-	p_saved.remember_data[? "revive"]++; 
 	
-    var player = instance_create_depth(p_saved.x,p_saved.y,depth,obj_player);
+	var _x = room_width / 2;
+	var _y = room_height / 2;
+	
+	if (instance_exists(p_saved))
+	{
+		p_saved.remember_data[? "revive"]++;
+		_x = p_saved.x;
+		_y = p_saved.y;
+	}
+	
+    var player = instance_create_depth(_x,_y,depth,obj_player);
     player.player_ide = player_ide;
     player.hit_cooldown = 50;
     player.p_device = device;
     player.controller_id = controller_id;
     player.remember_data = points;
+    player.vibration_amount = 1.5;
     
 	switch (player_ide)
 	{
@@ -69,3 +79,5 @@ if (inactive == 0 && place_meeting(x,y,obj_player) || checkpoint_hit)
     
     instance_destroy();
 }
+
+if (inactive == 0) {gamepad_set_vibration(controller_id, 0, 0);}

@@ -99,6 +99,11 @@ while (current_index < array_length(objects) && objects[current_index].time == f
 	current_index++;
 }
 
+if (!global.pause)
+{
+	level_length++;
+}
+
 if (global.runtime <= objects[array_length(objects) - 1].time || instance_exists(obj_enemy))
 {
 	end_game = 250;
@@ -109,7 +114,13 @@ if (global.runtime <= objects[array_length(objects) - 1].time || instance_exists
 
 if (end_game <= 240 && search != "")
 {
-	audio_sound_gain(sound_id,0,2000);	
+	audio_sound_gain(sound_id,0,1000);	
+	with (obj_player) {collect_points = false;}
+	
+	if (obj_points_scoreboard_manager.level_length  == -1)
+	{
+		obj_points_scoreboard_manager.level_length  = level_length  + 241; // we need to add the endgame timer
+	}
 }
 
 if (all_playes_dead && search != "")
@@ -122,8 +133,15 @@ if (all_playes_dead && search != "")
 	{
 		audio_stop_sound(sound_id);
 	}
+	
+	for (var l = 0; l < array_length(global.gamepads);l++)
+{
+	var controller = global.gamepads[l];
+	
+	gamepad_set_vibration(controller,0,0);
 }
 
+}
 
 if (instance_number(obj_enemy) <= 0 && end_game < 0)
 {

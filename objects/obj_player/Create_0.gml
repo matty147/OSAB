@@ -16,6 +16,8 @@ coyote_dash_time = 0;
 
 hit_cooldown = 0;
 
+vibration_amount = 0;
+
 // actions
 enum ACT
 {
@@ -69,6 +71,8 @@ update_score = false;
 
 afk_timer = 0;
 near_point = [-1000,-1000];
+
+collect_points = true;
 
 // the last value is the weight of the stat, aka what we will prioritize over what. the bigget number the better
 ds_map_add(remember_data,"hit",0); // 0 // the worst that can happen if there isnt anything better

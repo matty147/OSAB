@@ -50,6 +50,17 @@ if (!variable_global_exists("checkpoint")) {
 	global.checkpoint = [0,0,0]; // start time and object index, checkpoint index
 }
 
+// this is where the curent in use inputs devices are stored
+if (!variable_global_exists("input_map")) {
+	global.input_map = [];
+}
+
+// this is where all of the controller ids are saved please do not delete this or it will fuck up everything using controllers
+if (!variable_global_exists("gamepads"))
+{
+	global.gamepads = [];
+}
+
 audio_master_gain(global.volume);
 
 selected_items = 0;
@@ -120,19 +131,19 @@ level_object_map[? "industrial_circle"] = 0.065;
 level_object_map[? "lightning"] = 0.065;
 level_object_map[? "main_boss"] = 0.5;
 
-if !file_exists("lemon.png")
+if (!file_exists("lemon.png"))
 {
 	lemon = false;
 }
 
-if room == main_menu
+if (room == main_menu)
 {
 	//checks for available levels
 
     results = [];
     scr_read_files("levels", ".osab", results); // if the file dir is changed. reloading game maker is needed
 
-    if array_length(results) > 0 {
+    if (array_length(results) > 0) {
         for (var i = 0; i < array_length(results); i++) {
             show_debug_message("File found: " + results[i]);
         }
@@ -188,10 +199,8 @@ if room == main_menu
 
 if (!lemon)
 {
-			show_message("Error 404: Lemon Not Found.\nThe requested lemon could not be located. It might have been squeezed, zested, or simply never existed. Please check your citrus directory and try again.");
-			game_end();
-	 //show_error("Error: Went to wrong area. Aborting game.", true);
-
+	show_message("Error 404: Lemon Not Found.\nThe requested lemon could not be located. It might have been squeezed, zested, or simply never existed. Please check your citrus directory and try again.");
+	game_end();
 }
 
 //f4_count = 0;
@@ -204,3 +213,10 @@ if (!lemon)
 
 // scoreboard for testing
 // var scoreb = instance_create_layer(x + room_width ,y + room_height / 2,"manager",obj_points_scoreboard);
+
+for (var l = 0; l < array_length(global.gamepads);l++)
+{
+	var controller = global.gamepads[l];
+	
+	gamepad_set_vibration(controller,0,0);
+}
