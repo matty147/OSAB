@@ -1,4 +1,4 @@
-// 2025-12-19 01:43:39
+// 2025-12-19 23:45:53
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -151,6 +151,7 @@ if (score_board_display_time > 50)
             var total_height = scoreb.sprite_height + (player_numb - 1) * spacing - 20;
                 scoreb.x = room_width / 2 + (scoreb.sprite_width) / 2;
                 scoreb.y = (room_height - total_height) / 2 + i * (scoreb.sprite_height * 0.5 + spacing);
+                // scoreb.image_alpha = 0;
                 score_instances = scoreb;
                 scoreb.rank = rank;
                 scoreb.achievment_names = achievement;

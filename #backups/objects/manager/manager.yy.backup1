@@ -1,4 +1,4 @@
-// 2025-12-19 01:06:21
+// 2025-12-19 23:18:30
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -211,7 +211,7 @@ if (!lemon)
 //}
 
 // scoreboard for testing
-// var scoreb = instance_create_layer(x + room_width ,y + room_height / 2,"manager",obj_points_scoreboard);
+var scoreb = instance_create_layer(x + room_width ,y + room_height / 2,"manager",obj_points_scoreboard);
 
 #event alarm0
 window_set_position(0,0);

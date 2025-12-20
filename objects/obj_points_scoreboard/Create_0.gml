@@ -8,10 +8,12 @@ rank = RANKS.F;
 
 bg_color = #33a5a5;
 
-achievment_names = [["Achievment","You got a testing achivement congrats"],0];
+achievment_names = [[["Achievment","You got a testing achivement congrats"],0],[["Achievment","You got a testing achivement congrats"],0],[["Achievment","You got a testing achivement congrats"],0]];
 
-def_display_time = 100; // default_scoreboard_display_time / 3 (decalred in loadmenu create)
+def_display_time = 250; // default_scoreboard_display_time / 3 (decalred in loadmenu create)
 
 display_time = -1;
 
-curr_index = 10;
+curr_index = -1;
+
+_x = x + sprite_width;

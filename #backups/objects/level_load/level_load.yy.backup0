@@ -1,4 +1,4 @@
-// 2025-12-19 01:30:27
+// 2025-12-19 22:50:01
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -144,7 +144,7 @@ all_playes_dead = false;
 
 display_score_board = false;
 already_shown_score_board = false;
-default_scoreboard_display_time = 450; 
+default_scoreboard_display_time = 750; 
 
 scoreboard_manager = instance_find(obj_points_scoreboard_manager,0);
 
