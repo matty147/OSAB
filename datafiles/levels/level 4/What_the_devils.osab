@@ -4,7 +4,8 @@
     "name": "What the devils?????",
     "description": "Final level",
     "lenght": 65,
-    "diff": 9
+    "diff": 9,
+    "checkpoints": [200,400,800]
   },
   "level": [
     {

@@ -38,12 +38,20 @@ if room == level_select
 	
 }
 
-if (room = level) //?????????????
+if (room == level) //?????????????
 {
 	
 	if (keyboard_check_pressed(vk_escape))
 	{
 		global.pause = !global.pause;
+	}
+	
+	if (room == level)
+	{
+		if (level_load.win == true || level_load.all_playes_dead = true)
+		{
+			global.pause = true;
+		}
 	}
 	
 	if (!global.pause)
@@ -56,7 +64,6 @@ if (room = level) //?????????????
 if (!global.pause)
 {
 	global.runtime += 85 / (5 * room_speed);
-
 }	
 
 button += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);

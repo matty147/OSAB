@@ -17,3 +17,5 @@ display_time = -1;
 curr_index = -1;
 
 _x = x + sprite_width;
+
+player_sprite = spr_player;

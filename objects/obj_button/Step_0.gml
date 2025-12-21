@@ -234,11 +234,8 @@ if (scrollable)
 		
 			instance.last_value -= sign(instance.move_buttons);
 			instance.first_value -= sign(instance.move_buttons);
-		
-		
-		
-			//check if the list is not overflowing and if so, fixes it.
-		
+	
+			//check if the list is not overflowing and if so, fix it. // isnt this basicly what clamp() does?
 			if (instance.last_value < 0)
 			{
 				instance.last_value = array_length(instance.save) - 1;

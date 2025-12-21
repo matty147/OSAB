@@ -51,7 +51,8 @@ for (var i = 0; i < array_length(global.input_map);i++)
 
 if (array_length(global.input_map) <= 4) // todo make this more visible / better text
 {
-		draw_text_transformed_color(x + (clamp((array_length(global.input_map) + 1),1.6,1.6)* 74 + 16) + 32,y,"Press [SPACE] button or the [A] button to join",0.9,0.9,0,c_white,c_white,c_white,c_white,1);
+		draw_text_transformed_color(x + (clamp((array_length(global.input_map) + 1),1.6,1.6) * 74 + 16) + 32,y,"Press [SPACE] or the [A] button to join",0.9,0.9,0,c_white,c_white,c_white,c_white,1);
+		draw_text_transformed_color(x + (clamp((array_length(global.input_map) + 1),1.6,1.6) * 74 + 16) + 32,y + sprite_height - 26,"Press [P] to reset all players",0.75,0.75,0,c_white,c_white,c_white,c_white,1);
 }
 
 y -= 15;

@@ -1,5 +1,5 @@
-function scr_input_get(p, act, device, controller_id) {
-
+function scr_input_get(p, act, device, controller_id)
+{
 	if (device == "keyboard")
 	{
 	    var k = input_map[p][act];
@@ -20,6 +20,18 @@ function scr_input_get(p, act, device, controller_id) {
 	
 	    return gamepad_button_check_pressed(controller_id,k);
 	}
+}
+
+function calculate_hit_force(enemy_object)
+{
+	
+	var dir = point_direction(x,y,enemy_object.x, enemy_object.y);
+	var kb = 5;
+
+	var hsp = -lengthdir_x(kb, dir);
+	var vsp = -lengthdir_y(kb, dir);
+
+	return [hsp, vsp];
 }
 
 if (!global.pause)
@@ -57,8 +69,8 @@ if (!global.pause)
 		vibration_amount = 0.5;
 	}else dash_time = clamp(dash_time - 0.2,1,dash_time);
 	
-	y += move_y * _speed * clamp(dash_time,1,3.5);
-	x += move_x * _speed * clamp(dash_time,1,3.5);
+	y += move_y * _speed * clamp(dash_time,1,3.5) + force_position[1] * random_range(1,1.25);
+	x += move_x * _speed * clamp(dash_time,1,3.5) + force_position[0] * random_range(1,1.25);
 	
 	x = clamp(x,8,room_width - 8);
 	y = clamp(y,8,room_height - 8);
@@ -79,6 +91,11 @@ if (!global.pause)
 		hit_cooldown = 50;
 		_health--;
 		vibration_amount = 2;
+		
+		force_position = calculate_hit_force(_inst);
+		
+		show_debug_message(force_position);
+		
 	}else hit_cooldown = clamp(hit_cooldown - 1, -1, hit_cooldown);
 	
 	if (_health < 0)
@@ -86,6 +103,11 @@ if (!global.pause)
 		dead = true;
 	}
 }
+	
+	if (hit_cooldown / 4 <= 5)
+	{
+		force_position = [0,0];
+	}
 	
 	if (hit_cooldown > 0)
 	{
@@ -113,6 +135,7 @@ if (dead)
 	dead_player.device = p_device;
 	dead_player.controller_id = controller_id;
 	dead_player.points = remember_data;
+	dead_player.player_sprite = sprite_index;
 }
 
 
@@ -122,11 +145,9 @@ if (!global.pause && collect_points)
 {
 	if (distance_to_point(0,0) < camp_distance || distance_to_point(room_width,0) < camp_distance || distance_to_point(0,room_height) < camp_distance || distance_to_point(room_width,room_height) < camp_distance)
 	{
-		// show_debug_message($"player {player_ide} is in a corner camping");
 		remember_data[? "corner_camp"] += (collect_points) ? 1: 0;
 		update_score = true;
 	}
-	
 	
 	// lmao this is bad XD
 	near_point = (floor(global.runtime) % 50 == 0) ? [x,y] : near_point;
@@ -156,7 +177,7 @@ if (!global.pause && collect_points)
 if (update_score)
 {
 	update_score = false;
-	inp_score_board.player_stats[player_ide] = remember_data;
+	inp_score_board.player_stats[player_number] = remember_data;
 }
 
 remember_data[? "time_alive"]++;

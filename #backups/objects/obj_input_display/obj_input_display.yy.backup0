@@ -1,4 +1,4 @@
-// 2025-12-20 17:03:09
+// 2025-12-21 16:03:00
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_input_map_display;
@@ -27,7 +27,7 @@ if (level == room)
     visible = false;
 }
 
-image_yscale = 3;
+image_yscale = 3.5;
 
 image_xscale = 0;
 
@@ -147,7 +147,8 @@ for (var i = 0; i < array_length(global.input_map);i++)
 
 if (array_length(global.input_map) <= 4) // todo make this more visible / better text
 {
-		draw_text_transformed_color(x + (clamp((array_length(global.input_map) + 1),1.6,1.6)* 74 + 16) + 32,y,"Press [SPACE] button or the [A] button to join",0.9,0.9,0,c_white,c_white,c_white,c_white,1);
+		draw_text_transformed_color(x + (clamp((array_length(global.input_map) + 1),1.6,1.6) * 74 + 16) + 32,y,"Press [SPACE] or the [A] button to join",0.9,0.9,0,c_white,c_white,c_white,c_white,1);
+		draw_text_transformed_color(x + (clamp((array_length(global.input_map) + 1),1.6,1.6) * 74 + 16) + 32,y + sprite_height - 26,"Press [P] to reset all players",0.75,0.75,0,c_white,c_white,c_white,c_white,1);
 }
 
 y -= 15;

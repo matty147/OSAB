@@ -1,4 +1,4 @@
-// 2025-12-20 17:35:22
+// 2025-12-21 15:05:07
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_button;
@@ -239,10 +239,7 @@ if (keyboard_check_pressed(vk_escape) && instance.menu_id != 0 || keyboard_check
 	}
 }
 
-if (button_id % 2 == 0 && scrollable)
-{
-	image_index = 2;	
-}else image_index = 2; //0
+image_index = 2;
  
 // hide mouse when inactive
 if (point_distance(instance.mouse_xprevious, instance.mouse_yprevious, mouse_x, mouse_y)) // if mouse is moving
@@ -334,11 +331,8 @@ if (scrollable)
 		
 			instance.last_value -= sign(instance.move_buttons);
 			instance.first_value -= sign(instance.move_buttons);
-		
-		
-		
-			//check if the list is not overflowing and if so, fixes it.
-		
+	
+			//check if the list is not overflowing and if so, fix it.
 			if (instance.last_value < 0)
 			{
 				instance.last_value = array_length(instance.save) - 1;

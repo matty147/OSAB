@@ -29,7 +29,6 @@ function check_achievements_conditions(stats)
         array_push(ach,[["Hero","Revived your teammates many times"],4]);
     }
     
-    
     if (stats[? "dash"] / (level_length / room_speed) * 60 >= 30)
     {
         array_push(ach,[["I Am Speed","Dashed way too much"],3]);
@@ -118,9 +117,37 @@ if (score_board_display_time > 50)
                 rank = RANKS.C;
             }// else fail
             
+            var player_sprite = spr_player;
+            
+        	switch (i)
+            {
+            	case 0:
+            		player_sprite = spr_player;
+            	break;
+            	
+            	case 1:
+            		player_sprite = spr_player_yellow;
+            	break;
+            	
+            	case 2:
+            		player_sprite = spr_player_orange;
+            	break;
+            	
+            	case 3:
+            		player_sprite = spr_player_green;
+            	break;
+            	
+            	default:
+            		player_sprite = spr_player;
+            	break;
+            }
             
             show_debug_message($"player: {i}");
-            achievement = check_achievements_conditions(pstat);
+            
+            if (pstat != undefined)
+            {
+                achievement = check_achievements_conditions(pstat);
+            }
             show_debug_message($"This is the top 3: {achievement}");
             show_debug_message("----------------/n");
             
@@ -130,9 +157,11 @@ if (score_board_display_time > 50)
                 scoreb.x = room_width / 2 + (scoreb.sprite_width) / 2;
                 scoreb.y = (room_height - total_height) / 2 + i * (scoreb.sprite_height * 0.5 + spacing);
                 // scoreb.image_alpha = 0;
-                score_instances = scoreb;
                 scoreb.rank = rank;
                 scoreb.achievment_names = achievement;
+                scoreb.player_sprite = player_sprite;
+                
+                score_instances = scoreb;
         }
     }
 }else

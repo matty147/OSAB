@@ -1,4 +1,4 @@
-// 2025-12-20 22:02:39
+// 2025-12-21 19:38:06
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -97,6 +97,7 @@ if (array_length(global.input_map) <= 0)
 player_amount = clamp(array_length(global.input_map),1,4);
 
 keyboard_user_id = 0;
+controller_used = 0;
 
 for (var p = 0; p < player_amount; p++)
 {
@@ -106,12 +107,14 @@ for (var p = 0; p < player_amount; p++)
 	var randy = random_range(-rand_range,rand_range);
 	
 	var inp_player = instance_create_layer(room_width / 2 + randx,room_height / 2 + randy,"main",obj_player);
-	inp_player.player_ide = p;
+	inp_player.player_ide = p - controller_used;
 	inp_player.p_device = (is_array(global.input_map[p])) ? "controller" : "keyboard";
+	inp_player.player_number = p;
 	
 	if (is_array(global.input_map[p]))
 	{
 		inp_player.controller_id = global.input_map[p][1];
+		controller_used++;
 	}else
 	{
 		inp_player.keyboard_id = keyboard_user_id;

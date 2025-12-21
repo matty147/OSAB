@@ -1,4 +1,4 @@
-// 2025-12-20 18:00:01
+// 2025-12-21 15:14:00
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -282,6 +282,14 @@ if (room = level) //?????????????
 		global.pause = !global.pause;
 	}
 	
+	if (room == level)
+	{
+		if (level_load.win == true || level_load.all_playes_dead = true)
+		{
+			global.pause = true;
+		}
+	}
+	
 	if (!global.pause)
 	{
 		window_set_cursor(cr_none);
@@ -292,22 +300,9 @@ if (room = level) //?????????????
 if (!global.pause)
 {
 	global.runtime += 85 / (5 * room_speed);
-
 }	
 
-if (array_length(global.gamepads) > 0)
-{
-	for (var l = 0; l < array_length(global.input_map);l++)
-	{
-		var controller = global.input_map[l];
-		
-		show_debug_message(controller);
-		
-		gamepad_set_vibration(controller,0,0);
-	}
-
-	button += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
-}else button += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
+button += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
 	
 if (!button_repeat) // if the user is not in the level select screen
 {

@@ -44,13 +44,13 @@ input_map[1][ACT.MOVE_Y] = { neg: vk_up,   pos: vk_down };
 input_map[2] = array_create(3);
 input_map[2][ACT.DASH]   = ord("C");
 input_map[2][ACT.MOVE_X] = { neg: ord("F"), pos: ord("H") };
-input_map[2][ACT.MOVE_Y] = { neg: ord("T"),   pos: ord("G") };
+input_map[2][ACT.MOVE_Y] = { neg: ord("T"), pos: ord("G") };
 
 // for player 4
 input_map[3] = array_create(3);
 input_map[3][ACT.DASH]   = ord("N");
 input_map[3][ACT.MOVE_X] = { neg: ord("J"), pos: ord("L") };
-input_map[3][ACT.MOVE_Y] = { neg: ord("I"),   pos: ord("K") };
+input_map[3][ACT.MOVE_Y] = { neg: ord("I"), pos: ord("K") };
 
 // for player controller
 input_map[4] = array_create(3);
@@ -59,6 +59,7 @@ input_map[4][ACT.MOVE_X] = gp_axislh;
 input_map[4][ACT.MOVE_Y] = gp_axislv;
 
 player_ide = 0;
+player_number = 0;
 
 p_device = "keyboard";
 controller_id = 2;
@@ -86,3 +87,5 @@ ds_map_add(remember_data,"time_alive",0); // 1
 ds_map_add(remember_data,"alone_time_alive",0); // 1
 ds_map_add(remember_data,"alone_checkpoint",0); // 1
 ds_map_add(remember_data,"heighest_surive_time",0); // 1
+
+force_position = [0,0];

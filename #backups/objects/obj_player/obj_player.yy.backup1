@@ -1,4 +1,4 @@
-// 2025-12-20 20:20:24
+// 2025-12-21 19:37:44
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_player;
@@ -51,13 +51,13 @@ input_map[1][ACT.MOVE_Y] = { neg: vk_up,   pos: vk_down };
 input_map[2] = array_create(3);
 input_map[2][ACT.DASH]   = ord("C");
 input_map[2][ACT.MOVE_X] = { neg: ord("F"), pos: ord("H") };
-input_map[2][ACT.MOVE_Y] = { neg: ord("T"),   pos: ord("G") };
+input_map[2][ACT.MOVE_Y] = { neg: ord("T"), pos: ord("G") };
 
 // for player 4
 input_map[3] = array_create(3);
 input_map[3][ACT.DASH]   = ord("N");
 input_map[3][ACT.MOVE_X] = { neg: ord("J"), pos: ord("L") };
-input_map[3][ACT.MOVE_Y] = { neg: ord("I"),   pos: ord("K") };
+input_map[3][ACT.MOVE_Y] = { neg: ord("I"), pos: ord("K") };
 
 // for player controller
 input_map[4] = array_create(3);
@@ -66,6 +66,7 @@ input_map[4][ACT.MOVE_X] = gp_axislh;
 input_map[4][ACT.MOVE_Y] = gp_axislv;
 
 player_ide = 0;
+player_number = 0;
 
 p_device = "keyboard";
 controller_id = 2;
@@ -94,6 +95,8 @@ ds_map_add(remember_data,"alone_time_alive",0); // 1
 ds_map_add(remember_data,"alone_checkpoint",0); // 1
 ds_map_add(remember_data,"heighest_surive_time",0); // 1
 
+force_position = [0,0];
+
 #event alarm0 invincibility
 
 
@@ -101,8 +104,8 @@ ds_map_add(remember_data,"heighest_surive_time",0); // 1
 
 
 #event step
-function scr_input_get(p, act, device, controller_id) {
-
+function scr_input_get(p, act, device, controller_id)
+{
 	if (device == "keyboard")
 	{
 	    var k = input_map[p][act];
@@ -123,6 +126,18 @@ function scr_input_get(p, act, device, controller_id) {
 	
 	    return gamepad_button_check_pressed(controller_id,k);
 	}
+}
+
+function calculate_hit_force(enemy_object)
+{
+	
+	var dir = point_direction(x,y,enemy_object.x, enemy_object.y);
+	var kb = 5;
+
+	var hsp = -lengthdir_x(kb, dir);
+	var vsp = -lengthdir_y(kb, dir);
+
+	return [hsp, vsp];
 }
 
 if (!global.pause)
@@ -160,8 +175,8 @@ if (!global.pause)
 		vibration_amount = 0.5;
 	}else dash_time = clamp(dash_time - 0.2,1,dash_time);
 	
-	y += move_y * _speed * clamp(dash_time,1,3.5);
-	x += move_x * _speed * clamp(dash_time,1,3.5);
+	y += move_y * _speed * clamp(dash_time,1,3.5) + force_position[1] * random_range(1,1.25);
+	x += move_x * _speed * clamp(dash_time,1,3.5) + force_position[0] * random_range(1,1.25);
 	
 	x = clamp(x,8,room_width - 8);
 	y = clamp(y,8,room_height - 8);
@@ -182,6 +197,11 @@ if (!global.pause)
 		hit_cooldown = 50;
 		_health--;
 		vibration_amount = 2;
+		
+		force_position = calculate_hit_force(_inst);
+		
+		show_debug_message(force_position);
+		
 	}else hit_cooldown = clamp(hit_cooldown - 1, -1, hit_cooldown);
 	
 	if (_health < 0)
@@ -189,6 +209,11 @@ if (!global.pause)
 		dead = true;
 	}
 }
+	
+	if (hit_cooldown / 4 <= 5)
+	{
+		force_position = [0,0];
+	}
 	
 	if (hit_cooldown > 0)
 	{
@@ -216,20 +241,19 @@ if (dead)
 	dead_player.device = p_device;
 	dead_player.controller_id = controller_id;
 	dead_player.points = remember_data;
+	dead_player.player_sprite = sprite_index;
 }
 
 
 // points
 
-if (!global.pause)
+if (!global.pause && collect_points)
 {
 	if (distance_to_point(0,0) < camp_distance || distance_to_point(room_width,0) < camp_distance || distance_to_point(0,room_height) < camp_distance || distance_to_point(room_width,room_height) < camp_distance)
 	{
-		// show_debug_message($"player {player_ide} is in a corner camping");
 		remember_data[? "corner_camp"] += (collect_points) ? 1: 0;
 		update_score = true;
 	}
-	
 	
 	// lmao this is bad XD
 	near_point = (floor(global.runtime) % 50 == 0) ? [x,y] : near_point;
@@ -281,7 +305,3 @@ if (dash_time > 1)
 
 	draw_sprite_ext(sprite_index, 0,behind_player_x,behind_player_y,0.5,0.5,image_angle,c_white,1);
 }
-
-// draw_text_color(x,y - 40,remember_data[? "afk"],c_white,c_white,c_white,c_white,1);
-
-// draw_circle_color(near_point[0],near_point[1],1,c_white,c_white,false);

@@ -1,4 +1,4 @@
-// 2025-12-20 16:58:07
+// 2025-12-21 18:38:07
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_dead_player;
@@ -32,6 +32,8 @@ controller_id = 0;
 points = ds_map_create();
 
 checkpoint_hit = false;
+
+player_sprite = spr_player;
 
 #event step
 
@@ -89,29 +91,7 @@ if (inactive == 0 && place_meeting(x,y,obj_player) || checkpoint_hit)
     player.controller_id = controller_id;
     player.remember_data = points;
     player.vibration_amount = 1.5;
-    
-	switch (player_ide)
-	{
-		case 0:
-			player.sprite_index = spr_player;
-		break;
-		
-		case 1:
-			player.sprite_index = spr_player_yellow;
-		break;
-		
-		case 2:
-			player.sprite_index = spr_player_orange;
-		break;
-		
-		case 3:
-			player.sprite_index = spr_player_green;
-		break;
-		
-		default:
-			player.sprite_index = spr_player;
-		break;
-	}
+    player.sprite_index = player_sprite;
     
     instance_destroy();
 }

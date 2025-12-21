@@ -4,7 +4,8 @@
     "name": "Energy Synergy Matrix",
     "description": "Third story level",
     "lenght": 76,
-    "diff": 7
+    "diff": 7,
+    "checkpoints": [250,500,900]
   },
   "level": [
     {

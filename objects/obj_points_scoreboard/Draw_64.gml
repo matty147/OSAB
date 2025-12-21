@@ -1,6 +1,6 @@
 if (live_call()) return live_result;
 
-gpu_set_scissor(x - sprite_width, y - sprite_height/ 2, x + sprite_width * 0.5, y + sprite_height * 0.5,);
+gpu_set_scissor(x - sprite_width, y - sprite_height/ 2, x + sprite_width * 0.5, y + sprite_height * 0.5);
 
     draw_self();
 
@@ -33,3 +33,5 @@ gpu_set_scissor(x - sprite_width, y - sprite_height/ 2, x + sprite_width * 0.5, 
         draw_text_ext_transformed_color(_x - sprite_width + 115, y + 10, cur_achievement[1],15,sprite_width * 2/3, 1.25,1.25,0,c_black, c_black, c_black, c_black,1);
     }
 gpu_set_scissor(0, 0, display_get_width(), display_get_height());
+
+draw_sprite_ext(player_sprite,0,x - sprite_width - 64,y - 8,2,2,0,c_white,1);

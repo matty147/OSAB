@@ -4,7 +4,8 @@
     "name": "MariannE",
     "description": "Second story level",
     "lenght": 80,
-    "diff": 5
+    "diff": 5,
+    "checkpoints": [300,600,1000]
   },
   "level": [
     {

@@ -20,7 +20,7 @@ if (level == room)
     visible = false;
 }
 
-image_yscale = 3;
+image_yscale = 3.5;
 
 image_xscale = 0;
 

@@ -53,29 +53,7 @@ if (inactive == 0 && place_meeting(x,y,obj_player) || checkpoint_hit)
     player.controller_id = controller_id;
     player.remember_data = points;
     player.vibration_amount = 1.5;
-    
-	switch (player_ide)
-	{
-		case 0:
-			player.sprite_index = spr_player;
-		break;
-		
-		case 1:
-			player.sprite_index = spr_player_yellow;
-		break;
-		
-		case 2:
-			player.sprite_index = spr_player_orange;
-		break;
-		
-		case 3:
-			player.sprite_index = spr_player_green;
-		break;
-		
-		default:
-			player.sprite_index = spr_player;
-		break;
-	}
+    player.sprite_index = player_sprite;
     
     instance_destroy();
 }

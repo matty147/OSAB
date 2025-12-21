@@ -1,4 +1,4 @@
-// 2025-12-20 16:57:19
+// 2025-12-21 18:37:51
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_dead_player;
@@ -32,6 +32,8 @@ controller_id = 0;
 points = ds_map_create();
 
 checkpoint_hit = false;
+
+player_sprite = ;
 
 #event step
 
@@ -82,36 +84,14 @@ if (inactive == 0 && place_meeting(x,y,obj_player) || checkpoint_hit)
 		_y = p_saved.y;
 	}
 	
-    var player = instance_create_depth(_x,_y.y,depth,obj_player);
+    var player = instance_create_depth(_x,_y,depth,obj_player);
     player.player_ide = player_ide;
     player.hit_cooldown = 50;
     player.p_device = device;
     player.controller_id = controller_id;
     player.remember_data = points;
     player.vibration_amount = 1.5;
-    
-	switch (player_ide)
-	{
-		case 0:
-			player.sprite_index = spr_player;
-		break;
-		
-		case 1:
-			player.sprite_index = spr_player_yellow;
-		break;
-		
-		case 2:
-			player.sprite_index = spr_player_orange;
-		break;
-		
-		case 3:
-			player.sprite_index = spr_player_green;
-		break;
-		
-		default:
-			player.sprite_index = spr_player;
-		break;
-	}
+    player.sprite_index = player_sprite;
     
     instance_destroy();
 }
