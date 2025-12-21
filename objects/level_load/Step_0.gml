@@ -23,7 +23,6 @@ if (floor(global.runtime) == 0  && search != "")
 		show_debug_message("playing sound");
 		audio_play_sound(sound_id, 1, false,1);
 	}
-	
 }
 
 if (global.runtime > 1 && search != "" && !win)
@@ -57,6 +56,11 @@ if (array_length(meta.checkpoints) > current_checkpoint_index)
 			{
 				// show_debug_message($"this is the nearest object{objects[obj].time} at id: {obj}");
 				global.checkpoint = [objects[obj].time, obj, current_checkpoint_index + 1]; // time, obj index
+				global.pre_scoreboard_data = obj_points_scoreboard_manager.player_stats;
+				
+				// show_debug_message($"{global.pre_scoreboard_data} vs {obj_points_scoreboard_manager.player_stats}");
+				// show_debug_message($"{json_encode(global.pre_scoreboard_data[0])} vs {json_encode(obj_points_scoreboard_manager.player_stats[0])}");
+				
 				break;
 			}
 		}

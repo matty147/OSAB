@@ -50,6 +50,10 @@ if (!variable_global_exists("checkpoint")) {
 	global.checkpoint = [0,0,0]; // start time and object index, checkpoint index
 }
 
+if (!variable_global_exists("pre_scoreboard_data")) {
+	global.pre_scoreboard_data = [];
+}
+
 // this is where the curent in use inputs devices are stored
 if (!variable_global_exists("input_map")) {
 	global.input_map = [];

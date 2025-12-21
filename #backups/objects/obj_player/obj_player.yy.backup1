@@ -1,4 +1,4 @@
-// 2025-12-21 19:37:44
+// 2025-12-21 20:33:53
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_player;
@@ -283,7 +283,7 @@ if (!global.pause && collect_points)
 if (update_score)
 {
 	update_score = false;
-	inp_score_board.player_stats[player_ide] = remember_data;
+	inp_score_board.player_stats[player_number] = remember_data;
 }
 
 remember_data[? "time_alive"]++;

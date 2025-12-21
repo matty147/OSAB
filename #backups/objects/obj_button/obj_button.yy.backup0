@@ -1,4 +1,4 @@
-// 2025-12-21 15:05:30
+// 2025-12-21 20:03:31
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_button;
@@ -104,6 +104,7 @@ function button_pressed(menu_id, instance)
 		global.level_name = file_path;
 		show_debug_message(global.level_name);
 		global.checkpoint = [0,0,0];
+		global.pre_scoreboard_data = [];
 		room_goto(level);
 	}
 	
@@ -193,6 +194,7 @@ function button_pressed(menu_id, instance)
 				if (!restart_from_checkpoint)
 				{
 					global.checkpoint = [0,0,0];
+					global.pre_scoreboard_data = [];
 				}else show_debug_message("starting from checkpoint");
 			
 				room_restart();

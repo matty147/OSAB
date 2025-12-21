@@ -1,4 +1,4 @@
-// 2025-12-21 15:19:37
+// 2025-12-21 20:21:26
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -56,6 +56,10 @@ if (!variable_global_exists("fullscreen")) {
 
 if (!variable_global_exists("checkpoint")) {
 	global.checkpoint = [0,0,0]; // start time and object index, checkpoint index
+}
+
+if (!variable_global_exists("pre_scoreboard_data")) {
+	global.pre_scoreboard_data = [];
 }
 
 // this is where the curent in use inputs devices are stored

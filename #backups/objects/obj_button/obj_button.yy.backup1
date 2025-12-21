@@ -1,4 +1,4 @@
-// 2025-12-21 15:05:07
+// 2025-12-21 20:02:15
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_button;
@@ -193,6 +193,7 @@ function button_pressed(menu_id, instance)
 				if (!restart_from_checkpoint)
 				{
 					global.checkpoint = [0,0,0];
+					global.pre_scoreboard_data = [];
 				}else show_debug_message("starting from checkpoint");
 			
 				room_restart();
@@ -332,7 +333,7 @@ if (scrollable)
 			instance.last_value -= sign(instance.move_buttons);
 			instance.first_value -= sign(instance.move_buttons);
 	
-			//check if the list is not overflowing and if so, fix it.
+			//check if the list is not overflowing and if so, fix it. // isnt this basicly what clamp() does?
 			if (instance.last_value < 0)
 			{
 				instance.last_value = array_length(instance.save) - 1;
