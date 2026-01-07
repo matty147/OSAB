@@ -17,7 +17,7 @@
   "extensionVersion":"0.0.1",
   "files":[
     {"$GMExtensionFile":"","%Name":"","constants":[],"copyToTargets":3035426170322551018,"filename":"Dll1.dll","final":"","functions":[
-        {"$GMExtensionFunction":"","%Name":"move_files","argCount":0,"args":[1,1,1,],"documentation":"","externalName":"moveFiles","help":"ogg, png, folder - moves files from their destination to a specified folder","hidden":false,"kind":1,"name":"move_files","resourceType":"GMExtensionFunction","resourceVersion":"2.0","returnType":2,},
+        {"$GMExtensionFunction":"","%Name":"move_files","argCount":0,"args":[1,1,1,1,],"documentation":"","externalName":"moveFiles","help":"ogg, png, folder - moves files from their destination to a specified folder","hidden":false,"kind":1,"name":"move_files","resourceType":"GMExtensionFunction","resourceVersion":"2.0","returnType":2,},
         {"$GMExtensionFunction":"","%Name":"zip_folder","argCount":0,"args":[1,1,1,1,],"documentation":"","externalName":"zipFolder","help":"","hidden":false,"kind":1,"name":"zip_folder","resourceType":"GMExtensionFunction","resourceVersion":"2.0","returnType":2,},
         {"$GMExtensionFunction":"","%Name":"addition","argCount":0,"args":[2,2,],"documentation":"","externalName":"addition","help":"takes two numbers between 0-99, is used for testing if the dll even works","hidden":false,"kind":1,"name":"addition","resourceType":"GMExtensionFunction","resourceVersion":"2.0","returnType":2,},
       ],"init":"","kind":1,"name":"","order":[
@@ -27,7 +27,7 @@
       ],"origname":"","ProxyFiles":[],"resourceType":"GMExtensionFile","resourceVersion":"2.0","uncompress":false,"usesRunnerInterface":false,},
   ],
   "gradleinject":"",
-  "hasConvertedCodeInjection":false,
+  "hasConvertedCodeInjection":true,
   "helpfile":"",
   "HTML5CodeInjection":"",
   "html5Props":false,

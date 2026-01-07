@@ -1,4 +1,4 @@
-// 2025-11-08 13:08:43
+// 2026-01-08 00:11:48
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_editor_menu_dropdown_button;
@@ -15,11 +15,28 @@ with (obj_editor_menu_dropdown)
 }
 
 #event step
-function load()
+function fnc_move_file(dest_path, ogg_path, image_path, osab_path)
 {
-	
-	
+    show_debug_message($"{dest_path},\n{ogg_path}, \n{image_path}, \n{osab_path}");
+
+    var out = move_files(ogg_path, image_path, osab_path, dest_path);
+
+    if (out == 1)
+        show_debug_message("move success");
+    else
+        show_debug_message("move failed: " + string(out));
 }
+
+function fnc_zip_files(folder_path, audio, image, osab)
+{
+	var out = zip_folder(folder_path, audio,image, osab);
+
+    if (out == 1)
+        show_debug_message("zip success");
+    else
+        show_debug_message("zip failed: " + string(out));
+}
+
 
 if (mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y, id))
 {
@@ -41,9 +58,45 @@ if (mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y, id)
 			with (inp_setting)
 			{
 				state = CUR_EDITING.LEVEL_META;
+				update_meta = true;
 				// state = CUR_EDITING.OPTIONS;
 			}
 			break;
+
+		case "Export":
+			show_debug_message("export");
+				
+			// data that needs to be fetched
+			var ogg   = get_open_filename_ext(".ogg|*.ogg","", true,"Select an ogg audio file");
+    		var dimage = get_open_filename_ext(".png|*.png","",true,"Select an image file");
+    		var dosab = get_open_filename_ext(".osab|*.osab","",true,"Select an osab file");
+			var folder = working_directory + "exports"; // replace with the level name
+			
+			if (!directory_exists(folder))
+			{
+				directory_create(folder);
+			}
+			
+			show_debug_message($"this is the ogg name: {filename_name(ogg)}");
+		
+			var zogg  = filename_name(ogg);
+			var zimage = filename_name(dimage);
+			var zosab = filename_name(dosab);
+	
+			fnc_move_file(folder, ogg, dosab, dimage);
+			fnc_zip_files(folder,zogg,zimage,zosab);
+			
+			show_debug_message(folder + "/audio.ogg");
+			
+			file_delete(folder + "/" + zogg);
+			file_delete(folder + "/" + zimage);
+			file_delete(folder + "/" + zosab);
+			
+			// check if it is actualy true XD
+			show_message("Your level has been succsefully exported!");
+			
+			break;
+
 
 		case "Exit":
 			room_goto(main_menu);
@@ -60,8 +113,6 @@ if (mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y, id)
 
 
 #event draw_gui
-if (live_call()) return live_result;
-
 draw_self();
 
 draw_sprite_ext(spr_editor_meno_dropdown_img,icon_id,x + 32,y + 32,0.75,0.75,1,c_white,1);
