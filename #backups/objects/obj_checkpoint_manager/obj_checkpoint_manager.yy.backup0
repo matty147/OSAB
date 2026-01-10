@@ -1,0 +1,32 @@
+// 2026-01-10 01:44:05
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+uses_physics = false;
+
+#event create
+checkpoint_list = [];
+checkpoints_numb = instance_number(obj_checkpoint);
+current_level = global.cleared_levels;
+
+player = instance_find(obj_level_player,0);
+
+for (var i = 0; i < checkpoints_numb; ++i) {
+    array_push(checkpoint_list,instance_find(obj_checkpoint,i));
+}
+
+//show_debug_message(checkpoint_list);
+
+#event step
+// wait until the user is on the checkpoint until letting them move 
+if (player.on_checkpoint)
+{
+	current_level += keyboard_check_pressed(ord("D")) - keyboard_check_pressed(ord("A"));
+	current_level += keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
+}
+
+current_level = clamp(current_level,0,global.cleared_levels);
+
+if (current_level > checkpoints_numb - 1)
+{
+	current_level = checkpoints_numb - 1;
+}

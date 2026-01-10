@@ -1,3 +1,39 @@
+// 2026-01-10 01:47:27
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+sprite_index = spr_level_select_info_box;
+uses_physics = false;
+
+#event create
+data = undefined;
+
+name = "undefined";
+diff = -1;
+length = "5";
+cleared = false;
+
+text_size = 1.4;
+
+repeat_numb = 0;
+
+star_amount = 5;
+
+screen_x = camera_get_view_x(view_camera[0]);
+screen_y = camera_get_view_y(view_camera[0]);
+
+
+#event step
+//if !is_undefined(meta)
+//{
+//	name  = meta.name;
+//	diff  = meta.diff;
+//	length  = meta.length;
+//}
+
+screen_x = camera_get_view_x(view_camera[0]);
+screen_y = camera_get_view_y(view_camera[0]);
+
+#event draw_gui
 var _x = x - screen_x;
 var _y = y - screen_y;
 
@@ -19,7 +55,7 @@ if (visible)
 			}
 			show_debug_message(string_length(data.name));
 			
-		}else if (text_size < 1 && string_width(string(data.name)) * (text_size + 0.1) < sprite_width - 50)
+		}else (if text_size < 1 && string_width(string(data.name)) * (text_size + 0.1) < sprite_width - 50)
 		{
 			text_size += 0.1;
 		}

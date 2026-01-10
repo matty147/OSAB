@@ -1,6 +1,6 @@
 function fnc_move_file(dest_path, ogg_path, image_path, osab_path)
 {
-    show_debug_message($"{dest_path},\n{ogg_path}, \n{image_path}, \n{osab_path}");
+    // show_debug_message($"{dest_path},\n{ogg_path}, \n{image_path}, \n{osab_path}");
 
     var out = move_files(ogg_path, image_path, osab_path, dest_path);
 
@@ -8,6 +8,8 @@ function fnc_move_file(dest_path, ogg_path, image_path, osab_path)
         show_debug_message("move success");
     else
         show_debug_message("move failed: " + string(out));
+        
+    return out;
 }
 
 function fnc_zip_files(folder_path, audio, image, osab)
@@ -18,6 +20,8 @@ function fnc_zip_files(folder_path, audio, image, osab)
         show_debug_message("zip success");
     else
         show_debug_message("zip failed: " + string(out));
+        
+    return out;
 }
 
 
@@ -49,34 +53,41 @@ if (mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y, id)
 		case "Export":
 			show_debug_message("export");
 				
+			var move_bool = false;
+			var zip_bool = true;
+				
 			// data that needs to be fetched
-			var ogg   = get_open_filename_ext(".ogg|*.ogg","", true,"Select an ogg audio file");
-    		var dimage = get_open_filename_ext(".png|*.png","",true,"Select an image file");
-    		var dosab = get_open_filename_ext(".osab|*.osab","",true,"Select an osab file");
+			var ogg    = get_open_filename_ext("Audio Files (*.ogg)|*.ogg","", true,"Select an ogg audio file");
+    		var dimage = get_open_filename_ext("Image Files (*.png;*.jpg)|*.png;*.jpg","",true,"Select an image file");
+    		var dosab  = get_open_filename_ext("Osab Files (*.osab)|*.osab","",true,"Select an osab file");
 			var folder = working_directory + "exports"; // replace with the level name
 			
 			if (!directory_exists(folder))
 			{
 				directory_create(folder);
 			}
-			
-			show_debug_message($"this is the ogg name: {filename_name(ogg)}");
 		
 			var zogg  = filename_name(ogg);
 			var zimage = filename_name(dimage);
 			var zosab = filename_name(dosab);
 	
-			fnc_move_file(folder, ogg, dosab, dimage);
-			fnc_zip_files(folder,zogg,zimage,zosab);
+			move_bool = fnc_move_file(folder, ogg, dosab, dimage);
 			
-			show_debug_message(folder + "/audio.ogg");
+			if (move_bool)
+			{
+				zip_bool = fnc_zip_files(folder,zogg,zimage,zosab);
+			}
+			// show_debug_message(folder + "/audio.ogg");
 			
 			file_delete(folder + "/" + zogg);
 			file_delete(folder + "/" + zimage);
 			file_delete(folder + "/" + zosab);
 			
 			// check if it is actualy true XD
-			show_message("Your level has been succsefully exported!");
+			if (move_bool && zip_bool)
+			{
+				show_message("Your level has been succsefully exported!");
+			}else show_message("Failed to export level D:");
 			
 			break;
 
@@ -91,5 +102,4 @@ if (mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y, id)
 	}
 	
 	alarm[0] = 1; 
-	
 }

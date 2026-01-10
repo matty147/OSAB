@@ -3,7 +3,7 @@ data = undefined;
 name = "undefined";
 diff = -1;
 length = "5";
-cleared = false
+cleared = false;
 
 text_size = 1.4;
 

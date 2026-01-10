@@ -1,0 +1,37 @@
+// 2026-01-10 01:48:46
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+uses_physics = false;
+
+#event create
+player = instance_find(obj_level_player,0);
+
+if (player.x < 1135)
+{	
+	x = 0;
+	
+}else if (player.x > 800)
+{
+	x = room_width;	
+}
+
+x_plan = x;
+make_leap = false;
+camera_width = 1366;
+move = false;
+
+#event step
+if (player.x < room_width / 2)
+{
+	x_plan = 0;
+}else if (player.x > room_width / 2)
+{
+	x_plan = room_width;
+}
+	// x = lerp(x,x_plan,0.15);
+	
+x += (x_plan - x) * 0.05;
+
+#event draw
+
+// draw_circle(x,y,5,false);

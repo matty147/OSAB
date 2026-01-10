@@ -1,9 +1,10 @@
-if player.x < room_width / 2
+if (player.x < room_width / 2)
 {
 	x_plan = 0;
-}else if player.x > room_width / 2
+}else if (player.x > room_width / 2)
 {
 	x_plan = room_width;
 }
-	x = lerp(x,x_plan,0.15);
-
+	// x = lerp(x,x_plan,0.15);
+	
+x += (x_plan - x) * 0.05;
