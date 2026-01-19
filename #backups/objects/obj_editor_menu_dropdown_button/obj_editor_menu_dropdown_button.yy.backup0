@@ -1,4 +1,4 @@
-// 2026-01-10 01:49:35
+// 2026-01-10 11:54:14
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_editor_menu_dropdown_button;
@@ -78,6 +78,8 @@ if (mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y, id)
     		var dimage = get_open_filename_ext("Image Files (*.png;*.jpg)|*.png;*.jpg","",true,"Select an image file");
     		var dosab  = get_open_filename_ext("Osab Files (*.osab)|*.osab","",true,"Select an osab file");
 			var folder = working_directory + "exports"; // replace with the level name
+			
+			show_debug_message(folder);
 			
 			if (!directory_exists(folder))
 			{

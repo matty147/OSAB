@@ -1,0 +1,33 @@
+// 2026-01-17 23:53:19
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+sprite_index = spr_menu_icons;
+uses_physics = false;
+
+#event create
+
+image_speed = 0;
+link = "nothing";
+
+image_size = 0;
+
+#event step
+
+if (position_meeting(mouse_x,mouse_y,id))
+{
+    image_size = 1.25;
+}else image_size = 1;
+
+image_xscale += (image_size - image_xscale) * 0.1;
+image_yscale += (image_size - image_yscale) * 0.1;
+
+if (position_meeting(mouse_x,mouse_y,id) && mouse_check_button_pressed(mb_left))
+{
+    show_debug_message(link);
+    url_open(link);
+}
+
+#event draw
+if (live_call()) return live_result;
+
+draw_self();

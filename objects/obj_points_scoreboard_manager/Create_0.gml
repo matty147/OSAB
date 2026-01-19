@@ -31,15 +31,15 @@ score_instances = noone;
 
 player_stats = array_create(player_numb);
 
-// if (array_length(global.pre_scoreboard_data) != 0)
-// {
-//     show_debug_message("loaded_stats");
-//     player_stats = global.pre_scoreboard_data;
-// }
+if (array_length(global.pre_scoreboard_data) != 0)
+{
+    show_debug_message("loaded_stats");
+    player_stats = global.pre_scoreboard_data;
+}
 
-// show_debug_message(player_stats);
+show_debug_message(player_stats);
 
-// show_debug_message(json_encode(player_stats[0]));
+show_debug_message(json_encode(player_stats[0]));
 // show_debug_message(json_encode(player_stats[1]));
 // show_debug_message(json_encode(player_stats[2]));
 // show_debug_message(json_encode(player_stats[3]));

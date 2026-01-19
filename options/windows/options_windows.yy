@@ -10,7 +10,7 @@
   "option_windows_description_info":"A Game",
   "option_windows_disable_sandbox":true,
   "option_windows_display_cursor":true,
-  "option_windows_display_name":"OJ&B",
+  "option_windows_display_name":"OS&B",
   "option_windows_enable_steam":false,
   "option_windows_executable_name":"OJ&B.exe",
   "option_windows_icon":"${options_dir}/windows/icons/icon.ico",

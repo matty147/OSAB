@@ -1,4 +1,4 @@
-// 2025-12-21 19:58:02
+// 2026-01-17 20:16:52
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -59,7 +59,7 @@ if (!variable_global_exists("checkpoint")) {
 }
 
 if (!variable_global_exists("pre_scoreboard_data")) {
-	global.pre_scoreboard_data = []; // start time and object index, checkpoint index
+	global.pre_scoreboard_data = [];
 }
 
 // this is where the curent in use inputs devices are stored
@@ -239,6 +239,12 @@ global.f4_troll = false;//!global.f4_troll;
 
 #event step
 //if (live_call()) return live_result;
+
+
+if (keyboard_check_pressed(ord("G")))
+{
+	url_open("http://gamemaker.io");
+}
 
 if global.debug
 {

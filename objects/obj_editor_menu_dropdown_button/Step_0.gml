@@ -62,6 +62,8 @@ if (mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y, id)
     		var dosab  = get_open_filename_ext("Osab Files (*.osab)|*.osab","",true,"Select an osab file");
 			var folder = working_directory + "exports"; // replace with the level name
 			
+			show_debug_message(folder);
+			
 			if (!directory_exists(folder))
 			{
 				directory_create(folder);
