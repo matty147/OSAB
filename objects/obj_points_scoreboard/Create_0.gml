@@ -19,3 +19,5 @@ curr_index = -1;
 _x = x + sprite_width;
 
 player_sprite = spr_player;
+
+visible = true; //?????? where do i switch this off??

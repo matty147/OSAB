@@ -6,7 +6,7 @@ function check_achievements_conditions(stats)
     
     if (player_numb == 4)
     {
-        array_push(ach,[["Full Blast","Play a match with 4 players"],0]);
+        array_push(ach,[["Full Blast","Play a match with 4 players"],4]);
     }
     
     if (stats[? "hit"] == 0)

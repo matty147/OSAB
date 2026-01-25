@@ -1,0 +1,44 @@
+// 2026-01-25 02:19:17
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+uses_physics = false;
+
+#event create
+
+sprite = 0;
+left = 0;
+top = 0;
+width = 0;
+height = 0;
+spd = 0;
+dir = 0;
+
+fall_speed = 0;
+
+survive_time = 50;
+
+alpha = 1;
+scale = 1;
+
+#event draw
+
+draw_sprite_general(sprite,0,left,top,width,height,x,y,scale,scale,dir,c_white,c_white,c_white,c_white,alpha);
+speed -= 0.1;
+if (speed < 0)
+{
+	speed = 0;	
+}
+
+if (x>room_width) || (x < 0) || (y > room_height) || (survive_time <= 0)
+{
+	alpha -= 0.01;
+	image_xscale -= 0.05;
+	image_yscale -= 0.05;
+}survive_time--;
+
+show_debug_message(alpha);
+
+if (alpha <=0)
+{
+    instance_destroy();
+}

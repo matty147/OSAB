@@ -1,4 +1,4 @@
-// 2025-11-14 17:27:37
+// 2026-01-24 00:51:13
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_bg;
@@ -206,7 +206,7 @@ if (level_info)
 		
 			file_text_close(file_name);
 
-			show_debug_message("leveldata:  " + string(json));
+			// show_debug_message("leveldata:  " + string(json));
 		
 			level_data = json_parse(json);
 		
@@ -309,7 +309,7 @@ if (level_info)
 	draw_text_transformed(x + sprite_width / 4 ,325,"lenght: " + string(lenght),2,2,0);	
 	draw_text_transformed(x + sprite_width / 4 * 3 ,325,"difficulty: " + string(diff),2,2,0);
 	
-	if display_image != ""
+	if (display_image != "")
 	{
 		draw_sprite_ext(display_image,0,sprite_width / 4,375,picture_scale_x,picture_scale_y,0,c_white,1);
 	}

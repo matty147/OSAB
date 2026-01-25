@@ -1,4 +1,4 @@
-// 2025-12-21 20:34:05
+// 2026-01-25 02:11:27
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_player;
@@ -140,6 +140,35 @@ function calculate_hit_force(enemy_object)
 	return [hsp, vsp];
 }
 
+function create_particles(survive_time, size, particle_amount)
+{
+		for (var i = 0; i < particle_amount;i++)
+	{
+		var my_part = instance_create_depth(x,y,depth,obj_particle);
+		
+		with (my_part)
+		{
+			// sprite = obj_player.sprite_index;
+			left = irandom_range(0,sprite_width / 2);
+			top = irandom_range(0,sprite_height / 2);
+			width = irandom_range(1,10);
+			height = irandom_range(1,10);
+			spd = irandom_range(1,5);
+			dir = irandom_range(0,360);
+			direction = dir;
+			speed = spd;
+		}
+		
+		my_part.width = irandom_range(1,size);
+		my_part.height = irandom_range(1,size);
+		my_part.survive_time = survive_time;
+		my_part.sprite = sprite_index;
+		my_part.image_index = image_index;
+		
+		show_debug_message("h");
+	}
+}
+
 if (!global.pause)
 {
 	
@@ -194,6 +223,8 @@ if (!global.pause)
 		update_score = true;
 		audio_play_sound(snd_hit,1,false);
 		
+		// create_particles(20,10,10); // looks too confusing
+		
 		hit_cooldown = 50;
 		_health--;
 		vibration_amount = 2;
@@ -210,29 +241,31 @@ if (!global.pause)
 	}
 }
 	
-	if (hit_cooldown / 4 <= 5)
-	{
-		force_position = [0,0];
-	}
+if (hit_cooldown / 4 <= 5)
+{
+	force_position = [0,0];
+}
+
+if (hit_cooldown > 0)
+{
+	image_speed = 1;
 	
-	if (hit_cooldown > 0)
-	{
-		image_speed = 1;
-		
-		if (image_index % 2 == 0)
-		{
-			image_index = (3 - _health) * 2;
-		}
-	}else
+	if (image_index % 2 == 0)
 	{
 		image_index = (3 - _health) * 2;
-		image_speed = 0;	
 	}
+}else
+{
+	image_index = (3 - _health) * 2;
+	image_speed = 0;	
+}
 
 if (dead)
 {
 	remember_data[? "death"] += (collect_points) ? 1: 0;
 	update_score = true;
+	
+	create_particles(50,20,15);
 	
 	image_speed = 0;
 	instance_destroy();

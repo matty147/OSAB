@@ -1,4 +1,4 @@
-// 2025-12-14 21:31:07
+// 2026-01-25 01:01:11
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -21,7 +21,7 @@ closest_player = noone;
 
 if (!global.pause && !checkpoint_hit)
 {
-    visible = false;
+    visible = true;
     x -= move_speed;
     
     // var nearest_player = instance_nearest(x,obj_player);
@@ -54,6 +54,8 @@ if (!global.pause && !checkpoint_hit)
             if (abs(x - level_checkpoint.x) < 20)
             {
                 instance_destroy(level_checkpoint);
+                
+                				show_debug_message("SAVED score!!!");
                 
                 with (obj_dead_player)
                 {

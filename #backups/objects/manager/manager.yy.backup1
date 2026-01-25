@@ -1,4 +1,4 @@
-// 2026-01-17 20:16:52
+// 2026-01-24 00:47:50
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -235,19 +235,20 @@ for (var l = 0; l < array_length(global.gamepads);l++)
 
 #event alarm0
 window_set_position(0,0);
-global.f4_troll = false;//!global.f4_troll;
+// global.f4_troll = false;//!global.f4_troll;
 
 #event step
 //if (live_call()) return live_result;
 
-
-if (keyboard_check_pressed(ord("G")))
-{
-	url_open("http://gamemaker.io");
-}
-
 if global.debug
 {
+	if keyboard_check_pressed(vk_f11)
+	{
+		show_debug_message("Fullscreen");
+		global.fullscreen = !global.fullscreen;
+		window_set_fullscreen(global.fullscreen);
+	}
+	
 	if keyboard_check_pressed(192) // open console menu with ~
 	{
 		global.debug_log = !global.debug_log;

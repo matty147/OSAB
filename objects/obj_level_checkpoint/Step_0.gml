@@ -35,6 +35,9 @@ if (!global.pause && !checkpoint_hit)
             {
                 instance_destroy(level_checkpoint);
                 
+                show_debug_message("SAVED score!!!");
+                global.pre_scoreboard_data = obj_points_scoreboard_manager.player_stats; // saves even before the user can get to it so the stats are inacurate D:
+                
                 with (obj_dead_player)
                 {
                     checkpoint_hit = true;

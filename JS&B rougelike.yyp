@@ -155,6 +155,7 @@
     {"id":{"name":"obj_mouth_down","path":"objects/obj_mouth_down/obj_mouth_down.yy",},},
     {"id":{"name":"obj_mouth_up","path":"objects/obj_mouth_up/obj_mouth_up.yy",},},
     {"id":{"name":"obj_object_settings","path":"objects/obj_object_settings/obj_object_settings.yy",},},
+    {"id":{"name":"obj_particle","path":"objects/obj_particle/obj_particle.yy",},},
     {"id":{"name":"obj_player_old","path":"objects/obj_player_old/obj_player_old.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_points_scoreboard_manager","path":"objects/obj_points_scoreboard_manager/obj_points_scoreboard_manager.yy",},},

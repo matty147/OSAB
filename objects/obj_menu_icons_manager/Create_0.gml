@@ -6,7 +6,7 @@ links = [
     "https://github.com/matty147/OSAB",
     "https://discord.gg/wHVXxWgwAc",
     "https://inkk-ing.itch.io/osab",
-    "https://x.com/Matty_inkk"
+    "https://x.com/Matty_inkk" // why do i have this here XD
     ];
     
 icon_number = 5;
@@ -15,7 +15,7 @@ for (var i = 0; i < icon_number;i++)
 {
     var _x = room_width - (sprite_width + 18) * (icon_number - i - 0.5) - 5; 
     
-    var icon = instance_create_depth(_x,room_height - 25,depth,obj_menu_icons);
+    var icon = instance_create_layer(_x,room_height - 25,"main",obj_menu_icons);
     icon.link = links[i];
     icon.image_index = i;
 }

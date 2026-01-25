@@ -31,10 +31,20 @@ score_instances = noone;
 
 player_stats = array_create(player_numb);
 
+show_debug_message(array_length(global.pre_scoreboard_data));
+
 if (array_length(global.pre_scoreboard_data) != 0)
 {
     show_debug_message("loaded_stats");
     player_stats = global.pre_scoreboard_data;
+
+    for (var i = 0; i < player_numb; i++)
+    {
+        var player = instance_find(obj_player,i);
+        
+        player.remember_data = player_stats[i];
+    }
+    
 }
 
 show_debug_message(player_stats);

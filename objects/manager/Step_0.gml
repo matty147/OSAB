@@ -2,6 +2,13 @@
 
 if global.debug
 {
+	if keyboard_check_pressed(vk_f11)
+	{
+		show_debug_message("Fullscreen");
+		global.fullscreen = !global.fullscreen;
+		window_set_fullscreen(global.fullscreen);
+	}
+	
 	if keyboard_check_pressed(192) // open console menu with ~
 	{
 		global.debug_log = !global.debug_log;

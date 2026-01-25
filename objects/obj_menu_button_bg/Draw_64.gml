@@ -112,7 +112,7 @@ if (level_info)
 		
 			file_text_close(file_name);
 
-			show_debug_message("leveldata:  " + string(json));
+			// show_debug_message("leveldata:  " + string(json));
 		
 			level_data = json_parse(json);
 		

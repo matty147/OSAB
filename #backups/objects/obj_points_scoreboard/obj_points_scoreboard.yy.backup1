@@ -1,7 +1,8 @@
-// 2025-12-21 20:35:45
+// 2026-01-24 22:32:28
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_button;
+visible = false;
 uses_physics = false;
 
 #event create
@@ -26,6 +27,8 @@ curr_index = -1;
 _x = x + sprite_width;
 
 player_sprite = spr_player;
+
+visible = true; //?????? where do i switch this of??
 
 #event step
 

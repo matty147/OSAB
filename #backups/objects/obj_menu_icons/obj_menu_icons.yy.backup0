@@ -1,4 +1,4 @@
-// 2026-01-17 23:53:19
+// 2026-01-24 18:46:16
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_menu_icons;
@@ -28,6 +28,6 @@ if (position_meeting(mouse_x,mouse_y,id) && mouse_check_button_pressed(mb_left))
 }
 
 #event draw
-if (live_call()) return live_result;
+// if (live_call()) return live_result;
 
 draw_self();
