@@ -1,4 +1,4 @@
-// 2026-01-25 02:19:17
+// 2026-01-25 17:10:19
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -17,7 +17,7 @@ fall_speed = 0;
 
 survive_time = 50;
 
-alpha = 1;
+alpha = 0.9;
 scale = 1;
 
 #event draw
@@ -31,9 +31,8 @@ if (speed < 0)
 
 if (x>room_width) || (x < 0) || (y > room_height) || (survive_time <= 0)
 {
-	alpha -= 0.01;
-	image_xscale -= 0.05;
-	image_yscale -= 0.05;
+	alpha -= 0.025;
+	// scale -= 0.05;
 }survive_time--;
 
 show_debug_message(alpha);

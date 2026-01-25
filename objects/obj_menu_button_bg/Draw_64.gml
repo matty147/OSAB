@@ -63,7 +63,7 @@ if (display_text)
 	{
 		draw_set_halign(fa_left);
 		draw_text_transformed(x + 25,y + 150,"Programming: Inkk_ing",0.7,0.7,0);
-		draw_text_transformed(x + 25,y + 200,"Art: Krooby",0.7,0.7,0);
+		draw_text_transformed(x + 25,y + 200,"Art & Website: Krooby",0.7,0.7,0);
 		draw_text_transformed(x + 25,y + 270,"Music used:",0.75,0.75,0);
 		draw_text_transformed(x + 30,y + 320,"Yooh - MariannE",0.5,0.5,0);
 		draw_text_transformed(x + 30,y + 350,"Tanciky - Energy synergy Matrix",0.5,0.5,0);

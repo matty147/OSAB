@@ -13,6 +13,9 @@ function button_pressed(menu_id, instance)
 	
 	instance.button = 0; 
 	
+	show_debug_message(function_id);
+	show_debug_message(menu_id);
+	
 	switch (function_id) // -1 is NaN
 	{
 		//first screen
@@ -83,7 +86,7 @@ function button_pressed(menu_id, instance)
 			case "4": // Back
 				global.pop_up = false; // dosen't find the room????
 				instance.show_game_select_button = false;
-				show_debug_message(menu_id/10);
+				show_debug_message(floor(menu_id/10));
 				return floor(menu_id/10);
 				
 			case "40": // continue
@@ -122,11 +125,11 @@ function button_pressed(menu_id, instance)
 			case "10":
 				global.fullscreen = !global.fullscreen;
 				window_set_fullscreen(global.fullscreen);
-				return -1;
+				return 20;
 				
-			case "11":
+			case "11": // returning -1 may fuckup the back button 
 				window_enable_borderless_fullscreen(false);
-				return -1;
+				return 20;
 	}
 	return menu_id;
 } 

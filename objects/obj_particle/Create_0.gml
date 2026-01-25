@@ -11,5 +11,5 @@ fall_speed = 0;
 
 survive_time = 50;
 
-alpha = 1;
+alpha = 0.9;
 scale = 1;

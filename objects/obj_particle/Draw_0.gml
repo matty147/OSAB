@@ -8,12 +8,11 @@ if (speed < 0)
 
 if (x>room_width) || (x < 0) || (y > room_height) || (survive_time <= 0)
 {
-	alpha -= 0.01;
-	image_xscale -= 0.05;
-	image_yscale -= 0.05;
+	alpha -= 0.025;
+	// scale -= 0.05;
 }survive_time--;
 
-show_debug_message(alpha);
+// show_debug_message(alpha);
 
 if (alpha <=0)
 {

@@ -117,7 +117,7 @@ if (!global.pause)
 		update_score = true;
 		audio_play_sound(snd_hit,1,false);
 		
-		// create_particles(20,10,10); // looks too confusing
+		create_particles(5,5,5);
 		
 		hit_cooldown = 50;
 		_health--;
@@ -159,7 +159,7 @@ if (dead)
 	remember_data[? "death"] += (collect_points) ? 1: 0;
 	update_score = true;
 	
-	create_particles(50,20,15);
+	create_particles(10,20,8);
 	
 	image_speed = 0;
 	instance_destroy();
@@ -170,7 +170,6 @@ if (dead)
 	dead_player.points = remember_data;
 	dead_player.player_sprite = sprite_index;
 }
-
 
 // points
 
