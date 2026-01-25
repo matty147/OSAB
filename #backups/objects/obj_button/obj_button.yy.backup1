@@ -1,4 +1,4 @@
-// 2026-01-25 20:14:51
+// 2026-01-25 20:18:54
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_button;
@@ -222,7 +222,7 @@ function button_pressed(menu_id, instance)
 			case "10":
 				global.fullscreen = !global.fullscreen;
 				window_set_fullscreen(global.fullscreen);
-				return 20;
+				return 10;
 				
 			case "11": // returning -1 may fuckup the back button 
 				window_enable_borderless_fullscreen(false);
