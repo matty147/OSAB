@@ -19,6 +19,7 @@ if (point_distance(x,y,_x,_y) > 1)
 	
 }
 
+// unlock level - debug mode must be enabled
 if (keyboard_check_pressed(ord("K")) && place_meeting(x,y,obj_checkpoint) && global.debug)
 {
 	if (checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].cleared == false)

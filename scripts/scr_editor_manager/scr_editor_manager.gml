@@ -46,6 +46,8 @@ function scr_save_level(meta_data, level_objects){
 	ds_map_add(ds_meta,"lenght", empty ? 0 :  meta_data[? "leng"]); // i am a idiot and cannot change this D: (lenght/length)
 	ds_map_add(ds_meta,"diff", empty ? 0 : meta_data[? "diff"]);
 
+	show_debug_message($"penis time: {array_last(level_objects).object_time}");
+
     for (var i = 0; i < array_length(level_objects); i++) {
         var obj = level_objects[i];
         var ds_object_data = ds_map_create();

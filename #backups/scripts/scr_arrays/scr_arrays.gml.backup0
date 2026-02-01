@@ -1,3 +1,4 @@
+// 2026-02-01 19:46:17
 /// @description checks if the id is available for the object is available
 /// @param id string/numb of you want to check
 /// @param array the array to check

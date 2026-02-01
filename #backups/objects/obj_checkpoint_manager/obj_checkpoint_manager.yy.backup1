@@ -1,4 +1,4 @@
-// 2026-01-10 01:44:03
+// 2026-02-01 19:42:44
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -21,11 +21,13 @@ for (var i = 0; i < checkpoints_numb; ++i) {
 if (player.on_checkpoint)
 {
 	current_level += keyboard_check_pressed(ord("D")) - keyboard_check_pressed(ord("A"));
-	current_level += keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
+	if (!(keyboard_check(ord("D")) - keyboard_check(ord("A"))))
+	{
+		current_level += keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
+	}
 }
 
 current_level = clamp(current_level,0,global.cleared_levels);
-
 
 if (current_level > checkpoints_numb - 1)
 {

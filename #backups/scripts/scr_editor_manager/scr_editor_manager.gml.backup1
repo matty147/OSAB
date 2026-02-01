@@ -1,4 +1,4 @@
-// 2025-11-15 22:47:31
+// 2026-02-01 20:02:37
 /// @description saves data into a file
 /// @returns parsed json
 function scr_load_level(){
@@ -46,6 +46,8 @@ function scr_save_level(meta_data, level_objects){
 	ds_map_add(ds_meta,"description", empty ? "Default description" : meta_data[? "desc"]);
 	ds_map_add(ds_meta,"lenght", empty ? 0 :  meta_data[? "leng"]); // i am a idiot and cannot change this D: (lenght/length)
 	ds_map_add(ds_meta,"diff", empty ? 0 : meta_data[? "diff"]);
+
+	show_debug_message($"penis time: {array_last(level_objects).object_time}");
 
     for (var i = 0; i < array_length(level_objects); i++) {
         var obj = level_objects[i];

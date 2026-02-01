@@ -41,16 +41,14 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("S"))) || save_lev
 	
 	for (var count = 0; count < instances; count++)
 	{
+		show_debug_message(instance_find(obj_editor_enemy,count).object_time);
 		array_push(save_objects,instance_find(obj_editor_enemy,count));
 	}
 	
-	array_sort(save_objects,function(a,b) // spawntime does not exists
+	array_sort(save_objects,function(a,b)
 	{
-		show_debug_message("a: " + string(a.object_time));
-		show_debug_message("b: " + string(b.object_time));
 		return  a.object_time - b.object_time;
-	}
-	);
+	});
 	
 	show_debug_message(save_objects);
 	
