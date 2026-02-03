@@ -94,7 +94,6 @@ if (visible)
 	     
 	    if (mouse_check_button_released(mb_left)) 
 	    {
-			//object_time = x + sprite_width + timeline.sprite_widths / timeline.tick;
 	        dragging = false;
 	    }
 	}
@@ -103,10 +102,12 @@ if (visible)
 image_xscale = block_lenght * timeline.line_amount_w / 64;
 image_xscale = clamp(image_xscale,min_lenght_value,max_lenght_value);
 
-// x = clamp(timeline.x + (position + timeline.timeline_offset) * timeline.line_amo4unt_w, timeline.x, room_width);
 x = clamp(timeline.x + (position + timeline.timeline_offset) * timeline.line_amount_w, -room_width, room_width);
 
-object_time = round((x - timeline.x) / timeline.line_amount_w) - timeline.timeline_offset;
+if (visible)
+{
+	object_time = position;
+}
 
 if (editor_object_time >= 0)
 {

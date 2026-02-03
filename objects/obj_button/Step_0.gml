@@ -265,7 +265,6 @@ if (scrollable)
 			
 		//saves the updated value from the list into a button_title.
 		button_title = filename_name(instance.save[instance.last_value]);
-		
 		file_path = (instance.save[instance.last_value]);
 	}
 
@@ -305,10 +304,16 @@ if (scrollable)
 		file_path = (instance.save[instance.first_value]);
 		
 	}
+	button_title = string_replace(button_title,".osab","");
 }
 
 if(scrollable){
 	image_xscale = 0.5;
+	
+	// x = starting_x + sin(y * 0.05) * 50;
+	var t = y - room_height / 2;
+	x = starting_x + t * t * 0.0005;
+
 }
 
 if (instance.menu_id == "0" || instance.menu_id == "5")

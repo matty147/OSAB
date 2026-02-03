@@ -40,13 +40,13 @@ function scr_save_level(meta_data, level_objects){
 	
 	empty = ds_map_empty(meta_data);
 	
-	ds_map_add(ds_meta,"id", empty ? "0" : meta_data[? "id"]);
+	ds_map_add(ds_meta,"id", empty ? "-1" : meta_data[? "id"]); // can be a 20398234.0 for some reason D:
 	ds_map_add(ds_meta,"name", empty ? "Default name": meta_data[? "name"]);
 	ds_map_add(ds_meta,"description", empty ? "Default description" : meta_data[? "desc"]);
-	ds_map_add(ds_meta,"lenght", empty ? 0 :  meta_data[? "leng"]); // i am a idiot and cannot change this D: (lenght/length)
+	ds_map_add(ds_meta,"lenght", empty ? 0 :  array_last(level_objects).object_time); // i am a idiot and cannot change this D: (lenght/length)
 	ds_map_add(ds_meta,"diff", empty ? 0 : meta_data[? "diff"]);
 
-	show_debug_message($"penis time: {array_last(level_objects).object_time}");
+	show_debug_message($"level lenght: {array_last(level_objects).object_time}");
 
     for (var i = 0; i < array_length(level_objects); i++) {
         var obj = level_objects[i];

@@ -78,6 +78,11 @@ if (keyboard_check(vk_control) && keyboard_check_released(ord("O")) || load_leve
 		instance_destroy(obj_editor_enemy_display);
 	}
 	
+	with (obj_timeline)
+	{
+		timeline_offset = 0;
+	}
+	
 	var sett = instance_find(obj_timeline,0);
 	
 	for (var i = 0; i < array_length(objects);i++)

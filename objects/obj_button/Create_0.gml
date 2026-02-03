@@ -70,3 +70,5 @@ instance_deactivate_layer("credits");
 instance_deactivate_layer("level_select");
 
 restart_from_checkpoint = false;
+
+starting_x = x;
