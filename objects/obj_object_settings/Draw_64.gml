@@ -62,4 +62,5 @@ if (state == CUR_EDITING.OBJECT)
 		draw_text_transformed(x + 25, y + sprite_height * 1/15 + 100,$"Desc: ",1.25,1.25,0);
 		draw_text_transformed(x + 25, y + sprite_height * 1/15 + 130,$"Leng: ",1.25,1.25,0); // calc automaticly i guess?
 		draw_text_transformed(x + 25, y + sprite_height * 1/15 + 160,$"Diff: ",1.25,1.25,0); // -//-
+		draw_text_transformed(x + 25, y + sprite_height * 1/15 + 190,$"Music: ",1.25,1.25,0); // -//-
 }

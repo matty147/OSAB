@@ -50,7 +50,24 @@ if(mouse_check_button_pressed(mb_left)) {
 	}
 }
 
-if(typing)
+if (music_button && typing)
+{
+	show_debug_message("music add");
+	
+	var ogg = get_open_filename_ext("Audio Files (*.ogg)|*.ogg","", true,"Select an ogg audio file");
+	
+	global.editor_music = ogg;
+	
+	t_ = filename_name(ogg);
+	
+	if (string_length(t_) > max_text_lenght)
+	{
+	   t_ = string_copy(t_, 1, max_text_lenght) + "...";
+	}
+	
+	typing = false;
+	
+}else if(typing)
 {
 	text = keyboard_string;
 

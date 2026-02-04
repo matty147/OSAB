@@ -11,7 +11,7 @@ line_color = c_gray;
 
 line_width = 1;
 
-time = 0;
+time = 0; //seems useless and is nowhere used, check if really needed
 
 tick =	10;
 show_debug_message($"line_amount: {line_amount_h},{line_amount_w}");
@@ -22,3 +22,5 @@ timeline = instance_find(obj_timeline,0);
 man_editor = instance_find(manager_editor,0);
 
 level_play = false;
+
+level_music = -1;

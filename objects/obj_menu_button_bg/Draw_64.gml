@@ -203,8 +203,6 @@ if (level_info)
 			sound_id = audio_create_stream(filename_dir(music_path) + "\\" + search);
 			audio_play_sound(sound_id, 1, false,1);
 		}
-		
-		
 	}
 	
 	draw_set_font(fnt_default);

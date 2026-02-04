@@ -224,3 +224,5 @@ for (var l = 0; l < array_length(global.gamepads);l++)
 	
 	gamepad_set_vibration(controller,0,0);
 }
+
+clicked_pos = -1;

@@ -25,3 +25,5 @@ text_size = 1.4;
 repeat_numb = 0;
 
 star_amount = 5;
+
+music_button = false;

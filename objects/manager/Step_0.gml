@@ -94,6 +94,16 @@ if (!button_repeat) // if the user is not in the level select screen
 	
 move_buttons = mouse_wheel_up() - mouse_wheel_down();
 
+if (mouse_check_button_pressed(mb_left))
+{
+	clicked_pos = mouse_y;	
+}
+
+if (mouse_check_button(mb_left))
+{
+	move_buttons = (sign(clicked_pos - mouse_y) * point_distance(x,clicked_pos,x,mouse_y) / room_width / 2) * 5;
+}
+
 if (move_buttons == 0)
 {
 	move_buttons = (keyboard_check_pressed(vk_up) - keyboard_check_pressed(vk_down)) * 4.5; // find the right value for this so that the buttons dont move
@@ -236,14 +246,3 @@ if audio_is_playing(snd_menu_bg)
 }
 	
 }
-
-//if keyboard_check_pressed(vk_backspace)
-//{
-//	show_debug_message("reseting controllers")
-//	global.controllers = [];	
-//}
-
-//if gamepad_get_device_count() < 0
-//{
-//	show_debug_message("keyboard");	
-//}

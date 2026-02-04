@@ -16,7 +16,18 @@ set_data = [];
 
 editor_enemy_instance_table = [];
 
+// tell the user that the editor is only usable in windows. this only apears when not on windows
 if (os_type != 0 )
 {
-	show_message("This editor sadly only works on windows, you can still create the levels on other platforst but you sadly cannot save nor load them :/");
+	var msg = show_question("This editor currently only works on Windows. You can still create levels on other platforms, but saving and loading are not supported. \n Do you want to proceed?");
+
+	if (!msg)
+	{
+		room_goto(main_menu);
+	}
+	
+}
+
+if (!variable_global_exists("editor_music")) {
+	global.editor_music = "-1";
 }

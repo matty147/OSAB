@@ -102,7 +102,8 @@ inp_meta_data = [
 	["name", x + 100,  y + sprite_height * 1/15 + 70,  25, false, 2.75, edit_man],
 	["desc", x + 100,  y + sprite_height * 1/15 + 100, 25, false, 2.75, edit_man],
 	["leng", x + 100,  y + sprite_height * 1/15 + 130, 5,  true,  1,    edit_man],	
-	["diff", x + 100,  y + sprite_height * 1/15 + 160, 5,  true,  1,    edit_man]
+	["diff", x + 100,  y + sprite_height * 1/15 + 160, 5,  true,  1,    edit_man],
+	["music",x + 100,  y + sprite_height * 1/15 + 190, 25, true,  2.75,   edit_man],
 ];
 
 update_meta = false;
@@ -120,6 +121,10 @@ for (var o = 0; o < array_length(inp_meta_data); o++)
 	obj.return_key = meta_obj[0];
 	obj.image_yscale = 0.9;
 
+	if (meta_obj[0] == "music")
+	{
+		obj.music_button = true;
+	}
 	
 	metas[o] = obj;
 		

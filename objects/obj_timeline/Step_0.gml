@@ -44,6 +44,16 @@ if (keyboard_check_pressed(vk_space))
 if (level_play)
 {
     timeline_offset -= 85 / (5 * room_speed);
-}
+    
+    if (level_music == -1)
+    {
+		level_music = audio_create_stream(global.editor_music);
+    }
+    
+    if (!audio_is_playing(level_music))
+    {
+    	audio_play_sound(level_music,1,false,1,timeline_offset / 17);
+    }
+}else audio_stop_sound(level_music	);
 
 if (keyboard_check_pressed(vk_backspace)) {timeline_offset = 0;}
