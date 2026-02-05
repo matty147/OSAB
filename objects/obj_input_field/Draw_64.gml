@@ -56,7 +56,14 @@ if (music_button && typing)
 	
 	var ogg = get_open_filename_ext("Audio Files (*.ogg)|*.ogg","", true,"Select an ogg audio file");
 	
-	global.editor_music = ogg;
+	show_debug_message(ogg);
+	
+	if (ogg != "")
+	{
+		show_debug_message("saved");
+		global.editor_music = ogg;
+		obj_timeline.update_music = true;
+	}
 	
 	t_ = filename_name(ogg);
 	

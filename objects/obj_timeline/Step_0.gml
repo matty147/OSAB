@@ -45,15 +45,19 @@ if (level_play)
 {
     timeline_offset -= 85 / (5 * room_speed);
     
-    if (level_music == -1)
+    if (update_music)
     {
 		level_music = audio_create_stream(global.editor_music);
+		update_music = false;
     }
-    
-    if (!audio_is_playing(level_music))
+    if (audio_sound_is_playable(level_music))
     {
-    	audio_play_sound(level_music,1,false,1,timeline_offset / 17);
+    	if (!audio_is_playing(level_music))
+    	{
+    		// show_debug_message(abs(floor(timeline_offset)));
+		   	audio_play_sound(level_music,1,false,1,abs(floor(timeline_offset)) / 17);
+	    }
     }
-}else audio_stop_sound(level_music	);
+}else audio_stop_sound((level_music));
 
 if (keyboard_check_pressed(vk_backspace)) {timeline_offset = 0;}

@@ -310,8 +310,8 @@ if (scrollable)
 if(scrollable){
 	image_xscale = 0.5;
 	
-	var t = y - room_height / 2;
-	x = starting_x + t * t * 0.0001;
+	// var t = y - room_height / 2;
+	// x = starting_x + t * t * 0.0001;
 
 }
 

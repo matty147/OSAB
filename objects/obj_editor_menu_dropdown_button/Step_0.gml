@@ -1,8 +1,9 @@
 function fnc_move_file(dest_path, ogg_path, image_path, osab_path)
 {
     // show_debug_message($"{dest_path},\n{ogg_path}, \n{image_path}, \n{osab_path}");
-
-    var out = move_files(ogg_path, image_path, osab_path, dest_path);
+    
+    // if the editor is displaying an error here it just falsely flaged this. this works.
+	var out = move_files(ogg_path, image_path, osab_path, dest_path);
 
     if (out == 1)
         show_debug_message("move success");
@@ -94,8 +95,12 @@ if (mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y, id)
 			break;
 
 
-		case "Exit":
-			room_goto(main_menu);
+		case "Exit editor":
+				var ans = show_question("Are you sure you want to exit to the main menu?");
+				if (ans)
+				{
+					room_goto(main_menu);
+				}
 			break;
 
 		default:

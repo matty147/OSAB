@@ -24,3 +24,4 @@ man_editor = instance_find(manager_editor,0);
 level_play = false;
 
 level_music = -1;
+update_music = false;

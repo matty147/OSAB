@@ -15,7 +15,7 @@ option_text = [
 "Open",
 "Options",
 "Export",
-"Exit"
+"Exit editor"
 ];
 
 option_numbers = 6;

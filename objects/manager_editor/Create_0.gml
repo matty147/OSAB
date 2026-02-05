@@ -25,8 +25,7 @@ if (os_type != 0 )
 	{
 		room_goto(main_menu);
 	}
-	
-}
+}	
 
 if (!variable_global_exists("editor_music")) {
 	global.editor_music = "-1";
