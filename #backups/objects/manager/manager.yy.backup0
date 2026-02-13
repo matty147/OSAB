@@ -1,4 +1,4 @@
-// 2026-01-24 00:47:52
+// 2026-02-13 17:05:25
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -233,6 +233,8 @@ for (var l = 0; l < array_length(global.gamepads);l++)
 	gamepad_set_vibration(controller,0,0);
 }
 
+clicked_pos = -1;
+
 #event alarm0
 // window_set_position(0,0);
 // global.f4_troll = false;//!global.f4_troll;
@@ -266,12 +268,16 @@ if room == level_select ||  room == editor
 
 	if keyboard_check_pressed(vk_escape)
 	{
-		room_goto(main_menu);	
+		var ans = show_question("Are you sure you want to exit to the main menu?");
+		if (ans)
+		{
+			room_goto(main_menu);
+		}
 	}
 	
 	if room == level_select // fuck this i cant deal with this shit anymore T-T
 	{
-		window_set_cursor(cr_none);	
+		window_set_cursor(cr_none);	 // should i enable clicking on levels?
 	}
 }
 
@@ -333,6 +339,16 @@ if (!button_repeat) // if the user is not in the level select screen
 	}
 	
 move_buttons = mouse_wheel_up() - mouse_wheel_down();
+
+if (mouse_check_button_pressed(mb_left))
+{
+	clicked_pos = mouse_y;	
+}
+
+if (mouse_check_button(mb_left))
+{
+	move_buttons = (sign(clicked_pos - mouse_y) * point_distance(x,clicked_pos,x,mouse_y) / room_width / 2) * 5;
+}
 
 if (move_buttons == 0)
 {
@@ -477,17 +493,6 @@ if audio_is_playing(snd_menu_bg)
 	
 }
 
-//if keyboard_check_pressed(vk_backspace)
-//{
-//	show_debug_message("reseting controllers")
-//	global.controllers = [];	
-//}
-
-//if gamepad_get_device_count() < 0
-//{
-//	show_debug_message("keyboard");	
-//}
-
 #event draw
 if room == level
 {
@@ -506,6 +511,8 @@ if room == level
 }
 
 #event draw_gui
+// if (live_call()) return live_result;
+
 draw_self();
 
 if (room == level)
@@ -553,7 +560,20 @@ if (room == level)
 		instance_deactivate_layer("death_menu");		
 		instance_deactivate_layer("win_menu");		
 	}
-}
+}else if (room == level_select)
+{
+	draw_set_alpha(0.75);
+	draw_rectangle_color(0,room_height - 50,300,room_height,c_dkgray,c_dkgray,c_dkgray,c_dkgray,false);
+	draw_rectangle_color(room_width,room_height - 90,room_width - 1200,room_height,c_dkgray,c_dkgray,c_dkgray,c_dkgray,false);
+	draw_set_alpha(1);
 	
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_bottom);
+	draw_text_ext_transformed_color(10,room_height - 5,"Press [ESC] to exit",20,250,2,2,0,c_white,c_white,c_white,c_white,1);
+	
+	draw_set_halign(fa_right);
+	draw_text_ext_transformed_color(room_width - 570,room_height - 5, "Press [Enter] or [SPACE] to enter a level",20,400,2,2,0,c_white,c_white,c_white,c_white,1);
+	draw_text_ext_transformed_color(room_width - 570,room_height - 45 ,"Press [arrows] or [WD] to chose a level",20,400,2,2,0,c_white,c_white,c_white,c_white,1);
+}
 	
 	

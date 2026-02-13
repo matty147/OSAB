@@ -33,6 +33,8 @@ if (!global.pause && !checkpoint_hit)
             
             if (abs(x - level_checkpoint.x) < 20)
             {
+                audio_play_sound(snd_checkpoint_reached,0,false);
+                
                 instance_destroy(level_checkpoint);
                 
                 show_debug_message("SAVED score!!!");

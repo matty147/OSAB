@@ -220,6 +220,7 @@
     {"id":{"name":"music_scene4","path":"sounds/music_scene4/music_scene4.yy",},},
     {"id":{"name":"snd_back","path":"sounds/snd_back/snd_back.yy",},},
     {"id":{"name":"snd_button","path":"sounds/snd_button/snd_button.yy",},},
+    {"id":{"name":"snd_checkpoint_reached","path":"sounds/snd_checkpoint_reached/snd_checkpoint_reached.yy",},},
     {"id":{"name":"snd_click","path":"sounds/snd_click/snd_click.yy",},},
     {"id":{"name":"snd_dash","path":"sounds/snd_dash/snd_dash.yy",},},
     {"id":{"name":"snd_def","path":"sounds/snd_def/snd_def.yy",},},
