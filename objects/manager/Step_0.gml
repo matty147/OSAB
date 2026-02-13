@@ -35,7 +35,7 @@ if room == level_select ||  room == editor
 	
 	if room == level_select // fuck this i cant deal with this shit anymore T-T
 	{
-		window_set_cursor(cr_none);	
+		window_set_cursor(cr_none);	 // should i enable clicking on levels?
 	}
 }
 

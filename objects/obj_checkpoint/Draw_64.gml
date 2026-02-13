@@ -1,8 +1,8 @@
-if checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].checkpoint_id == checkpoint_id// && place_meeting(x,y,obj_player)
+if (checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].checkpoint_id == checkpoint_id)
 {
-	if place_meeting(x,y,obj_level_player)
+	if (place_meeting(x,y,obj_level_player))
 	{
-		popup_size = 0.25;
+		popup_size = 0.3;
 
 		info_box.visible = true;
 	}else 

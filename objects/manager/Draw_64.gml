@@ -1,3 +1,5 @@
+// if (live_call()) return live_result;
+
 draw_self();
 
 if (room == level)
@@ -45,7 +47,19 @@ if (room == level)
 		instance_deactivate_layer("death_menu");		
 		instance_deactivate_layer("win_menu");		
 	}
-}
+}else if (room == level_select)
+{
+	draw_set_alpha(0.75);
+	draw_rectangle_color(0,room_height - 50,300,room_height,c_dkgray,c_dkgray,c_dkgray,c_dkgray,false);
+	draw_rectangle_color(room_width,room_height - 50,room_width - 1200,room_height,c_dkgray,c_dkgray,c_dkgray,c_dkgray,false);
+	draw_set_alpha(1);
 	
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_bottom);
+	draw_text_ext_transformed_color(10,room_height - 5,"Press [ESC] to exit",20,250,2,2,0,c_white,c_white,c_white,c_white,1);
+	
+	draw_set_halign(fa_right);
+	draw_text_ext_transformed_color(room_width - 570,room_height - 5,"Press [Enter] or [SPACE] to enter a level",20,400,2,2,0,c_white,c_white,c_white,c_white,1);
+}
 	
 	
