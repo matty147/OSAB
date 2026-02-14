@@ -1,0 +1,22 @@
+// 2026-02-14 18:02:55
+function scr_save_data(){
+    
+    show_debug_message("createing a new save");
+    var file = file_text_open_write(working_directory + "save.sosab");
+    
+    var data = ds_map_create();
+    
+    ds_map_add(data,"volume",global.volume);
+    ds_map_add(data,"story_progress",global.cleared_levels); // track cleared levels
+    ds_map_add(data,"fullscreen",global.fullscreen);
+    // ds_map_add(data,"cleared_list",0); // add if time but i doubt it
+    
+    var json = json_encode(data,false);
+    
+    file_text_write_string(file, json);
+    file_text_close(file);
+    ds_map_destroy(data);
+    
+    show_debug_message("successfully created new save file at\n" + working_directory);
+    
+}

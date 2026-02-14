@@ -2,6 +2,8 @@ randomise();
 
 alarm_set(0, 300);
 
+alarm[0] = 5;
+
 global.pause = false;
 
 global.runtime = 0; // track starts
@@ -206,17 +208,6 @@ if (!lemon)
 	show_message("Error 404: Lemon Not Found.\nThe requested lemon could not be located. It might have been squeezed, zested, or simply never existed. Please check your citrus directory and try again.");
 	game_end();
 }
-
-//f4_count = 0;
-//f4_pos = 99999;
-
-//if !variable_global_exists("f4_troll") {
-//	global.f4_troll = true;
-//	f4_count = 0;
-//}
-
-// scoreboard for testing
-// var scoreb = instance_create_layer(x + room_width ,y + room_height / 2,"manager",obj_points_scoreboard);
 
 for (var l = 0; l < array_length(global.gamepads);l++)
 {

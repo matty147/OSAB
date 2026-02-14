@@ -201,7 +201,7 @@ if (level_info)
 		if (search != "")
 		{
 			sound_id = audio_create_stream(filename_dir(music_path) + "\\" + search);
-			audio_play_sound(sound_id, 1, false,1);
+			audio_play_sound(sound_id, 1, true,1);
 		}
 	}
 	

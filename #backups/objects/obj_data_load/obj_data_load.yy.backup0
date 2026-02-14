@@ -1,0 +1,54 @@
+// 2026-02-14 18:06:41
+#event properties (no comments/etc. here are saved)
+parent_index = -1;
+uses_physics = false;
+
+#event create
+if (!variable_global_exists("load_save")) {
+	global.load_save = true;
+}
+
+if (global.load_save)
+{
+    show_debug_message("loading save");
+    global.load_save = false;
+    
+    if (file_exists(working_directory + "save.sosab"))
+    {
+        show_debug_message("loading an already preexisting save file");
+        var file = file_text_open_read(working_directory + "save.sosab");
+        
+        var content = "";
+        
+        while (!file_text_eof(file)) {
+            content += file_text_read_string(file);
+            file_text_readln(file);
+        }
+        
+        show_debug_message(content);
+
+        file_text_close(file);
+
+        var data = json_decode(content);        
+        
+    	global.volume = data[? "volume"];
+        global.cleared_levels = data[? "story_progress"];
+        global.fullscreen = data[? "fullscreen"];
+        
+        audio_master_gain(global.volume);
+    	window_set_fullscreen(global.fullscreen);
+        
+        show_debug_message($"{data[? "volume"]} {global.volume}");
+        show_debug_message($"{data[? "story_progress"]} {global.cleared_levels}");
+        show_debug_message($"{data[? "fullscreen"]} {global.fullscreen}");
+    
+    }else // create the new save file
+    {
+        scr_save_data();
+    }
+}
+
+#event step
+
+
+#event draw_gui

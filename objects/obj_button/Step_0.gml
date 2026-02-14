@@ -80,7 +80,8 @@ function button_pressed(menu_id, instance)
 				return 32;
 		
 			case "3": // quit
-			game_end();
+				scr_save_data();
+				game_end();
 				break;
 
 			case "4": // Back

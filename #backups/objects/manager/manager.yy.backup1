@@ -1,4 +1,4 @@
-// 2026-02-13 17:04:49
+// 2026-02-14 18:07:50
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -215,17 +215,6 @@ if (!lemon)
 	game_end();
 }
 
-//f4_count = 0;
-//f4_pos = 99999;
-
-//if !variable_global_exists("f4_troll") {
-//	global.f4_troll = true;
-//	f4_count = 0;
-//}
-
-// scoreboard for testing
-// var scoreb = instance_create_layer(x + room_width ,y + room_height / 2,"manager",obj_points_scoreboard);
-
 for (var l = 0; l < array_length(global.gamepads);l++)
 {
 	var controller = global.gamepads[l];
@@ -236,8 +225,7 @@ for (var l = 0; l < array_length(global.gamepads);l++)
 clicked_pos = -1;
 
 #event alarm0
-// window_set_position(0,0);
-// global.f4_troll = false;//!global.f4_troll;
+scr_save_data(); // save data
 
 #event step
 //if (live_call()) return live_result;
@@ -268,11 +256,11 @@ if room == level_select ||  room == editor
 
 	if keyboard_check_pressed(vk_escape)
 	{
-		var ans = show_question("Are you sure you want to exit to the main menu?");
-		if (ans)
-		{
+		// var ans = show_question("Are you sure you want to exit to the main menu?");
+		// if (ans)
+		// {
 			room_goto(main_menu);
-		}
+		// }
 	}
 	
 	if room == level_select // fuck this i cant deal with this shit anymore T-T
@@ -573,7 +561,7 @@ if (room == level)
 	
 	draw_set_halign(fa_right);
 	draw_text_ext_transformed_color(room_width - 570,room_height - 5, "Press [Enter] or [SPACE] to enter a level",20,400,2,2,0,c_white,c_white,c_white,c_white,1);
-	draw_text_ext_transformed_color(room_width - 570,room_height - 50 ,"Press [arrows] or [WD] to chose a level",20,400,2,2,0,c_white,c_white,c_white,c_white,1);
+	draw_text_ext_transformed_color(room_width - 570,room_height - 45 ,"Press [arrows] or [WD] to chose a level",20,400,2,2,0,c_white,c_white,c_white,c_white,1);
 }
 	
 	

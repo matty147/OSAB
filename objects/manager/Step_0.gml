@@ -26,11 +26,11 @@ if room == level_select ||  room == editor
 
 	if keyboard_check_pressed(vk_escape)
 	{
-		var ans = show_question("Are you sure you want to exit to the main menu?");
-		if (ans)
-		{
+		// var ans = show_question("Are you sure you want to exit to the main menu?");
+		// if (ans)
+		// {
 			room_goto(main_menu);
-		}
+		// }
 	}
 	
 	if room == level_select // fuck this i cant deal with this shit anymore T-T

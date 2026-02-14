@@ -1,4 +1,4 @@
-// 2026-01-25 20:19:40
+// 2026-02-14 18:14:12
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_button;
@@ -88,9 +88,11 @@ instance_deactivate_layer("level_select");
 
 restart_from_checkpoint = false;
 
+starting_x = x;
+
 #event alarm0 mouse not moving
 
-window_set_cursor(cr_none); // mouse not moving
+// window_set_cursor(cr_none); // mouse not moving
 var instance = instance_find(manager,0);
 instance.mouse_off = true;
 
@@ -177,7 +179,8 @@ function button_pressed(menu_id, instance)
 				return 32;
 		
 			case "3": // quit
-			game_end();
+				scr_save_data();
+				game_end();
 				break;
 
 			case "4": // Back
@@ -362,7 +365,6 @@ if (scrollable)
 			
 		//saves the updated value from the list into a button_title.
 		button_title = filename_name(instance.save[instance.last_value]);
-		
 		file_path = (instance.save[instance.last_value]);
 	}
 
@@ -402,10 +404,15 @@ if (scrollable)
 		file_path = (instance.save[instance.first_value]);
 		
 	}
+	button_title = string_replace(button_title,".osab","");
 }
 
 if(scrollable){
 	image_xscale = 0.5;
+	
+	// var t = y - room_height / 2;
+	// x = starting_x + t * t * 0.0001;
+
 }
 
 if (instance.menu_id == "0" || instance.menu_id == "5")
@@ -473,7 +480,6 @@ if (show_extra_buttons)
 }
 
 var pannel = instance_find(obj_select_panel,0);
-
 
 #event draw
 draw_self();

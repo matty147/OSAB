@@ -1,4 +1,4 @@
-// 2026-02-13 17:05:25
+// 2026-02-14 18:08:41
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -9,6 +9,8 @@ button_max:real = 3;
 randomise();
 
 alarm_set(0, 300);
+
+alarm[0] = 5;
 
 global.pause = false;
 
@@ -215,17 +217,6 @@ if (!lemon)
 	game_end();
 }
 
-//f4_count = 0;
-//f4_pos = 99999;
-
-//if !variable_global_exists("f4_troll") {
-//	global.f4_troll = true;
-//	f4_count = 0;
-//}
-
-// scoreboard for testing
-// var scoreb = instance_create_layer(x + room_width ,y + room_height / 2,"manager",obj_points_scoreboard);
-
 for (var l = 0; l < array_length(global.gamepads);l++)
 {
 	var controller = global.gamepads[l];
@@ -236,8 +227,7 @@ for (var l = 0; l < array_length(global.gamepads);l++)
 clicked_pos = -1;
 
 #event alarm0
-// window_set_position(0,0);
-// global.f4_troll = false;//!global.f4_troll;
+scr_save_data(); // save data
 
 #event step
 //if (live_call()) return live_result;
@@ -268,11 +258,11 @@ if room == level_select ||  room == editor
 
 	if keyboard_check_pressed(vk_escape)
 	{
-		var ans = show_question("Are you sure you want to exit to the main menu?");
-		if (ans)
-		{
+		// var ans = show_question("Are you sure you want to exit to the main menu?");
+		// if (ans)
+		// {
 			room_goto(main_menu);
-		}
+		// }
 	}
 	
 	if room == level_select // fuck this i cant deal with this shit anymore T-T

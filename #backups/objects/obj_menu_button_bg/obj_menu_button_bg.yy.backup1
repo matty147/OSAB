@@ -1,4 +1,4 @@
-// 2026-01-25 19:37:29
+// 2026-02-14 16:52:11
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_bg;
@@ -295,10 +295,8 @@ if (level_info)
 		if (search != "")
 		{
 			sound_id = audio_create_stream(filename_dir(music_path) + "\\" + search);
-			audio_play_sound(sound_id, 1, false,1);
+			audio_play_sound(sound_id, 1, true,1);
 		}
-		
-		
 	}
 	
 	draw_set_font(fnt_default);
