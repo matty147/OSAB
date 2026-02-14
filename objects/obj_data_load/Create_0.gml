@@ -9,7 +9,7 @@ if (global.load_save)
     
     if (file_exists(working_directory + "save.sosab"))
     {
-        show_debug_message("loading an already preexisting save file");
+        show_debug_message("loading an already preexisting save file " + working_directory);
         var file = file_text_open_read(working_directory + "save.sosab");
         
         var content = "";
@@ -19,18 +19,31 @@ if (global.load_save)
             file_text_readln(file);
         }
         
-        show_debug_message(content);
+        var key = manager.enk;
+       
+    	var	mcontent = base64_decode(content);
+        mcontent = delete_obstruction(mcontent);
+		mcontent = vigenere_ascii(mcontent,key,0);
 
         file_text_close(file);
 
-        var data = json_decode(content);        
+        var data = json_decode(mcontent);   
         
-    	global.volume = data[? "volume"];
-        global.cleared_levels = data[? "story_progress"];
-        global.fullscreen = data[? "fullscreen"];
+        show_debug_message(content);
         
-        audio_master_gain(global.volume);
-    	window_set_fullscreen(global.fullscreen);
+        try
+        {
+	    	global.volume = data[? "volume"];
+	        global.cleared_levels = data[? "story_progress"];
+	        global.fullscreen = data[? "fullscreen"];
+	        
+	        audio_master_gain(global.volume);
+	    	window_set_fullscreen(global.fullscreen);
+        }catch(e)
+        {
+        	show_debug_message("invalid data");
+        	scr_save_data();
+        }
         
         show_debug_message($"{data[? "volume"]} {global.volume}");
         show_debug_message($"{data[? "story_progress"]} {global.cleared_levels}");
@@ -38,6 +51,8 @@ if (global.load_save)
     
     }else // create the new save file
     {
+	    show_debug_message("createing a new save");
         scr_save_data();
+        show_debug_message("successfully created new save file at\n" + working_directory);
     }
 }

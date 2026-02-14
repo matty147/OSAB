@@ -1,7 +1,6 @@
-// 2026-02-14 18:02:55
+// 2026-02-14 23:02:06
 function scr_save_data(){
-    
-    show_debug_message("createing a new save");
+
     var file = file_text_open_write(working_directory + "save.sosab");
     
     var data = ds_map_create();
@@ -10,13 +9,89 @@ function scr_save_data(){
     ds_map_add(data,"story_progress",global.cleared_levels); // track cleared levels
     ds_map_add(data,"fullscreen",global.fullscreen);
     // ds_map_add(data,"cleared_list",0); // add if time but i doubt it
-    
     var json = json_encode(data,false);
     
-    file_text_write_string(file, json);
+    var key = manager.enk;
+    var save = vigenere_ascii(json,key,1); 
+    save = add_obstruction(save);
+    save = base64_encode(save);
+    
+    file_text_write_string(file, save);
     file_text_close(file);
     ds_map_destroy(data);
-    
-    show_debug_message("successfully created new save file at\n" + working_directory);
-    
 }
+
+// vig + base64(key) + base64(json) -> base64 -> vig
+
+/// vigenere_ascii(in,key,mode)
+//
+//  Returns the given string enciphered or deciphered 
+//  using a simple Vigenere style cipher, and filtering
+//  out non-printable characters.
+//
+//      in          input, string
+//      key         enciphering key, string
+//      mode        0 = decipher, 1 = encipher
+//
+/// GMLscripts.com/license
+function vigenere_ascii(in,key,mode) {
+    var out = "";
+    var inLen, keyLen, pos, inChar, keyChar, outChar;
+    var inVal, keyVal, outVal, loVal, hiVal, span;
+    inLen = string_length(in);
+    keyLen = string_length(key);
+    loVal = 32;
+    hiVal = 126;
+    span = (hiVal - loVal) + 1;
+    for (pos=0; pos<inLen; pos+=1) {
+        inChar = string_char_at(in, pos+1);
+        keyChar = string_char_at(key, (pos mod keyLen)+1);
+        inVal = min(max(loVal, ord(inChar)), hiVal) - loVal;
+        keyVal = min(max(loVal, ord(keyChar)), hiVal) - loVal;
+        if (mode) {
+            outVal = ((inVal + keyVal) mod span) + loVal;
+        }else{
+            outVal = ((span + inVal - keyVal) mod span) + loVal;
+        }
+        outChar = chr(outVal);
+        out = out + outChar;
+    }
+    return out;
+}
+
+// adds a random character every second position
+function add_obstruction(text)
+{
+    var lo = 32;
+    var hi = 126;
+    var original_len = string_length(text);
+
+    for (var i = 1; i <= original_len; i++)
+    {
+        var rand_char = chr(irandom_range(lo, hi));
+        text = string_insert(rand_char, text, i * 2 - 1);
+    }
+
+    return text;
+}
+
+
+// delet a character every second position
+function delete_obstruction(text)
+{
+    var len = string_length(text);
+    var result = "";
+
+    for (var i = 2; i <= len; i += 2)
+    {
+        result += string_char_at(text, i);
+    }
+
+    return result;
+}
+
+
+
+
+
+

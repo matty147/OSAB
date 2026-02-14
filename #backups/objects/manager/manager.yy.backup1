@@ -1,4 +1,4 @@
-// 2026-02-14 18:07:50
+// 2026-02-14 21:14:40
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -9,6 +9,8 @@ button_max:real = 3;
 randomise();
 
 alarm_set(0, 300);
+
+alarm[0] = 5;
 
 global.pause = false;
 
@@ -48,6 +50,8 @@ if (!variable_global_exists("cleared_levels")) {
 if (!variable_global_exists("volume")) {
 	global.volume = 0.25;
 }
+
+enk = "rNqsvZZSekRCCATZPJhyUqJKgwSYvqNIBSdlllnKNxGCkSoGspBsauyYZAgbnhFPtjKDvPxhRBmDZMNAOcnRvIYZCmKLsNYkNYyP";
 
 if (!variable_global_exists("fullscreen")) {
 	global.fullscreen = true;

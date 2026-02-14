@@ -43,6 +43,8 @@ if (!variable_global_exists("volume")) {
 	global.volume = 0.25;
 }
 
+enk = base64_encode("rNqsvZZSekRCCATZPJhyUqJKgwSYvqNIBSdlllnKNxGCkSoGspBsauyYZAgbnhFPtjKDvPxhRBmDZMNAOcnRvIYZCmKLsNYkNYyP");
+
 if (!variable_global_exists("fullscreen")) {
 	global.fullscreen = true;
 	window_set_fullscreen(global.fullscreen);
