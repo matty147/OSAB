@@ -21,8 +21,6 @@ function scr_save_data(){
     ds_map_destroy(data);
 }
 
-// vig + base64(key) + base64(json) -> base64 -> vig
-
 /// vigenere_ascii(in,key,mode)
 //
 //  Returns the given string enciphered or deciphered 
@@ -76,7 +74,7 @@ function add_obstruction(text)
 }
 
 
-// delet a character every second position
+// delete a character every second position
 function delete_obstruction(text)
 {
     var len = string_length(text);

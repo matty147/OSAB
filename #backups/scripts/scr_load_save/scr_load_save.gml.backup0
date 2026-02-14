@@ -1,4 +1,4 @@
-// 2026-02-14 23:02:07
+// 2026-02-14 23:11:57
 function scr_save_data(){
 
     var file = file_text_open_write(working_directory + "save.sosab");
@@ -21,8 +21,6 @@ function scr_save_data(){
     file_text_close(file);
     ds_map_destroy(data);
 }
-
-// vig + base64(key) + base64(json) -> base64 -> vig
 
 /// vigenere_ascii(in,key,mode)
 //
@@ -77,7 +75,7 @@ function add_obstruction(text)
 }
 
 
-// delet a character every second position
+// delete a character every second position
 function delete_obstruction(text)
 {
     var len = string_length(text);

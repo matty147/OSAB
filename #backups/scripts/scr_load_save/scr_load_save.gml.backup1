@@ -1,4 +1,4 @@
-// 2026-02-14 23:02:06
+// 2026-02-14 23:11:51
 function scr_save_data(){
 
     var file = file_text_open_write(working_directory + "save.sosab");
@@ -12,6 +12,7 @@ function scr_save_data(){
     var json = json_encode(data,false);
     
     var key = manager.enk;
+    
     var save = vigenere_ascii(json,key,1); 
     save = add_obstruction(save);
     save = base64_encode(save);
@@ -20,8 +21,6 @@ function scr_save_data(){
     file_text_close(file);
     ds_map_destroy(data);
 }
-
-// vig + base64(key) + base64(json) -> base64 -> vig
 
 /// vigenere_ascii(in,key,mode)
 //
