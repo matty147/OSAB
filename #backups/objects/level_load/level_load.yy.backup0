@@ -1,4 +1,4 @@
-// 2026-02-15 17:15:46
+// 2026-02-15 19:27:12
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -10,6 +10,9 @@ audio_stop_all();
 current_index = global.checkpoint[1];
 global.runtime = global.checkpoint[0];
 current_checkpoint_index = global.checkpoint[2];
+
+show_debug_message($"run {global.runtime} vs {global.checkpoint}");
+
 win = false;
 
 read_file = false;
@@ -36,7 +39,6 @@ if (file_exists(global.level_name))
 	
 	file_text_close(file);
 
-	
 	level_data = json_parse(json);
 
 }
@@ -224,7 +226,9 @@ if (array_length(meta.checkpoints) > current_checkpoint_index)
 			if (meta.checkpoints[current_checkpoint_index] <= objects[obj].time)
 			{
 				// show_debug_message($"this is the nearest object{objects[obj].time} at id: {obj}");
-				global.checkpoint = [objects[obj].time, obj, current_checkpoint_index + 1]; // time, obj index
+				global.checkpoint = [objects[obj -1].time, obj, current_checkpoint_index + 1]; // time, obj index
+				show_debug_message(global.checkpoint);
+				
 				break;
 			}
 		}

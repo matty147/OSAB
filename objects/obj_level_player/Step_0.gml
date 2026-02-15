@@ -42,6 +42,9 @@ if (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space))
 		
 		audio_stop_sound(snd_story_level_bg);
 		
+		global.checkpoint = [0,0,0];
+		global.pre_scoreboard_data = [];
+		
 		room_goto(checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].cutscene);	
 	}
 }

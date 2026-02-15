@@ -1,4 +1,4 @@
-// 2026-02-01 17:19:15
+// 2026-02-15 19:40:07
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 sprite_index = spr_player;
@@ -71,6 +71,9 @@ if (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space))
 		show_debug_message("started: " + string(global.level_name) + "\ncleared: " + string(global.cleared));
 		
 		audio_stop_sound(snd_story_level_bg);
+		
+		global.checkpoint = [0,0,0];
+		global.pre_scoreboard_data = [];
 		
 		room_goto(checkpoint_manager.checkpoint_list[checkpoint_manager.current_level].cutscene);	
 	}

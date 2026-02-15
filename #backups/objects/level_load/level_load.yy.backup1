@@ -1,4 +1,4 @@
-// 2026-02-15 17:14:27
+// 2026-02-15 19:24:56
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -10,6 +10,9 @@ audio_stop_all();
 current_index = global.checkpoint[1];
 global.runtime = global.checkpoint[0];
 current_checkpoint_index = global.checkpoint[2];
+
+show_debug_message($"run {global.runtime} vs {global.checkpoint}");
+
 win = false;
 
 read_file = false;
@@ -36,7 +39,6 @@ if (file_exists(global.level_name))
 	
 	file_text_close(file);
 
-	
 	level_data = json_parse(json);
 
 }
@@ -60,7 +62,7 @@ show_debug_message($"level lenght: {array_last(objects).time}");
 show_debug_message("finished");
 read_file = true;
 
-// show_debug_message("object count: " + string(array_length(objects)));
+show_debug_message("object count: " + string(array_length(objects)));
 
 if (array_length(objects) <= 0)
 {
@@ -185,6 +187,12 @@ if (floor(global.runtime) == 0  && search != "")
 	}
 }
 
+show_debug_message("-----------------------------------------------------");
+show_debug_message(array_length(meta.checkpoints)); // numb of checkpoints
+show_debug_message(floor(meta.checkpoints[clamp(current_checkpoint_index-1,0,array_length(meta.checkpoints))])); // time of next checkpoint
+show_debug_message(current_checkpoint_index); // time of next checkpoint
+show_debug_message(floor(global.runtime)); // cur time
+
 if (current_checkpoint_index > 0 && floor(meta.checkpoints[clamp(current_checkpoint_index-1,0,array_length(meta.checkpoints))]) == floor(global.runtime)-11)
 {
 	if (!audio_is_playing(sound_id))
@@ -224,7 +232,9 @@ if (array_length(meta.checkpoints) > current_checkpoint_index)
 			if (meta.checkpoints[current_checkpoint_index] <= objects[obj].time)
 			{
 				// show_debug_message($"this is the nearest object{objects[obj].time} at id: {obj}");
-				global.checkpoint = [objects[obj].time, obj, current_checkpoint_index + 1]; // time, obj index
+				global.checkpoint = [objects[obj -1].time, obj, current_checkpoint_index + 1]; // time, obj index
+				show_debug_message(global.checkpoint);
+				
 				break;
 			}
 		}

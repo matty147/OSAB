@@ -1,4 +1,4 @@
-// 2026-02-14 21:14:40
+// 2026-02-15 18:42:41
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -17,7 +17,7 @@ global.pause = false;
 global.runtime = 0; // track starts
 
 if (!variable_global_exists("debug")) { // turn all debug things off/on for relase
-	global.debug = true;
+	global.debug = false;
 }
 
 if (!variable_global_exists("debug_log")) { // turn all debug things off/on for relase
@@ -51,7 +51,7 @@ if (!variable_global_exists("volume")) {
 	global.volume = 0.25;
 }
 
-enk = "rNqsvZZSekRCCATZPJhyUqJKgwSYvqNIBSdlllnKNxGCkSoGspBsauyYZAgbnhFPtjKDvPxhRBmDZMNAOcnRvIYZCmKLsNYkNYyP";
+enk = base64_encode("rNqsvZZSekRCCATZPJhyUqJKgwSYvqNIBSdlllnKNxGCkSoGspBsauyYZAgbnhFPtjKDvPxhRBmDZMNAOcnRvIYZCmKLsNYkNYyP");
 
 if (!variable_global_exists("fullscreen")) {
 	global.fullscreen = true;

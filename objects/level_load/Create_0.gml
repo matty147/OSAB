@@ -4,6 +4,9 @@ audio_stop_all();
 current_index = global.checkpoint[1];
 global.runtime = global.checkpoint[0];
 current_checkpoint_index = global.checkpoint[2];
+
+show_debug_message($"run {global.runtime} vs {global.checkpoint}");
+
 win = false;
 
 read_file = false;
@@ -30,7 +33,6 @@ if (file_exists(global.level_name))
 	
 	file_text_close(file);
 
-	
 	level_data = json_parse(json);
 
 }

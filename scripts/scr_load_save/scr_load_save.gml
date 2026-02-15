@@ -7,6 +7,7 @@ function scr_save_data(){
     ds_map_add(data,"volume",global.volume);
     ds_map_add(data,"story_progress",global.cleared_levels); // track cleared levels
     ds_map_add(data,"fullscreen",global.fullscreen);
+    ds_map_add(data,"graaaa",global.fullscreen);
     // ds_map_add(data,"cleared_list",0); // add if time but i doubt it
     var json = json_encode(data,false);
     
