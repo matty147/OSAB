@@ -64,7 +64,7 @@ function check_achievements_conditions(stats)
     
     ach = array_reverse(ach);
     
-    show_debug_message($"this is the whole array: {ach}");
+    // show_debug_message($"this is the whole array: {ach}");
     
     lach = [];
     
@@ -87,7 +87,7 @@ if (score_board_display_time > 50)
     // show_debug_message("display");
     if (score_instances == noone)
     {
-        show_debug_message($"level time: {level_length}");
+        // show_debug_message($"level time: {level_length}");
         
         for (var i = 0; i < player_numb; i++)
         {
@@ -95,7 +95,7 @@ if (score_board_display_time > 50)
             
             var pstat = player_stats[i];
             
-            show_debug_message($"p{i}: {json_encode(pstat)}");
+            // show_debug_message($"p{i}: {json_encode(pstat)}");
             
             var rank = RANKS.F; 
             var hit = pstat[? "hit"];
@@ -142,14 +142,14 @@ if (score_board_display_time > 50)
             	break;
             }
             
-            show_debug_message($"player: {i}");
+            // show_debug_message($"player: {i}");
             
             if (pstat != undefined)
             {
                 achievement = check_achievements_conditions(pstat);
             }
-            show_debug_message($"This is the top 3: {achievement}");
-            show_debug_message("----------------/n");
+            // show_debug_message($"This is the top 3: {achievement}");
+            // show_debug_message("----------------/n");
             
             var scoreb = instance_create_layer(x, y,"scoreboard",obj_points_scoreboard);
             var spacing = scoreb.sprite_height * 0.7;

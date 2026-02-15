@@ -9,7 +9,7 @@ if (global.load_save)
     
     if (file_exists(working_directory + "save.sosab"))
     {
-        show_debug_message("loading an already preexisting save file " + working_directory);
+        show_debug_message("loading an already preexisting save file at: " + working_directory);
         var file = file_text_open_read(working_directory + "save.sosab");
         
         var content = "";

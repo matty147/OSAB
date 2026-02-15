@@ -231,6 +231,7 @@
     {"id":{"name":"snd_hit","path":"sounds/snd_hit/snd_hit.yy",},},
     {"id":{"name":"snd_level_boss","path":"sounds/snd_level_boss/snd_level_boss.yy",},},
     {"id":{"name":"snd_level_enter","path":"sounds/snd_level_enter/snd_level_enter.yy",},},
+    {"id":{"name":"snd_level_results","path":"sounds/snd_level_results/snd_level_results.yy",},},
     {"id":{"name":"snd_menu_bg","path":"sounds/snd_menu_bg/snd_menu_bg.yy",},},
     {"id":{"name":"snd_player_join","path":"sounds/snd_player_join/snd_player_join.yy",},},
     {"id":{"name":"snd_story_level_bg","path":"sounds/snd_story_level_bg/snd_story_level_bg.yy",},},

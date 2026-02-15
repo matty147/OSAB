@@ -25,12 +25,6 @@ if (floor(global.runtime) == 0  && search != "")
 	}
 }
 
-show_debug_message("-----------------------------------------------------");
-show_debug_message(array_length(meta.checkpoints)); // numb of checkpoints
-show_debug_message(floor(meta.checkpoints[clamp(current_checkpoint_index-1,0,array_length(meta.checkpoints))])); // time of next checkpoint
-show_debug_message(current_checkpoint_index); // time of next checkpoint
-show_debug_message(floor(global.runtime)); // cur time
-
 if (current_checkpoint_index > 0 && floor(meta.checkpoints[clamp(current_checkpoint_index-1,0,array_length(meta.checkpoints))]) == floor(global.runtime)-11)
 {
 	if (!audio_is_playing(sound_id))
@@ -120,13 +114,13 @@ if (!global.pause)
 
 if (global.runtime <= objects[array_length(objects) - 1].time || instance_exists(obj_enemy))
 {
-	end_game = 250;
+	end_game = 170;
 }else if (!global.pause)
 {	
 	end_game--;
 }
 
-if (end_game <= 240 && search != "")
+if (end_game <= 150 && search != "")
 {
 	audio_sound_gain(sound_id,0,1000);	
 	with (obj_player) {collect_points = false;}
@@ -163,7 +157,12 @@ if (instance_number(obj_enemy) <= 0 && end_game < 0)
 	{
 		scoreboard_manager.score_board_display_time = default_scoreboard_display_time;
 		already_shown_score_board = true;
-	}if (!global.pause)
+		if (!audio_is_playing(snd_level_results))
+		{
+			audio_play_sound(snd_level_results,0,false,5);
+		}
+	}
+	if (!global.pause)
 	{
 		scoreboard_manager.score_board_display_time--;
 	}
@@ -171,6 +170,8 @@ if (instance_number(obj_enemy) <= 0 && end_game < 0)
 	if (scoreboard_manager.score_board_display_time <= 0)
 	{
 		win = true;
+		
+		audio_stop_sound(snd_level_results);
 		
 		global.pause = true;
 	
@@ -189,6 +190,8 @@ if (instance_number(obj_enemy) <= 0 && end_game < 0)
 			global.cleared_levels++;
 			global.cleared = true;
 			show_debug_message("cleared + story" + string(global.cleared_levels));
+			global.checkpoint = [0,0,0];
+			global.pre_scoreboard_data = [];
 		}
 	}
 }

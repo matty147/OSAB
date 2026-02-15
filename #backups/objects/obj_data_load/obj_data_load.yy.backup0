@@ -1,4 +1,4 @@
-// 2026-02-15 14:04:13
+// 2026-02-15 14:05:29
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -15,7 +15,7 @@ if (global.load_save)
     
     if (file_exists(working_directory + "save.sosab"))
     {
-        show_debug_message("loading an already preexisting save file " + working_directory);
+        show_debug_message("loading an already preexisting save file at: " + working_directory);
         var file = file_text_open_read(working_directory + "save.sosab");
         
         var content = "";
