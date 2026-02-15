@@ -1,4 +1,4 @@
-// 2026-02-15 18:48:36
+// 2026-02-15 20:18:13
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -17,7 +17,7 @@ global.pause = false;
 global.runtime = 0; // track starts
 
 if (!variable_global_exists("debug")) { // turn all debug things off/on for relase
-	global.debug = true;
+	global.debug = false;
 }
 
 if (!variable_global_exists("debug_log")) { // turn all debug things off/on for relase

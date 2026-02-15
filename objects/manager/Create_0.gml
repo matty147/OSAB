@@ -9,7 +9,7 @@ global.pause = false;
 global.runtime = 0; // track starts
 
 if (!variable_global_exists("debug")) { // turn all debug things off/on for relase
-	global.debug = true;
+	global.debug = false;
 }
 
 if (!variable_global_exists("debug_log")) { // turn all debug things off/on for relase
