@@ -1,4 +1,4 @@
-// 2026-02-14 23:11:51
+// 2026-02-15 13:27:00
 function scr_save_data(){
 
     var file = file_text_open_write(working_directory + "save.sosab");
@@ -10,6 +10,8 @@ function scr_save_data(){
     ds_map_add(data,"fullscreen",global.fullscreen);
     // ds_map_add(data,"cleared_list",0); // add if time but i doubt it
     var json = json_encode(data,false);
+    
+    show_debug_message($"saveing settings {json}");
     
     var key = manager.enk;
     
@@ -75,7 +77,7 @@ function add_obstruction(text)
 }
 
 
-// delet a character every second position
+// delete a character every second position
 function delete_obstruction(text)
 {
     var len = string_length(text);

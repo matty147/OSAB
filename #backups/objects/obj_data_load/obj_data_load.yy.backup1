@@ -1,4 +1,4 @@
-// 2026-02-14 23:12:15
+// 2026-02-15 14:04:09
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -35,34 +35,31 @@ if (global.load_save)
 
         var data = json_decode(mcontent);   
         
-        show_debug_message(content);
-        
 		if (
-		    is_struct(data) &&
-		    variable_struct_exists(data, "volume") &&
-		    variable_struct_exists(data, "story_progress") &&
-		    variable_struct_exists(data, "fullscreen") &&
-		    is_real(data.volume) &&
-		    is_real(data.story_progress) &&
-		    is_bool(data.fullscreen)
-		)
+		    ds_exists(data,ds_type_map) &&
+		    ds_map_exists(data, "volume") &&
+		    ds_map_exists(data, "story_progress") &&
+		    ds_map_exists(data, "fullscreen")
+			)        
 		{
-		    global.volume = data.volume;
-		    global.cleared_levels = data.story_progress;
-		    global.fullscreen = data.fullscreen;
+	    	global.volume = data[? "volume"];
+	        global.cleared_levels = data[? "story_progress"];
+	        global.fullscreen = data[? "fullscreen"];
 		
 		    audio_master_gain(global.volume);
 		    window_set_fullscreen(global.fullscreen);
+	        
+	        show_debug_message($"{data[? "volume"]} {global.volume}");
+	        show_debug_message($"{data[? "story_progress"]} {global.cleared_levels}");
+	        show_debug_message($"{data[? "fullscreen"]} {global.fullscreen}");
 		}
 		else
 		{
 		    show_debug_message("invalid save data – regenerating");
 		    scr_save_data();
 		}
-        
-        show_debug_message($"{data[? "volume"]} {global.volume}");
-        show_debug_message($"{data[? "story_progress"]} {global.cleared_levels}");
-        show_debug_message($"{data[? "fullscreen"]} {global.fullscreen}");
+		
+        ds_map_destroy(data);
     
     }else // replace the corupted save file
     {

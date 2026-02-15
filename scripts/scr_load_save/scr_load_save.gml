@@ -10,6 +10,8 @@ function scr_save_data(){
     // ds_map_add(data,"cleared_list",0); // add if time but i doubt it
     var json = json_encode(data,false);
     
+    show_debug_message($"saving settings {json}");
+    
     var key = manager.enk;
     
     var save = vigenere_ascii(json,key,1); 

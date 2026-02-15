@@ -25,6 +25,21 @@ if (floor(global.runtime) == 0  && search != "")
 	}
 }
 
+show_debug_message("-----------------------------------------------------");
+show_debug_message(array_length(meta.checkpoints)); // numb of checkpoints
+show_debug_message(floor(meta.checkpoints[clamp(current_checkpoint_index-1,0,array_length(meta.checkpoints))])); // time of next checkpoint
+show_debug_message(current_checkpoint_index); // time of next checkpoint
+show_debug_message(floor(global.runtime)); // cur time
+
+if (current_checkpoint_index > 0 && floor(meta.checkpoints[clamp(current_checkpoint_index-1,0,array_length(meta.checkpoints))]) == floor(global.runtime)-11)
+{
+	if (!audio_is_playing(sound_id))
+	{
+		show_debug_message("playing sound");
+		audio_play_sound(sound_id, 1, false,1, floor(meta.checkpoints[clamp(current_checkpoint_index-1,0,array_length(meta.checkpoints))] + 11)/17);
+	}	
+}
+
 if (global.runtime > 1 && search != "" && !win)
 {
 	if (global.pause && !all_playes_dead)

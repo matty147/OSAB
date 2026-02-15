@@ -1,4 +1,4 @@
-// 2026-02-14 23:11:57
+// 2026-02-15 14:01:25
 function scr_save_data(){
 
     var file = file_text_open_write(working_directory + "save.sosab");
@@ -10,6 +10,8 @@ function scr_save_data(){
     ds_map_add(data,"fullscreen",global.fullscreen);
     // ds_map_add(data,"cleared_list",0); // add if time but i doubt it
     var json = json_encode(data,false);
+    
+    show_debug_message($"saving settings {json}");
     
     var key = manager.enk;
     

@@ -1,4 +1,4 @@
-// 2026-01-25 01:00:37
+// 2026-02-15 13:17:39
 #event properties (no comments/etc. here are saved)
 parent_index = -1;
 uses_physics = false;
@@ -185,6 +185,21 @@ if (floor(global.runtime) == 0  && search != "")
 	}
 }
 
+show_debug_message("-----------------------------------------------------");
+show_debug_message(array_length(meta.checkpoints)); // numb of checkpoints
+show_debug_message(floor(meta.checkpoints[clamp(current_checkpoint_index-1,0,array_length(meta.checkpoints))])); // time of next checkpoint
+show_debug_message(current_checkpoint_index); // time of next checkpoint
+show_debug_message(floor(global.runtime)); // cur time
+
+if (current_checkpoint_index > 0 && floor(meta.checkpoints[clamp(current_checkpoint_index-1,0,array_length(meta.checkpoints))]) == floor(global.runtime)-11)
+{
+	if (!audio_is_playing(sound_id))
+	{
+		show_debug_message("playing sound");
+		audio_play_sound(sound_id, 1, false,1, floor(meta.checkpoints[clamp(current_checkpoint_index-1,0,array_length(meta.checkpoints))] + 11)/17);
+	}	
+}
+
 if (global.runtime > 1 && search != "" && !win)
 {
 	if (global.pause && !all_playes_dead)
@@ -216,7 +231,6 @@ if (array_length(meta.checkpoints) > current_checkpoint_index)
 			{
 				// show_debug_message($"this is the nearest object{objects[obj].time} at id: {obj}");
 				global.checkpoint = [objects[obj].time, obj, current_checkpoint_index + 1]; // time, obj index
-				// global.pre_scoreboard_data = obj_points_scoreboard_manager.player_stats; // saves even before the user can get to it so the stats are inacurate D:
 				break;
 			}
 		}
